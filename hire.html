@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plant & Tool Hire | Navan Hire & Hardware</title>
+  <meta name="description" content="Hire diggers, dumpers, breakers, generators, compressors and more from Navan Hire & Hardware. Daily and weekly rates. Delivering across Dublin and the North East."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .hire-intro { padding: 60px 0 40px; }
+    .hire-intro p { max-width: 680px; color: var(--mid); margin-top: 16px; font-size: 1.05rem; }
+    .hire-categories { padding: 0 0 80px; }
+    .hire-cat { margin-bottom: 56px; }
+    .hire-cat-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 3px solid var(--red);
+    }
+    .hire-cat-icon { font-size: 2rem; }
+    .hire-cat-header h2 {
+      font-family: var(--font-head);
+      font-size: 1.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+    .hire-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .hire-item {
+      background: var(--light);
+      border-radius: 4px;
+      padding: 20px;
+      border-left: 3px solid transparent;
+      transition: all var(--transition);
+    }
+    .hire-item:hover {
+      border-left-color: var(--red);
+      background: var(--white);
+      box-shadow: var(--shadow);
+      transform: translateX(4px);
+    }
+    .hire-item h4 {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .hire-item p { font-size: 0.85rem; color: var(--mid); }
+    .hire-cta-box {
+      background: var(--dark);
+      border-radius: 6px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .hire-cta-box h3 {
+      font-family: var(--font-head);
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .hire-cta-box p { color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+    .hire-cta-box .btn-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>📞 <a href="tel:0469022535">046 902 2535</a></span>
+      <span>🕐 Mon–Fri: 7am–5pm &nbsp;|&nbsp; Sat: 8:30am–1pm</span>
+      <span>📍 Kells Road, Navan, Co. Meath</span>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-main">NHH</span><span class="logo-sub">Navan Hire & Hardware</span></a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="hardware.html" class="nav-link">Hardware & DIY</a>
+        <a href="hire.html" class="nav-link active">Plant & Tool Hire</a>
+        <a href="powered-access.html" class="nav-link">Powered Access</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="careers.html" class="nav-link">Careers</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="hardware.html">Hardware & DIY</a>
+      <a href="hire.html">Plant & Tool Hire</a>
+      <a href="powered-access.html">Powered Access</a>
+      <a href="contact.html">Contact</a>
+      <a href="careers.html">Careers</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Plant & Tool Hire</div>
+      <h1>Plant & Tool Hire</h1>
+      <p>One of the North East's largest hire fleets — diggers, dumpers, breakers, generators, teleporters and much more. Delivering to Dublin and surrounding counties daily.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="hire-categories">
+
+      <div class="hire-cat">
+        <div class="hire-cat-header">
+          <span class="hire-cat-icon">⛏️</span>
+          <h2>Diggers & Dumpers</h2>
+        </div>
+        <div class="hire-items">
+          <div class="hire-item"><h4>3 Ton Kubota Digger</h4><p>Compact mini excavator ideal for confined sites</p></div>
+          <div class="hire-item"><h4>5 Ton Kubota U55-4</h4><p>Versatile mid-size excavator for most groundwork</p></div>
+          <div class="hire-item"><h4>1 Ton High-Tip Dumper</h4><p>Agile dumper for moving materials around site</p></div>
+          <div class="hire-item"><h4>3 Ton Dumper</h4><p>Reliable workhorse for medium volume tasks</p></div>
+          <div class="hire-item"><h4>6 Ton Dumper</h4><p>High capacity for large excavation projects</p></div>
+        </div>
+      </div>
+
+      <div class="hire-cat">
+        <div class="hire-cat-header">
+          <span class="hire-cat-icon">🔨</span>
+          <h2>Breakers & Drilling</h2>
+        </div>
+        <div class="hire-items">
+          <div class="hire-item"><h4>Electric Breakers</h4><p>Heavy-duty electric breakers for concrete demolition</p></div>
+          <div class="hire-item"><h4>Pneumatic Breakers</h4><p>Powerful air-powered breakers for hard materials</p></div>
+          <div class="hire-item"><h4>Core Drills</h4><p>Diamond core drills for precise hole cutting</p></div>
+          <div class="hire-item"><h4>Rotary Hammer Drills</h4><p>SDS drills for masonry and concrete</p></div>
+        </div>
+      </div>
+
+      <div class="hire-cat">
+        <div class="hire-cat-header">
+          <span class="hire-cat-icon">⚡</span>
+          <h2>Generators, Lighting & Welding</h2>
+        </div>
+        <div class="hire-items">
+          <div class="hire-item"><h4>Petrol Generators</h4><p>Portable generators from 2kVA to 10kVA</p></div>
+          <div class="hire-item"><h4>Diesel Generators</h4><p>Heavy-duty diesel units for sustained power needs</p></div>
+          <div class="hire-item"><h4>Lighting Towers</h4><p>LED and metal halide lighting for night work</p></div>
+          <div class="hire-item"><h4>Welding Sets</h4><p>MIG and arc welders available for hire</p></div>
+        </div>
+      </div>
+
+      <div class="hire-cat">
+        <div class="hire-cat-header">
+          <span class="hire-cat-icon">💨</span>
+          <h2>Compressors & Air Tools</h2>
+        </div>
+        <div class="hire-items">
+          <div class="hire-item"><h4>Petrol Compressors</h4><p>Portable compressors for site use</p></div>
+          <div class="hire-item"><h4>Electric Compressors</h4><p>Quiet compressors for indoor applications</p></div>
+          <div class="hire-item"><h4>Nail Guns</h4><p>Pneumatic nail guns for framing and fixing</p></div>
+        </div>
+      </div>
+
+      <div class="hire-cat">
+        <div class="hire-cat-header">
+          <span class="hire-cat-icon">🏗️</span>
+          <h2>Concreting & Cutting</h2>
+        </div>
+        <div class="hire-items">
+          <div class="hire-item"><h4>Concrete Mixers</h4><p>Electric and petrol mixers in various drum sizes</p></div>
+          <div class="hire-item"><h4>Poker Vibrators</h4><p>Internal vibrators for concrete consolidation</p></div>
+          <div class="hire-item"><h4>Floor Saws</h4><p>Diamond blade saws for cutting concrete slabs</p></div>
+          <div class="hire-item"><h4>Disc Cutters</h4><p>Angle grinders and disc cutters for masonry</p></div>
+          <div class="hire-item"><h4>Block Splitters</h4><p>Hydraulic and manual block splitters</p></div>
+        </div>
+      </div>
+
+      <div class="hire-cat">
+        <div class="hire-cat-header">
+          <span class="hire-cat-icon">🔄</span>
+          <h2>Rollers & Compaction</h2>
+        </div>
+        <div class="hire-items">
+          <div class="hire-item"><h4>Plate Compactors</h4><p>Forward and reversible plate compactors</p></div>
+          <div class="hire-item"><h4>Trench Rammers</h4><p>Petrol rammers for confined areas</p></div>
+          <div class="hire-item"><h4>Ride-On Rollers</h4><p>Walk-behind and ride-on compaction rollers</p></div>
+        </div>
+      </div>
+
+      <div class="hire-cat">
+        <div class="hire-cat-header">
+          <span class="hire-cat-icon">💧</span>
+          <h2>Heating, Pumps, Cooling & Ventilation</h2>
+        </div>
+        <div class="hire-items">
+          <div class="hire-item"><h4>Diesel Space Heaters</h4><p>Indirect and direct fired heaters</p></div>
+          <div class="hire-item"><h4>Electric Fan Heaters</h4><p>Portable electric heating solutions</p></div>
+          <div class="hire-item"><h4>Water Pumps</h4><p>Submersible and centrifugal pumps for site drainage</p></div>
+          <div class="hire-item"><h4>Dehumidifiers</h4><p>Industrial dehumidifiers for drying out buildings</p></div>
+          <div class="hire-item"><h4>Air Movers</h4><p>High-volume fans for ventilation and drying</p></div>
+        </div>
+      </div>
+
+      <div class="hire-cat">
+        <div class="hire-cat-header">
+          <span class="hire-cat-icon">🪟</span>
+          <h2>Flooring & Sanding</h2>
+        </div>
+        <div class="hire-items">
+          <div class="hire-item"><h4>Drum Floor Sanders</h4><p>Large belt sanders for hardwood floors</p></div>
+          <div class="hire-item"><h4>Edge Sanders</h4><p>Disc sanders for edges and corners</p></div>
+          <div class="hire-item"><h4>Floor Grinders</h4><p>Diamond grinders for concrete floor preparation</p></div>
+        </div>
+      </div>
+
+      <div class="hire-cat">
+        <div class="hire-cat-header">
+          <span class="hire-cat-icon">🚛</span>
+          <h2>Trailers & Site Management</h2>
+        </div>
+        <div class="hire-items">
+          <div class="hire-item"><h4>Plant Trailers</h4><p>Heavy duty trailers for transporting equipment</p></div>
+          <div class="hire-item"><h4>Site Offices</h4><p>Portable site offices and welfare units</p></div>
+          <div class="hire-item"><h4>Toilets</h4><p>Self-contained portable toilet units</p></div>
+          <div class="hire-item"><h4>Barriers & Fencing</h4><p>Pedestrian barriers and temporary fencing panels</p></div>
+        </div>
+      </div>
+
+      <div class="hire-cta-box">
+        <h3>Not Sure What You Need?</h3>
+        <p>Our experienced team can advise you on the right equipment for your project and arrange fast delivery across Dublin and the North East.</p>
+        <div class="btn-row">
+          <a href="tel:0469022535" class="btn btn-primary btn-lg">📞 Call 046 902 2535</a>
+          <a href="contact.html" class="btn btn-outline-white btn-lg">Send Enquiry</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">NHH</div>
+        <p>Navan Hire & Hardware<br>Whistlemount, Kells Road<br>Navan, Co. Meath, C15 FX6Y</p>
+        <p><a href="tel:0469022535">046 902 2535</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="hardware.html">Hardware & DIY</a></li>
+          <li><a href="hire.html">Plant & Tool Hire</a></li>
+          <li><a href="powered-access.html">Powered Access</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="https://www.nationaltrainingsolutions.ie" target="_blank">Safety Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <p>Mon–Fri: 7:00am – 5:00pm</p>
+        <p>Saturday: 8:30am – 1:00pm</p>
+        <p>Sunday: Closed</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>© 2026 Navan Hire & Hardware. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

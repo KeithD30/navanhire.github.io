@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Navan Hire & Hardware</title>
+  <meta name="description" content="Contact Navan Hire & Hardware on 046 902 2535. Located on the Kells Road, Navan, Co. Meath. Open Mon–Fri 7am–5pm, Sat 8:30am–1pm."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>📞 <a href="tel:0469022535">046 902 2535</a></span>
+      <span>🕐 Mon–Fri: 7am–5pm &nbsp;|&nbsp; Sat: 8:30am–1pm</span>
+      <span>📍 Kells Road, Navan, Co. Meath</span>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><span class="logo-main">NHH</span><span class="logo-sub">Navan Hire & Hardware</span></a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="hardware.html" class="nav-link">Hardware & DIY</a>
+        <a href="hire.html" class="nav-link">Plant & Tool Hire</a>
+        <a href="powered-access.html" class="nav-link">Powered Access</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="careers.html" class="nav-link">Careers</a>
+      </nav>
+      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="hardware.html">Hardware & DIY</a>
+      <a href="hire.html">Plant & Tool Hire</a>
+      <a href="powered-access.html">Powered Access</a>
+      <a href="contact.html">Contact</a>
+      <a href="careers.html">Careers</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+      <h1>Get in Touch</h1>
+      <p>Call us, send an enquiry or drop into our store on the Kells Road, Navan. We're always happy to help.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <h2>Contact Details</h2>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:0469022535">046 902 2535</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📧</div>
+          <div>
+            <h4>Email</h4>
+            <p>info@nhh.ie</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">📍</div>
+          <div>
+            <h4>Address</h4>
+            <p>Navan Hire & Hardware<br>Whistlemount, Kells Road<br>Navan, Co. Meath<br>C15 FX6Y</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🕐</div>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>Monday – Friday: 7:00am – 5:00pm<br>Saturday: 8:30am – 1:00pm<br>Sunday: Closed</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">🏋️</div>
+          <div>
+            <h4>Safety Training</h4>
+            <p>For safety training enquiries, visit<br><a href="https://www.nationaltrainingsolutions.ie" target="_blank" style="color:var(--red)">nationaltrainingsolutions.ie</a></p>
+          </div>
+        </div>
+
+        <iframe
+          class="map-embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2385.9!2d-6.683!3d53.654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDM5JzE0LjQiTiA2wrA0MCc1OC44Ilc!5e0!3m2!1sen!2sie!4v1234567890"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Navan Hire & Hardware location">
+        </iframe>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h2>Send an Enquiry</h2>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" required placeholder="John"/>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" required placeholder="Murphy"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com"/>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="087 000 0000"/>
+          </div>
+          <div class="form-group">
+            <label for="enquiryType">Type of Enquiry</label>
+            <select id="enquiryType" name="enquiryType">
+              <option value="">Select...</option>
+              <option value="hardware">Hardware & DIY</option>
+              <option value="hire">Plant & Tool Hire</option>
+              <option value="access">Powered Access / Spider Lifts</option>
+              <option value="quote">General Quote</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required placeholder="Tell us what you need — equipment type, dates, location, quantity etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Send Enquiry →</button>
+          <div id="formSuccess" style="display:none; margin-top:16px; padding:16px; background:#E8F5E9; border-radius:4px; color:#2E7D32; font-weight:600; text-align:center;">
+            ✅ Thanks! We'll be in touch shortly.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">NHH</div>
+        <p>Navan Hire & Hardware<br>Whistlemount, Kells Road<br>Navan, Co. Meath, C15 FX6Y</p>
+        <p><a href="tel:0469022535">046 902 2535</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="hardware.html">Hardware & DIY</a></li>
+          <li><a href="hire.html">Plant & Tool Hire</a></li>
+          <li><a href="powered-access.html">Powered Access</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="https://www.nationaltrainingsolutions.ie" target="_blank">Safety Training</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <p>Mon–Fri: 7:00am – 5:00pm</p>
+        <p>Saturday: 8:30am – 1:00pm</p>
+        <p>Sunday: Closed</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container"><p>© 2026 Navan Hire & Hardware. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
