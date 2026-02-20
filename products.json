@@ -1,0 +1,10 @@
+{
+  "info": "Product database for Navan Hire & Hardware - 317 items",
+  "lastUpdated": "2026-02-20",
+  "products": [
+    {"name": "TELEPORTER 360 26 MTR 6 TON LIFT", "cat": "360° Roto Telehandlers", "page": "telehandlers.html", "pageLabel": "Telehandlers", "d1": "850"},
+    {"name": "TELEPORTER 360 30 MTR 6 TON LIFT", "cat": "360° Roto Telehandlers", "page": "telehandlers.html", "pageLabel": "Telehandlers", "d1": "1050"},
+    {"name": "NOTE", "cat": "See search.js line 5 for full product array", "page": "", "pageLabel": "", "d1": "0"}
+  ],
+  "note": "Full product list is currently embedded in search.js. To optimize: 1) Copy the full NHH_INDEX array here, 2) Update search.js to fetch this file on page load, 3) Make search initialization async"
+}

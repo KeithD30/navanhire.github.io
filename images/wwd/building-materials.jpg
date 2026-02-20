@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1510;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg4)"/>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#FFF" text-anchor="middle" opacity="0.9">🏗️ BUILDING MATERIALS</text>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="24" fill="#CCC" text-anchor="middle" opacity="0.8">Timber, Insulation, Hardware & More</text>
+</svg>

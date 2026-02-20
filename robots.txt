@@ -1,0 +1,10 @@
+# robots.txt for Navan Hire & Hardware
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://KeithD30.github.io/navanhire.github.io/sitemap.xml
+
+# Disallow admin/demo pages from indexing
+Disallow: /nhh-portal-demo.html

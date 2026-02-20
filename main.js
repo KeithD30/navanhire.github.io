@@ -23,17 +23,8 @@ if (mobileNav) {
   });
 }
 
-// Contact form handler (demo — shows success message)
-function handleSubmit(e) {
-  e.preventDefault();
-  const form = document.getElementById('contactForm');
-  const success = document.getElementById('formSuccess');
-  if (form && success) {
-    form.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
-    form.querySelector('button[type=submit]').style.display = 'none';
-    success.style.display = 'block';
-  }
-}
+// Contact form is now powered by FormSpree
+// To activate: Sign up free at https://formspree.io and add your form ID to contact.html
 
 // Scroll reveal animation
 const observer = new IntersectionObserver((entries) => {
