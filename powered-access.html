@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Powered Access & Spider Lifts | Navan Hire & Hardware</title>
-  <meta name="description" content="Hire scissor lifts, boom lifts, spider lifts and telehandlers from Navan Hire & Hardware. Delivering across Dublin, Meath and the North East."/>
+  <title>Access &amp; Spider Lifts for Hire | Navan Hire &amp; Hardware</title>
+  <meta name="description" content="Diesel and electric boom lifts, spider lifts and scissor lifts for hire. Delivering across Meath, Dublin and the North East. Free site survey available."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
@@ -12,192 +12,399 @@
 <body>
   <div class="topbar">
     <div class="container topbar-inner">
-      <span>📞 <a href="tel:0469022535">046 902 2535</a></span>
-      <span>🕐 Mon–Fri: 7am–5pm &nbsp;|&nbsp; Sat: 8:30am–1pm</span>
-      <span>📍 Kells Road, Navan, Co. Meath</span>
+      <span>&#128222; <a href="tel:0469022535">046 902 2535</a></span>
+      <span>&#128336; Mon&ndash;Fri: 7am&ndash;5pm &nbsp;|&nbsp; Sat: 8:30am&ndash;1pm</span>
+      <span>&#128205; Kells Road, Navan, Co. Meath</span>
     </div>
   </div>
   <header class="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-main">NHH</span><span class="logo-sub">Navan Hire & Hardware</span></a>
-      <nav class="nav">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="Navan Hire &amp; Hardware" class="logo-img"/>
+      </a>
+            <nav class="nav">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="hardware.html" class="nav-link">Hardware & DIY</a>
-        <a href="hire.html" class="nav-link">Plant & Tool Hire</a>
-        <a href="powered-access.html" class="nav-link active">Powered Access</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="careers.html" class="nav-link">Careers</a>
+        <a href="hardware.html" class="nav-link">Hardware &amp; DIY</a>
+        <a href="telehandlers.html" class="nav-link">Telehandlers</a>
+        <a href="hire.html" class="nav-link">Plant &amp; Tool Hire</a>
+        <a href="powered-access.html" class="nav-link active">Access &amp; Spider Lifts</a>
       </nav>
-      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-      <button class="hamburger" id="hamburger">&#9776;</button>
+      <div class="nhh-search-wrap">
+        <input type="search" id="nhhSearch" class="nhh-search-input" placeholder="Search equipment..." autocomplete="off" spellcheck="false"/>
+        <span class="nhh-search-icon">&#128269;</span>
+        <div class="nhh-search-results" id="nhhSearchResults"></div>
+      </div>
+      <a href="contact.html" class="btn btn-white header-cta">Get a Quote</a>
+      <a href="account.html" class="nhh-account-btn" title="Trade Login / Apply" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
     </div>
-    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav" id="mobileNav">
       <a href="index.html">Home</a>
       <a href="hardware.html">Hardware & DIY</a>
+      <a href="telehandlers.html">Telehandlers</a>
       <a href="hire.html">Plant & Tool Hire</a>
-      <a href="powered-access.html">Powered Access</a>
-      <a href="contact.html">Contact</a>
-      <a href="careers.html">Careers</a>
+      <a href="powered-access.html">Access & Spider Lifts</a>
+      <a href="contact.html">Get a Quote</a>
+      <div class="mobile-search-wrap">
+        <input type="search" id="nhhSearchMob" class="nhh-search-input" placeholder="Search all equipment..." autocomplete="off" spellcheck="false"/>
+        <div class="nhh-search-results" id="nhhSearchResultsMob"></div>
+      </div>
     </div>
   </header>
 
-  <section class="page-hero">
-    <div class="container page-hero-content">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Powered Access</div>
-      <h1>Powered Access<br>& Spider Lifts</h1>
-      <p>From compact electric scissor lifts to large diesel articulated booms and spider lifts — we have the machine for your project. Free site surveys available. Delivery daily across Dublin and the North East.</p>
+  <section class="pa-hero">
+    <div class="container">
+      <nav class="hc-breadcrumb" id="paBreadcrumb">
+        <span class="hc-bc-item hc-bc-active">Access &amp; Spider Lifts</span>
+      </nav>
+      <h1 id="paTitle">Access &amp; Spider Lifts</h1>
+      <p id="paSubtitle">Choose a machine type below &mdash; click to see machines and rates. Free site survey available.</p>
     </div>
   </section>
 
-  <div class="container">
-    <div class="access-grid">
+  <div class="container hc-container">
 
-      <div class="access-card">
-        <div class="access-card-icon">🏗️</div>
-        <h3>Diesel Articulated Booms</h3>
-        <p>The most versatile boom lifts in our fleet — ideal for working at height on uneven ground or outdoor sites where maximum reach is needed.</p>
-        <div class="access-specs">
-          <div class="access-spec"><strong>Best for:</strong> Outdoor construction, facade work, tree surgery</div>
-          <div class="access-spec"><strong>Terrain:</strong> Rough ground capability</div>
-          <div class="access-spec"><strong>Drive:</strong> 4WD diesel</div>
+    <!-- FILTER PANEL -->
+    <div id="nhhFilter"></div>
+
+    <!-- LEVEL 1: CATEGORY TILES -->
+    <div id="paLevel1">
+      <div class="pa-group-grid">
+        <div class="pa-group-card" data-idx="0" onclick="paOpenCat(this)">
+          <!-- IMAGE SLOT: save photo as images/access/diesel-boom.jpg -->
+          <div class="pa-card-img" style="background-image:url('images/access/diesel-boom.jpg')">
+            <div class="pa-card-img-placeholder">
+              <span class="pa-card-img-icon">🏗</span>
+              <span class="pa-card-img-hint">&#128247; images/access/diesel-boom.jpg</span>
+            </div>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-title">Diesel Boom Lifts</div>
+            <div class="pa-card-desc">Articulated and telescopic diesel boom lifts from 40ft to 135ft. Rough-terrain 4WD — ideal for outdoor construction, facade work and large sites.</div>
+            <div class="pa-card-meta">10 machines</div>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
         </div>
-        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-      </div>
-
-      <div class="access-card">
-        <div class="access-card-icon">⬆️</div>
-        <h3>Diesel Scissor Lifts</h3>
-        <p>Robust diesel scissor lifts for outdoor applications where electric models aren't suitable. Large platform size with excellent load capacity.</p>
-        <div class="access-specs">
-          <div class="access-spec"><strong>Best for:</strong> Outdoor maintenance, construction sites</div>
-          <div class="access-spec"><strong>Terrain:</strong> Rough terrain models available</div>
-          <div class="access-spec"><strong>Drive:</strong> Diesel / 4WD</div>
+        <div class="pa-group-card" data-idx="1" onclick="paOpenCat(this)">
+          <!-- IMAGE SLOT: save photo as images/access/electric-boom.jpg -->
+          <div class="pa-card-img" style="background-image:url('images/access/electric-boom.jpg')">
+            <div class="pa-card-img-placeholder">
+              <span class="pa-card-img-icon">⚡</span>
+              <span class="pa-card-img-hint">&#128247; images/access/electric-boom.jpg</span>
+            </div>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-title">Electric Boom Lifts</div>
+            <div class="pa-card-desc">Zero-emission electric boom lifts from 30ft to 45ft. Quiet and clean — perfect for indoor use, environmentally sensitive sites and warehouses.</div>
+            <div class="pa-card-meta">2 machines</div>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
         </div>
-        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-      </div>
-
-      <div class="access-card">
-        <div class="access-card-icon">🦒</div>
-        <h3>Diesel Telescopic Booms</h3>
-        <p>Maximum horizontal and vertical reach for large outdoor projects. Ideal when you need to reach far out as well as up.</p>
-        <div class="access-specs">
-          <div class="access-spec"><strong>Best for:</strong> Bridge maintenance, large construction</div>
-          <div class="access-spec"><strong>Terrain:</strong> Rough ground</div>
-          <div class="access-spec"><strong>Drive:</strong> 4WD diesel</div>
+        <div class="pa-group-card" data-idx="2" onclick="paOpenCat(this)">
+          <!-- IMAGE SLOT: save photo as images/access/spider-lift.jpg -->
+          <div class="pa-card-img" style="background-image:url('images/access/spider-lift.jpg')">
+            <div class="pa-card-img-placeholder">
+              <span class="pa-card-img-icon">🕷</span>
+              <span class="pa-card-img-hint">&#128247; images/access/spider-lift.jpg</span>
+            </div>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-title">Spider Lifts</div>
+            <div class="pa-card-desc">Track-mounted spider boom lifts from 15m to 26m. Works on slopes, lawns, delicate floors and in confined spaces where no other machine can reach.</div>
+            <div class="pa-card-meta">4 machines</div>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
         </div>
-        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-      </div>
-
-      <div class="access-card">
-        <div class="access-card-icon">⚡</div>
-        <h3>Electric Boom Lifts</h3>
-        <p>Zero emissions electric boom lifts perfect for indoor use or environmentally sensitive areas. Quiet, clean and compact.</p>
-        <div class="access-specs">
-          <div class="access-spec"><strong>Best for:</strong> Indoor work, warehouses, clean sites</div>
-          <div class="access-spec"><strong>Terrain:</strong> Hard flat surfaces</div>
-          <div class="access-spec"><strong>Drive:</strong> Electric</div>
+        <div class="pa-group-card" data-idx="3" onclick="paOpenCat(this)">
+          <!-- IMAGE SLOT: save photo as images/access/diesel-scissors.jpg -->
+          <div class="pa-card-img" style="background-image:url('images/access/diesel-scissors.jpg')">
+            <div class="pa-card-img-placeholder">
+              <span class="pa-card-img-icon">🛣</span>
+              <span class="pa-card-img-hint">&#128247; images/access/diesel-scissors.jpg</span>
+            </div>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-title">Diesel Scissor Lifts</div>
+            <div class="pa-card-desc">Rough-terrain and all-terrain diesel scissor lifts from 26ft to 65ft. Built for outdoor sites with uneven ground.</div>
+            <div class="pa-card-meta">4 machines</div>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
         </div>
-        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-      </div>
-
-      <div class="access-card">
-        <div class="access-card-icon">🔲</div>
-        <h3>Electric Scissor Lifts</h3>
-        <p>The most popular indoor access machine — stable, quiet and easy to operate. Available in a range of working heights.</p>
-        <div class="access-specs">
-          <div class="access-spec"><strong>Best for:</strong> Indoor maintenance, fit-out, retail</div>
-          <div class="access-spec"><strong>Terrain:</strong> Hard flat surfaces</div>
-          <div class="access-spec"><strong>Drive:</strong> Electric</div>
+        <div class="pa-group-card" data-idx="4" onclick="paOpenCat(this)">
+          <!-- IMAGE SLOT: save photo as images/access/electric-scissors.jpg -->
+          <div class="pa-card-img" style="background-image:url('images/access/electric-scissors.jpg')">
+            <div class="pa-card-img-placeholder">
+              <span class="pa-card-img-icon">🟦</span>
+              <span class="pa-card-img-hint">&#128247; images/access/electric-scissors.jpg</span>
+            </div>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-title">Electric Scissor Lifts</div>
+            <div class="pa-card-desc">Electric scissor lifts from 10ft to 40ft. Compact, quiet and zero-emissions — the most popular machine for indoor maintenance, fit-out and retail.</div>
+            <div class="pa-card-meta">7 machines</div>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
         </div>
-        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
       </div>
-
-      <div class="access-card">
-        <div class="access-card-icon">🕷️</div>
-        <h3>Spider Lifts</h3>
-        <p>The most versatile access machine available. Spider lifts can work on slopes, in confined spaces, and on delicate surfaces — ideal for access where other machines simply can't go.</p>
-        <div class="access-specs">
-          <div class="access-spec"><strong>Best for:</strong> Gardens, slopes, confined access, indoors</div>
-          <div class="access-spec"><strong>Terrain:</strong> Any — including lawns & delicate floors</div>
-          <div class="access-spec"><strong>Drive:</strong> Electric / Hybrid</div>
-        </div>
-        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-      </div>
-
-      <div class="access-card">
-        <div class="access-card-icon">🏋️</div>
-        <h3>Telehandlers</h3>
-        <p>Powerful telescopic handlers for lifting and placing materials at height on construction sites. Available in multiple reach and lift configurations.</p>
-        <div class="access-specs">
-          <div class="access-spec"><strong>Best for:</strong> Block laying, roof work, material handling</div>
-          <div class="access-spec"><strong>Terrain:</strong> Rough ground</div>
-          <div class="access-spec"><strong>Drive:</strong> Diesel 4WD</div>
-        </div>
-        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-      </div>
-
-      <div class="access-card">
-        <div class="access-card-icon">🚜</div>
-        <h3>Forklifts</h3>
-        <p>Counterbalance and reach forklifts available for warehouse and yard applications. Various capacities available.</p>
-        <div class="access-specs">
-          <div class="access-spec"><strong>Best for:</strong> Warehouses, builders' yards, loading bays</div>
-          <div class="access-spec"><strong>Terrain:</strong> Hard flat surfaces / yard</div>
-          <div class="access-spec"><strong>Drive:</strong> Electric / Diesel / LPG</div>
-        </div>
-        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-      </div>
-
     </div>
+
+    <!-- LEVEL 2: PRODUCT LIST -->
+    <div id="paLevel2" style="display:none">
+      <button class="hc-back-btn" onclick="paGoLevel1()">&#8592; Back to all machine types</button>
+      <p class="hc-back-context" id="paBackCat"></p>
+      <div class="pa-product-list" id="paProdList"></div>
+    </div>
+
+    <!-- LEVEL 3: PRODUCT DETAIL -->
+    <div id="paLevel3" style="display:none">
+      <button class="hc-back-btn" onclick="paGoLevel2()">&#8592; Back to products</button>
+      <div id="paProdDetail"></div>
+    </div>
+
   </div>
 
-  <section class="cta-band">
+  <section class="cta-band" style="margin-top:40px">
     <div class="container cta-inner">
       <div>
         <h2>Free Site Survey Available</h2>
-        <p>Not sure which machine is right for your job? We'll come to site and advise you — free of charge.</p>
+        <p>Not sure which machine suits your job? We'll visit the site and advise &mdash; free of charge.</p>
       </div>
       <div class="cta-actions">
-        <a href="tel:0469022535" class="btn btn-white btn-lg">📞 046 902 2535</a>
+        <a href="tel:0469022535" class="btn btn-white btn-lg">&#128222; 046 902 2535</a>
         <a href="contact.html" class="btn btn-outline-white btn-lg">Request Site Survey</a>
       </div>
     </div>
   </section>
 
+  <script>
+  var PA_DATA = {"Diesel Boom Lifts": [{"name": "BOOM LIFT 135FT ARTICULATED", "d1": "850", "d2": "1250", "d3": "1550", "we": "850"}, {"name": "S125 BOOM LIFT", "d1": "850", "d2": "1250", "d3": "1550", "we": "850"}, {"name": "BOOM LIFT 85FT STRAIGHT", "d1": "450", "d2": "625", "d3": "750", "we": "450"}, {"name": "80 FT ARTICULATED BOOM LIFT", "d1": "450", "d2": "625", "d3": "750", "we": "450"}, {"name": "BOOM LIFT 60' ARTICULATED BOOM", "d1": "295", "d2": "450", "d3": "575", "we": "340"}, {"name": "BOOM LIFT 45FT Z45", "d1": "250", "d2": "350", "d3": "450", "we": "295"}, {"name": "BOOM LIFT 40FT TOWABLE ARTICULATED", "d1": "250", "d2": "350", "d3": "395", "we": "250"}, {"name": "BOOM LIFT 40FT TOWABLE", "d1": "250", "d2": "350", "d3": "395", "we": "250"}, {"name": "BOOM LIFT 38'  5'WIDE UPRIGHT", "d1": "250", "d2": "350", "d3": "450", "we": "250"}, {"name": "BOOM LIFT 30FT", "d1": "250", "d2": "350", "d3": "450", "we": "250"}], "Electric Boom Lifts": [{"name": "BOOM LIFT 45FT ELECTRIC", "d1": "295", "d2": "425", "d3": "550", "we": "350"}, {"name": "TOUCAN 10E", "d1": "250", "d2": "350", "d3": "450", "we": "250"}], "Spider Lifts": [{"name": "26M SPIDER BOOM LIFT", "d1": "1300", "d2": "1700", "d3": "2000", "we": "1300"}, {"name": "20M SPIDER BOOM LIFT", "d1": "800", "d2": "1200", "d3": "1500", "we": "800"}, {"name": "17M SPIDER BOOM LIFT", "d1": "550", "d2": "800", "d3": "950", "we": "550"}, {"name": "15M SPIDER BOOM LIFT", "d1": "450", "d2": "650", "d3": "750", "we": "450"}], "Diesel Scissor Lifts": [{"name": "20M SCISSORS LIFT", "d1": "550", "d2": "750", "d3": "1050", "we": "550"}, {"name": "SCISSORS LIFT 50FT ALL-TERRAIN", "d1": "275", "d2": "425", "d3": "475", "we": "295"}, {"name": "SCISSORS LIFT 40FT ALL TERRAIN NARROW", "d1": "250", "d2": "375", "d3": "450", "we": "250"}, {"name": "SCISSORS LIFT 26 ALL TERRAIN DIESEL", "d1": "270", "d2": "350", "d3": "400", "we": "270"}], "Electric Scissor Lifts": [{"name": "SCISSORS LIFT 40 FT ELECTRIC", "d1": "300", "d2": "450", "d3": "495", "we": "300"}, {"name": "SCISSORS LIFT 40FT ALL-TERRAIN ELECTRIC", "d1": "250", "d2": "375", "d3": "450", "we": "250"}, {"name": "SCISSORS LIFT 32 FT  110V", "d1": "165", "d2": "260", "d3": "295", "we": "195"}, {"name": "SCISSORS LIFT 26FT", "d1": "125", "d2": "225", "d3": "275", "we": "180"}, {"name": "SCISSORS  LIFT 19FT", "d1": "95", "d2": "185", "d3": "225", "we": "150"}, {"name": "SKYJACK SJ16", "d1": "95", "d2": "185", "d3": "225", "we": "150"}, {"name": "SCISSORS 10FT ELECTRIC", "d1": "85", "d2": "170", "d3": "200", "we": "130"}]};
+  var PA_CAT_NAMES = ["Diesel Boom Lifts", "Electric Boom Lifts", "Spider Lifts", "Diesel Scissor Lifts", "Electric Scissor Lifts"];
+  var PA_CAT_INFO  = {"Diesel Boom Lifts": {"icon": "🏗", "desc": "Articulated and telescopic diesel boom lifts from 40ft to 135ft. Rough-terrain 4WD — ideal for outdoor construction, facade work and large sites.", "img": "images/access/diesel-boom.jpg"}, "Electric Boom Lifts": {"icon": "⚡", "desc": "Zero-emission electric boom lifts from 30ft to 45ft. Quiet and clean — perfect for indoor use, environmentally sensitive sites and warehouses.", "img": "images/access/electric-boom.jpg"}, "Spider Lifts": {"icon": "🕷", "desc": "Track-mounted spider boom lifts from 15m to 26m. Works on slopes, lawns, delicate floors and in confined spaces where no other machine can reach.", "img": "images/access/spider-lift.jpg"}, "Diesel Scissor Lifts": {"icon": "🛣", "desc": "Rough-terrain and all-terrain diesel scissor lifts from 26ft to 65ft. Built for outdoor sites with uneven ground.", "img": "images/access/diesel-scissors.jpg"}, "Electric Scissor Lifts": {"icon": "🟦", "desc": "Electric scissor lifts from 10ft to 40ft. Compact, quiet and zero-emissions — the most popular machine for indoor maintenance, fit-out and retail.", "img": "images/access/electric-scissors.jpg"}};
+
+  var paCurCat = null;
+
+  function fmtPrice(p) {
+    var v = parseFloat(p);
+    if (isNaN(v) || v === 0) return 'POA';
+    return '\u20ac' + (v === Math.floor(v) ? String(Math.floor(v)) : v.toFixed(2));
+  }
+  function escH(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function paShow(n) {
+    for (var i = 1; i <= 3; i++) {
+      var el = document.getElementById('paLevel' + i);
+      if (el) el.style.display = (i === n) ? 'block' : 'none';
+    }
+    var hero = document.querySelector('.pa-hero');
+    if (hero) window.scrollTo({top: hero.offsetTop - 80, behavior: 'smooth'});
+  }
+  function paSetHero(title, sub) {
+    var t = document.getElementById('paTitle');    if (t) t.textContent = title;
+    var s = document.getElementById('paSubtitle'); if (s) s.textContent = sub;
+  }
+  function paSetCrumb(parts) {
+    var bc = document.getElementById('paBreadcrumb');
+    if (!bc) return;
+    var h = '<span class="hc-bc-item hc-bc-home" onclick="paGoLevel1()">Access &amp; Spider Lifts</span>';
+    if (parts.length >= 1) {
+      h += ' <span class="hc-bc-sep">&rsaquo;</span>';
+      h += ' <span class="hc-bc-item' + (parts.length === 1 ? ' hc-bc-active' : '') + '" onclick="paGoLevel2()">' + escH(parts[0]) + '</span>';
+    }
+    if (parts.length >= 2) {
+      h += ' <span class="hc-bc-sep">&rsaquo;</span>';
+      h += ' <span class="hc-bc-item hc-bc-active">' + escH(parts[1]) + '</span>';
+    }
+    bc.innerHTML = h;
+  }
+  function paGoLevel1() {
+    paSetHero('Access & Spider Lifts', 'Choose a machine type below \u2014 click to see machines and rates. Free site survey available.');
+    paSetCrumb([]);
+    paShow(1);
+  }
+  function paGoLevel2() { if (paCurCat) paOpenCat(null, paCurCat); }
+
+  function paOpenCat(el, catName) {
+    var cat = catName || PA_CAT_NAMES[parseInt(el.dataset.idx)];
+    paCurCat = cat;
+    var items = PA_DATA[cat];
+    if (!items) return;
+    paSetHero(cat, items.length + ' machine' + (items.length !== 1 ? 's' : '') + ' \u2014 largest to smallest \u2014 click to see rates and enquire');
+    paSetCrumb([cat]);
+    var list = document.getElementById('paProdList');
+    var html = '';
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+      var slug = item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '');
+      var prodImg = 'images/access/products/' + slug + '.jpg';
+      html += '<div class="pa-prod-row" data-prodidx="' + i + '" onclick="paOpenProdByIdx(this)">';
+      html += '<div class="pa-prod-thumb" style="background-image:url(\'' + prodImg + '\')">';
+      html += '<div class="pa-prod-thumb-ph">&#128247;</div>';
+      html += '</div>';
+      html += '<div class="pa-prod-info">';
+      html += '<span class="hc-prod-name">' + escH(item.name) + '</span>';
+      html += '<span class="hc-prod-preview">From ' + fmtPrice(item.d1) + '/day</span>';
+      html += '</div>';
+      html += '<span class="hc-arrow">&#8250;</span>';
+      html += '</div>';
+    }
+    list.innerHTML = html;
+    document.getElementById('paBackCat').textContent = cat;
+    paShow(2);
+  }
+
+  function paOpenProdByIdx(el) {
+    paOpenProd(PA_DATA[paCurCat][parseInt(el.dataset.prodidx)]);
+  }
+
+  function paOpenProd(item) {
+    paSetHero(item.name, 'Hire rates and enquiry');
+    paSetCrumb([paCurCat, item.name]);
+    var slug = item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '');
+    var prodImg = 'images/access/products/' + slug + '.jpg';
+    var d = document.getElementById('paProdDetail');
+    d.innerHTML =
+      '<div class="pt-tab-bar" id="pt-bar-' + slug + '"></div>' +
+      '<div class="pt-tab-content" data-slug="' + slug + '">' +
+        '<div class="pt-pane pt-rates-pane">' +
+          '<div class="hc-detail">' +
+            '<div class="pa-product-hero-img" style="background-image:url(\'' + prodImg + '\')">' +
+              '<div class="pa-product-hero-ph">' +
+                '<span style="font-size:2.5rem">&#128247;</span>' +
+                '<p class="pa-img-hint" style="margin:8px 0 0">Save photo as: ' + prodImg + '</p>' +
+              '</div>' +
+            '</div>' +
+            '<div class="hc-detail-name">' + escH(item.name) + '</div>' +
+            '<div class="hc-rates">' +
+              '<div class="hc-rate-box"><div class="hc-rate-label">Day 1</div><div class="hc-rate-value">' + fmtPrice(item.d1) + '</div></div>' +
+              '<div class="hc-rate-box"><div class="hc-rate-label">Day 2</div><div class="hc-rate-value">' + fmtPrice(item.d2) + '</div></div>' +
+              '<div class="hc-rate-box"><div class="hc-rate-label">Day 3+</div><div class="hc-rate-value">' + fmtPrice(item.d3) + '</div></div>' +
+              '<div class="hc-rate-box hc-rate-box--we"><div class="hc-rate-label">Weekend</div><div class="hc-rate-value">' + fmtPrice(item.we) + '</div></div>' +
+            '</div>' +
+            '<p class="hc-vat-note">All prices ex VAT &nbsp;&middot;&nbsp; Longer than 1 week? <a href="mailto:hiredesk@nhh.ie">Email us</a> or call <a href="tel:0469022535">046 902 2535</a></p>' +
+            '<div class="hc-book-form">' +
+              '<h3>Enquire About This Machine</h3>' +
+              '<div class="hc-item-ref">Machine: <strong>' + escH(item.name) + '</strong></div>' +
+              '<div class="hc-form-row">' +
+                '<div class="hc-form-group"><label>Your Name *</label><input type="text" id="paBfName" required placeholder="John Murphy"/></div>' +
+                '<div class="hc-form-group"><label>Phone Number *</label><input type="tel" id="paBfPhone" required placeholder="086 123 4567"/></div>' +
+              '</div>' +
+              '<div class="hc-form-row">' +
+                '<div class="hc-form-group"><label>Email</label><input type="email" id="paBfEmail" placeholder="john@example.com"/></div>' +
+                '<div class="hc-form-group"><label>Duration</label><select id="paBfDuration"><option>1 Day</option><option>2 Days</option><option>3+ Days</option><option>Weekend</option><option>1+ Week (we\'ll quote)</option></select></div>' +
+              '</div>' +
+              '<div class="hc-form-row">' +
+                '<div class="hc-form-group"><label>Start Date</label><input type="date" id="paBfDate"/></div>' +
+                '<div class="hc-form-group"><label>Delivery / Collection</label><input type="text" id="paBfAddr" placeholder="Site address or collection from Navan"/></div>' +
+              '</div>' +
+              '<div class="hc-form-group hc-form-group--full"><label>Notes</label><textarea id="paBfNotes" rows="3" placeholder="Site access, ground conditions, heights required, etc."></textarea></div>' +
+              '<button class="btn btn-primary hc-submit-btn" onclick="paSubmit(this.dataset.name)" data-name="' + escH(item.name) + '">Send Enquiry</button>' +
+              '<p class="hc-or-call">Or email: <a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a> &nbsp;&middot;&nbsp; <a href="tel:0469022535">046 902 2535</a></p>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="pt-pane pt-specs-pane" style="display:none"><p class="pt-loading">Loading specs…</p></div>' +
+        '<div class="pt-pane pt-downloads-pane" style="display:none"><p class="pt-loading">Loading downloads…</p></div>' +
+      '</div>';
+    var di = document.getElementById('paBfDate');
+    if (di) di.min = new Date().toISOString().split('T')[0];
+    NHH_TABS.render(slug, document.getElementById('pt-bar-' + slug), document.querySelector('[data-slug="' + slug + '"]'));
+    paShow(3);
+  }
+
+  function paSubmit(itemName) {
+    var name  = document.getElementById('paBfName').value.trim();
+    var phone = document.getElementById('paBfPhone').value.trim();
+    if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+    var dur   = document.getElementById('paBfDuration').value;
+    var date  = document.getElementById('paBfDate').value;
+    var addr  = document.getElementById('paBfAddr').value;
+    var notes = document.getElementById('paBfNotes').value;
+    var subj  = encodeURIComponent('Access Lift Enquiry: ' + itemName);
+    var body  = encodeURIComponent('Machine: ' + itemName + '\nName: ' + name + '\nPhone: ' + phone + '\nDuration: ' + dur + (date ? '\nStart Date: ' + date : '') + (addr ? '\nDelivery: ' + addr : '') + (notes ? '\nNotes: ' + notes : ''));
+    var btn = document.querySelector('.hc-submit-btn');
+    if (btn) { btn.textContent = '\u2705 Ready to Send!'; btn.disabled = true; btn.style.background = '#22a84d'; }
+    var msg = document.createElement('div');
+    msg.className = 'hc-success';
+    msg.innerHTML = 'Hi <strong>' + escH(name) + '</strong>! Click below to open your email, or call <a href="tel:0469022535">046 902 2535</a>.<br><br><a href="mailto:hiredesk@nhh.ie?subject=' + subj + '&body=' + body + '" class="btn btn-primary" style="display:inline-block;margin-top:8px">&#128231; Open Email to Send</a>';
+    document.getElementById('paProdDetail').appendChild(msg);
+  }
+
+  paShow(1);
+
+  // ── Filter panel ───────────────────────────────────────────────────────────
+  var PA_MIN_PRICES = {"Diesel Boom Lifts": 250.0, "Electric Boom Lifts": 250.0, "Spider Lifts": 450.0, "Diesel Scissor Lifts": 250.0, "Electric Scissor Lifts": 85.0};
+
+  window.NHH.initFilter({
+    containerId: 'nhhFilter',
+    categories:  PA_CAT_NAMES,
+    getCards: function() {
+      return document.querySelectorAll('#paLevel1 .pa-group-card');
+    },
+    getCatName: function(card) {
+      return PA_CAT_NAMES[parseInt(card.dataset.idx)];
+    },
+    getMinPrice: function(card) {
+      return PA_MIN_PRICES[PA_CAT_NAMES[parseInt(card.dataset.idx)]] || 0;
+    },
+    onReset: function() {}
+  });
+  </script>
+
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
-        <div class="footer-logo">NHH</div>
-        <p>Navan Hire & Hardware<br>Whistlemount, Kells Road<br>Navan, Co. Meath, C15 FX6Y</p>
-        <p><a href="tel:0469022535">046 902 2535</a></p>
+        <img src="logo-footer.svg" alt="Navan Hire &amp; Hardware" class="footer-logo-img"/>
+        <p style="margin-top:14px;color:rgba(255,255,255,0.7)">Whistlemount, Kells Road<br>Navan, Co. Meath, C15 FX6Y</p>
+        <p><a href="tel:0469022535" style="color:#fff">046 902 2535</a></p>
+        <p><a href="mailto:hiredesk@nhh.ie" style="color:rgba(255,255,255,0.7)">hiredesk@nhh.ie</a></p>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4>Hire</h4>
         <ul>
-          <li><a href="hardware.html">Hardware & DIY</a></li>
-          <li><a href="hire.html">Plant & Tool Hire</a></li>
-          <li><a href="powered-access.html">Powered Access</a></li>
+          <li><a href="fleet.html">Hire Fleet</a></li>
+          <li><a href="hire.html">Plant &amp; Tool Hire</a></li>
+          <li><a href="powered-access.html">Access &amp; Spider Lifts</a></li>
+          <li><a href="telehandlers.html">Telehandlers</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
+          <li><a href="hardware.html">Hardware &amp; DIY</a></li>
           <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="https://www.nationaltrainingsolutions.ie" target="_blank">Safety Training</a></li>
+          <li><a href="account.html">Trade Account</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Opening Hours</h4>
-        <p>Mon–Fri: 7:00am – 5:00pm</p>
-        <p>Saturday: 8:30am – 1:00pm</p>
-        <p>Sunday: Closed</p>
+        <p style="color:rgba(255,255,255,0.7)">Mon&ndash;Fri: 7:00am &ndash; 5:00pm<br>Saturday: 8:30am &ndash; 1:00pm<br>Sunday: Closed</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/NavanHireHardware" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/navanhirehardware" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/navan-hire-hardware" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="container"><p>© 2026 Navan Hire & Hardware. All rights reserved.</p></div>
+      <div class="container">
+        <p>&copy; 2026 Navan Hire &amp; Hardware. All rights reserved. | 100% Irish Owned</p>
+      </div>
     </div>
   </footer>
+  <script src="prod-tabs.js"></script>
+  <script src="search.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

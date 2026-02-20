@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Telehandlers for Hire | Navan Hire &amp; Hardware</title>
+  <meta name="description" content="360 Roto, straight and buggyscopic telehandlers, forklifts and attachments for hire from Navan, Co. Meath."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>&#128222; <a href="tel:0469022535">046 902 2535</a></span>
+      <span>&#128336; Mon&ndash;Fri: 7am&ndash;5pm &nbsp;|&nbsp; Sat: 8:30am&ndash;1pm</span>
+      <span>&#128205; Kells Road, Navan, Co. Meath</span>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="Navan Hire &amp; Hardware" class="logo-img"/>
+      </a>
+            <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="hardware.html" class="nav-link">Hardware &amp; DIY</a>
+        <a href="telehandlers.html" class="nav-link active">Telehandlers</a>
+        <a href="hire.html" class="nav-link">Plant &amp; Tool Hire</a>
+        <a href="powered-access.html" class="nav-link">Access &amp; Spider Lifts</a>
+      </nav>
+      <div class="nhh-search-wrap">
+        <input type="search" id="nhhSearch" class="nhh-search-input" placeholder="Search equipment..." autocomplete="off" spellcheck="false"/>
+        <span class="nhh-search-icon">&#128269;</span>
+        <div class="nhh-search-results" id="nhhSearchResults"></div>
+      </div>
+      <a href="contact.html" class="btn btn-white header-cta">Get a Quote</a>
+      <a href="account.html" class="nhh-account-btn" title="Trade Login / Apply" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+        <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="hardware.html">Hardware & DIY</a>
+      <a href="telehandlers.html">Telehandlers</a>
+      <a href="hire.html">Plant & Tool Hire</a>
+      <a href="powered-access.html">Access & Spider Lifts</a>
+      <a href="contact.html">Get a Quote</a>
+      <div class="mobile-search-wrap">
+        <input type="search" id="nhhSearchMob" class="nhh-search-input" placeholder="Search all equipment..." autocomplete="off" spellcheck="false"/>
+        <div class="nhh-search-results" id="nhhSearchResultsMob"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="pa-hero">
+    <div class="container">
+      <nav class="hc-breadcrumb" id="thBreadcrumb">
+        <span class="hc-bc-item hc-bc-active">Telehandlers</span>
+      </nav>
+      <h1 id="thTitle">Telehandlers</h1>
+      <p id="thSubtitle">Choose a category below &mdash; click to see machines and rates.</p>
+    </div>
+  </section>
+
+  <div class="container hc-container">
+
+    <!-- FILTER PANEL -->
+    <div id="nhhFilter"></div>
+
+    <!-- LEVEL 1: CATEGORY TILES -->
+    <div id="thLevel1">
+      <div class="pa-group-grid">
+        <div class="pa-group-card" data-idx="0" onclick="thOpenCat(this)">
+          <!-- IMAGE SLOT: save photo as images/telehandlers/360-roto.jpg -->
+          <div class="pa-card-img" style="background-image:url('images/telehandlers/360-roto.jpg')">
+            <div class="pa-card-img-placeholder">
+              <span class="pa-card-img-icon">🔄</span>
+              <span class="pa-card-img-hint">&#128247; images/telehandlers/360-roto.jpg</span>
+            </div>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-title">360° Roto Telehandlers</div>
+            <div class="pa-card-desc">360° fully rotating telehandlers from 26m to 35m reach. Lift, place and rotate without repositioning.</div>
+            <div class="pa-card-meta">6 items</div>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+        <div class="pa-group-card" data-idx="1" onclick="thOpenCat(this)">
+          <!-- IMAGE SLOT: save photo as images/telehandlers/straight.jpg -->
+          <div class="pa-card-img" style="background-image:url('images/telehandlers/straight.jpg')">
+            <div class="pa-card-img-placeholder">
+              <span class="pa-card-img-icon">📏</span>
+              <span class="pa-card-img-hint">&#128247; images/telehandlers/straight.jpg</span>
+            </div>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-title">Straight Telehandlers</div>
+            <div class="pa-card-desc">Fixed-boom telehandlers from 14m to 20m reach. Reliable for block laying, roofing and material placement.</div>
+            <div class="pa-card-meta">3 items</div>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+        <div class="pa-group-card" data-idx="2" onclick="thOpenCat(this)">
+          <!-- IMAGE SLOT: save photo as images/telehandlers/buggyscopic.jpg -->
+          <div class="pa-card-img" style="background-image:url('images/telehandlers/buggyscopic.jpg')">
+            <div class="pa-card-img-placeholder">
+              <span class="pa-card-img-icon">🚜</span>
+              <span class="pa-card-img-hint">&#128247; images/telehandlers/buggyscopic.jpg</span>
+            </div>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-title">Buggyscopic Telehandlers</div>
+            <div class="pa-card-desc">Compact buggyscopic telehandlers from 4m to 9m. Highly manoeuvrable for confined sites and agricultural work.</div>
+            <div class="pa-card-meta">2 items</div>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+        <div class="pa-group-card" data-idx="3" onclick="thOpenCat(this)">
+          <!-- IMAGE SLOT: save photo as images/telehandlers/forklifts.jpg -->
+          <div class="pa-card-img" style="background-image:url('images/telehandlers/forklifts.jpg')">
+            <div class="pa-card-img-placeholder">
+              <span class="pa-card-img-icon">🏭</span>
+              <span class="pa-card-img-hint">&#128247; images/telehandlers/forklifts.jpg</span>
+            </div>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-title">Forklifts</div>
+            <div class="pa-card-desc">Electric and diesel counterbalance forklifts. 2 and 3 tonne capacity available.</div>
+            <div class="pa-card-meta">2 items</div>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+        <div class="pa-group-card" data-idx="4" onclick="thOpenCat(this)">
+          <!-- IMAGE SLOT: save photo as images/telehandlers/attachments.jpg -->
+          <div class="pa-card-img" style="background-image:url('images/telehandlers/attachments.jpg')">
+            <div class="pa-card-img-placeholder">
+              <span class="pa-card-img-icon">🔧</span>
+              <span class="pa-card-img-hint">&#128247; images/telehandlers/attachments.jpg</span>
+            </div>
+          </div>
+          <div class="pa-card-body">
+            <div class="pa-card-title">Telehandler Attachments</div>
+            <div class="pa-card-desc">Man baskets, jibs, winches and sweepers. Extend the capability of any telehandler on site.</div>
+            <div class="pa-card-meta">7 items</div>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEVEL 2: PRODUCT LIST -->
+    <div id="thLevel2" style="display:none">
+      <button class="hc-back-btn" onclick="thGoLevel1()">&#8592; Back to all categories</button>
+      <p class="hc-back-context" id="thBackCat"></p>
+      <div class="pa-product-list" id="thProdList"></div>
+    </div>
+
+    <!-- LEVEL 3: PRODUCT DETAIL -->
+    <div id="thLevel3" style="display:none">
+      <button class="hc-back-btn" onclick="thGoLevel2()">&#8592; Back to products</button>
+      <div id="thProdDetail"></div>
+    </div>
+
+  </div>
+
+  <section class="cta-band" style="margin-top:40px">
+    <div class="container cta-inner">
+      <div>
+        <h2>Not Sure Which Machine You Need?</h2>
+        <p>Call us and we'll advise on the right telehandler for your lift, reach and site conditions.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="tel:0469022535" class="btn btn-white btn-lg">&#128222; 046 902 2535</a>
+        <a href="contact.html" class="btn btn-outline-white btn-lg">Send Enquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  var TH_DATA = {"360° Roto Telehandlers": [{"name": "TELEPORTER 360 26 MTR 6 TON LIFT", "d1": "850", "d2": "1150", "d3": "1400", "we": "995"}, {"name": "TELEPORTER 360 30 MTR 6 TON LIFT", "d1": "1050", "d2": "1550", "d3": "1800", "we": "1250"}, {"name": "TELEPORTER 360 35 MTR 7 TON LIFT", "d1": "1150", "d2": "1750", "d3": "2100", "we": "1450"}, {"name": "MAGNI RTH 6.51 ROTO TELEHANDLER", "d1": "1550", "d2": "2150", "d3": "3350", "we": "1750"}, {"name": "MAGNI RTH 8.35 ROTO TELEHANDLER", "d1": "1150", "d2": "1750", "d3": "2100", "we": "1450"}, {"name": "MAGNI RTH 8.39 ROTO TELEHANDLER", "d1": "1350", "d2": "1950", "d3": "2500", "we": "1550"}], "Straight Telehandlers": [{"name": "TELEPORTER JCB 14mtr", "d1": "250", "d2": "325", "d3": "395", "we": "295"}, {"name": "TELEPORTER 17-18 MTR", "d1": "325", "d2": "475", "d3": "450", "we": "325"}, {"name": "TELEPORTER 20 MTR", "d1": "350", "d2": "495", "d3": "600", "we": "350"}], "Buggyscopic Telehandlers": [{"name": "TELEPORTER BUGGYSCOPIC", "d1": "250", "d2": "325", "d3": "395", "we": "295"}, {"name": "TELEPORTER 7M FARM HAND BUGGY", "d1": "250", "d2": "325", "d3": "395", "we": "250"}], "Forklifts": [{"name": "FORKLIFT 3 TON", "d1": "160", "d2": "250", "d3": "295", "we": "160"}, {"name": "FORKLIFT 2 TON ELECTRIC (HELI)", "d1": "120", "d2": "195", "d3": "250", "we": "150"}], "Telehandler Attachments": [{"name": "TELEPORTER 4 FT CAGE BASKET", "d1": "65", "d2": "120", "d3": "150", "we": "85"}, {"name": "P6000 PENCIL 2 HOOK JIB 6 TON", "d1": "65", "d2": "120", "d3": "150", "we": "85"}, {"name": "WINCH 5 TON", "d1": "65", "d2": "120", "d3": "150", "we": "85"}, {"name": "PC60 SHORT JIB 6 TON", "d1": "65", "d2": "120", "d3": "150", "we": "85"}, {"name": "PT2000 EXTENSION JIB C/W WINCH 2 TON", "d1": "65", "d2": "120", "d3": "150", "we": "85"}, {"name": "MAN BASKET", "d1": "100", "d2": "150", "d3": "195", "we": "125"}, {"name": "SWEEPER ATTACHMENT FOR TELEPORTER C/W WATER TANK", "d1": "100", "d2": "175", "d3": "250", "we": "125"}]};
+  var TH_CAT_NAMES = ["360° Roto Telehandlers", "Straight Telehandlers", "Buggyscopic Telehandlers", "Forklifts", "Telehandler Attachments"];
+  var TH_CAT_INFO = {"360° Roto Telehandlers": {"icon": "🔄", "desc": "360° fully rotating telehandlers from 26m to 35m reach. Lift, place and rotate without repositioning.", "img": "images/telehandlers/360-roto.jpg"}, "Straight Telehandlers": {"icon": "📏", "desc": "Fixed-boom telehandlers from 14m to 20m reach. Reliable for block laying, roofing and material placement.", "img": "images/telehandlers/straight.jpg"}, "Buggyscopic Telehandlers": {"icon": "🚜", "desc": "Compact buggyscopic telehandlers from 4m to 9m. Highly manoeuvrable for confined sites and agricultural work.", "img": "images/telehandlers/buggyscopic.jpg"}, "Forklifts": {"icon": "🏭", "desc": "Electric and diesel counterbalance forklifts. 2 and 3 tonne capacity available.", "img": "images/telehandlers/forklifts.jpg"}, "Telehandler Attachments": {"icon": "🔧", "desc": "Man baskets, jibs, winches and sweepers. Extend the capability of any telehandler on site.", "img": "images/telehandlers/attachments.jpg"}};
+
+  var thCurCat = null;
+
+  function fmtPrice(p) {
+    var v = parseFloat(p);
+    if (isNaN(v) || v === 0) return 'POA';
+    return '\u20ac' + (v === Math.floor(v) ? String(Math.floor(v)) : v.toFixed(2));
+  }
+  function escH(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function thShow(n) {
+    for (var i = 1; i <= 3; i++) {
+      var el = document.getElementById('thLevel' + i);
+      if (el) el.style.display = (i === n) ? 'block' : 'none';
+    }
+    var hero = document.querySelector('.pa-hero');
+    if (hero) window.scrollTo({top: hero.offsetTop - 80, behavior: 'smooth'});
+  }
+  function thSetHero(title, sub) {
+    var t = document.getElementById('thTitle');    if (t) t.textContent = title;
+    var s = document.getElementById('thSubtitle'); if (s) s.textContent = sub;
+  }
+  function thSetCrumb(parts) {
+    var bc = document.getElementById('thBreadcrumb');
+    if (!bc) return;
+    var h = '<span class="hc-bc-item hc-bc-home" onclick="thGoLevel1()">Telehandlers</span>';
+    if (parts.length >= 1) {
+      h += ' <span class="hc-bc-sep">&rsaquo;</span>';
+      h += ' <span class="hc-bc-item' + (parts.length === 1 ? ' hc-bc-active' : '') + '" onclick="thGoLevel2()">' + escH(parts[0]) + '</span>';
+    }
+    if (parts.length >= 2) {
+      h += ' <span class="hc-bc-sep">&rsaquo;</span>';
+      h += ' <span class="hc-bc-item hc-bc-active">' + escH(parts[1]) + '</span>';
+    }
+    bc.innerHTML = h;
+  }
+  function thGoLevel1() {
+    thSetHero('Telehandlers', 'Choose a category below \u2014 click to see machines and rates.');
+    thSetCrumb([]);
+    thShow(1);
+  }
+  function thGoLevel2() { if (thCurCat) thOpenCat(null, thCurCat); }
+
+  function thOpenCat(el, catName) {
+    var cat = catName || TH_CAT_NAMES[parseInt(el.dataset.idx)];
+    thCurCat = cat;
+    var items = TH_DATA[cat];
+    if (!items) return;
+    thSetHero(cat, items.length + ' item' + (items.length !== 1 ? 's' : '') + ' \u2014 click to see rates and enquire');
+    thSetCrumb([cat]);
+    var list = document.getElementById('thProdList');
+    var html = '';
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+      var slug = item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '');
+      var prodImg = 'images/telehandlers/products/' + slug + '.jpg';
+      html += '<div class="pa-prod-row" data-prodidx="' + i + '" onclick="thOpenProdByIdx(this)">';
+      html += '<div class="pa-prod-thumb" style="background-image:url(\'' + prodImg + '\')">';
+      html += '<div class="pa-prod-thumb-ph">&#128247;</div>';
+      html += '</div>';
+      html += '<div class="pa-prod-info">';
+      html += '<span class="hc-prod-name">' + escH(item.name) + '</span>';
+      html += '<span class="hc-prod-preview">From ' + fmtPrice(item.d1) + '/day</span>';
+      html += '</div>';
+      html += '<span class="hc-arrow">&#8250;</span>';
+      html += '</div>';
+    }
+    list.innerHTML = html;
+    document.getElementById('thBackCat').textContent = cat;
+    thShow(2);
+  }
+
+  function thOpenProdByIdx(el) {
+    thOpenProd(TH_DATA[thCurCat][parseInt(el.dataset.prodidx)]);
+  }
+
+  function thOpenProd(item) {
+    thSetHero(item.name, 'Hire rates and enquiry');
+    thSetCrumb([thCurCat, item.name]);
+    var slug = item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '');
+    var prodImg = 'images/telehandlers/products/' + slug + '.jpg';
+    var d = document.getElementById('thProdDetail');
+    d.innerHTML =
+      '<div class="pt-tab-bar" id="pt-bar-' + slug + '"></div>' +
+      '<div class="pt-tab-content" data-slug="' + slug + '">' +
+        '<div class="pt-pane pt-rates-pane">' +
+          '<div class="hc-detail">' +
+            '<div class="pa-product-hero-img" style="background-image:url(\'' + prodImg + '\')">' +
+              '<div class="pa-product-hero-ph">' +
+                '<span style="font-size:2.5rem">&#128247;</span>' +
+                '<p class="pa-img-hint" style="margin:8px 0 0">Save photo as: ' + prodImg + '</p>' +
+              '</div>' +
+            '</div>' +
+            '<div class="hc-detail-name">' + escH(item.name) + '</div>' +
+            '<div class="hc-rates">' +
+              '<div class="hc-rate-box"><div class="hc-rate-label">Day 1</div><div class="hc-rate-value">' + fmtPrice(item.d1) + '</div></div>' +
+              '<div class="hc-rate-box"><div class="hc-rate-label">Day 2</div><div class="hc-rate-value">' + fmtPrice(item.d2) + '</div></div>' +
+              '<div class="hc-rate-box"><div class="hc-rate-label">Day 3+</div><div class="hc-rate-value">' + fmtPrice(item.d3) + '</div></div>' +
+              '<div class="hc-rate-box hc-rate-box--we"><div class="hc-rate-label">Weekend</div><div class="hc-rate-value">' + fmtPrice(item.we) + '</div></div>' +
+            '</div>' +
+            '<p class="hc-vat-note">All prices ex VAT &nbsp;&middot;&nbsp; Longer than 1 week? <a href="mailto:hiredesk@nhh.ie">Email us</a> or call <a href="tel:0469022535">046 902 2535</a></p>' +
+            '<div class="hc-book-form">' +
+              '<h3>Enquire About This Machine</h3>' +
+              '<div class="hc-item-ref">Machine: <strong>' + escH(item.name) + '</strong></div>' +
+              '<div class="hc-form-row">' +
+                '<div class="hc-form-group"><label>Your Name *</label><input type="text" id="thBfName" required placeholder="John Murphy"/></div>' +
+                '<div class="hc-form-group"><label>Phone Number *</label><input type="tel" id="thBfPhone" required placeholder="086 123 4567"/></div>' +
+              '</div>' +
+              '<div class="hc-form-row">' +
+                '<div class="hc-form-group"><label>Email</label><input type="email" id="thBfEmail" placeholder="john@example.com"/></div>' +
+                '<div class="hc-form-group"><label>Duration</label><select id="thBfDuration"><option>1 Day</option><option>2 Days</option><option>3+ Days</option><option>Weekend</option><option>1+ Week (we\'ll quote)</option></select></div>' +
+              '</div>' +
+              '<div class="hc-form-row">' +
+                '<div class="hc-form-group"><label>Start Date</label><input type="date" id="thBfDate"/></div>' +
+                '<div class="hc-form-group"><label>Delivery / Collection</label><input type="text" id="thBfAddr" placeholder="Site address or collection from Navan"/></div>' +
+              '</div>' +
+              '<div class="hc-form-group hc-form-group--full"><label>Notes</label><textarea id="thBfNotes" rows="3" placeholder="Ground conditions, lifting requirements, attachments needed, etc."></textarea></div>' +
+              '<button class="btn btn-primary hc-submit-btn" onclick="thSubmit(this.dataset.name)" data-name="' + escH(item.name) + '">Send Enquiry</button>' +
+              '<p class="hc-or-call">Or email: <a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a> &nbsp;&middot;&nbsp; <a href="tel:0469022535">046 902 2535</a></p>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="pt-pane pt-specs-pane" style="display:none"><p class="pt-loading">Loading specs…</p></div>' +
+        '<div class="pt-pane pt-downloads-pane" style="display:none"><p class="pt-loading">Loading downloads…</p></div>' +
+      '</div>';
+    var di = document.getElementById('thBfDate');
+    if (di) di.min = new Date().toISOString().split('T')[0];
+    NHH_TABS.render(slug, document.getElementById('pt-bar-' + slug), document.querySelector('[data-slug="' + slug + '"]'));
+    thShow(3);
+  }
+
+  function thSubmit(itemName) {
+    var name  = document.getElementById('thBfName').value.trim();
+    var phone = document.getElementById('thBfPhone').value.trim();
+    if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+    var dur   = document.getElementById('thBfDuration').value;
+    var date  = document.getElementById('thBfDate').value;
+    var addr  = document.getElementById('thBfAddr').value;
+    var notes = document.getElementById('thBfNotes').value;
+    var subj  = encodeURIComponent('Telehandler Enquiry: ' + itemName);
+    var body  = encodeURIComponent('Machine: ' + itemName + '\nName: ' + name + '\nPhone: ' + phone + '\nDuration: ' + dur + (date ? '\nStart Date: ' + date : '') + (addr ? '\nDelivery: ' + addr : '') + (notes ? '\nNotes: ' + notes : ''));
+    var btn = document.querySelector('.hc-submit-btn');
+    if (btn) { btn.textContent = '\u2705 Ready to Send!'; btn.disabled = true; btn.style.background = '#22a84d'; }
+    var msg = document.createElement('div');
+    msg.className = 'hc-success';
+    msg.innerHTML = 'Hi <strong>' + escH(name) + '</strong>! Click below to open your email, or call <a href="tel:0469022535">046 902 2535</a>.<br><br><a href="mailto:hiredesk@nhh.ie?subject=' + subj + '&body=' + body + '" class="btn btn-primary" style="display:inline-block;margin-top:8px">&#128231; Open Email to Send</a>';
+    document.getElementById('thProdDetail').appendChild(msg);
+  }
+
+  thShow(1);
+
+  // ── Filter panel ───────────────────────────────────────────────────────────
+  var TH_MIN_PRICES = {"360° Roto Telehandlers": 850.0, "Straight Telehandlers": 250.0, "Buggyscopic Telehandlers": 250.0, "Forklifts": 120.0, "Telehandler Attachments": 65.0};
+
+  window.NHH.initFilter({
+    containerId: 'nhhFilter',
+    categories:  TH_CAT_NAMES,
+    getCards: function() {
+      return document.querySelectorAll('#thLevel1 .pa-group-card');
+    },
+    getCatName: function(card) {
+      return TH_CAT_NAMES[parseInt(card.dataset.idx)];
+    },
+    getMinPrice: function(card) {
+      return TH_MIN_PRICES[TH_CAT_NAMES[parseInt(card.dataset.idx)]] || 0;
+    },
+    onReset: function() {}
+  });
+  </script>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <img src="logo-footer.svg" alt="Navan Hire &amp; Hardware" class="footer-logo-img"/>
+        <p style="margin-top:14px;color:rgba(255,255,255,0.7)">Whistlemount, Kells Road<br>Navan, Co. Meath, C15 FX6Y</p>
+        <p><a href="tel:0469022535" style="color:#fff">046 902 2535</a></p>
+        <p><a href="mailto:hiredesk@nhh.ie" style="color:rgba(255,255,255,0.7)">hiredesk@nhh.ie</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Hire</h4>
+        <ul>
+          <li><a href="fleet.html">Hire Fleet</a></li>
+          <li><a href="hire.html">Plant &amp; Tool Hire</a></li>
+          <li><a href="powered-access.html">Access &amp; Spider Lifts</a></li>
+          <li><a href="telehandlers.html">Telehandlers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="hardware.html">Hardware &amp; DIY</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="account.html">Trade Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <p style="color:rgba(255,255,255,0.7)">Mon&ndash;Fri: 7:00am &ndash; 5:00pm<br>Saturday: 8:30am &ndash; 1:00pm<br>Sunday: Closed</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/NavanHireHardware" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/navanhirehardware" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/navan-hire-hardware" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Navan Hire &amp; Hardware. All rights reserved. | 100% Irish Owned</p>
+      </div>
+    </div>
+  </footer>
+  <script src="prod-tabs.js"></script>
+  <script src="search.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

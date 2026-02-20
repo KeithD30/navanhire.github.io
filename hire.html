@@ -8,280 +8,627 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
-  <style>
-    .hire-intro { padding: 60px 0 40px; }
-    .hire-intro p { max-width: 680px; color: var(--mid); margin-top: 16px; font-size: 1.05rem; }
-    .hire-categories { padding: 0 0 80px; }
-    .hire-cat { margin-bottom: 56px; }
-    .hire-cat-header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 20px;
-      padding-bottom: 14px;
-      border-bottom: 3px solid var(--red);
-    }
-    .hire-cat-icon { font-size: 2rem; }
-    .hire-cat-header h2 {
-      font-family: var(--font-head);
-      font-size: 1.7rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: var(--black);
-    }
-    .hire-items {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 16px;
-    }
-    .hire-item {
-      background: var(--light);
-      border-radius: 4px;
-      padding: 20px;
-      border-left: 3px solid transparent;
-      transition: all var(--transition);
-    }
-    .hire-item:hover {
-      border-left-color: var(--red);
-      background: var(--white);
-      box-shadow: var(--shadow);
-      transform: translateX(4px);
-    }
-    .hire-item h4 {
-      font-family: var(--font-head);
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-      color: var(--dark);
-      margin-bottom: 4px;
-    }
-    .hire-item p { font-size: 0.85rem; color: var(--mid); }
-    .hire-cta-box {
-      background: var(--dark);
-      border-radius: 6px;
-      padding: 40px;
-      text-align: center;
-      margin-bottom: 80px;
-    }
-    .hire-cta-box h3 {
-      font-family: var(--font-head);
-      font-size: 1.8rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: var(--white);
-      margin-bottom: 12px;
-    }
-    .hire-cta-box p { color: rgba(255,255,255,0.65); margin-bottom: 24px; }
-    .hire-cta-box .btn-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  </style>
 </head>
 <body>
   <div class="topbar">
     <div class="container topbar-inner">
-      <span>📞 <a href="tel:0469022535">046 902 2535</a></span>
-      <span>🕐 Mon–Fri: 7am–5pm &nbsp;|&nbsp; Sat: 8:30am–1pm</span>
-      <span>📍 Kells Road, Navan, Co. Meath</span>
+      <span>&#128222; <a href="tel:0469022535">046 902 2535</a></span>
+      <span>&#128336; Mon&ndash;Fri: 7am&ndash;5pm &nbsp;|&nbsp; Sat: 8:30am&ndash;1pm</span>
+      <span>&#128205; Kells Road, Navan, Co. Meath</span>
     </div>
   </div>
   <header class="header">
     <div class="container header-inner">
-      <a href="index.html" class="logo"><span class="logo-main">NHH</span><span class="logo-sub">Navan Hire & Hardware</span></a>
-      <nav class="nav">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="Navan Hire &amp; Hardware" class="logo-img"/>
+      </a>
+            <nav class="nav">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="hardware.html" class="nav-link">Hardware & DIY</a>
-        <a href="hire.html" class="nav-link active">Plant & Tool Hire</a>
-        <a href="powered-access.html" class="nav-link">Powered Access</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="careers.html" class="nav-link">Careers</a>
+        <a href="hardware.html" class="nav-link">Hardware &amp; DIY</a>
+        <a href="telehandlers.html" class="nav-link">Telehandlers</a>
+        <a href="hire.html" class="nav-link active">Plant &amp; Tool Hire</a>
+        <a href="powered-access.html" class="nav-link">Access &amp; Spider Lifts</a>
       </nav>
-      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
-      <button class="hamburger" id="hamburger">&#9776;</button>
+      <div class="nhh-search-wrap">
+        <input type="search" id="nhhSearch" class="nhh-search-input" placeholder="Search equipment..." autocomplete="off" spellcheck="false"/>
+        <span class="nhh-search-icon">&#128269;</span>
+        <div class="nhh-search-results" id="nhhSearchResults"></div>
+      </div>
+      <a href="contact.html" class="btn btn-white header-cta">Get a Quote</a>
+      <a href="account.html" class="nhh-account-btn" title="Trade Login / Apply" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
     </div>
-    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav" id="mobileNav">
       <a href="index.html">Home</a>
       <a href="hardware.html">Hardware & DIY</a>
+      <a href="telehandlers.html">Telehandlers</a>
       <a href="hire.html">Plant & Tool Hire</a>
-      <a href="powered-access.html">Powered Access</a>
-      <a href="contact.html">Contact</a>
-      <a href="careers.html">Careers</a>
+      <a href="powered-access.html">Access & Spider Lifts</a>
+      <a href="contact.html">Get a Quote</a>
+      <div class="mobile-search-wrap">
+        <input type="search" id="nhhSearchMob" class="nhh-search-input" placeholder="Search all equipment..." autocomplete="off" spellcheck="false"/>
+        <div class="nhh-search-results" id="nhhSearchResultsMob"></div>
+      </div>
     </div>
   </header>
 
-  <section class="page-hero">
-    <div class="container page-hero-content">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Plant & Tool Hire</div>
-      <h1>Plant & Tool Hire</h1>
-      <p>One of the North East's largest hire fleets — diggers, dumpers, breakers, generators, teleporters and much more. Delivering to Dublin and surrounding counties daily.</p>
+  <section class="hc-hero">
+    <div class="container">
+      <nav class="hc-breadcrumb" id="hcBreadcrumb">
+        <span class="hc-bc-item hc-bc-active">Plant &amp; Tool Hire</span>
+      </nav>
+      <h1 id="hcTitle">Plant &amp; Tool Hire</h1>
+      <p id="hcSubtitle">Choose a category below &mdash; 16 sections with daily, weekend and weekly rates.</p>
     </div>
   </section>
 
-  <div class="container">
-    <div class="hire-categories">
+  <div class="container hc-container">
 
-      <div class="hire-cat">
-        <div class="hire-cat-header">
-          <span class="hire-cat-icon">⛏️</span>
-          <h2>Diggers & Dumpers</h2>
+    <!-- FILTER PANEL -->
+    <div id="nhhFilter"></div>
+
+    <!-- LEVEL 1: SECTION TILES -->
+    <div id="hcLevel1">
+      <div class="hc-section-grid">
+      <div class="hc-section-card" data-idx="0" data-sub="true" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/breakers-drills-saws.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/breakers-drills-saws.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/breakers-drills-saws.jpg</span></div>
         </div>
-        <div class="hire-items">
-          <div class="hire-item"><h4>3 Ton Kubota Digger</h4><p>Compact mini excavator ideal for confined sites</p></div>
-          <div class="hire-item"><h4>5 Ton Kubota U55-4</h4><p>Versatile mid-size excavator for most groundwork</p></div>
-          <div class="hire-item"><h4>1 Ton High-Tip Dumper</h4><p>Agile dumper for moving materials around site</p></div>
-          <div class="hire-item"><h4>3 Ton Dumper</h4><p>Reliable workhorse for medium volume tasks</p></div>
-          <div class="hire-item"><h4>6 Ton Dumper</h4><p>High capacity for large excavation projects</p></div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Breakers, Drills &amp; Saws</h2>
+            <p>3 sub-categories &nbsp;&middot;&nbsp; 31 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
         </div>
       </div>
-
-      <div class="hire-cat">
-        <div class="hire-cat-header">
-          <span class="hire-cat-icon">🔨</span>
-          <h2>Breakers & Drilling</h2>
+      <div class="hc-section-card" data-idx="1" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/cleaning-equipment.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/cleaning-equipment.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/cleaning-equipment.jpg</span></div>
         </div>
-        <div class="hire-items">
-          <div class="hire-item"><h4>Electric Breakers</h4><p>Heavy-duty electric breakers for concrete demolition</p></div>
-          <div class="hire-item"><h4>Pneumatic Breakers</h4><p>Powerful air-powered breakers for hard materials</p></div>
-          <div class="hire-item"><h4>Core Drills</h4><p>Diamond core drills for precise hole cutting</p></div>
-          <div class="hire-item"><h4>Rotary Hammer Drills</h4><p>SDS drills for masonry and concrete</p></div>
-        </div>
-      </div>
-
-      <div class="hire-cat">
-        <div class="hire-cat-header">
-          <span class="hire-cat-icon">⚡</span>
-          <h2>Generators, Lighting & Welding</h2>
-        </div>
-        <div class="hire-items">
-          <div class="hire-item"><h4>Petrol Generators</h4><p>Portable generators from 2kVA to 10kVA</p></div>
-          <div class="hire-item"><h4>Diesel Generators</h4><p>Heavy-duty diesel units for sustained power needs</p></div>
-          <div class="hire-item"><h4>Lighting Towers</h4><p>LED and metal halide lighting for night work</p></div>
-          <div class="hire-item"><h4>Welding Sets</h4><p>MIG and arc welders available for hire</p></div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Cleaning Equipment</h2>
+            <p>7 categories &nbsp;&middot;&nbsp; 11 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
         </div>
       </div>
-
-      <div class="hire-cat">
-        <div class="hire-cat-header">
-          <span class="hire-cat-icon">💨</span>
-          <h2>Compressors & Air Tools</h2>
+      <div class="hc-section-card" data-idx="2" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/air-compressors.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/air-compressors.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/air-compressors.jpg</span></div>
         </div>
-        <div class="hire-items">
-          <div class="hire-item"><h4>Petrol Compressors</h4><p>Portable compressors for site use</p></div>
-          <div class="hire-item"><h4>Electric Compressors</h4><p>Quiet compressors for indoor applications</p></div>
-          <div class="hire-item"><h4>Nail Guns</h4><p>Pneumatic nail guns for framing and fixing</p></div>
-        </div>
-      </div>
-
-      <div class="hire-cat">
-        <div class="hire-cat-header">
-          <span class="hire-cat-icon">🏗️</span>
-          <h2>Concreting & Cutting</h2>
-        </div>
-        <div class="hire-items">
-          <div class="hire-item"><h4>Concrete Mixers</h4><p>Electric and petrol mixers in various drum sizes</p></div>
-          <div class="hire-item"><h4>Poker Vibrators</h4><p>Internal vibrators for concrete consolidation</p></div>
-          <div class="hire-item"><h4>Floor Saws</h4><p>Diamond blade saws for cutting concrete slabs</p></div>
-          <div class="hire-item"><h4>Disc Cutters</h4><p>Angle grinders and disc cutters for masonry</p></div>
-          <div class="hire-item"><h4>Block Splitters</h4><p>Hydraulic and manual block splitters</p></div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Air &amp; Compressors</h2>
+            <p>8 categories &nbsp;&middot;&nbsp; 9 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
         </div>
       </div>
-
-      <div class="hire-cat">
-        <div class="hire-cat-header">
-          <span class="hire-cat-icon">🔄</span>
-          <h2>Rollers & Compaction</h2>
+      <div class="hc-section-card" data-idx="3" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/rollers-compaction.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/rollers-compaction.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/rollers-compaction.jpg</span></div>
         </div>
-        <div class="hire-items">
-          <div class="hire-item"><h4>Plate Compactors</h4><p>Forward and reversible plate compactors</p></div>
-          <div class="hire-item"><h4>Trench Rammers</h4><p>Petrol rammers for confined areas</p></div>
-          <div class="hire-item"><h4>Ride-On Rollers</h4><p>Walk-behind and ride-on compaction rollers</p></div>
-        </div>
-      </div>
-
-      <div class="hire-cat">
-        <div class="hire-cat-header">
-          <span class="hire-cat-icon">💧</span>
-          <h2>Heating, Pumps, Cooling & Ventilation</h2>
-        </div>
-        <div class="hire-items">
-          <div class="hire-item"><h4>Diesel Space Heaters</h4><p>Indirect and direct fired heaters</p></div>
-          <div class="hire-item"><h4>Electric Fan Heaters</h4><p>Portable electric heating solutions</p></div>
-          <div class="hire-item"><h4>Water Pumps</h4><p>Submersible and centrifugal pumps for site drainage</p></div>
-          <div class="hire-item"><h4>Dehumidifiers</h4><p>Industrial dehumidifiers for drying out buildings</p></div>
-          <div class="hire-item"><h4>Air Movers</h4><p>High-volume fans for ventilation and drying</p></div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Rollers &amp; Compaction</h2>
+            <p>10 categories &nbsp;&middot;&nbsp; 11 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
         </div>
       </div>
-
-      <div class="hire-cat">
-        <div class="hire-cat-header">
-          <span class="hire-cat-icon">🪟</span>
-          <h2>Flooring & Sanding</h2>
+      <div class="hc-section-card" data-idx="4" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/concreting-cutting.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/concreting-cutting.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/concreting-cutting.jpg</span></div>
         </div>
-        <div class="hire-items">
-          <div class="hire-item"><h4>Drum Floor Sanders</h4><p>Large belt sanders for hardwood floors</p></div>
-          <div class="hire-item"><h4>Edge Sanders</h4><p>Disc sanders for edges and corners</p></div>
-          <div class="hire-item"><h4>Floor Grinders</h4><p>Diamond grinders for concrete floor preparation</p></div>
-        </div>
-      </div>
-
-      <div class="hire-cat">
-        <div class="hire-cat-header">
-          <span class="hire-cat-icon">🚛</span>
-          <h2>Trailers & Site Management</h2>
-        </div>
-        <div class="hire-items">
-          <div class="hire-item"><h4>Plant Trailers</h4><p>Heavy duty trailers for transporting equipment</p></div>
-          <div class="hire-item"><h4>Site Offices</h4><p>Portable site offices and welfare units</p></div>
-          <div class="hire-item"><h4>Toilets</h4><p>Self-contained portable toilet units</p></div>
-          <div class="hire-item"><h4>Barriers & Fencing</h4><p>Pedestrian barriers and temporary fencing panels</p></div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Concreting &amp; Cutting</h2>
+            <p>14 categories &nbsp;&middot;&nbsp; 18 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
         </div>
       </div>
-
-      <div class="hire-cta-box">
-        <h3>Not Sure What You Need?</h3>
-        <p>Our experienced team can advise you on the right equipment for your project and arrange fast delivery across Dublin and the North East.</p>
-        <div class="btn-row">
-          <a href="tel:0469022535" class="btn btn-primary btn-lg">📞 Call 046 902 2535</a>
-          <a href="contact.html" class="btn btn-outline-white btn-lg">Send Enquiry</a>
+      <div class="hc-section-card" data-idx="5" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/diggers-dumpers.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/diggers-dumpers.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/diggers-dumpers.jpg</span></div>
+        </div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Diggers &amp; Dumpers</h2>
+            <p>21 categories &nbsp;&middot;&nbsp; 24 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
         </div>
       </div>
-
+      <div class="hc-section-card" data-idx="6" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/flooring-sanding.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/flooring-sanding.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/flooring-sanding.jpg</span></div>
+        </div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Flooring &amp; Sanding</h2>
+            <p>9 categories &nbsp;&middot;&nbsp; 9 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+      </div>
+      <div class="hc-section-card" data-idx="7" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/gardening-groundscare.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/gardening-groundscare.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/gardening-groundscare.jpg</span></div>
+        </div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Gardening &amp; Groundscare</h2>
+            <p>15 categories &nbsp;&middot;&nbsp; 16 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+      </div>
+      <div class="hc-section-card" data-idx="8" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/generators-lighting-welding.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/generators-lighting-welding.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/generators-lighting-welding.jpg</span></div>
+        </div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Generators, Lighting &amp; Welding</h2>
+            <p>16 categories &nbsp;&middot;&nbsp; 18 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+      </div>
+      <div class="hc-section-card" data-idx="9" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/heating-pumps-ventilation.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/heating-pumps-ventilation.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/heating-pumps-ventilation.jpg</span></div>
+        </div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Heating, Pumps &amp; Ventilation</h2>
+            <p>14 categories &nbsp;&middot;&nbsp; 16 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+      </div>
+      <div class="hc-section-card" data-idx="10" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/miscellaneous-tools.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/miscellaneous-tools.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/miscellaneous-tools.jpg</span></div>
+        </div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Miscellaneous Tools</h2>
+            <p>26 categories &nbsp;&middot;&nbsp; 27 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+      </div>
+      <div class="hc-section-card" data-idx="11" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/plumbing-pipe-tools.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/plumbing-pipe-tools.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/plumbing-pipe-tools.jpg</span></div>
+        </div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Plumbing &amp; Pipe Tools</h2>
+            <p>14 categories &nbsp;&middot;&nbsp; 16 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+      </div>
+      <div class="hc-section-card" data-idx="12" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/scaffolding-ladders-access.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/scaffolding-ladders-access.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/scaffolding-ladders-access.jpg</span></div>
+        </div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Scaffolding, Ladders &amp; Access</h2>
+            <p>16 categories &nbsp;&middot;&nbsp; 20 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+      </div>
+      <div class="hc-section-card" data-idx="13" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/site-management-safety.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/site-management-safety.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/site-management-safety.jpg</span></div>
+        </div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Site Management &amp; Safety</h2>
+            <p>7 categories &nbsp;&middot;&nbsp; 18 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+      </div>
+      <div class="hc-section-card" data-idx="14" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/surveying-detection.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/surveying-detection.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/surveying-detection.jpg</span></div>
+        </div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Surveying &amp; Detection</h2>
+            <p>8 categories &nbsp;&middot;&nbsp; 8 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+      </div>
+      <div class="hc-section-card" data-idx="15" data-sub="false" onclick="openSection(this)">
+        <!-- IMAGE SLOT: images/hire/trailers-materials-handling.jpg -->
+        <div class="hc-section-card-img" style="background-image:url('images/hire/trailers-materials-handling.jpg')">
+          <div class="hc-section-card-img-ph"><span class="pa-img-hint">images/hire/trailers-materials-handling.jpg</span></div>
+        </div>
+        <div class="hc-section-card-content">
+          <div class="hc-section-info">
+            <h2>Trailers &amp; Materials Handling</h2>
+            <p>14 categories &nbsp;&middot;&nbsp; 18 items</p>
+          </div>
+          <span class="hc-arrow">&#8250;</span>
+        </div>
+      </div>
+      </div>
     </div>
+
+    <!-- LEVEL 2: SUB-CATEGORIES (Breakers only) -->
+    <div id="hcLevel2" style="display:none">
+      <button class="hc-back-btn" onclick="showLevel(1);updateBreadcrumb([])">&#8592; Back to all categories</button>
+      <div class="hc-cat-grid" id="hcSubcatGrid"></div>
+    </div>
+
+    <!-- LEVEL 3: CATEGORIES -->
+    <div id="hcLevel3" style="display:none">
+      <button class="hc-back-btn" id="hcBackBtn3" onclick="goBack3()">&#8592; Back</button>
+      <div class="hc-cat-grid" id="hcCatGrid"></div>
+    </div>
+
+    <!-- LEVEL 4: PRODUCT LIST -->
+    <div id="hcLevel4" style="display:none">
+      <button class="hc-back-btn" id="hcBackBtn4" onclick="showLevel(3)">&#8592; Back to categories</button>
+      <div class="hc-product-list" id="hcProductList"></div>
+    </div>
+
+    <!-- LEVEL 5: PRODUCT DETAIL -->
+    <div id="hcLevel5" style="display:none">
+      <button class="hc-back-btn" onclick="history.go(-1)">&#8592; Back to products</button>
+      <div id="hcProductDetail"></div>
+    </div>
+
   </div>
+
+  <script>
+  var HIRE_DATA     = {"Scaffolding, Ladders & Access": {"Acrow Props": [{"name": "ACROW  PROP TRENCH C-W PIN", "d1": "2", "d2": "4", "d3": "6", "we": "3"}, {"name": "ACROW PROP C/W PIN NO.2", "d1": "2", "d2": "4", "d3": "6", "we": "3"}, {"name": "ACROW PROP C/W PIN NO.3", "d1": "2", "d2": "4", "d3": "6", "we": "3"}, {"name": "ACROW PROP C/W PIN NO.4", "d1": "2", "d2": "4", "d3": "6", "we": "3"}], "Ladder 21Ft Roofing": [{"name": "LADDER 21ft ROOFING", "d1": "30", "d2": "60", "d3": "87", "we": "43.5"}], "Ladder 24 Ft Ext": [{"name": "LADDER 24 FT EXT", "d1": "30", "d2": "60", "d3": "87", "we": "43.5"}], "Ladder 6 Ft A Frame": [{"name": "LADDER 6 FT A FRAME", "d1": "28", "d2": "55", "d3": "65", "we": "35"}], "Scaffold Hoist 200 Kg (100Ft)": [{"name": "SCAFFOLD HOIST 200 KG (100FT)", "d1": "100", "d2": "150", "d3": "200", "we": "100"}], "Ladder 10Ft A Frame": [{"name": "LADDER 10FT A FRAME", "d1": "28", "d2": "56", "d3": "65", "we": "35"}], "Trestle 3Ft To 6Ft (No3)": [{"name": "TRESTLE 3FT TO 6 FT NO 3", "d1": "3", "d2": "6", "d3": "9", "we": "4.5"}], "Ladder 30 Ft Ext": [{"name": "LADDER 30FT", "d1": "35", "d2": "70", "d3": "105", "we": "52.5"}, {"name": "LADDER 28FT", "d1": "35", "d2": "70", "d3": "105", "we": "52.5"}], "Wall Support(Strong Boy)": [{"name": "WALL SUPPORT(STRONG BOY)", "d1": "2", "d2": "4", "d3": "6", "we": "3"}], "Podium Ladder 1.8 Mtrs-2.4 Mtre": [{"name": "PODIUM LADDER 1.8 MTRS-2.4 MTRE", "d1": "55", "d2": "100", "d3": "150", "we": "55"}], "Scaffolding Plank 8 Ft": [{"name": "SCAFFOLDING PLANK 8FT", "d1": "2", "d2": "4", "d3": "4", "we": "3"}], "Tower Scaffolding 8 X 5": [{"name": "TOWER SCAFFOLDING 8 X 5", "d1": "150", "d2": "225", "d3": "275", "we": "225"}], "Tower Scaffolding 4 X 2": [{"name": "TOWER SCAFFOLDING4X2", "d1": "105", "d2": "170", "d3": "210", "we": "150"}], "Walkway 18 Ft Youngman Board": [{"name": "WALKWAY 18 FT", "d1": "33", "d2": "40", "d3": "40", "we": "33"}], "Tower Scaffolding 8 X 3": [{"name": "TOWER SCAFFOLDING 8 X 3", "d1": "150", "d2": "225", "d3": "275", "we": "225"}], "Fall Arrest System": [{"name": "FALL ARREST SYSTEM", "d1": "150", "d2": "225", "d3": "295", "we": "165"}]}, "Site Management & Safety": {"Fencing Panels/Blocks/Clips": [{"name": "FENCE PANEL 3MTR X 2MTR", "d1": "3", "d2": "6", "d3": "7.5", "we": "4"}, {"name": "SOLID SECURITY FENCE PANEL 2.2", "d1": "3", "d2": "6", "d3": "7.5", "we": "4"}, {"name": "PLASTIC PEDESTRIAN BARRIER 2.MTR X 1.2MTR", "d1": "3", "d2": "6", "d3": "7.5", "we": "4"}, {"name": "STEEL HOARDING PANEL (2140 MM X 1980MM)", "d1": "8", "d2": "8", "d3": "8", "we": "8"}], "Rubbish Chute C/W 2 Chains": [{"name": "RUBBISH CHUTE C/W 2 CHAINS", "d1": "8", "d2": "16", "d3": "24", "we": "12"}], "Rubbish Chute Hopper X 1": [{"name": "RUBBISH CHUTE HOPPER X 1", "d1": "8", "d2": "16", "d3": "24", "we": "12"}], "Signs": [{"name": "SIGN (ARROW)", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"name": "SIGN (NO OVERTAKING) C/W STAND", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"name": "SIGN (RAMP AHEAD)", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"name": "SIGN (ROAD NARROWING)", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"name": "SIGN (SINGLE LINE TRAFFIC)", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"name": "SIGN (SLOW HEAVY MACH CROSSING", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"name": "SIGN (STOP AT RED LIGHT)", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"name": "SIGN (WAIT FOR GREEN)", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"name": "SIGN MEN AT WORK", "d1": "11", "d2": "11", "d3": "11", "we": "11"}], "Traffic Cone 1M": [{"name": "TRAFFIC CONE 1M", "d1": "1.5", "d2": "3", "d3": "4.5", "we": "2.5"}], "Traffic Lights C-W Module": [{"name": "TRAFFIC LIGHTS C-W MODULE", "d1": "95", "d2": "145", "d3": "195", "we": "125"}], "Water Filled Barrier Red/White": [{"name": "WATER FILLED BARRIER RED/WHITE", "d1": "5", "d2": "10", "d3": "10", "we": "5"}]}, "Miscellaneous Tools": {"Extension Lead 110V 40Mtr 2.5": [{"name": "LEAD 110V EXTENSION", "d1": "5", "d2": "10", "d3": "15", "we": "5"}], "Extension Lead 220V 40Mtr 2.5": [{"name": "LEAD 220V EXTENSION", "d1": "5", "d2": "10", "d3": "15", "we": "5"}, {"name": "EXTENSION  LEAD 220V 25MTR", "d1": "5", "d2": "10", "d3": "15", "we": "5"}], "Paint Sprayer Pot Type": [{"name": "PAINT SPRAYER POT TYPE", "d1": "45", "d2": "85", "d3": "110", "we": "65"}], "Strapping Unit (Metall": [{"name": "STRAPPING UNIT (METALl", "d1": "65", "d2": "130", "d3": "195", "we": "65"}], "Block Splitter": [{"name": "BLOCK SPLITTER", "d1": "28", "d2": "56", "d3": "84", "we": "45"}], "Bitumen Boiler Small": [{"name": "BITUMEN BOILER SMALL (C/W TORCH AND PROPANE REGULATOR", "d1": "30", "d2": "65", "d3": "90", "we": "30"}], "Bitumen Boiler Large": [{"name": "BITUMEN BOILER LARGE C/W BITUMENT TORCH AND REGULATOR", "d1": "35", "d2": "70", "d3": "95", "we": "35"}], "Engine Hoist 2 Ton On Frame": [{"name": "ENGINE HOIST", "d1": "50", "d2": "100", "d3": "150", "we": "50"}], "Generater 100 Kva": [{"name": "GENERATER 100 KVA", "d1": "250", "d2": "330", "d3": "375", "we": "250"}], "Hilti Vacuum Pump 110V": [{"name": "HILTI VACUUM PUMP 110V", "d1": "32", "d2": "50", "d3": "68", "we": "45"}], "Dust Supression Bottle": [{"name": "DUST SUPRESSION BOTTLE", "d1": "20", "d2": "30", "d3": "45", "we": "25"}], "Paint Sprayer Airless": [{"name": "PAINT SPRAYER AIRLESS", "d1": "113", "d2": "226", "d3": "339", "we": "113"}], "Vaccum Cleaner Industrial Type": [{"name": "VACCUM CLEANER INDUSTRIAL TYPE", "d1": "34", "d2": "68", "d3": "102", "we": "51"}], "Wallpaper Stripper": [{"name": "WALLPAPER STRIPPER", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}], "Wallpaper Spiker": [{"name": "WALLPAPER SPIKER", "d1": "6", "d2": "11", "d3": "17", "we": "6"}], "Duct Cable Rod (80Mtr)": [{"name": "DUCT CABLE ROD (80MTR)", "d1": "30", "d2": "60", "d3": "90", "we": "40"}], "Torch": [{"name": "TORCH SINGLE HEAD", "d1": "20", "d2": "40", "d3": "60", "we": "30"}], "Duct Cable Rod (250M)": [{"name": "DUCT CABLE ROD (250M)", "d1": "40", "d2": "80", "d3": "105", "we": "55"}], "Double Head Suction Pad": [{"name": "DOUBLE HEAD SUCTION PAID (PAIR 2) GLASS", "d1": "12", "d2": "24", "d3": "36", "we": "12"}], "Block  & Tackle": [{"name": "BLOCK & TACKLE", "d1": "30", "d2": "60", "d3": "60", "we": "30"}], "Hydraulic Pullers": [{"name": "HYDRAULIC PULLERS PRICE", "d1": "33", "d2": "66", "d3": "99", "we": "45"}], "Duct Cable Rod (60 Mtr)": [{"name": "DUCT CABLE ROD (60 MTR)", "d1": "30", "d2": "60", "d3": "90", "we": "40"}], "Cable Duct Rod 100 Mm": [{"name": "DUCT CABLE ROD (6 MM X 100 MTR)", "d1": "30", "d2": "60", "d3": "90", "we": "40"}], "Jib Extension": [{"name": "JIB EXTENSION", "d1": "65", "d2": "120", "d3": "150", "we": "85"}], "Pop Rivet Gun Lazy Tongs": [{"name": "POP RIVET GUN", "d1": "10", "d2": "20", "d3": "30", "we": "10"}], "Slab Lifter Battery Suction": [{"name": "SLAB LIFTER BATTERY SUCTION", "d1": "60", "d2": "120", "d3": "150", "we": "60"}]}, "Generators, Lighting & Welding": {"Transformer 10 Kva": [{"name": "TRANSFORMER 10 KVA", "d1": "25", "d2": "45", "d3": "60", "we": "30"}], "Transformer 3 Kva": [{"name": "TRANSFORMER 3 KVA", "d1": "5", "d2": "10", "d3": "15", "we": "7.5"}], "Transformer 5 Kva": [{"name": "TRANSFORMER 5 KVA", "d1": "17", "d2": "30", "d3": "30", "we": "20"}, {"name": "TRANSFORMER 3 KVA", "d1": "5", "d2": "10", "d3": "15", "we": "7.5"}], "Generator 5Kva Petrol": [{"name": "GENERATOR 6KVA DIESEL", "d1": "45", "d2": "90", "d3": "125", "we": "70"}, {"name": "GENERATOR 5KVA PETROL", "d1": "45", "d2": "90", "d3": "125", "we": "70"}], "Cat Signal Generator": [{"name": "CAT SIGNAL GENERATOR", "d1": "24", "d2": "48", "d3": "72", "we": "36"}], "Generator 13Kva Trolley Frame": [{"name": "GENERATOR 10 KVA", "d1": "65", "d2": "130", "d3": "160", "we": "95"}], "Generator 3.4 Kw": [{"name": "GENERATOR 3.4 KW", "d1": "30", "d2": "60", "d3": "81", "we": "45"}], "Generator 40 Kva": [{"name": "GENERATOR 40 KVA", "d1": "180", "d2": "260", "d3": "295", "we": "180"}], "Generator 6Kva Diesel": [{"name": "GENERATOR 6KVA DIESEL", "d1": "45", "d2": "90", "d3": "125", "we": "70"}], "Lighting Tower 10 Metre": [{"name": "LIGHTING TOWER 10 METRE", "d1": "140", "d2": "195", "d3": "225", "we": "165"}], "Welder Magic 200Amp 2Kva 110V": [{"name": "WELDER MAGIC 200AMP 2KVA 110V", "d1": "35", "d2": "70", "d3": "105", "we": "55"}], "Welder/Gen 180Amp Dc 4Kva .": [{"name": "WELDER/GEN 180AMP DC 4KVA .", "d1": "50", "d2": "100", "d3": "150", "we": "75"}], "Generator 20K 3 Phase": [{"name": "GENERATOR 20K 3 PHASE", "d1": "150", "d2": "210", "d3": "250", "we": "150"}], "Compressor Generator 130Cfm/6Kva": [{"name": "COMPRESSOR GENERATOR 130CFM/6KVA", "d1": "110", "d2": "210", "d3": "250", "we": "150"}], "Generator 60Kva Sdmo": [{"name": "GENERATOR 60KVA SDMO", "d1": "195", "d2": "280", "d3": "325", "we": "195"}], "Generator Sdmo 200Kva": [{"name": "GENERATOR SDMO 200KVA", "d1": "295", "d2": "375", "d3": "450", "we": "295"}]}, "Trailers & Materials Handling": {"Pallet Truck": [{"name": "PALLET TRUCK", "d1": "29", "d2": "60", "d3": "87", "we": "43.5"}], "Bowser 250 Gallon Road Tow": [{"name": "BOWSER 250 GALLON ROAD TOW", "d1": "75", "d2": "120", "d3": "150", "we": "75"}], "Block Grab C/W Fork Attachment": [{"name": "BLOCK GRAB C/W FORK ATTACHMENT", "d1": "70", "d2": "120", "d3": "150", "we": "70"}, {"name": "DOUBLE BLOCK GRAB C/W FORK ATTACHMENT", "d1": "75", "d2": "130", "d3": "160", "we": "75"}], "Kerb Grab Hydraulic": [{"name": "KERB GRAB HYDRAULIC", "d1": "125", "d2": "195", "d3": "250", "we": "150"}], "Trailer Box 10 X 5": [{"name": "TRAILER BOX 10 X 5", "d1": "100", "d2": "200", "d3": "260", "we": "120"}], "Trailer Car Transporter": [{"name": "TRAILER CAR TRANSPORTER", "d1": "100", "d2": "180", "d3": "235", "we": "120"}], "Trailer Tri Axel 14 X 6.6": [{"name": "TRAILER DUMPER TYPE 14 X 6.6", "d1": "100", "d2": "180", "d3": "250", "we": "120"}], "Trailer Plant 10' X 6": [{"name": "TRAILER PLANT 10' X 6", "d1": "90", "d2": "170", "d3": "230", "we": "100"}], "Machine Skates 20 Ton": [{"name": "MACHINE SKATES 20 TON", "d1": "60", "d2": "100", "d3": "125", "we": "80"}], "Road Plates 8X4": [{"name": "ROAD PLATE 8X4", "d1": "45", "d2": "45", "d3": "45", "we": "45"}, {"name": "ROAD PLATES 8X4", "d1": "45", "d2": "45", "d3": "45", "we": "45"}], "Trailer 10 X 6  Twin Axle Drop Sides": [{"name": "TRAILER", "d1": "85", "d2": "140", "d3": "180", "we": "85"}, {"name": "TRAILER DUMPER TYPE 14 X 6.6", "d1": "95", "d2": "180", "d3": "250", "we": "95"}, {"name": "TRAILER PLANT 10' X 6", "d1": "90", "d2": "170", "d3": "230", "we": "100"}], "Trailer 8Ft 2 \" X 4Ft 9\" Single Axle": [{"name": "TRAILER 8FT 2 \" X 4FT 9\" SINGLE AXLE", "d1": "65", "d2": "100", "d3": "140", "we": "70"}], "Bunded Fuel Bowser 900Ltrs": [{"name": "BOWSER HIRE RATE", "d1": "75", "d2": "120", "d3": "150", "we": "75"}], "Stone Rake (1 Tonne)": [{"name": "STONE RAKE (1 TONNE)", "d1": "30", "d2": "60", "d3": "80", "we": "55"}]}, "__sub__Breakers, Drills & Saws": {"Breaking": {"Hydraulic Power Pack & Hammer": [{"name": "HYDRAULIC POWER PACK & HAMMER", "d1": "55", "d2": "110", "d3": "160", "we": "82.5"}], "Hammer Kango Sds Max Drill": [{"name": "HAMMER KANGO MAKITA", "d1": "37", "d2": "74", "d3": "111", "we": "55"}, {"name": "BREAKER HAMMER H65", "d1": "40", "d2": "80", "d3": "120", "we": "40"}], "Hammer Heavy Duty": [{"name": "HAMMER/BREAKER HEAVY DUTY", "d1": "44", "d2": "88", "d3": "132", "we": "66"}], "Hammer/Breaker 25Kg (Extra Large)": [{"name": "HAMMER/BREAKER 35KG (EXTRA LARGE)", "d1": "60", "d2": "120", "d3": "160", "we": "65"}], "Cut & Break Saw": [{"name": "CUT AND BREAK SAW", "d1": "125", "d2": "200", "d3": "295", "we": "125"}]}, "Drilling": {"Drill Right Angle": [{"name": "DRILL RIGHT ANGLE", "d1": "29", "d2": "58", "d3": "87", "we": "43"}], "Drill Plaster Mixer Rge150": [{"name": "DRILL PLASTER MIXER RGE150", "d1": "34", "d2": "68", "d3": "102", "we": "51"}], "Drill Magnetic": [{"name": "DRILL MAGNETIC", "d1": "44", "d2": "88", "d3": "132", "we": "66"}], "Dd130 Hilti Wet Core Drill": [{"name": "DD130 HILTI WET CORE DRILL", "d1": "125", "d2": "185", "d3": "250", "we": "150"}], "Hilti Core Drill Dd200": [{"name": "HILTI CORE DRILL DD200", "d1": "145", "d2": "290", "d3": "415", "we": "210"}, {"name": "HILTI CORE DRILL DD250", "d1": "145", "d2": "290", "d3": "415", "we": "210"}], "Drill Sds Plus 110V": [{"name": "DRILL SDS PLUS", "d1": "23", "d2": "46", "d3": "66", "we": "33"}, {"name": "DRILL SDS MAX 110V", "d1": "40", "d2": "80", "d3": "110", "we": "55"}], "Impact Gun 1\"": [{"name": "IMPACT GUN 1\"", "d1": "44", "d2": "88", "d3": "132", "we": "44"}], "Impact Gun 1/2\" Battery": [{"name": "INPACT GUN 1/2\" BATTERY", "d1": "25", "d2": "50", "d3": "60", "we": "25"}], "Nailer (Secret Nailer)": [{"name": "NAILER (SECRET NAILER)", "d1": "29", "d2": "58", "d3": "87", "we": "43"}]}, "Sawing": {"Circular Saw 9\"": [{"name": "CIRCULAR SAW 9\"", "d1": "22", "d2": "44", "d3": "57", "we": "28"}], "Sabre Saw (Cordless)": [{"name": "SABRE SAW (CORDLESS)", "d1": "32", "d2": "64", "d3": "96", "we": "48"}], "Jigsaw 110V": [{"name": "JIGSAW ATLAS COPCO 110V", "d1": "22", "d2": "44", "d3": "66", "we": "33"}], "Saw  Chopsaw": [{"name": "SAW  CHOPSAW", "d1": "37", "d2": "74", "d3": "111", "we": "55.5"}], "Saw  Sabre Saw": [{"name": "SAW  SABRE SAW", "d1": "22", "d2": "44", "d3": "66", "we": "33"}], "Saw Brick & Tile (110V)": [{"name": "SAW BRICK & TILE (110V)", "d1": "69", "d2": "138", "d3": "207", "we": "103.5"}], "Tile Cutter Electric": [{"name": "TILE CUTTER ELECTRIC", "d1": "55", "d2": "110", "d3": "165", "we": "85"}, {"name": "TILE CUTTER ELECTRIC IND.", "d1": "55", "d2": "110", "d3": "165", "we": "85"}], "Tile Cutter Hand (Cut400) Lrg": [{"name": "TILE CUTTER HAND (CUT400) LRG", "d1": "27", "d2": "54", "d3": "81", "we": "40.5"}], "Table Saw": [{"name": "TABLE SAW 5\" MAKITA CIRCULAR", "d1": "50", "d2": "100", "d3": "150", "we": "75"}], "Angle Grinder 5\"": [{"name": "ANGLE GRINDER 5\"", "d1": "19", "d2": "38", "d3": "57", "we": "28.5"}], "Angle Grinder 9\" 110V": [{"name": "ANGLE GRINDER 9\" 110V", "d1": "22", "d2": "44", "d3": "66", "we": "33"}], "Plane Wood Electric": [{"name": "PLANE WOOD ELECTRIC", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}], "Router": [{"name": "ROUTER", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}]}}, "Cleaning Equipment": {"Leaf Blower Hand Held": [{"name": "LEAF BLOWER HAND HELD", "d1": "35", "d2": "70", "d3": "105", "we": "52.5"}], "Pressure Washer 3000 Psi. Cold": [{"name": "PRESSURE WASHER 3000 PSI. COLD", "d1": "59", "d2": "118", "d3": "177", "we": "88.5"}, {"name": "PRESSURE WASHER 2550 PSI DIESEL", "d1": "75", "d2": "150", "d3": "225", "we": "100"}], "Patio Cleaner 3000 Psi": [{"name": "PATIO CLEANER 3000 PSI", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}], "Pressure Washer Cold  2000 Psi": [{"name": "PRESSURE WASHER COLD  2000 PSI", "d1": "42", "d2": "84", "d3": "126", "we": "63"}], "Pressure Washer Hot": [{"name": "PRESSURE WASHER HOT", "d1": "80", "d2": "160", "d3": "240", "we": "120"}, {"name": "HOT BOX WATER HEATER", "d1": "80", "d2": "160", "d3": "240", "we": "120"}, {"name": "WASHER EXTENSION 5MTR LANCE", "d1": "15", "d2": "30", "d3": "45", "we": "22.5"}], "Pressure Washer Mobile Unit": [{"name": "PRESSURE WASH MOBILE UNIT PETROL", "d1": "92", "d2": "184", "d3": "276", "we": "138"}, {"name": "PRESSURE WASHER MOBILE UNIT DIESEL", "d1": "125", "d2": "250", "d3": "300", "we": "150"}], "Patio Cleaner 18\"": [{"name": "PATIO CLEANER 18\" WIDE", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}]}, "Diggers & Dumpers": {"Skidsteer Loader": [{"name": "SKIDSTEER LOADER", "d1": "225", "d2": "350", "d3": "425", "we": "250"}], "Digger 13 Ton": [{"name": "DIGGER 13 TON", "d1": "375", "d2": "575", "d3": "750", "we": "400"}], "Digger 5 Ton": [{"name": "DIGGER 5 TON", "d1": "295", "d2": "450", "d3": "550", "we": "330"}], "Digger 8 Ton": [{"name": "DIGGER 8 TON", "d1": "350", "d2": "520", "d3": "650", "we": "350"}], "Track Dumper 32\"": [{"name": "DUMPER TRACK  HIGH TIP", "d1": "130", "d2": "180", "d3": "235", "we": "130"}], "Dumper 4 Ton Swivel": [{"name": "DUMPER 3 TON SWIVEL SKIP", "d1": "120", "d2": "190", "d3": "270", "we": "150"}], "Dumper 6 Ton Swivel": [{"name": "DUMPER 6 TON SWIVEL SKIP", "d1": "195", "d2": "230", "d3": "295", "we": "195"}], "Dumper 9 Ton": [{"name": "DUMPER 9 TON 101\" WIDE", "d1": "200", "d2": "280", "d3": "350", "we": "200"}, {"name": "DUMPER 9 TON C/W CAB", "d1": "200", "d2": "280", "d3": "350", "we": "200"}], "Rock Breaker 13-14 Ton": [{"name": "ROCK BREAKER 12 TONNE", "d1": "220", "d2": "440", "d3": "440", "we": "220"}], "Rock Breaker 8 Ton": [{"name": "ROCK BREAKER 8 TONNE", "d1": "110", "d2": "220", "d3": "330", "we": "150"}], "Dumper 1 Ton": [{"name": "DUMPER 1 TON HIGH-TIP 48\"", "d1": "90", "d2": "150", "d3": "210", "we": "120"}], "Rock Breaker 5 Ton": [{"name": "ROCK BREAKER 5 TON DIGGER", "d1": "100", "d2": "132", "d3": "198", "we": "115"}], "Bobcat Fork Attachment": [{"name": "BOBCAT FORK ATTACHMENT", "d1": "45", "d2": "65", "d3": "80", "we": "55"}], "Skidsteer Sweeper Attachment C/W Water Tank": [{"name": "SWEEPER ATTACHMENT FOR SKIDSTEER C/W WATER TANK", "d1": "100", "d2": "175", "d3": "250", "we": "125"}, {"name": "SWEEPER ATTACHMENT FOR SKIDSTEER C/W WATER TAN", "d1": "100", "d2": "175", "d3": "250", "we": "125"}], "Skidsteer  Pallet Forks": [{"name": "SKIDSTEER PALLET FORKS", "d1": "35", "d2": "70", "d3": "85", "we": "55"}], "Rock Breaker 3 Ton": [{"name": "ROCK BREAKER 3 TON", "d1": "60", "d2": "120", "d3": "170", "we": "85"}], "Rock Breaker 1 Ton": [{"name": "ROCK BREAKER 1 TON", "d1": "55", "d2": "110", "d3": "160", "we": "75"}], "Rock Breaker 1.7 Ton": [{"name": "ROCK BREAKER 1.5 TON DIGGER", "d1": "55", "d2": "110", "d3": "160", "we": "75"}], "Digger 1 Ton": [{"name": "DIGGER 1 TON", "d1": "125", "d2": "250", "d3": "295", "we": "150"}], "Digger 1.7 Ton": [{"name": "DIGGER 1.7 TON", "d1": "135", "d2": "270", "d3": "315", "we": "165"}, {"name": "DIGGER 1.7 TON C/W CAB", "d1": "135", "d2": "270", "d3": "315", "we": "165"}], "Digger 3 Ton": [{"name": "DIGGER 3 TON", "d1": "160", "d2": "330", "d3": "425", "we": "230"}]}, "Flooring & Sanding": {"Carpet Stretcher": [{"name": "CARPET STRETCHER", "d1": "15", "d2": "25", "d3": "35", "we": "20"}], "Floor Scrubber 20\" Base": [{"name": "FLOOR SCRUBBER 20\" BASE", "d1": "50", "d2": "85", "d3": "125", "we": "65"}], "Floor Planer Diamond Petrol": [{"name": "FLOOR PLANER DIAMOND PETROL", "d1": "95", "d2": "150", "d3": "250", "we": "135"}], "Sander Square Orbital": [{"name": "SANDER SQUARE ORBITAL", "d1": "24", "d2": "48", "d3": "72", "we": "36"}], "Sander 4 1/2\" Belt": [{"name": "SANDER 4 1/2\" BELT", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}], "Sander Palm Orbital": [{"name": "SANDER PALM ORBITAL", "d1": "22", "d2": "44", "d3": "66", "we": "33"}], "Sander Floor  Buff Type": [{"name": "SANDER FLOOR  BUFF TYPE", "d1": "50", "d2": "100", "d3": "135", "we": "75"}], "Sander Floor Drum": [{"name": "SANDER FLOOR DRUM", "d1": "50", "d2": "100", "d3": "150", "we": "75"}], "Sander Floor Edger": [{"name": "SANDER FLOOR EDGER", "d1": "29", "d2": "58", "d3": "87", "we": "43"}]}, "Air & Compressors": {"Compressor 260 Cfm": [{"name": "COMPRESSOR ATLAS COPCO 260CFM", "d1": "180", "d2": "330", "d3": "395", "we": "225"}], "Compressor 180 Cfm": [{"name": "COMPRESSOR 180 CFM", "d1": "110", "d2": "210", "d3": "250", "we": "150"}], "Compressor 140 Cfm": [{"name": "COMPRESSOR 140 CFM", "d1": "110", "d2": "210", "d3": "250", "we": "150"}], "Compressor 95 Cfm": [{"name": "COMPRESSOR 95 CFM", "d1": "95", "d2": "135", "d3": "175", "we": "110"}], "Compressor Air Petrol 50 Ltr": [{"name": "COMPRESSOR HONDA ENG AIR 50 LIT", "d1": "58.5", "d2": "76.5", "d3": "120", "we": "58.5"}], "Compressor Air Electric 90 Ltr": [{"name": "COMPRESSOR AIR ELECTRIC 90 LTR", "d1": "35", "d2": "70", "d3": "110", "we": "45"}], "Road Hammer Large Mk20/21 Compressor Hammer": [{"name": "ROAD HAMMER LARGE MK20/21", "d1": "30", "d2": "60", "d3": "75", "we": "45"}], "Hammer Cp9 Or Sk10  Compressor Hammer": [{"name": "BREAKER HAMMER H65", "d1": "20", "d2": "35", "d3": "50", "we": "25"}, {"name": "ROAD HAMMER CP9 /  SK10 (LIGHT", "d1": "20", "d2": "35", "d3": "50", "we": "25"}]}, "Rollers & Compaction": {"Roller 15 Ton Single Drum": [{"name": "ROLLER 15 TONNE SINGLE DRUM", "d1": "395", "d2": "600", "d3": "750", "we": "450"}], "Roller 138 Twin Drum": [{"name": "ROLLER 138", "d1": "250", "d2": "370", "d3": "425", "we": "250"}], "Roller 120 Twin Drum": [{"name": "ROLLER 120 TWIN DRUM", "d1": "125", "d2": "250", "d3": "295", "we": "150"}], "Roller 90  Twin Drum": [{"name": "ROLLER 90  TWIN DRUM BOMAG", "d1": "115", "d2": "220", "d3": "250", "we": "135"}], "Star Roller": [{"name": "STAR ROLLER", "d1": "23", "d2": "46", "d3": "69", "we": "35"}], "Garden Roller": [{"name": "GARDEN ROLLER", "d1": "20", "d2": "40", "d3": "51", "we": "25"}], "Compactor 25\" Diesel For/Rev": [{"name": "COMPACTOR DIESEL FOR/REV 2550", "d1": "42", "d2": "84", "d3": "125", "we": "63"}], "Compactor 16\" Petrol": [{"name": "COMPACTOR 16\" wacker plate", "d1": "39", "d2": "79", "d3": "111", "we": "55"}, {"name": "COMPACTOR 16\" PETROL C/W  WATER TANK  (WACKER)", "d1": "39", "d2": "79", "d3": "111", "we": "55"}], "Compactor 14\" Petrol": [{"name": "COMPACTOR 14\" PETROL", "d1": "37", "d2": "74", "d3": "111", "we": "55"}], "Compactor Jumping Jack Petrol": [{"name": "COMPACTOR JUMPING JACK PETROL", "d1": "40", "d2": "80", "d3": "120", "we": "55"}]}, "Concreting & Cutting": {"Consaw 12\"": [{"name": "CONSAW (12\" TS 400) STIHL", "d1": "32", "d2": "64", "d3": "96", "we": "48"}], "Consaw 16\"": [{"name": "CONSAW 16\" TS 760 STIHL", "d1": "48", "d2": "95", "d3": "121", "we": "55"}], "Float Bull C/W 3 Handles": [{"name": "FLOAT BULL C/W 3 HANDLES", "d1": "35", "d2": "70", "d3": "102", "we": "51"}], "Cement Mixer Electric 1/2 Bag": [{"name": "CEMENT MIXER ELECTRIC 1/2 BAG", "d1": "30", "d2": "60", "d3": "90", "we": "43"}], "Cement Mixer Petrol 1/2 Bag": [{"name": "CEMENT MIXER PETROL 1/2 BAG", "d1": "30", "d2": "60", "d3": "90", "we": "43"}, {"name": "CEMENT MIXER ELECTRIC 1/2 BAG", "d1": "30", "d2": "60", "d3": "90", "we": "43"}], "Cement Mixer Diesel 2 Bag": [{"name": "CEMENT MIXER DIESEL 2 BAG", "d1": "50", "d2": "100", "d3": "150", "we": "73"}], "Moisture Meter Concrete": [{"name": "MOISTURE METER CONCRETE", "d1": "35", "d2": "70", "d3": "105", "we": "55"}], "Concrete Planer 7\" 110V Makita": [{"name": "CONCRETE PLANER 7\" 110V MAKITA", "d1": "66", "d2": "110", "d3": "145", "we": "80"}], "Poker Electric High Freq.": [{"name": "POKER ELECTRIC HIGH FREQ.", "d1": "44", "d2": "88", "d3": "132", "we": "66"}], "Roadsaw Concrete": [{"name": "ROADSAW CONCRETE", "d1": "59", "d2": "118", "d3": "177", "we": "88.5"}], "Scabbler (Tripple Head)": [{"name": "SCABBLER (TRIPPLE HEAD)", "d1": "35", "d2": "70", "d3": "105", "we": "55"}], "Stihl Tsa 230 9\" Consaw": [{"name": "STIHL TSA 230 9\" CONSAW", "d1": "32", "d2": "64", "d3": "96", "we": "48"}], "Concrete Skip": [{"name": "CONCRETE SKIP 3/4 METRE BANANA", "d1": "80", "d2": "125", "d3": "150", "we": "80"}, {"name": "CONCRETE SKIP (1 MTR/2 TON)", "d1": "80", "d2": "125", "d3": "150", "we": "80"}, {"name": "CONCRETE SKIP (1.5MTR/3 TON)", "d1": "80", "d2": "125", "d3": "150", "we": "80"}, {"name": "TIPPING SKIP HOLDS 2000 KG 15000 LTRS", "d1": "80", "d2": "125", "d3": "150", "we": "80"}], "Cement Mixer 4 Bag (Towable)": [{"name": "CEMENT MIXER 4 BAG (TOWABLE)", "d1": "60", "d2": "120", "d3": "160", "we": "80"}]}, "Surveying & Detection": {"Cat Scanner": [{"name": "CAT SCANNER", "d1": "35", "d2": "70", "d3": "105", "we": "52.5"}], "Cat Sonde Signal Unit": [{"name": "CAT SONDE SIGNAL UNIT", "d1": "20", "d2": "40", "d3": "60", "we": "30"}], "Metal Detector": [{"name": "METAL DETECTOR C/W DISC.", "d1": "29", "d2": "55", "d3": "83", "we": "43.5"}], "Laser Level 120Semi-Auto": [{"name": "LASER LEVEL 120SEMI-AUTO", "d1": "40", "d2": "80", "d3": "120", "we": "60"}], "Laser Level Gradiant": [{"name": "LASER LEVEL GRADIANT", "d1": "40", "d2": "80", "d3": "120", "we": "60"}], "Dumpy Level": [{"name": "DUMPY LEVEL", "d1": "25", "d2": "44", "d3": "65", "we": "25"}], "Sound Meter": [{"name": "SOUND METER", "d1": "30", "d2": "60", "d3": "90", "we": "45"}], "Measuring Wheel": [{"name": "MEASURING WHEEL C/W COUNTER", "d1": "25", "d2": "50", "d3": "75", "we": "25"}]}, "Heating, Pumps & Ventilation": {"De Humidifier Industrial": [{"name": "DE HUMIDIFIER INDUSTRIAL", "d1": "37", "d2": "74", "d3": "111", "we": "55"}], "Heater Medium Size Popane Gas": [{"name": "HEATER MEDIUM  PROPANE GAS", "d1": "35", "d2": "70", "d3": "105", "we": "45"}], "Heater Large Propane Gas": [{"name": "HEATER LARGE PROPANE GAS", "d1": "38", "d2": "76", "d3": "114", "we": "55"}], "Heater Large Space": [{"name": "HEATER LARGE SPACE", "d1": "38", "d2": "76", "d3": "114", "we": "55"}, {"name": "HEATER DIESEL EXTRA LARGE", "d1": "40", "d2": "80", "d3": "120", "we": "40"}], "Heat Gun": [{"name": "HEAT GUN", "d1": "15", "d2": "25", "d3": "35", "we": "18"}], "Water Pump 1\" Puddle  Elec.": [{"name": "WATER PUMP 1\" PUDDLE  ELEC.", "d1": "34", "d2": "68", "d3": "102", "we": "51"}], "Water Pump 2\" Submercible Elec": [{"name": "WATER PUMP 2\" SUBMERCIBLE ELEC", "d1": "34", "d2": "68", "d3": "102", "we": "51"}, {"name": "WATER PUMP 1\" PUDDLE  ELEC.", "d1": "34", "d2": "68", "d3": "102", "we": "51"}], "Water Pump 3\" Petrol Engine": [{"name": "WATER PUMP 3\" PETROL ENGINE", "d1": "48", "d2": "96", "d3": "144", "we": "72"}], "Extraction Fan C/W Ducting": [{"name": "EXTRACTION FAN C/W DUCTING", "d1": "40", "d2": "80", "d3": "120", "we": "50"}], "Heater Radient Diesel": [{"name": "HEATER RADIENT DIESEL", "d1": "54", "d2": "108", "d3": "162", "we": "81"}], "Water Pump 2\" Petrol Engine": [{"name": "WATER PUMP 2\" PETROL ENGINE", "d1": "34", "d2": "68", "d3": "102", "we": "51"}], "Pump Transfer 12V": [{"name": "PUMP TRANFFER 12V", "d1": "35", "d2": "70", "d3": "99", "we": "50"}], "Eletric Heater 32 Amp": [{"name": "ELETRIC HEATER", "d1": "30", "d2": "50", "d3": "66", "we": "40"}], "Infra Red Diesel Heater": [{"name": "INFRA RED DIESEL HEATER", "d1": "69", "d2": "138", "d3": "207", "we": "103.5"}]}, "Plumbing & Pipe Tools": {"Laser Pipe.17 Legs/2 Targets/1": [{"name": "LASER PIPE.17 LEGS/2 TARGETS/1", "d1": "60", "d2": "120", "d3": "140", "we": "80"}], "Pipe Bender Hydraulic": [{"name": "PIPE BENDER HYDRAULIC", "d1": "40", "d2": "75", "d3": "95", "we": "60"}], "Pipe Freeze Kit Electric 110V": [{"name": "PIPE FREEZE KIT ELECTRIC 110V", "d1": "60", "d2": "120", "d3": "180", "we": "90"}], "Pipe Threader Electric On Stan": [{"name": "PIPE THREADER ELECTRIC ON STAND", "d1": "125", "d2": "240", "d3": "290", "we": "150"}], "Pipe Vise & Stand": [{"name": "PIPE VISE & STAND", "d1": "20", "d2": "40", "d3": "60", "we": "30"}], "Stilson Wrench 48\"": [{"name": "STILSON WRENCH 48\"", "d1": "15", "d2": "30", "d3": "45", "we": "25"}], "Pipe Threader Hand R200 No.2": [{"name": "PIPE THREADER HAND R200 NO.2", "d1": "35", "d2": "55", "d3": "85", "we": "45"}], "Pipe Threader Hand R200 No.5": [{"name": "PIPE THREADER HAND R200 NO.5", "d1": "40", "d2": "60", "d3": "95", "we": "50"}], "Fernox  Mk111 Power Flushing Machine": [{"name": "FERNOX  MK111 POWER FLUSHING MACHINE", "d1": "44", "d2": "88", "d3": "130", "we": "81"}], "Solar Fill Pump": [{"name": "SOLAR FILL PUMP", "d1": "44", "d2": "88", "d3": "132", "we": "66"}, {"name": "FERNOX  MK111 POWER FLUSHING MACHINE", "d1": "44", "d2": "88", "d3": "130", "we": "81"}], "Alu-Pex Pipe Crimper (Rems)": [{"name": "ALU-PEX PIPE CRIMPER 16MM, 20MM, 26MM, 32MM", "d1": "35", "d2": "70", "d3": "95", "we": "48"}], "Stand Pipe": [{"name": "STAND PIPE (CLIP ON TYPE)", "d1": "11", "d2": "22", "d3": "33", "we": "15"}, {"name": "STAND PIPE BAYONET TYPE (CLIP ON TYPE)", "d1": "11", "d2": "22", "d3": "33", "we": "15"}], "Bar & Key": [{"name": "BAR & KEY", "d1": "25", "d2": "50", "d3": "75", "we": "25"}], "Water Test Adpator To Be Supplied With Washer": [{"name": "WATER TEST ADAPTOR TO BE SUPPLIED WITH PRESSURE WASHER", "d1": "43.33", "d2": "86.66", "d3": "129.99", "we": "43.33"}]}, "Gardening & Groundscare": {"Mower Self Drive 21\"": [{"name": "MOWER SELF DRIVE 21\"", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}], "Strimmer 26 Cc": [{"name": "STRIMMER 26 CC MITSUBISHI", "d1": "35", "d2": "70", "d3": "105", "we": "52.5"}], "Strimmer 43Cc Heavy Duty`": [{"name": "STRIMMER 43CC HEAVY DUTY`", "d1": "40", "d2": "80", "d3": "120", "we": "60"}], "Hedgecutter": [{"name": "HEDGECUTTER 30\" C/W GOGGLES", "d1": "40", "d2": "75", "d3": "115", "we": "60"}, {"name": "HEDGECUTTER STIHL 24\" HS45", "d1": "35", "d2": "70", "d3": "105", "we": "52.5"}], "Hedge Cutter Long Arm": [{"name": "HEDGE CUTTER LONG ARM", "d1": "47", "d2": "94", "d3": "141", "we": "70"}], "Lawn  Aerator": [{"name": "LAWN   AIRRATOR  24 \" PLUG TYP", "d1": "100", "d2": "190", "d3": "280", "we": "120"}], "Lawn Scarafier": [{"name": "LAWN SCARAFIER", "d1": "47", "d2": "94", "d3": "141", "we": "70.5"}], "Log Splitter Honda 40 Ton": [{"name": "LOG SPLITTER 40 TONNE", "d1": "155", "d2": "220", "d3": "300", "we": "170"}], "Post Hole Borer C-W Auger": [{"name": "POST HOLE BORER C-W AUGER", "d1": "59", "d2": "118", "d3": "177", "we": "88.5"}], "Post Driver Manual": [{"name": "POST DRIVER MANUAL", "d1": "25", "d2": "35", "d3": "50", "we": "30"}], "Rotovator Standard": [{"name": "ROTOVATOR STANDARD", "d1": "47", "d2": "94", "d3": "141", "we": "70.5"}], "Shredder 6\" Indusrlial Diesel": [{"name": "SHREDDER 6\" INDUSRLIAL DIESEL", "d1": "250", "d2": "400", "d3": "550", "we": "250"}], "Shredder 8\" Industrial Diesel": [{"name": "SHREDDER 8\" INDUSTRIAL DIESEL", "d1": "300", "d2": "500", "d3": "650", "we": "300"}], "Pole Pruner Saw": [{"name": "POLE PRUNER SAW (BLADE 12\")", "d1": "70", "d2": "140", "d3": "180", "we": "80"}], "Lawnseed Spreader": [{"name": "LAWNSEED SPREADER", "d1": "15", "d2": "22.5", "d3": "30", "we": "20"}]}};
+  var SECTION_NAMES = ["Breakers, Drills & Saws", "Cleaning Equipment", "Air & Compressors", "Rollers & Compaction", "Concreting & Cutting", "Diggers & Dumpers", "Flooring & Sanding", "Gardening & Groundscare", "Generators, Lighting & Welding", "Heating, Pumps & Ventilation", "Miscellaneous Tools", "Plumbing & Pipe Tools", "Scaffolding, Ladders & Access", "Site Management & Safety", "Surveying & Detection", "Trailers & Materials Handling"];
+  var SECTION_KEYS  = ["__sub__Breakers, Drills & Saws", "Cleaning Equipment", "Air & Compressors", "Rollers & Compaction", "Concreting & Cutting", "Diggers & Dumpers", "Flooring & Sanding", "Gardening & Groundscare", "Generators, Lighting & Welding", "Heating, Pumps & Ventilation", "Miscellaneous Tools", "Plumbing & Pipe Tools", "Scaffolding, Ladders & Access", "Site Management & Safety", "Surveying & Detection", "Trailers & Materials Handling"];
+
+  var currentSection = null;
+  var currentSubcat  = null;
+  var currentCat     = null;
+
+  function fmt(p) {
+    var v = parseFloat(p);
+    if (isNaN(v) || v === 0) return 'POA';
+    return '\u20ac' + (v === Math.floor(v) ? String(Math.floor(v)) : v.toFixed(2));
+  }
+  function escH(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function showLevel(n) {
+    [1,2,3,4,5].forEach(function(i) {
+      var el = document.getElementById('hcLevel' + i);
+      if (el) el.style.display = (i === n) ? 'block' : 'none';
+    });
+    var hero = document.querySelector('.hc-hero');
+    if (hero) window.scrollTo({top: hero.offsetTop - 80, behavior: 'smooth'});
+  }
+
+  function updateBreadcrumb(parts) {
+    var bc = document.getElementById('hcBreadcrumb');
+    var h = '<span class="hc-bc-item hc-bc-home" onclick="showLevel(1);updateBreadcrumb([])">Plant &amp; Tool Hire</span>';
+    if (parts[0]) {
+      h += ' <span class="hc-bc-sep">&rsaquo;</span>';
+      h += ' <span class="hc-bc-item' + (!parts[1] ? ' hc-bc-active' : '') + '" onclick="openSection(null,' + "'" + parts[0].replace(/'/g,"\\'") + "'" + ')">' + escH(parts[0]) + '</span>';
+    }
+    if (parts[1]) {
+      h += ' <span class="hc-bc-sep">&rsaquo;</span>';
+      h += ' <span class="hc-bc-item' + (!parts[2] ? ' hc-bc-active' : '') + '" onclick="openSubOrCat(' + "'" + parts[1].replace(/'/g,"\\'") + "'" + ')">' + escH(parts[1]) + '</span>';
+    }
+    if (parts[2]) {
+      h += ' <span class="hc-bc-sep">&rsaquo;</span>';
+      h += ' <span class="hc-bc-item' + (!parts[3] ? ' hc-bc-active' : '') + '" onclick="openCat(' + "'" + parts[2].replace(/'/g,"\\'") + "'" + ')">' + escH(parts[2]) + '</span>';
+    }
+    if (parts[3]) {
+      h += ' <span class="hc-bc-sep">&rsaquo;</span>';
+      h += ' <span class="hc-bc-item hc-bc-active">' + escH(parts[3]) + '</span>';
+    }
+    bc.innerHTML = h;
+  }
+
+  // ── Level 1 → open a section ──────────────────────────────────────────────
+  function openSection(el, secLabel) {
+    var label = secLabel || SECTION_NAMES[parseInt(el.dataset.idx)];
+    var isSub = el ? el.dataset.sub === 'true' : (label === 'Breakers, Drills & Saws');
+    var key   = isSub ? '__sub__' + label : label;
+    currentSection = label;
+    currentSubcat  = null;
+    currentCat     = null;
+    var data = HIRE_DATA[key];
+    if (!data) { console.error('No data for', key); return; }
+
+    document.getElementById('hcTitle').textContent = label;
+
+    if (isSub) {
+      // Show sub-category level (Level 2 sub)
+      var subcats = Object.keys(data);
+      document.getElementById('hcSubtitle').textContent = subcats.length + ' sub-categories';
+      var grid = document.getElementById('hcSubcatGrid');
+      var html = '';
+      subcats.forEach(function(sub, i) {
+        var total = Object.values(data[sub]).reduce(function(a, items) { return a + items.length; }, 0);
+        html += '<div class="hc-cat-card" data-subcatidx="' + i + '" onclick="openSubcatByIdx(this)">';
+        html += '<div class="hc-cat-name">' + escH(sub) + '</div>';
+        html += '<div class="hc-cat-count">' + total + ' item' + (total !== 1 ? 's' : '') + '</div>';
+        html += '<span class="hc-arrow">&#8250;</span>';
+        html += '</div>';
+      });
+      grid.innerHTML = html;
+      grid.dataset.subcatlist = JSON.stringify(subcats);
+      updateBreadcrumb([label]);
+      showLevel(2);
+    } else {
+      // Normal section: go straight to cat grid (Level 3)
+      var cats = Object.keys(data);
+      document.getElementById('hcSubtitle').textContent = cats.length + ' categories';
+      var grid = document.getElementById('hcCatGrid');
+      var html = '';
+      cats.forEach(function(cat, i) {
+        var count = data[cat].length;
+        html += '<div class="hc-cat-card" data-catidx="' + i + '" onclick="openCatByIdx(this)">';
+        html += '<div class="hc-cat-name">' + escH(cat) + '</div>';
+        html += '<div class="hc-cat-count">' + count + ' item' + (count !== 1 ? 's' : '') + '</div>';
+        html += '<span class="hc-arrow">&#8250;</span>';
+        html += '</div>';
+      });
+      grid.innerHTML = html;
+      grid.dataset.catlist = JSON.stringify(cats);
+      updateBreadcrumb([label]);
+      showLevel(3);
+    }
+  }
+
+  // ── Level 2 (sub-cat) → Level 3 (cat) ────────────────────────────────────
+  function openSubcatByIdx(el) {
+    var grid = document.getElementById('hcSubcatGrid');
+    var subcats = JSON.parse(grid.dataset.subcatlist);
+    openSubOrCat(subcats[parseInt(el.dataset.subcatidx)]);
+  }
+  function openSubOrCat(subName) {
+    currentSubcat = subName;
+    currentCat    = null;
+    var key  = '__sub__' + currentSection;
+    var data = HIRE_DATA[key][subName];
+    var cats = Object.keys(data);
+    document.getElementById('hcTitle').textContent    = subName;
+    document.getElementById('hcSubtitle').textContent = cats.length + ' categories';
+    var grid = document.getElementById('hcCatGrid');
+    var html = '';
+    cats.forEach(function(cat, i) {
+      var count = data[cat].length;
+      html += '<div class="hc-cat-card" data-catidx="' + i + '" onclick="openCatByIdx(this)">';
+      html += '<div class="hc-cat-name">' + escH(cat) + '</div>';
+      html += '<div class="hc-cat-count">' + count + ' item' + (count !== 1 ? 's' : '') + '</div>';
+      html += '<span class="hc-arrow">&#8250;</span>';
+      html += '</div>';
+    });
+    grid.innerHTML = html;
+    grid.dataset.catlist = JSON.stringify(cats);
+    updateBreadcrumb([currentSection, subName]);
+    showLevel(3);
+  }
+
+  // ── Level 3 (cat list) → Level 4 (product list) ───────────────────────────
+  function openCatByIdx(el) {
+    var grid = document.getElementById('hcCatGrid');
+    var cats = JSON.parse(grid.dataset.catlist);
+    openCat(cats[parseInt(el.dataset.catidx)]);
+  }
+  function openCat(cat) {
+    currentCat = cat;
+    var items;
+    if (currentSubcat) {
+      items = HIRE_DATA['__sub__' + currentSection][currentSubcat][cat];
+    } else {
+      items = HIRE_DATA[currentSection][cat];
+    }
+    if (!items) { console.error('No items for cat:', cat); return; }
+    document.getElementById('hcTitle').textContent    = cat;
+    document.getElementById('hcSubtitle').textContent = items.length + ' item' + (items.length !== 1 ? 's' : '') + ' \u2014 click to see rates';
+    var list = document.getElementById('hcProductList');
+    var html = '';
+    items.forEach(function(item, i) {
+      html += '<div class="hc-prod-row" data-prodidx="' + i + '" onclick="openProductByIdx(this)">';
+      html += '<span class="hc-prod-name">' + escH(item.name) + '</span>';
+      html += '<span class="hc-prod-preview">From ' + fmt(item.d1) + '/day</span>';
+      html += '<span class="hc-arrow">&#8250;</span>';
+      html += '</div>';
+    });
+    list.innerHTML = html;
+    var crumbs = currentSubcat ? [currentSection, currentSubcat, cat] : [currentSection, cat];
+    updateBreadcrumb(crumbs);
+    showLevel(4);
+  }
+
+  // ── Level 4 (product list) → Level 5 (detail) ────────────────────────────
+  function openProductByIdx(el) {
+    var items;
+    if (currentSubcat) {
+      items = HIRE_DATA['__sub__' + currentSection][currentSubcat][currentCat];
+    } else {
+      items = HIRE_DATA[currentSection][currentCat];
+    }
+    openProduct(items[parseInt(el.dataset.prodidx)]);
+  }
+  function openProduct(item) {
+    var crumbs = currentSubcat
+      ? [currentSection, currentSubcat, currentCat, item.name]
+      : [currentSection, currentCat, item.name];
+    updateBreadcrumb(crumbs);
+    document.getElementById('hcTitle').textContent    = item.name;
+    document.getElementById('hcSubtitle').textContent = 'Hire rates and booking enquiry';
+    var hireSlug = item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/, '');
+    var d = document.getElementById('hcProductDetail');
+    d.innerHTML =
+      '<div class="pt-tab-bar" id="pt-bar-' + hireSlug + '"></div>' +
+      '<div class="pt-tab-content" data-slug="' + hireSlug + '">' +
+        '<div class="pt-pane pt-rates-pane">' +
+          '<div class="hc-detail">' +
+            '<div class="hc-detail-name">' + escH(item.name) + '</div>' +
+            '<div class="hc-rates">' +
+              '<div class="hc-rate-box"><div class="hc-rate-label">Day 1</div><div class="hc-rate-value">' + fmt(item.d1) + '</div></div>' +
+              '<div class="hc-rate-box"><div class="hc-rate-label">Day 2</div><div class="hc-rate-value">' + fmt(item.d2) + '</div></div>' +
+              '<div class="hc-rate-box"><div class="hc-rate-label">Day 3+</div><div class="hc-rate-value">' + fmt(item.d3) + '</div></div>' +
+              '<div class="hc-rate-box hc-rate-box--we"><div class="hc-rate-label">Weekend</div><div class="hc-rate-value">' + fmt(item.we) + '</div></div>' +
+            '</div>' +
+            '<p class="hc-vat-note">All prices ex VAT &nbsp;&middot;&nbsp; Longer than 1 week? <a href="mailto:hiredesk@nhh.ie">Email us</a> or call <a href="tel:0469022535">046 902 2535</a></p>' +
+            '<div class="hc-book-form">' +
+              '<h3>Enquire / Book</h3>' +
+              '<div class="hc-item-ref">Item: <strong>' + escH(item.name) + '</strong></div>' +
+              '<div class="hc-form-row">' +
+                '<div class="hc-form-group"><label>Your Name *</label><input type="text" id="hcBfName" required placeholder="John Murphy"/></div>' +
+                '<div class="hc-form-group"><label>Phone Number *</label><input type="tel" id="hcBfPhone" required placeholder="086 123 4567"/></div>' +
+              '</div>' +
+              '<div class="hc-form-row">' +
+                '<div class="hc-form-group"><label>Email</label><input type="email" id="hcBfEmail" placeholder="john@example.com"/></div>' +
+                '<div class="hc-form-group"><label>Duration</label><select id="hcBfDuration"><option>1 Day</option><option>2 Days</option><option>3+ Days</option><option>Weekend</option><option>1+ Week (we\'ll quote)</option></select></div>' +
+              '</div>' +
+              '<div class="hc-form-row">' +
+                '<div class="hc-form-group"><label>Start Date</label><input type="date" id="hcBfDate"/></div>' +
+                '<div class="hc-form-group"><label>Delivery / Collection</label><input type="text" id="hcBfAddr" placeholder="Site address or collection from Navan"/></div>' +
+              '</div>' +
+              '<div class="hc-form-group hc-form-group--full"><label>Notes</label><textarea id="hcBfNotes" rows="3" placeholder="Any access issues, special requirements, etc."></textarea></div>' +
+              '<button class="btn btn-primary hc-submit-btn" onclick="submitEnquiry(this.dataset.name)" data-name="' + escH(item.name) + '">Send Enquiry</button>' +
+              '<p class="hc-or-call">Or email: <a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a> &nbsp;&middot;&nbsp; <a href="tel:0469022535">046 902 2535</a></p>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="pt-pane pt-specs-pane" style="display:none"><p class="pt-loading">Loading specs…</p></div>' +
+        '<div class="pt-pane pt-downloads-pane" style="display:none"><p class="pt-loading">Loading downloads…</p></div>' +
+      '</div>';
+    var di = document.getElementById('hcBfDate');
+    if (di) di.min = new Date().toISOString().split('T')[0];
+    NHH_TABS.render(hireSlug, document.getElementById('pt-bar-' + hireSlug), document.querySelector('[data-slug="' + hireSlug + '"]'));
+    showLevel(5);
+  }
+
+  function submitEnquiry(itemName) {
+    var name  = document.getElementById('hcBfName').value.trim();
+    var phone = document.getElementById('hcBfPhone').value.trim();
+    if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+    var dur   = document.getElementById('hcBfDuration').value;
+    var date  = document.getElementById('hcBfDate').value;
+    var addr  = document.getElementById('hcBfAddr').value;
+    var notes = document.getElementById('hcBfNotes').value;
+    var subj  = encodeURIComponent('Hire Enquiry: ' + itemName);
+    var body  = encodeURIComponent('Item: ' + itemName + '\nName: ' + name + '\nPhone: ' + phone + '\nDuration: ' + dur + (date ? '\nStart Date: ' + date : '') + (addr ? '\nDelivery: ' + addr : '') + (notes ? '\nNotes: ' + notes : ''));
+    var btn = document.querySelector('.hc-submit-btn');
+    if (btn) { btn.textContent = '\u2705 Ready to Send!'; btn.disabled = true; btn.style.background = '#22a84d'; }
+    var msg = document.createElement('div');
+    msg.className = 'hc-success';
+    msg.innerHTML = 'Hi <strong>' + escH(name) + '</strong>! Click below to send your enquiry, or call <a href="tel:0469022535">046 902 2535</a>.<br><br><a href="mailto:hiredesk@nhh.ie?subject=' + subj + '&body=' + body + '" class="btn btn-primary" style="display:inline-block;margin-top:8px">&#128231; Open Email to Send</a>';
+    document.getElementById('hcProductDetail').appendChild(msg);
+  }
+
+
+  function goBack3() {
+    if (currentSubcat) { showLevel(2); } else { showLevel(1); updateBreadcrumb([]); }
+  }
+  showLevel(1);
+
+  // ── Filter panel ───────────────────────────────────────────────────────────
+  var HIRE_MIN_PRICES = {"Breakers, Drills & Saws": 19.0, "Cleaning Equipment": 15.0, "Air & Compressors": 20.0, "Rollers & Compaction": 20.0, "Concreting & Cutting": 30.0, "Diggers & Dumpers": 35.0, "Flooring & Sanding": 15.0, "Gardening & Groundscare": 15.0, "Generators, Lighting & Welding": 5.0, "Heating, Pumps & Ventilation": 15.0, "Miscellaneous Tools": 5.0, "Plumbing & Pipe Tools": 11.0, "Scaffolding, Ladders & Access": 2.0, "Site Management & Safety": 1.5, "Surveying & Detection": 20.0, "Trailers & Materials Handling": 29.0};
+
+  window.NHH.initFilter({
+    containerId: 'nhhFilter',
+    categories:  SECTION_NAMES,
+    getCards: function() {
+      return document.querySelectorAll('#hcLevel1 .hc-section-card');
+    },
+    getCatName: function(card) {
+      return SECTION_NAMES[parseInt(card.dataset.idx)];
+    },
+    getMinPrice: function(card) {
+      return HIRE_MIN_PRICES[SECTION_NAMES[parseInt(card.dataset.idx)]] || 0;
+    },
+    onReset: function() {}
+  });
+  </script>
 
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
-        <div class="footer-logo">NHH</div>
-        <p>Navan Hire & Hardware<br>Whistlemount, Kells Road<br>Navan, Co. Meath, C15 FX6Y</p>
-        <p><a href="tel:0469022535">046 902 2535</a></p>
+        <img src="logo-footer.svg" alt="Navan Hire &amp; Hardware" class="footer-logo-img"/>
+        <p style="margin-top:14px;color:rgba(255,255,255,0.7)">Whistlemount, Kells Road<br>Navan, Co. Meath, C15 FX6Y</p>
+        <p><a href="tel:0469022535" style="color:#fff">046 902 2535</a></p>
+        <p><a href="mailto:hiredesk@nhh.ie" style="color:rgba(255,255,255,0.7)">hiredesk@nhh.ie</a></p>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4>Hire</h4>
         <ul>
-          <li><a href="hardware.html">Hardware & DIY</a></li>
-          <li><a href="hire.html">Plant & Tool Hire</a></li>
-          <li><a href="powered-access.html">Powered Access</a></li>
+          <li><a href="fleet.html">Hire Fleet</a></li>
+          <li><a href="hire.html">Plant &amp; Tool Hire</a></li>
+          <li><a href="powered-access.html">Access &amp; Spider Lifts</a></li>
+          <li><a href="telehandlers.html">Telehandlers</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
+          <li><a href="hardware.html">Hardware &amp; DIY</a></li>
           <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="https://www.nationaltrainingsolutions.ie" target="_blank">Safety Training</a></li>
+          <li><a href="account.html">Trade Account</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Opening Hours</h4>
-        <p>Mon–Fri: 7:00am – 5:00pm</p>
-        <p>Saturday: 8:30am – 1:00pm</p>
-        <p>Sunday: Closed</p>
+        <p style="color:rgba(255,255,255,0.7)">Mon&ndash;Fri: 7:00am &ndash; 5:00pm<br>Saturday: 8:30am &ndash; 1:00pm<br>Sunday: Closed</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/NavanHireHardware" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/navanhirehardware" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/navan-hire-hardware" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="container"><p>© 2026 Navan Hire & Hardware. All rights reserved.</p></div>
+      <div class="container">
+        <p>&copy; 2026 Navan Hire &amp; Hardware. All rights reserved. | 100% Irish Owned</p>
+      </div>
     </div>
   </footer>
+  <script src="prod-tabs.js"></script>
+  <script src="search.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

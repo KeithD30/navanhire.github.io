@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trade Account | Navan Hire &amp; Hardware</title>
+  <meta name="description" content="Log in or apply for a trade credit account with Navan Hire &amp; Hardware."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>&#128222; <a href="tel:0469022535">046 902 2535</a></span>
+      <span>&#128336; Mon&ndash;Fri: 7am&ndash;5pm &nbsp;|&nbsp; Sat: 8:30am&ndash;1pm</span>
+      <span>&#128205; Kells Road, Navan, Co. Meath</span>
+    </div>
+  </div>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="Navan Hire &amp; Hardware" class="logo-img"/>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="fleet.html" class="nav-link">Hire Fleet</a>
+        <a href="hardware.html" class="nav-link">Hardware &amp; DIY</a>
+        <a href="telehandlers.html" class="nav-link">Telehandlers</a>
+        <a href="hire.html" class="nav-link">Plant &amp; Tool Hire</a>
+        <a href="powered-access.html" class="nav-link">Access &amp; Spider Lifts</a>
+              <a href="account.html" class="nav-link active">My Account</a>
+      </nav>
+      <div class="nhh-search-wrap">
+        <input type="search" id="nhhSearch" class="nhh-search-input" placeholder="Search equipment..." autocomplete="off" spellcheck="false"/>
+        <span class="nhh-search-icon">&#128269;</span>
+        <div class="nhh-search-results" id="nhhSearchResults"></div>
+      </div>
+      <a href="contact.html" class="btn btn-white header-cta">Get a Quote</a>
+      <a href="account.html" class="nhh-account-btn nhh-account-btn--active" title="Trade Login / Apply" aria-label="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="4"/>
+          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="fleet.html">Hire Fleet</a>
+      <a href="hardware.html">Hardware & DIY</a>
+      <a href="telehandlers.html">Telehandlers</a>
+      <a href="hire.html">Plant & Tool Hire</a>
+      <a href="powered-access.html">Access & Spider Lifts</a>
+      <a href="contact.html">Get a Quote</a>
+      <a href="account.html">My Account</a>
+      <div class="mobile-search-wrap">
+        <input type="search" id="nhhSearchMob" class="nhh-search-input" placeholder="Search all equipment..." autocomplete="off" spellcheck="false"/>
+        <div class="nhh-search-results" id="nhhSearchResultsMob"></div>
+      </div>
+    </div>
+  </header>
+  <section class="pa-hero">
+    <div class="container">
+      <div class="hc-breadcrumb"><a href="index.html" class="hc-bc-item">Home</a> <span class="hc-bc-sep">&rsaquo;</span> <span class="hc-bc-item hc-bc-active">Trade Account</span></div>
+      <h1>Trade Account</h1>
+      <p>Log in to your existing account, or apply for a new trade credit account.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="account-grid">
+
+      <!-- LOGIN PANEL -->
+      <div class="account-panel account-panel--login">
+        <div class="account-panel-header">
+          <div class="account-panel-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+          </div>
+          <div>
+            <h2>Customer Login</h2>
+            <p>Access your account, order history and invoices.</p>
+          </div>
+        </div>
+        <form class="account-form" onsubmit="handleLogin(event)">
+          <div class="af-group">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" id="loginEmail" placeholder="you@company.ie" required autocomplete="email"/>
+          </div>
+          <div class="af-group">
+            <label for="loginPass">Password</label>
+            <div class="af-pass-wrap">
+              <input type="password" id="loginPass" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" required autocomplete="current-password"/>
+              <button type="button" class="af-pass-toggle" onclick="togglePass('loginPass',this)" aria-label="Show/hide password">&#128065;</button>
+            </div>
+          </div>
+          <div class="af-row af-row--spread">
+            <label class="af-check"><input type="checkbox"/> Keep me logged in</label>
+            <a href="mailto:hiredesk@nhh.ie?subject=Password Reset Request" class="af-link">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary af-submit">Log In</button>
+          <p class="af-note">New to NHH? <a href="#apply" class="af-link" onclick="showApplyForm();return false;">Apply for a trade account &darr;</a></p>
+        </form>
+        <div class="af-msg" id="loginMsg" style="display:none"></div>
+      </div>
+
+      <!-- APPLY CTA — shown by default, hides when form opens -->
+      <div class="account-apply-cta" id="applyCta">
+        <div class="aac-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <path d="M14 2v6h6"/><path d="M12 11v6m-3-3h6"/>
+          </svg>
+        </div>
+        <h3>Apply for a Trade Account</h3>
+        <p>Get access to trade pricing, 30-day invoicing and priority hire availability across our full fleet.</p>
+        <ul class="aac-benefits">
+          <li>&#10003;&nbsp; Trade pricing on all hire &amp; hardware</li>
+          <li>&#10003;&nbsp; 30-day credit terms</li>
+          <li>&#10003;&nbsp; Priority machine availability</li>
+          <li>&#10003;&nbsp; Dedicated account manager</li>
+        </ul>
+        <button class="btn btn-primary aac-btn" onclick="showApplyForm()">Open Application Form</button>
+      </div>
+
+      <!-- APPLICATION FORM — hidden until button clicked -->
+      <div class="account-panel account-panel--apply" id="apply">
+        <div class="account-panel-header">
+          <div class="account-panel-icon account-panel-icon--red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <path d="M14 2v6h6"/><path d="M12 11v6m-3-3h6"/>
+            </svg>
+          </div>
+          <div>
+            <h2>Credit Application &mdash; Trade</h2>
+            <p>Click each section to expand and complete it. All fields marked * are required.</p>
+          </div>
+        </div>
+
+        <form class="account-form" id="applyForm" onsubmit="handleApply(event)">
+
+          <!-- ACCORDION 1: Business Details -->
+          <div class="af-acc af-acc--open" id="acc-biz">
+            <button type="button" class="af-acc-hdr" onclick="toggleAcc('biz')">
+              <span class="af-acc-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              </span>
+              <span class="af-acc-titles">
+                <span class="af-acc-title">Business Details</span>
+                <span class="af-acc-sub">Company name, address, VAT &amp; registration</span>
+              </span>
+              <svg class="af-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="af-acc-body">
+              <div class="af-acc-inner">
+                <div class="af-group">
+                  <label for="bizName">Business / Company Name *</label>
+                  <input type="text" id="bizName" placeholder="Murphy Construction Ltd" required/>
+                </div>
+                <div class="af-row">
+                  <div class="af-group">
+                    <label for="bizAddr1">Trading Address *</label>
+                    <input type="text" id="bizAddr1" placeholder="123 Main Street" required/>
+                  </div>
+                  <div class="af-group">
+                    <label for="bizType">Type of Business *</label>
+                    <select id="bizType" required>
+                      <option value="">Select&hellip;</option>
+                      <option>Limited Company</option>
+                      <option>Independent / Sole Trader</option>
+                      <option>Legal Partnership</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="af-row">
+                  <div class="af-group">
+                    <label for="bizAddr2">Address Line 2</label>
+                    <input type="text" id="bizAddr2" placeholder="Navan, Co. Meath"/>
+                  </div>
+                  <div class="af-group">
+                    <label for="bizEircode">Eircode *</label>
+                    <input type="text" id="bizEircode" placeholder="C15 FX6Y" required/>
+                  </div>
+                </div>
+                <div class="af-row">
+                  <div class="af-group">
+                    <label for="bizTel">Telephone No. *</label>
+                    <input type="tel" id="bizTel" placeholder="046 902 2535" required/>
+                  </div>
+                  <div class="af-group">
+                    <label for="bizEmail">Business Email *</label>
+                    <input type="email" id="bizEmail" placeholder="accounts@company.ie" required/>
+                  </div>
+                </div>
+                <div class="af-row">
+                  <div class="af-group">
+                    <label for="bizVat">VAT Reg No.</label>
+                    <input type="text" id="bizVat" placeholder="IE1234567T"/>
+                  </div>
+                  <div class="af-group">
+                    <label for="bizCoReg">Company Reg No.</label>
+                    <input type="text" id="bizCoReg" placeholder="123456"/>
+                  </div>
+                </div>
+                <div class="af-group">
+                  <label for="bizSoleTrader">Sole Trader / Personal Name (if applicable)</label>
+                  <input type="text" id="bizSoleTrader" placeholder="John Murphy"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACCORDION 2: Proprietor -->
+          <div class="af-acc" id="acc-prop">
+            <button type="button" class="af-acc-hdr" onclick="toggleAcc('prop')">
+              <span class="af-acc-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+                </svg>
+              </span>
+              <span class="af-acc-titles">
+                <span class="af-acc-title">Details of Proprietor(s)</span>
+                <span class="af-acc-sub">Name, address and contact details of owner(s)</span>
+              </span>
+              <svg class="af-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="af-acc-body">
+              <div class="af-acc-inner">
+                <div class="af-group">
+                  <label for="propName">Name *</label>
+                  <input type="text" id="propName" placeholder="John Murphy" required/>
+                </div>
+                <div class="af-group">
+                  <label for="propAddr">Address *</label>
+                  <input type="text" id="propAddr" placeholder="12 Oak Drive, Navan, Co. Meath" required/>
+                </div>
+                <div class="af-row">
+                  <div class="af-group">
+                    <label for="propHomePhone">Home Phone</label>
+                    <input type="tel" id="propHomePhone" placeholder="046 123 4567"/>
+                  </div>
+                  <div class="af-group">
+                    <label for="propMobile">Mobile Phone *</label>
+                    <input type="tel" id="propMobile" placeholder="086 123 4567" required/>
+                  </div>
+                </div>
+                <div class="af-group">
+                  <label for="propEmail">Email *</label>
+                  <input type="email" id="propEmail" placeholder="john@company.ie" required/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACCORDION 3: Accounts Contact -->
+          <div class="af-acc" id="acc-accnt">
+            <button type="button" class="af-acc-hdr" onclick="toggleAcc('accnt')">
+              <span class="af-acc-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                </svg>
+              </span>
+              <span class="af-acc-titles">
+                <span class="af-acc-title">Accounts Contact</span>
+                <span class="af-acc-sub">Billing address and person responsible for accounts</span>
+              </span>
+              <svg class="af-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="af-acc-body">
+              <div class="af-acc-inner">
+                <div class="af-group">
+                  <label for="accName">Name of Person Responsible for Accounts *</label>
+                  <input type="text" id="accName" placeholder="Mary Murphy" required/>
+                </div>
+                <div class="af-group">
+                  <label for="accBillingAddr">Billing Address *</label>
+                  <input type="text" id="accBillingAddr" placeholder="Same as trading address, or enter different" required/>
+                </div>
+                <div class="af-row">
+                  <div class="af-group">
+                    <label for="accTel">Telephone No. *</label>
+                    <input type="tel" id="accTel" placeholder="046 902 1234" required/>
+                  </div>
+                  <div class="af-group">
+                    <label for="accEmail">Email Address *</label>
+                    <input type="email" id="accEmail" placeholder="accounts@company.ie" required/>
+                  </div>
+                </div>
+                <p style="font-size:.78rem;color:#888;margin:4px 0 0">All invoices and statements will be forwarded by email.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACCORDION 4: Trade References -->
+          <div class="af-acc" id="acc-refs">
+            <button type="button" class="af-acc-hdr" onclick="toggleAcc('refs')">
+              <span class="af-acc-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </span>
+              <span class="af-acc-titles">
+                <span class="af-acc-title">Trade References</span>
+                <span class="af-acc-sub">3 trade references required</span>
+              </span>
+              <svg class="af-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="af-acc-body">
+              <div class="af-acc-inner">
+                <div class="af-ref-block"><div class="af-ref-num">1</div><div class="af-ref-fields">
+                  <div class="af-row"><div class="af-group"><label for="ref1Name">Name *</label><input type="text" id="ref1Name" placeholder="Supplier or trade contact" required/></div><div class="af-group"><label for="ref1Addr">Address *</label><input type="text" id="ref1Addr" placeholder="Address" required/></div></div>
+                  <div class="af-row"><div class="af-group"><label for="ref1Tel">Telephone No. *</label><input type="tel" id="ref1Tel" placeholder="01 234 5678" required/></div><div class="af-group"><label for="ref1Email">Email *</label><input type="email" id="ref1Email" placeholder="contact@supplier.ie" required/></div></div>
+                </div></div>
+                <div class="af-ref-block"><div class="af-ref-num">2</div><div class="af-ref-fields">
+                  <div class="af-row"><div class="af-group"><label for="ref2Name">Name *</label><input type="text" id="ref2Name" placeholder="Supplier or trade contact" required/></div><div class="af-group"><label for="ref2Addr">Address *</label><input type="text" id="ref2Addr" placeholder="Address" required/></div></div>
+                  <div class="af-row"><div class="af-group"><label for="ref2Tel">Telephone No. *</label><input type="tel" id="ref2Tel" placeholder="01 234 5678" required/></div><div class="af-group"><label for="ref2Email">Email *</label><input type="email" id="ref2Email" placeholder="contact@supplier.ie" required/></div></div>
+                </div></div>
+                <div class="af-ref-block"><div class="af-ref-num">3</div><div class="af-ref-fields">
+                  <div class="af-row"><div class="af-group"><label for="ref3Name">Name *</label><input type="text" id="ref3Name" placeholder="Supplier or trade contact" required/></div><div class="af-group"><label for="ref3Addr">Address *</label><input type="text" id="ref3Addr" placeholder="Address" required/></div></div>
+                  <div class="af-row"><div class="af-group"><label for="ref3Tel">Telephone No. *</label><input type="tel" id="ref3Tel" placeholder="01 234 5678" required/></div><div class="af-group"><label for="ref3Email">Email *</label><input type="email" id="ref3Email" placeholder="contact@supplier.ie" required/></div></div>
+                </div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACCORDION 5: Banking Details -->
+          <div class="af-acc" id="acc-bank">
+            <button type="button" class="af-acc-hdr" onclick="toggleAcc('bank')">
+              <span class="af-acc-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>
+                </svg>
+              </span>
+              <span class="af-acc-titles">
+                <span class="af-acc-title">Banking Details</span>
+                <span class="af-acc-sub">Bank name, account number, sort code and credit required</span>
+              </span>
+              <svg class="af-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="af-acc-body">
+              <div class="af-acc-inner">
+                <div class="af-row">
+                  <div class="af-group"><label for="bankName">Banker Name *</label><input type="text" id="bankName" placeholder="Bank of Ireland" required/></div>
+                  <div class="af-group"><label for="bankAddr">Bank Address *</label><input type="text" id="bankAddr" placeholder="Main Street, Navan" required/></div>
+                </div>
+                <div class="af-row">
+                  <div class="af-group"><label for="bankAccNo">Bank Account No. *</label><input type="text" id="bankAccNo" placeholder="12345678" required/></div>
+                  <div class="af-group"><label for="bankSort">Sort Code *</label><input type="text" id="bankSort" placeholder="90-00-17" required/></div>
+                </div>
+                <div class="af-group">
+                  <label for="creditRequired">How Much Credit Do You Require? *</label>
+                  <input type="text" id="creditRequired" placeholder="e.g. &euro;2,000" required/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACCORDION 6: Declaration -->
+          <div class="af-acc" id="acc-decl">
+            <button type="button" class="af-acc-hdr" onclick="toggleAcc('decl')">
+              <span class="af-acc-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <path d="M14 2v6h6M9 13h6m-6 4h4"/>
+                </svg>
+              </span>
+              <span class="af-acc-titles">
+                <span class="af-acc-title">Declaration &amp; Signature</span>
+                <span class="af-acc-sub">Director name, date and agreement to terms</span>
+              </span>
+              <svg class="af-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="af-acc-body">
+              <div class="af-acc-inner">
+                <div class="af-declaration">
+                  <p>I hereby request Navan Hire and Hardware and Safety Training Ltd to open a Credit Account for the above company. I have read the Terms and Conditions of Trade and agree to abide by them.</p>
+                  <p><strong>Please note:</strong> Account is at risk of being closed if not used within 6 months from opening date.</p>
+                </div>
+                <div class="af-row">
+                  <div class="af-group">
+                    <label for="directorName">Director Name *</label>
+                    <input type="text" id="directorName" placeholder="Full name of signing director" required/>
+                  </div>
+                  <div class="af-group">
+                    <label for="signDate">Date *</label>
+                    <input type="date" id="signDate" required/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <label class="af-check af-check--terms">
+            <input type="checkbox" id="applyTerms" required/>
+            I confirm all information is accurate. I agree to the Terms &amp; Conditions of Trade and the Personal Guarantee. *
+          </label>
+          <button type="submit" class="btn btn-primary af-submit">Submit Credit Application</button>
+          <p class="af-note">We aim to process applications within 1&ndash;2 business days.</p>
+        </form>
+        <div class="af-msg" id="applyMsg" style="display:none"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+  // Set today's date as default
+  (function(){ var d=document.getElementById('signDate'); if(d) d.valueAsDate=new Date(); })();
+
+  function showApplyForm() {
+    document.getElementById('apply').style.display = 'block';
+    document.getElementById('applyCta').style.display = 'none';
+    setTimeout(function(){ document.getElementById('apply').scrollIntoView({behavior:'smooth',block:'start'}); }, 60);
+  }
+  function toggleAcc(id) {
+    document.getElementById('acc-'+id).classList.toggle('af-acc--open');
+  }
+  function togglePass(id, btn) {
+    var inp = document.getElementById(id);
+    inp.type = inp.type==='password' ? 'text' : 'password';
+    btn.innerHTML = inp.type==='password' ? '&#128065;' : '&#128064;';
+  }
+  function showMsg(id, type, html) {
+    var el = document.getElementById(id);
+    el.className = 'af-msg af-msg--'+type;
+    el.innerHTML = html;
+    el.style.display = 'block';
+    el.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+  function handleLogin(e) {
+    e.preventDefault();
+    var btn = e.target.querySelector('.af-submit');
+    btn.textContent = 'Logging in...'; btn.disabled = true;
+    setTimeout(function(){
+      btn.textContent = 'Log In'; btn.disabled = false;
+      showMsg('loginMsg','info','<strong>Online portal coming soon.</strong><br>Contact us: <a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a> or <a href="tel:0469022535">046 902 2535</a>.');
+    }, 900);
+  }
+  function handleApply(e) {
+    e.preventDefault();
+    // If browser skipped validation (non-Chromium), open first invalid accordion
+    var bad = document.getElementById('applyForm').querySelectorAll(':invalid');
+    if (bad.length) {
+      var acc = bad[0].closest('.af-acc');
+      if (acc) acc.classList.add('af-acc--open');
+      bad[0].focus(); return;
+    }
+    var btn = e.target.querySelector('.af-submit');
+    var g = function(id){ var el=document.getElementById(id); return el?el.value.trim():''; };
+    var biz = g('bizName');
+    var nl  = '%0D%0A';
+    var body =
+      'CREDIT+APPLICATION+FORM+-+TRADE' + nl +
+      '================================' + nl + nl +
+      'BUSINESS+DETAILS' + nl +
+      'Business+%2F+Company+Name%3A+' + encodeURIComponent(biz) + nl +
+      'Trading+Address%3A+' + encodeURIComponent(g('bizAddr1')+(g('bizAddr2')?', '+g('bizAddr2'):'')) + nl +
+      'Eircode%3A+' + encodeURIComponent(g('bizEircode')) + nl +
+      'Type+of+Business%3A+' + encodeURIComponent(g('bizType')) + nl +
+      'Telephone%3A+' + encodeURIComponent(g('bizTel')) + nl +
+      'Email%3A+' + encodeURIComponent(g('bizEmail')) + nl +
+      'VAT+Reg+No%3A+' + encodeURIComponent(g('bizVat')||'N/A') + nl +
+      'Co.+Reg+No%3A+' + encodeURIComponent(g('bizCoReg')||'N/A') + nl +
+      'Sole+Trader+Name%3A+' + encodeURIComponent(g('bizSoleTrader')||'N/A') + nl + nl +
+      'DETAILS+OF+PROPRIETOR' + nl +
+      'Name%3A+' + encodeURIComponent(g('propName')) + nl +
+      'Address%3A+' + encodeURIComponent(g('propAddr')) + nl +
+      'Home+Phone%3A+' + encodeURIComponent(g('propHomePhone')||'N/A') + nl +
+      'Mobile%3A+' + encodeURIComponent(g('propMobile')) + nl +
+      'Email%3A+' + encodeURIComponent(g('propEmail')) + nl + nl +
+      'ACCOUNTS+CONTACT' + nl +
+      'Name%3A+' + encodeURIComponent(g('accName')) + nl +
+      'Billing+Address%3A+' + encodeURIComponent(g('accBillingAddr')) + nl +
+      'Telephone%3A+' + encodeURIComponent(g('accTel')) + nl +
+      'Email%3A+' + encodeURIComponent(g('accEmail')) + nl + nl +
+      'TRADE+REFERENCES' + nl +
+      '%281%29+Name%3A+' + encodeURIComponent(g('ref1Name')) + '+Address%3A+' + encodeURIComponent(g('ref1Addr')) + nl +
+      '++Tel%3A+' + encodeURIComponent(g('ref1Tel')) + '+Email%3A+' + encodeURIComponent(g('ref1Email')) + nl +
+      '%282%29+Name%3A+' + encodeURIComponent(g('ref2Name')) + '+Address%3A+' + encodeURIComponent(g('ref2Addr')) + nl +
+      '++Tel%3A+' + encodeURIComponent(g('ref2Tel')) + '+Email%3A+' + encodeURIComponent(g('ref2Email')) + nl +
+      '%283%29+Name%3A+' + encodeURIComponent(g('ref3Name')) + '+Address%3A+' + encodeURIComponent(g('ref3Addr')) + nl +
+      '++Tel%3A+' + encodeURIComponent(g('ref3Tel')) + '+Email%3A+' + encodeURIComponent(g('ref3Email')) + nl + nl +
+      'BANKING+DETAILS' + nl +
+      'Banker%3A+' + encodeURIComponent(g('bankName')) + nl +
+      'Bank+Address%3A+' + encodeURIComponent(g('bankAddr')) + nl +
+      'Account+No%3A+' + encodeURIComponent(g('bankAccNo')) + nl +
+      'Sort+Code%3A+' + encodeURIComponent(g('bankSort')) + nl +
+      'Credit+Required%3A+' + encodeURIComponent(g('creditRequired')) + nl + nl +
+      'DECLARATION' + nl +
+      'Director+Name%3A+' + encodeURIComponent(g('directorName')) + nl +
+      'Date%3A+' + encodeURIComponent(g('signDate'));
+    btn.textContent = 'Sending...'; btn.disabled = true;
+    setTimeout(function(){
+      window.location.href = 'mailto:hiredesk@nhh.ie?subject=Credit+Application+-+Trade%3A+' + encodeURIComponent(biz) + '&body=' + body;
+      btn.textContent = 'Application Ready';
+      btn.style.background = '#22a84d';
+      showMsg('applyMsg','success','<strong>Thank you!</strong> Your email client should have opened with the completed application. If not, email <a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a> or call <a href="tel:0469022535">046 902 2535</a>.');
+    }, 700);
+  }
+  </script>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <img src="logo-footer.svg" alt="Navan Hire &amp; Hardware" class="footer-logo-img"/>
+        <p style="margin-top:14px;color:rgba(255,255,255,0.7)">Whistlemount, Kells Road<br>Navan, Co. Meath, C15 FX6Y</p>
+        <p><a href="tel:0469022535" style="color:#fff">046 902 2535</a></p>
+        <p><a href="mailto:hiredesk@nhh.ie" style="color:rgba(255,255,255,0.7)">hiredesk@nhh.ie</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Hire</h4>
+        <ul>
+          <li><a href="fleet.html">Hire Fleet</a></li>
+          <li><a href="hire.html">Plant &amp; Tool Hire</a></li>
+          <li><a href="powered-access.html">Access &amp; Spider Lifts</a></li>
+          <li><a href="telehandlers.html">Telehandlers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="hardware.html">Hardware &amp; DIY</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="account.html">Trade Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <p style="color:rgba(255,255,255,0.7)">Mon&ndash;Fri: 7:00am &ndash; 5:00pm<br>Saturday: 8:30am &ndash; 1:00pm<br>Sunday: Closed</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/NavanHireHardware" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/navanhirehardware" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/navan-hire-hardware" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Navan Hire &amp; Hardware. All rights reserved. | 100% Irish Owned</p>
+      </div>
+    </div>
+  </footer>
+  <script src="search.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

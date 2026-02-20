@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade Portal | Navan Hire &amp; Hardware</title>
+<style>
+
+:root{--red:#fe0000;--dark:#1a1a1a;--mid:#444;--grey:#888;--light:#F5F4F2;--border:#e0e0e0;--green:#1a7a3c;--amber:#c47d00;--blue:#1a5fa8;--fh:'Arial Narrow',Arial,sans-serif;--fb:Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--fb);color:var(--dark);font-size:15px;line-height:1.55;background:#fff}
+a{color:inherit;text-decoration:none}ul{list-style:none}
+.topbar{background:#333;color:#fff;font-size:12px;padding:7px 20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.topbar a{color:#fff}
+.hdr{background:var(--red);border-bottom:3px solid #c00;position:sticky;top:0;z-index:200}
+.hdr-inner{display:flex;align-items:center;gap:16px;padding:8px 20px}
+.demo-pill{background:rgba(0,0,0,.3);color:rgba(255,255,255,.65);font-family:var(--fh);font-size:10px;letter-spacing:1px;padding:3px 9px;border-radius:20px;margin-left:auto}
+.acct-btn{width:34px;height:34px;border-radius:50%;border:2px solid rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;color:#fff;cursor:pointer;background:rgba(255,255,255,.2);flex-shrink:0}
+.acct-btn svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:1.8}
+.hero{background:#111;padding:36px 20px 26px;border-bottom:4px solid var(--red)}
+.hero h1{font-family:var(--fh);font-size:32px;font-weight:900;color:#fff;text-transform:uppercase;margin:6px 0;letter-spacing:1px}
+.hero p{color:rgba(255,255,255,.5);font-size:13px}
+.bc{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.bc span{font-family:var(--fh);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.4);cursor:pointer}
+.bc span:hover{color:#fff}.bc .act{color:var(--red);cursor:default}
+.shell{display:flex;min-height:calc(100vh - 175px)}
+.sb{width:216px;flex-shrink:0;background:#fff;border-right:1px solid var(--border);position:sticky;top:86px;height:calc(100vh - 86px);overflow-y:auto}
+.sb-cat{display:block;font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--grey);padding:8px 16px 3px;margin-top:6px}
+.sb-a{display:flex;align-items:center;gap:9px;padding:9px 16px;font-family:var(--fh);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mid);cursor:pointer;border-left:3px solid transparent;transition:all .12s}
+.sb-a:hover{background:rgba(254,0,0,.04);color:var(--dark)}.sb-a.on{background:rgba(254,0,0,.07);color:var(--red);border-left-color:var(--red)}
+.sb-a svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0;opacity:.6}.sb-a.on svg{opacity:1}
+.sb-n{margin-left:auto;background:var(--red);color:#fff;font-size:10px;font-weight:700;padding:1px 7px;border-radius:10px}.sb-n.am{background:var(--amber)}.sb-n.gr{background:var(--green)}
+.sb-hr{height:1px;background:var(--border);margin:5px 12px}
+.content{flex:1;min-width:0;background:var(--light);padding:24px 22px}
+.view{display:none}.view.on{display:block}
+.sh{font-family:var(--fh);font-size:22px;font-weight:900;text-transform:uppercase;letter-spacing:1px;color:#111;margin-bottom:3px}
+.sp{font-size:13px;color:var(--grey);margin-bottom:18px}
+.card{background:#fff;border-radius:4px;border:1px solid var(--border);overflow:hidden;margin-bottom:16px;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.card-hdr{padding:11px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.card-title{font-family:var(--fh);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#111;border-left:3px solid var(--red);padding-left:9px}
+.tbl{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:9px 14px;font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey);background:var(--light);border-bottom:2px solid var(--border);white-space:nowrap}
+td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:middle}tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:#fafafa}
+tbody tr.clickable{cursor:pointer}
+tbody tr.clickable:hover td{background:#fff5f5}
+.badge{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:20px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}
+.badge::before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.5}
+.bl{background:#edf8f2;color:var(--green)}.bp{background:#fff8ee;color:var(--amber)}.bpd{background:#edf8f2;color:var(--green)}.bo{background:#fff0f0;color:var(--red)}.bb{background:#eef3fc;color:var(--blue)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.stat{background:#fff;border-radius:4px;border:1px solid var(--border);padding:15px 13px;display:flex;align-items:center;gap:11px;cursor:pointer;transition:all .13s}
+.stat:hover{border-color:var(--red);transform:translateY(-1px)}
+.stat-ic{width:36px;height:36px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ir{background:#fff0f0}.ir svg{stroke:var(--red)}.ig{background:#edf8f2}.ig svg{stroke:var(--green)}.ib{background:#eef3fc}.ib svg{stroke:var(--blue)}.ia{background:#fff8ee}.ia svg{stroke:var(--amber)}
+.stat-ic svg{width:17px;height:17px;fill:none;stroke-width:2}
+.stat-n{font-family:var(--fh);font-size:24px;font-weight:900;line-height:1;color:#111}.stat-l{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey);margin-top:2px}
+.banner{background:#111;border-left:4px solid var(--red);border-radius:4px;padding:20px 22px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.banner h2{font-family:var(--fh);font-size:19px;font-weight:900;text-transform:uppercase;letter-spacing:1px;color:#fff;margin-bottom:2px}.banner p{font-size:13px;color:rgba(255,255,255,.42)}
+.qa{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-bottom:16px}
+.qc{background:#fff;border-radius:4px;border:1px solid var(--border);padding:15px 13px;cursor:pointer;transition:all .14s}
+.qc:hover{border-color:var(--red);box-shadow:0 4px 14px rgba(254,0,0,.1);transform:translateY(-2px)}
+.qc-ic{width:32px;height:32px;background:var(--light);border-radius:6px;display:flex;align-items:center;justify-content:center;margin-bottom:7px}
+.qc-ic svg{width:15px;height:15px;stroke:var(--red);fill:none;stroke-width:2}
+.qc-t{font-family:var(--fh);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#111;margin-bottom:2px}
+.qc-d{font-size:11px;color:var(--grey)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:4px;border:2px solid transparent;cursor:pointer;white-space:nowrap;transition:all .14s}
+.btn-red{background:var(--red);color:#fff;border-color:var(--red)}.btn-red:hover{background:#c00}
+.btn-out{background:transparent;color:var(--dark);border-color:var(--dark)}.btn-out:hover{background:var(--dark);color:#fff}
+.btn-green{background:var(--green);color:#fff;border-color:var(--green)}.btn-green:hover{background:#155f2f}
+.btn-ghost{background:transparent;color:var(--grey);border-color:var(--border)}.btn-ghost:hover{border-color:var(--dark);color:var(--dark)}
+.btn-sm{padding:6px 13px;font-size:11px}.btn-xs{padding:3px 9px;font-size:10px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px}
+.fg{display:flex;flex-direction:column;gap:4px;margin-bottom:11px}
+.fg label{font-size:11px;font-weight:700;color:#555;text-transform:uppercase;letter-spacing:1px}
+.fg label span{color:var(--red)}
+.fg input,.fg select,.fg textarea{padding:9px 11px;border:1.5px solid var(--border);border-radius:5px;font-size:13px;font-family:var(--fb);color:#111;background:#fafafa;outline:none;transition:border-color .14s;width:100%}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--red);background:#fff}
+.fg textarea{resize:vertical;min-height:68px}
+.fn{font-size:11px;color:var(--grey);text-align:center;margin-top:4px}
+.info{border:1.5px solid #f0c040;border-radius:5px;padding:14px;font-size:13px;line-height:1.65;background:#fff8e1;color:#5a4500}
+.info.green{background:#edf8f2;border-color:#7ac49a;color:#1a4f2e}
+.info.blue{background:#eef3fc;border-color:#7aadde;color:#1a3a5f}
+.info h3{font-family:var(--fh);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
+.info ul{padding-left:14px}.info li{margin-bottom:3px}.info a{color:var(--red);font-weight:700}
+.alert{padding:11px 14px;border-radius:4px;font-size:13px;margin-bottom:11px;display:none}
+.alert.show{display:block}.a-ok{background:#e8f7ee;border:1.5px solid #4caf50;color:#1a5c2a}.a-err{background:#fef0f0;border:1.5px solid var(--red);color:#8b0000}
+/* Rate display box */
+.rate-box{background:#111;border-radius:5px;padding:14px 16px;margin-top:10px;margin-bottom:14px}
+.rate-box-title{font-family:var(--fh);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:rgba(255,255,255,.5);margin-bottom:8px}
+.rate-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.rate-cell{text-align:center}
+.rate-lbl{font-size:10px;color:rgba(255,255,255,.45);margin-bottom:3px}
+.rate-val{font-family:var(--fh);font-size:18px;font-weight:900;color:#fff}
+.rate-cell.sel .rate-val{color:var(--red)}
+.rate-cell.sel .rate-lbl{color:rgba(254,0,0,.7)}
+/* LOGIN */
+#lp{display:flex;min-height:calc(100vh - 120px)}
+.ll{width:42%;background:#111;display:flex;flex-direction:column;justify-content:flex-end;padding:46px 40px;position:relative;overflow:hidden;border-right:4px solid var(--red)}
+.ll-bg{position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 60px,rgba(254,0,0,.04) 60px,rgba(254,0,0,.04) 61px)}
+.ll-in{position:relative;z-index:1}
+.l-badge{display:inline-block;background:var(--red);color:#fff;font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 11px;border-radius:2px;margin-bottom:14px}
+.l-title{font-family:var(--fh);font-size:44px;font-weight:900;line-height:.92;color:#fff;text-transform:uppercase;margin-bottom:11px;letter-spacing:1px}
+.l-title em{color:rgba(255,255,255,.22);font-style:normal}
+.l-desc{font-size:13px;color:rgba(255,255,255,.44);line-height:1.65;max-width:270px}
+.lr{flex:1;display:flex;align-items:center;justify-content:center;padding:38px 30px;background:var(--light)}
+.lbox{width:100%;max-width:375px}
+.lpanel{background:#fff;border-radius:5px;border:1.5px solid var(--border);overflow:hidden}
+.lp-hdr{display:flex;align-items:flex-start;gap:12px;padding:20px 20px 0;margin-bottom:14px}
+.lp-ic{width:38px;height:38px;background:var(--light);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.lp-ic svg{width:19px;height:19px;stroke:#555;fill:none;stroke-width:1.7}
+.lp-hdr h2{font-family:var(--fh);font-size:19px;font-weight:900;text-transform:uppercase;letter-spacing:1px;color:#111;margin:0 0 3px}
+.lp-hdr p{font-size:12px;color:var(--grey);margin:0}
+.lp-form{padding:0 20px 20px;display:flex;flex-direction:column;gap:10px}
+.hint-box{background:#fff8e1;border:1.5px solid #f0c040;border-radius:4px;padding:8px 12px;font-size:11px;color:#5a4500;text-align:center}
+.sign-btn{width:100%;padding:11px;font-size:14px;font-family:var(--fh);font-weight:700;letter-spacing:2px;text-transform:uppercase;border-radius:5px;border:none;background:var(--red);color:#fff;cursor:pointer}
+.sign-btn:hover{background:#c00}
+.l-note{font-size:11px;color:var(--grey);text-align:center}.l-note a{color:var(--red);font-weight:700}
+.l-links{display:flex;justify-content:space-between;font-size:11px}
+.l-links a{color:var(--red);font-weight:700}
+/* MACHINE / QR PAGE */
+#mp{display:none}#mp.on{display:block}
+.m-bar{background:var(--dark);padding:10px 20px;display:flex;align-items:center;gap:9px;border-bottom:3px solid var(--red)}
+.m-bar-dot{width:7px;height:7px;background:var(--red);border-radius:50%}
+.m-bar-t{font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.6)}.m-bar-t strong{color:#fff}
+.m-wrap{max-width:490px;margin:0 auto;padding:20px 14px 80px;background:var(--light);min-height:calc(100vh - 56px)}
+.m-card{background:#fff;border-radius:5px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,.12);border:1px solid var(--border)}
+.m-hero{background:#111;padding:22px 20px;position:relative;overflow:hidden;border-bottom:4px solid var(--red)}
+.m-hero::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 60px,rgba(254,0,0,.04) 60px,rgba(254,0,0,.04) 61px)}
+.m-ghost{position:absolute;top:6px;right:10px;font-family:var(--fh);font-size:40px;font-weight:900;color:rgba(255,255,255,.05);pointer-events:none}
+.m-tag{display:inline-block;background:var(--red);color:#fff;font-family:var(--fh);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:8px;position:relative;z-index:1}
+.m-name{font-family:var(--fh);font-size:21px;font-weight:900;color:#fff;text-transform:uppercase;line-height:1.05;margin-bottom:5px;position:relative;z-index:1;letter-spacing:1px}
+.m-meta{font-size:12px;color:rgba(255,255,255,.38);position:relative;z-index:1}.m-meta strong{color:rgba(255,255,255,.75)}
+.cert-row{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid var(--border)}
+.c-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;animation:pulse 2s infinite}.c-dot.ok{background:var(--green)}.c-dot.warn{background:var(--amber)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.c-lbl{font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey)}.c-val{font-size:13px;font-weight:700;color:var(--green)}
+.m-sec{padding:13px 16px}
+.m-sec-lbl{font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey);padding-bottom:5px;border-bottom:2px solid var(--red);display:inline-block;margin-bottom:10px}
+.spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:4px;overflow:hidden;margin-bottom:12px}
+.spec-c{background:#fff;padding:9px 12px}.spec-l{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey);margin-bottom:2px}.spec-v{font-size:13px;font-weight:700;color:#111}
+.doc{display:flex;align-items:center;gap:11px;border:1.5px solid var(--border);border-radius:5px;padding:10px 12px;margin-bottom:7px;text-decoration:none;color:inherit;transition:all .12s}
+.doc:hover{border-color:var(--red);background:#fff8f8}
+.doc-ic{width:36px;height:36px;background:var(--light);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.doc-n{font-weight:700;font-size:13px;color:#111}.doc-s{font-size:11px;color:var(--grey);margin-top:1px}
+.doc-arr{margin-left:auto;color:var(--grey)}.doc-arr svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2}
+.m-foot{background:var(--light);padding:11px 16px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.m-fi{font-size:11px;color:var(--grey)}.m-fi strong{color:var(--dark)}
+.call-btn{font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:5px}
+.call-btn svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2}
+.back-fab{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:999;display:flex;align-items:center;gap:6px;background:var(--dark);color:#fff;border-radius:24px;padding:8px 20px;font-family:var(--fh);font-size:12px;letter-spacing:1px;text-transform:uppercase;box-shadow:0 6px 24px rgba(0,0,0,.22);cursor:pointer;border:none}
+.back-fab svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:2.5}
+/* MODAL */
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:800;display:none;align-items:center;justify-content:center;padding:16px}
+.overlay.on{display:flex}
+.modal{background:#fff;border-radius:5px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;box-shadow:0 12px 52px rgba(0,0,0,.18);border-top:4px solid var(--red)}
+.m-hdr{padding:15px 19px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#fff;z-index:1}
+.m-hdr h2{font-family:var(--fh);font-size:17px;font-weight:900;text-transform:uppercase;letter-spacing:1px}
+.m-x{width:26px;height:26px;border-radius:50%;background:var(--light);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--grey);font-size:13px}
+.m-x:hover{background:var(--border);color:var(--dark)}
+.m-body{padding:17px 19px}
+.m-foot2{padding:11px 19px;border-top:1px solid var(--border);display:flex;justify-content:flex-end;gap:8px;background:#fff;position:sticky;bottom:0}
+.m-ref{background:var(--light);border-radius:3px;padding:8px 12px;font-weight:700;font-size:13px;margin-bottom:12px;border-left:3px solid var(--red)}
+/* HIRE REQUEST - search/filter */
+.search-bar{display:flex;gap:10px;margin-bottom:14px}
+.search-bar input{flex:1;padding:9px 13px;border:1.5px solid var(--border);border-radius:5px;font-size:13px;font-family:var(--fb);outline:none}
+.search-bar input:focus{border-color:var(--red)}
+.search-bar select{padding:9px 11px;border:1.5px solid var(--border);border-radius:5px;font-size:13px;font-family:var(--fb);outline:none;min-width:180px}
+.search-bar select:focus{border-color:var(--red)}
+.prod-list{border:1.5px solid var(--border);border-radius:5px;max-height:240px;overflow-y:auto;background:#fff}
+.prod-item{padding:9px 14px;cursor:pointer;border-bottom:1px solid var(--border);font-size:13px;transition:background .1s}
+.prod-item:last-child{border-bottom:none}
+.prod-item:hover{background:#fff5f5}
+.prod-item.sel{background:rgba(254,0,0,.06);color:var(--red);font-weight:700}
+.prod-cat-label{padding:6px 14px;font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey);background:var(--light);border-bottom:1px solid var(--border)}
+.selected-eq{background:var(--light);border:1.5px solid var(--border);border-radius:5px;padding:10px 13px;font-size:13px;margin-bottom:11px;display:none}
+.selected-eq.show{display:flex;align-items:center;justify-content:space-between}
+.selected-eq strong{color:var(--red)}
+/* TOAST */
+.toast{position:fixed;bottom:20px;right:20px;z-index:1000;background:var(--dark);color:#fff;border-radius:4px;padding:11px 16px;font-size:13px;max-width:320px;box-shadow:0 6px 26px rgba(0,0,0,.18);display:none;align-items:center;gap:8px;border-left:4px solid var(--red)}
+.toast.on{display:flex}.tic{width:18px;height:18px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px}
+/* FORGOT PW modal */
+.fp-sent{display:none;text-align:center;padding:10px}
+/* FOOTER */
+.footer{background:#111;color:rgba(255,255,255,.62);padding:46px 20px 0;display:none}.footer.on{display:block}
+.fg-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:38px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.08)}
+.fc p{font-size:13px;margin-bottom:6px}.fc a{color:rgba(255,255,255,.55)}.fc a:hover{color:#fff}
+.fc h4{font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:12px}
+.fc ul{display:flex;flex-direction:column;gap:6px}.fc li{font-size:13px}
+.soc{display:flex;gap:8px;margin-top:14px}
+.soc a{width:34px;height:34px;border-radius:5px;background:rgba(255,255,255,.09);border:1.5px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:#fff}
+.soc a svg{width:15px;height:15px}.soc a:hover{background:var(--red);border-color:var(--red)}
+.f-bot{padding:15px 0;text-align:center;font-size:11px;color:rgba(255,255,255,.28)}
+/* Off-hire edit modal fields */
+.section-divider{font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey);padding:8px 0 4px;border-bottom:1px solid var(--border);margin-bottom:11px;margin-top:4px}
+/* Pending orders status */
+.order-status-bar{height:6px;background:var(--border);border-radius:3px;margin-top:5px;overflow:hidden}
+.order-status-fill{height:100%;border-radius:3px;background:var(--green)}
+.status-steps{display:flex;gap:0;margin-top:6px}
+.status-step{flex:1;text-align:center;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--grey)}
+.status-step.done{color:var(--green)}.status-step.active{color:var(--amber)}
+@media(max-width:800px){.sb{display:none}.stats,.qa{grid-template-columns:1fr 1fr}.g2,.g3{grid-template-columns:1fr}.ll{display:none}.content{padding:14px 12px}.rate-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<!-- TOPBAR + HEADER -->
+<div class="topbar">
+  <span>📞 <a href="tel:0469022535">046 902 2535</a></span>
+  <span>🕐 Mon–Fri 7am–5pm | Sat 8:30am–1pm</span>
+  <span>📍 Kells Road, Navan, Co. Meath</span>
+</div>
+<header class="hdr"><div class="hdr-inner">
+  <a href="#" style="display:block">
+    <svg viewBox="0 0 1500 630.25" xmlns="http://www.w3.org/2000/svg" style="height:44px;width:auto">
+      <path fill="#fff" d="M69.38,444.09V50.86h157.48l197.27,299.32-2.62-299.32h93.63v393.24h-158.91L161.82,147.94l2.86,296.15h-95.3Z"/>
+      <path fill="#fff" d="M549.32,444.09V50.86h99.11v145.2h225.14V50.86h99.11v393.24h-99.11v-150.96h-225.14v150.96h-99.11Z"/>
+      <path fill="#fff" d="M1008.6,444.09V50.86h99.11v145.2h225.14V50.86h99.11v393.24h-99.11v-150.96h-225.14v150.96h-99.11Z"/>
+      <path fill="#fff" d="M65.77,577.81v-93.98h28.64v34.7h65.06v-34.7h28.64v93.98h-28.64v-36.08h-65.06v36.08h-28.64Z"/>
+      <path fill="#fff" d="M208.72,501.46v-17.62h24.23v17.62h-24.23ZM208.72,577.81v-65.82h24.23v65.82h-24.23Z"/>
+      <path fill="#fff" d="M251.71,577.81v-65.82h23.27v14.66c1.24-3.44,2.28-5.87,3.13-7.3.85-1.42,2.01-2.71,3.48-3.86,4.31-3.35,11.13-5.03,20.45-5.03,10.51,0,17.76,2.43,21.76,7.3,2.94,3.54,4.41,9.87,4.41,19,0,.73-.05,2.16-.14,4.27h-22.72c.05-.5.07-.85.07-1.03,0-3.76-.99-6.45-2.96-8.06-1.97-1.61-5.28-2.41-9.91-2.41-6.84,0-11.54,1.93-14.11,5.78-1.65,2.43-2.48,6.5-2.48,12.19v30.29h-24.23Z"/>
+      <path fill="#fff" d="M403.74,556.88h23.82c-.09,5.05-.99,9-2.69,11.84-2.43,3.95-6.4,6.64-11.91,8.09-5.51,1.45-14.62,2.17-27.33,2.17-11.61,0-20.56-.57-26.85-1.72-3.81-.73-7.23-2.19-10.26-4.37-3.03-2.18-5.26-4.83-6.68-7.95-2.11-4.5-3.17-10.88-3.17-19.14,0-6.2.41-11.18,1.24-14.94.83-3.76,2.23-7,4.2-9.71,3.99-5.6,10.49-8.81,19.48-9.64,5.23-.46,12-.69,20.31-.69,11.84,0,20.54.55,26.09,1.65,5.55,1.1,9.94,3.99,13.15,8.67,2.94,4.22,4.41,11.32,4.41,21.27v7.23h-64.23v3.1c0,3.58.79,6.23,2.38,7.95,1.58,1.72,4.23,2.79,7.95,3.2,3.07.32,7.32.48,12.74.48,6.61,0,11.08-.5,13.43-1.51s3.65-3.01,3.92-5.99ZM403.95,536.71c-.05-4.73-1.34-7.78-3.89-9.16-2.55-1.38-8.18-2.07-16.9-2.07-5,0-8.73.23-11.19.69-2.46.46-4.35,1.26-5.68,2.41-1.93,1.75-2.89,4.09-2.89,7.02v1.1h40.55Z"/>
+      <path fill="#fff" d="M515.25,531.82v24.03h-48.81v-24.03h48.81Z"/>
+      <path fill="#fff" d="M561.55,577.81v-93.98h28.64v34.7h65.06v-34.7h28.64v93.98h-28.64v-36.08h-65.06v36.08h-28.64Z"/>
+      <path fill="#fff" d="M765.57,577.81v-11.63c-1.56,5.28-4.35,8.79-8.37,10.53s-11.39,2.62-22.13,2.62c-7.71,0-13.72-.33-18.04-1-4.31-.67-7.55-1.76-9.71-3.27-2.3-1.65-3.96-3.81-4.99-6.47-1.03-2.66-1.55-6.2-1.55-10.6s.52-7.97,1.55-10.71c1.03-2.73,2.7-4.9,4.99-6.51,2.75-1.97,6.34-3.27,10.77-3.89,4.43-.62,12.17-.93,23.24-.93,8.03,0,13.65.56,16.87,1.69,3.21,1.12,5.44,3.32,6.68,6.58v-7.3c0-3.49-.39-5.96-1.17-7.4-.78-1.45-2.27-2.42-4.48-2.93-2.43-.6-7.41-.89-14.94-.89-7.07,0-11.54.3-13.43.89-1.88.6-2.94,2.09-3.17,4.47h-24.17c.23-4.27,1.06-7.6,2.48-9.98,1.42-2.39,3.83-4.47,7.23-6.27,3.26-1.7,7.32-2.84,12.19-3.44,4.86-.6,12.71-.9,23.55-.9,8.72,0,15.41.32,20.07.96,4.66.64,8.46,1.75,11.39,3.3,4.77,2.62,7.78,7.14,9.02,13.56.23,1.29.34,4.16.34,8.61v40.9h-24.23ZM743.88,549.45c-7.57,0-12.66.49-15.25,1.48-2.59.99-3.89,2.95-3.89,5.89,0,3.86,2.48,6.2,7.44,7.02,1.51.28,6.15.41,13.91.41,6.15,0,10.37-.21,12.67-.62,4.36-.83,6.54-3.14,6.54-6.95,0-2.98-1.33-4.93-3.99-5.85-2.66-.92-8.47-1.38-17.42-1.38Z"/>
+      <path fill="#fff" d="M808.1,577.81v-65.82h23.27v14.66c1.24-3.44,2.28-5.87,3.13-7.3.85-1.42,2.01-2.71,3.48-3.86,4.31-3.35,11.13-5.03,20.45-5.03,10.51,0,17.76,2.43,21.76,7.3,2.94,3.54,4.41,9.87,4.41,19,0,.73-.05,2.16-.14,4.27h-22.72c.05-.5.07-.85.07-1.03,0-3.76-.99-6.45-2.96-8.06-1.97-1.61-5.28-2.41-9.91-2.41-6.84,0-11.54,1.93-14.11,5.78-1.65,2.43-2.48,6.5-2.48,12.19v30.29h-24.23Z"/>
+      <path fill="#fff" d="M965.11,577.81v-14.39c-1.1,3.35-2.28,5.89-3.55,7.61-1.26,1.72-3.04,3.25-5.33,4.58-4.5,2.52-11.45,3.79-20.86,3.79-15.56,0-26.23-1.84-32.01-5.51-3.44-2.25-5.8-5.32-7.06-9.23-1.26-3.9-1.89-10.1-1.89-18.59,0-10.69,1.01-18.29,3.03-22.79,3.86-8.54,15.72-12.81,35.59-12.81,8.81,0,15.7.9,20.65,2.68,2.2.83,4.04,1.94,5.51,3.34,1.47,1.4,3.19,3.68,5.16,6.85v-39.52h24.23v93.98h-23.48ZM940.74,528.45c-5.6,0-9.6.2-12.01.58-2.41.39-4.28,1.16-5.61,2.31-1.56,1.33-2.65,3.03-3.27,5.1-.62,2.06-.93,5.03-.93,8.88,0,4.41.39,7.64,1.17,9.71.78,2.07,2.23,3.56,4.34,4.48,2.57,1.19,8.15,1.79,16.73,1.79,10.65,0,17.17-.94,19.55-2.82,1.47-1.1,2.5-2.66,3.1-4.68s.9-4.87.9-8.54c0-4.41-.38-7.72-1.14-9.95-.76-2.23-2.05-3.82-3.89-4.79-2.48-1.38-8.79-2.06-18.93-2.06Z"/>
+      <path fill="#fff" d="M1025.82,577.81l-24.07-65.82h25.64l15.18,49.09,18.19-49.09h23.04l17.84,49.09,15.79-49.09h25.71l-24.27,65.82h-33.57l-13.06-39.11-13.4,39.11h-33.02Z"/>
+      <path fill="#fff" d="M1215.45,577.81v-11.63c-1.56,5.28-4.35,8.79-8.37,10.53-4.02,1.74-11.39,2.62-22.13,2.62-7.71,0-13.72-.33-18.04-1s-7.55-1.76-9.71-3.27c-2.3-1.65-3.96-3.81-4.99-6.47-1.03-2.66-1.55-6.2-1.55-10.6s.52-7.97,1.55-10.71c1.03-2.73,2.7-4.9,4.99-6.51,2.75-1.97,6.34-3.27,10.77-3.89,4.43-.62,12.17-.93,23.24-.93,8.03,0,13.65.56,16.87,1.69,3.21,1.12,5.44,3.32,6.68,6.58v-7.3c0-3.49-.39-5.96-1.17-7.4-.78-1.45-2.27-2.42-4.48-2.93-2.43-.6-7.41-.89-14.94-.89-7.07,0-11.54.3-13.42.89-1.88.6-2.94,2.09-3.17,4.47h-24.17c.23-4.27,1.06-7.6,2.48-9.98,1.42-2.39,3.83-4.47,7.23-6.27,3.26-1.7,7.32-2.84,12.19-3.44,4.86-.6,12.71-.9,23.54-.9,8.72,0,15.41.32,20.07.96,4.66.64,8.46,1.75,11.39,3.3,4.77,2.62,7.78,7.14,9.02,13.56.23,1.29.34,4.16.34,8.61v40.9h-24.23ZM1193.77,549.45c-7.57,0-12.66.49-15.25,1.48-2.59.99-3.89,2.95-3.89,5.89,0,3.86,2.48,6.2,7.44,7.02,1.52.28,6.15.41,13.91.41,6.15,0,10.37-.21,12.67-.62,4.36-.83,6.54-3.14,6.54-6.95,0-2.98-1.33-4.93-3.99-5.85-2.66-.92-8.47-1.38-17.42-1.38Z"/>
+      <path fill="#fff" d="M1258.37,577.81v-65.82h23.27v14.66c1.24-3.44,2.28-5.87,3.13-7.3.85-1.42,2.01-2.71,3.48-3.86,4.31-3.35,11.13-5.03,20.45-5.03,10.51,0,17.76,2.43,21.76,7.3,2.94,3.54,4.41,9.87,4.41,19,0,.73-.05,2.16-.14,4.27h-22.72c.05-.5.07-.85.07-1.03,0-3.76-.99-6.45-2.96-8.06-1.97-1.61-5.28-2.41-9.91-2.41-6.84,0-11.54,1.93-14.11,5.78-1.65,2.43-2.48,6.5-2.48,12.19v30.29h-24.23Z"/>
+      <path fill="#fff" d="M1410.41,556.88h23.82c-.09,5.05-.99,9-2.69,11.84-2.43,3.95-6.4,6.64-11.91,8.09-5.51,1.45-14.62,2.17-27.33,2.17-11.61,0-20.56-.57-26.85-1.72-3.81-.73-7.23-2.19-10.26-4.37-3.03-2.18-5.26-4.83-6.68-7.95-2.11-4.5-3.17-10.88-3.17-19.14,0-6.2.41-11.18,1.24-14.94.83-3.76,2.23-7,4.2-9.71,3.99-5.6,10.49-8.81,19.48-9.64,5.23-.46,12-.69,20.31-.69,11.84,0,20.54.55,26.09,1.65,5.55,1.1,9.94,3.99,13.15,8.67,2.94,4.22,4.41,11.32,4.41,21.27v7.23h-64.24v3.1c0,3.58.79,6.23,2.38,7.95,1.58,1.72,4.23,2.79,7.95,3.2,3.07.32,7.32.48,12.74.48,6.61,0,11.08-.5,13.43-1.51s3.65-3.01,3.92-5.99ZM1410.61,536.71c-.05-4.73-1.34-7.78-3.89-9.16-2.55-1.38-8.18-2.07-16.9-2.07-5,0-8.73.23-11.19.69-2.46.46-4.35,1.26-5.68,2.41-1.93,1.75-2.89,4.09-2.89,7.02v1.1h40.55Z"/>
+    </svg>
+  </a>
+  <span class="demo-pill">● DEMO</span>
+  <div class="acct-btn"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+</div></header>
+
+<!-- LOGIN PAGE -->
+<div id="lp">
+  <div class="ll"><div class="ll-bg"></div><div class="ll-in">
+    <div class="l-badge">Trade Account Portal</div>
+    <div class="l-title">YOUR HIRE<br><em>ACCOUNT</em><br>ONLINE</div>
+    <div class="l-desc">View machines on hire, download invoices, request off-hires and check rates — 24/7.</div>
+  </div></div>
+  <div class="lr"><div class="lbox">
+    <div class="lpanel">
+      <div class="lp-hdr">
+        <div class="lp-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <div><h2>Trade Login</h2><p>Access your account, invoices and hire contracts</p></div>
+      </div>
+      <div class="lp-form">
+        <div class="hint-box">Demo — enter any email &amp; password and click Sign In</div>
+        <div id="login-alert" class="alert a-ok" style="display:none"></div>
+        <div class="fg"><label>Email Address <span>*</span></label><input type="email" id="login-email" value="mccormack@build.ie" placeholder="your@email.com"></div>
+        <div class="fg"><label>Password <span>*</span></label><input type="password" id="login-pw" value="password123"></div>
+        <div class="l-links">
+          <label style="display:flex;align-items:center;gap:6px;cursor:pointer;color:#555;font-size:11px"><input type="checkbox" style="accent-color:var(--red)"> Keep me logged in</label>
+          <a href="#" onclick="openForgotPw();return false">Forgot password?</a>
+        </div>
+        <button class="sign-btn" onclick="doLogin()">Sign In</button>
+        <div class="l-note">Need access? <a href="Credit-Application-Form-Trade-Navan.pdf" target="_blank">Apply for a trade account →</a></div>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<!-- PORTAL SHELL -->
+<div id="pp" style="display:none">
+  <div class="hero"><div style="padding:0 20px">
+    <div class="bc"><span onclick="doLogout()">Home</span><span style="opacity:.3">&rsaquo;</span><span class="act">Trade Portal</span></div>
+    <h1>Trade Account</h1>
+    <p id="hero-sub">McCormack Building Ltd &nbsp;·&nbsp; Account AC-2841</p>
+  </div></div>
+  <div class="shell">
+    <nav class="sb"><div style="padding:14px 0">
+      <span class="sb-cat">Overview</span>
+      <div class="sb-a on" id="sb-dash" onclick="go('dash')"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Dashboard</div>
+      <div class="sb-hr"></div>
+      <span class="sb-cat">Hire</span>
+      <div class="sb-a" id="sb-contracts" onclick="go('contracts')"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Machines on Hire<span class="sb-n" id="sbn-contracts">4</span></div>
+      <div class="sb-a" id="sb-offhire" onclick="go('offhire')"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Request Off-Hire</div>
+      <div class="sb-a" id="sb-pending-offhires" onclick="go('pending-offhires')"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Pending Off-Hires<span class="sb-n am" id="sbn-poh">1</span></div>
+      <div class="sb-a" id="sb-hirereq" onclick="go('hirereq')"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Request Hire</div>
+      <div class="sb-a" id="sb-pending-orders" onclick="go('pending-orders')"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/></svg>Pending Orders<span class="sb-n gr">2</span></div>
+      <div class="sb-hr"></div>
+      <span class="sb-cat">Finance</span>
+      <div class="sb-a" id="sb-invoices" onclick="go('invoices')"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Invoices<span class="sb-n am" id="sbn-inv">1</span></div>
+      <div class="sb-hr"></div>
+      <div class="sb-a" onclick="doLogout()"><svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Sign Out</div>
+    </div></nav>
+
+    <main class="content">
+
+      <!-- DASHBOARD -->
+      <div class="view on" id="v-dash">
+        <div class="banner"><div><h2 id="dash-greet">Hello, mccormack@build.ie</h2><p>4 machines on hire &nbsp;·&nbsp; 1 outstanding invoice &nbsp;·&nbsp; 1 pending off-hire</p></div><button class="btn btn-red" onclick="go('hirereq')">+ Request Hire</button></div>
+        <div class="stats">
+          <div class="stat" onclick="go('contracts')"><div class="stat-ic ir"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div><div><div class="stat-n">4</div><div class="stat-l">On Hire</div></div></div>
+          <div class="stat" onclick="go('pending-offhires')"><div class="stat-ic ia"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="stat-n">1</div><div class="stat-l">Pending Off-Hires</div></div></div>
+          <div class="stat" onclick="go('invoices')"><div class="stat-ic ib"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><div class="stat-n">€14,280</div><div class="stat-l">Balance Due</div></div></div>
+          <div class="stat" onclick="go('pending-orders')"><div class="stat-ic ig"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/></svg></div><div><div class="stat-n">2</div><div class="stat-l">Pending Orders</div></div></div>
+        </div>
+        <div class="qa">
+          <div class="qc" onclick="go('offhire')"><div class="qc-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div><div class="qc-t">Request Off-Hire</div><div class="qc-d">Return a machine from site</div></div>
+          <div class="qc" onclick="go('hirereq')"><div class="qc-ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div><div class="qc-t">Request Hire</div><div class="qc-d">Get equipment to site</div></div>
+          <div class="qc" onclick="go('invoices')"><div class="qc-ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="qc-t">View Invoices</div><div class="qc-d">1 outstanding</div></div>
+          <div class="qc" onclick="go('pending-orders')"><div class="qc-ic"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/></svg></div><div class="qc-t">Pending Orders</div><div class="qc-d">Track hire requests</div></div>
+        </div>
+        <div class="card">
+          <div class="card-hdr"><div class="card-title">Machines Currently on Hire</div><button class="btn btn-sm btn-out" onclick="go('contracts')">View All</button></div>
+          <div class="tbl"><table>
+            <thead><tr><th>Contract</th><th>Equipment</th><th>Start</th><th>Site</th><th>Status</th></tr></thead>
+            <tbody>
+              <tr class="clickable" onclick="showMach('H-24-8821','Manitou MRT 2150 360° Roto','NHH-005','12 Jan 2025','8 Jan 2025')"><td><strong>H-24-8821</strong></td><td>Manitou MRT 2150 360° Roto</td><td>12 Jan 2025</td><td>Johnstown Rd, Navan</td><td><span class="badge bl">Live</span></td></tr>
+              <tr class="clickable" onclick="showMach('H-24-8902','JCB 3CX Backhoe Loader','NHH-012','19 Jan 2025','5 Jan 2025')"><td><strong>H-24-8902</strong></td><td>JCB 3CX Backhoe Loader</td><td>19 Jan 2025</td><td>Johnstown Rd, Navan</td><td><span class="badge bl">Live</span></td></tr>
+              <tr class="clickable" onclick="showMach('H-25-0044','Genie Z-45/25J Boom Lift','NHH-031','3 Feb 2025','28 Jan 2025')"><td><strong>H-25-0044</strong></td><td>Genie Z-45/25J Boom Lift</td><td>3 Feb 2025</td><td>Trim Road Site B</td><td><span class="badge bl">Live</span></td></tr>
+              <tr class="clickable" onclick="showMach('H-25-0071','Bomag BW120 Roller','NHH-019','10 Feb 2025','2 Feb 2025')"><td><strong>H-25-0071</strong></td><td>Bomag BW120 Roller</td><td>10 Feb 2025</td><td>Trim Road Site B</td><td><span class="badge bp">Off-Hire Pending</span></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+      </div>
+
+      <!-- MACHINES ON HIRE -->
+      <div class="view" id="v-contracts">
+        <div class="sh">Machines on Hire</div><div class="sp">Click a machine to view its GA1 cert and documents</div>
+        <div class="card"><div class="card-hdr"><div class="card-title">Active Contracts</div></div>
+          <div class="tbl"><table>
+            <thead><tr><th>Contract</th><th>Equipment</th><th>Fleet No</th><th>Start</th><th>Site</th><th>Day Rate</th><th>Status</th><th></th></tr></thead>
+            <tbody>
+              <tr class="clickable" onclick="showMach('H-24-8821','Manitou MRT 2150 360° Roto','NHH-005','12 Jan 2025','8 Jan 2025')"><td><strong>H-24-8821</strong></td><td>🔍 Manitou MRT 2150 360° Roto</td><td>NHH-005</td><td>12 Jan</td><td>Johnstown Rd</td><td>€420</td><td><span class="badge bl">Live</span></td><td><button class="btn btn-xs btn-out" onclick="event.stopPropagation();openModal('H-24-8821','Manitou MRT 2150','Johnstown Rd, Navan','Joe Murphy','087 123 4567')">Off-Hire</button></td></tr>
+              <tr class="clickable" onclick="showMach('H-24-8902','JCB 3CX Backhoe Loader','NHH-012','19 Jan 2025','5 Jan 2025')"><td><strong>H-24-8902</strong></td><td>🔍 JCB 3CX Backhoe Loader</td><td>NHH-012</td><td>19 Jan</td><td>Johnstown Rd</td><td>€310</td><td><span class="badge bl">Live</span></td><td><button class="btn btn-xs btn-out" onclick="event.stopPropagation();openModal('H-24-8902','JCB 3CX','Johnstown Rd, Navan','Joe Murphy','087 123 4567')">Off-Hire</button></td></tr>
+              <tr class="clickable" onclick="showMach('H-25-0044','Genie Z-45/25J Boom Lift','NHH-031','3 Feb 2025','28 Jan 2025')"><td><strong>H-25-0044</strong></td><td>🔍 Genie Z-45/25J Boom Lift</td><td>NHH-031</td><td>3 Feb</td><td>Trim Rd Site B</td><td>€185</td><td><span class="badge bl">Live</span></td><td><button class="btn btn-xs btn-out" onclick="event.stopPropagation();openModal('H-25-0044','Genie Z-45','Trim Road Site B, Trim','Pat Flynn','086 234 5678')">Off-Hire</button></td></tr>
+              <tr class="clickable" onclick="showMach('H-25-0071','Bomag BW120 Roller','NHH-019','10 Feb 2025','2 Feb 2025')"><td><strong>H-25-0071</strong></td><td>🔍 Bomag BW120 Roller</td><td>NHH-019</td><td>10 Feb</td><td>Trim Rd Site B</td><td>€145</td><td><span class="badge bp">Off-Hire Pending</span></td><td>—</td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <p style="font-size:12px;color:var(--grey)">🔍 Click any row to view GA1 cert, inspection records and documents for that machine.</p>
+      </div>
+
+      <!-- PENDING OFF-HIRES -->
+      <div class="view" id="v-pending-offhires">
+        <div class="sh">Pending Off-Hires</div><div class="sp">Off-hire requests awaiting confirmation from NHH — you can cancel or edit these</div>
+        <div class="card"><div class="card-hdr"><div class="card-title">Awaiting Collection</div></div>
+          <div class="tbl"><table>
+            <thead><tr><th>Ref</th><th>Contract</th><th>Equipment</th><th>Collection Date</th><th>Site</th><th>Contact</th><th>Status</th><th></th></tr></thead>
+            <tbody>
+              <tr><td><strong>OFN-25-0092</strong></td><td>H-25-0071</td><td>Bomag BW120 Roller</td><td>25 Feb 2025, 8am</td><td>Trim Road Site B, Trim</td><td>Pat Flynn</td><td><span class="badge bp">Pending</span></td><td style="white-space:nowrap"><button class="btn btn-xs btn-out" style="margin-right:4px" onclick="editOffhire('OFN-25-0092','H-25-0071','Bomag BW120 Roller','2025-02-25','08:00','Trim Road Site B, Trim, Co. Meath, C15 AB12','Pat Flynn','086 234 5678','Access via main gate')">Edit</button><button class="btn btn-xs" style="background:#fff0f0;border:1.5px solid var(--red);color:var(--red)" onclick="cancelOffhire('OFN-25-0092')">Cancel</button></td></tr>
+            </tbody>
+          </table></div>
+        </div>
+        <div class="info blue" style="margin-top:4px"><h3>&#9432; About pending off-hires</h3>You can edit or cancel a pending off-hire up until it is confirmed by our hire desk. Once confirmed, please call <a href="tel:0469022535">046 902 2535</a> to make changes.</div>
+      </div>
+
+      <!-- PENDING ORDERS -->
+      <div class="view" id="v-pending-orders">
+        <div class="sh">Pending Orders</div><div class="sp">Hire requests submitted — track status and expected delivery</div>
+        <div class="card"><div class="card-hdr"><div class="card-title">Hire Requests</div></div>
+          <div style="padding:0 16px 16px">
+            <table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:12px">
+              <thead><tr><th style="text-align:left;padding:8px 10px;font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey);background:var(--light);border-bottom:2px solid var(--border)">Ref</th><th style="text-align:left;padding:8px 10px;font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey);background:var(--light);border-bottom:2px solid var(--border)">Equipment</th><th style="text-align:left;padding:8px 10px;font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey);background:var(--light);border-bottom:2px solid var(--border)">Site</th><th style="text-align:left;padding:8px 10px;font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey);background:var(--light);border-bottom:2px solid var(--border)">Needed</th><th style="text-align:left;padding:8px 10px;font-family:var(--fh);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grey);background:var(--light);border-bottom:2px solid var(--border)">Progress</th></tr></thead>
+              <tbody id="orders-tbody">
+                <tr><td style="padding:12px 10px;border-bottom:1px solid var(--border)"><strong>HRQ-25-0044</strong></td><td style="padding:12px 10px;border-bottom:1px solid var(--border)">Excavator 13T</td><td style="padding:12px 10px;border-bottom:1px solid var(--border)">Dunboyne Road, Navan</td><td style="padding:12px 10px;border-bottom:1px solid var(--border)">24 Feb</td><td style="padding:12px 10px;border-bottom:1px solid var(--border);min-width:200px">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:3px">
+                    <span style="font-size:10px;font-weight:700;color:var(--amber)">Availability check</span>
+                    <span style="font-size:10px;color:var(--grey)">Step 2/4</span>
+                  </div>
+                  <div class="order-status-bar"><div class="order-status-fill" style="width:40%;background:var(--amber)"></div></div>
+                  <div class="status-steps"><span class="status-step done">Received</span><span class="status-step active">Checking</span><span class="status-step">Confirmed</span><span class="status-step">Delivered</span></div>
+                </td></tr>
+                <tr><td style="padding:12px 10px"><strong>HRQ-25-0041</strong></td><td style="padding:12px 10px">Scissor Lift 26ft Electric</td><td style="padding:12px 10px">Trim Road Site B</td><td style="padding:12px 10px">22 Feb</td><td style="padding:12px 10px;min-width:200px">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:3px">
+                    <span style="font-size:10px;font-weight:700;color:var(--green)">Confirmed — delivery Fri</span>
+                    <span style="font-size:10px;color:var(--grey)">Step 3/4</span>
+                  </div>
+                  <div class="order-status-bar"><div class="order-status-fill" style="width:75%"></div></div>
+                  <div class="status-steps"><span class="status-step done">Received</span><span class="status-step done">Checking</span><span class="status-step active">Confirmed</span><span class="status-step">Delivered</span></div>
+                </td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- OFF-HIRE REQUEST -->
+      <div class="view" id="v-offhire">
+        <div class="sh">Request Off-Hire</div><div class="sp">Notify NHH a machine is ready for collection</div>
+        <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start">
+          <div class="card"><div class="card-hdr"><div class="card-title">Off-Hire Form</div></div><div style="padding:16px">
+            <div class="alert" id="oh-al"></div>
+            <div class="fg"><label>Contract / Machine <span>*</span></label>
+              <select id="oh-sel" onchange="onContractSelect()">
+                <option value="">— Select a contract —</option>
+                <option value="H-24-8821|Manitou MRT 2150 360° Roto|Johnstown Rd, Navan, Co. Meath, C15 XY12|Joe Murphy|087 123 4567">H-24-8821 — Manitou MRT 2150</option>
+                <option value="H-24-8902|JCB 3CX Backhoe Loader|Johnstown Rd, Navan, Co. Meath, C15 XY12|Joe Murphy|087 123 4567">H-24-8902 — JCB 3CX Backhoe</option>
+                <option value="H-25-0044|Genie Z-45/25J Boom Lift|Trim Road Site B, Trim, Co. Meath, C15 AB12|Pat Flynn|086 234 5678">H-25-0044 — Genie Z-45 Boom Lift</option>
+              </select>
+            </div>
+            <div class="section-divider">Collection Details</div>
+            <div class="g2">
+              <div class="fg"><label>Collection Date <span>*</span></label><input type="date" id="oh-dt" value="2025-02-25"></div>
+              <div class="fg"><label>Ready by (time)</label><input type="time" id="oh-time" value="08:00"></div>
+            </div>
+            <div class="fg">
+              <label>Collection Address <span>*</span></label>
+              <div style="display:flex;gap:8px;align-items:flex-start">
+                <input type="text" id="oh-addr" placeholder="Site address" style="flex:1" readonly>
+                <button class="btn btn-ghost btn-sm" type="button" onclick="unlockAddr()" style="flex-shrink:0;margin-top:0">Change</button>
+              </div>
+              <span style="font-size:10px;color:var(--grey);margin-top:3px">Auto-filled from contract. Click Change to edit.</span>
+            </div>
+            <div class="section-divider">Site Contact</div>
+            <div class="g2">
+              <div class="fg"><label>Contact Name <span>*</span></label><input type="text" id="oh-contact" placeholder="Site contact"></div>
+              <div class="fg"><label>Contact Phone <span>*</span></label><input type="text" id="oh-phone" placeholder="Phone number"></div>
+            </div>
+            <div class="fg"><label>Collection Notes</label><textarea id="oh-notes" placeholder="Gate code, access instructions, position of machine on site..."></textarea></div>
+            <button class="btn btn-red" style="width:100%" onclick="subOH()">Submit Off-Hire Request</button>
+            <div class="fn">Logged instantly — hire desk will confirm by phone or email.</div>
+          </div></div>
+          <div>
+            <div class="info"><h3>&#9889; What happens next?</h3><ul><li>Request logged into our system</li><li>Hire desk reviews &amp; schedules collection</li><li>Confirmation by phone or email</li><li>Machine collected on agreed date</li></ul><div style="margin-top:11px"><strong>Urgent?</strong> Call <a href="tel:0469022535">046 902 2535</a></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HIRE REQUEST -->
+      <div class="view" id="v-hirereq">
+        <div class="sh">Request Hire</div><div class="sp">Search or browse our full fleet — rates shown after selecting equipment and duration</div>
+        <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:16px;align-items:start">
+          <div class="card"><div class="card-hdr"><div class="card-title">Equipment & Details</div></div><div style="padding:16px">
+            <div class="alert" id="hr-al"></div>
+            <div class="section-divider">Select Equipment</div>
+            <div class="search-bar">
+              <input type="text" id="eq-search" placeholder="Search equipment... e.g. excavator, boom lift" oninput="filterEquipment()">
+              <select id="eq-cat" onchange="filterEquipment()">
+                <option value="">All Categories</option>
+              </select>
+            </div>
+            <div id="sel-eq-display" class="selected-eq"><div><strong id="sel-eq-name"></strong><span id="sel-eq-cat" style="font-size:11px;color:var(--grey);margin-left:8px"></span></div><button class="btn btn-xs btn-ghost" onclick="clearEquipment()">&#10005; Clear</button></div>
+            <div class="prod-list" id="prod-list"></div>
+
+            <div id="rate-section" style="display:none">
+              <div class="section-divider" style="margin-top:14px">Duration & Rate</div>
+              <div class="fg"><label>Duration <span>*</span></label>
+                <select id="hr-duration" onchange="onDurationChange()">
+                  <option value="">— Select duration —</option>
+                  <option value="d1">Day 1 (first day)</option>
+                  <option value="d2">Day 2 (second day)</option>
+                  <option value="d3">Week (3+ days)</option>
+                  <option value="we">Weekend</option>
+                </select>
+              </div>
+              <div id="rate-display" class="rate-box" style="display:none">
+                <div class="rate-box-title">Your Rate for Selected Equipment &amp; Duration</div>
+                <div class="rate-grid">
+                  <div class="rate-cell" id="rc-d1"><div class="rate-lbl">Day 1</div><div class="rate-val" id="rv-d1">—</div></div>
+                  <div class="rate-cell" id="rc-d2"><div class="rate-lbl">Day 2</div><div class="rate-val" id="rv-d2">—</div></div>
+                  <div class="rate-cell" id="rc-d3"><div class="rate-lbl">Week</div><div class="rate-val" id="rv-d3">—</div></div>
+                  <div class="rate-cell" id="rc-we"><div class="rate-lbl">Weekend</div><div class="rate-val" id="rv-we">—</div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-divider" style="margin-top:14px">Order Details</div>
+            <div class="g2">
+              <div class="fg"><label>Quantity</label><input type="number" id="hr-qty" value="1" min="1"></div>
+              <div class="fg"><label>Your PO Number</label><input type="text" id="hr-po" placeholder="Optional"></div>
+              <div class="fg"><label>Required From <span>*</span></label><input type="date" id="hr-from" value="2025-02-24"></div>
+              <div class="fg"><label>Required Until</label><input type="date" id="hr-to"></div>
+            </div>
+
+            <div class="section-divider">Delivery Address</div>
+            <div class="fg"><label>Address Line 1 <span>*</span></label><input type="text" id="hr-addr1" placeholder="Street / site name"></div>
+            <div class="g2">
+              <div class="fg"><label>Town / City <span>*</span></label><input type="text" id="hr-town" placeholder="e.g. Navan"></div>
+              <div class="fg"><label>County <span>*</span></label><input type="text" id="hr-county" placeholder="e.g. Co. Meath"></div>
+            </div>
+            <div class="fg"><label>Eircode <span>*</span></label><input type="text" id="hr-eircode" placeholder="e.g. C15 XY12" style="max-width:160px"></div>
+            <div class="section-divider">Site Contact</div>
+            <div class="g2">
+              <div class="fg"><label>Contact Name <span>*</span></label><input type="text" id="hr-contact" placeholder="Site contact name"></div>
+              <div class="fg"><label>Contact Phone <span>*</span></label><input type="text" id="hr-phone" placeholder="Mobile or site phone"></div>
+            </div>
+            <div class="fg"><label>Additional Notes</label><textarea id="hr-notes" placeholder="Ground conditions, access restrictions, special requirements..."></textarea></div>
+            <button class="btn btn-red" style="width:100%" onclick="subHR()">Submit Hire Request</button>
+            <div class="fn">We'll contact you to confirm availability and delivery date.</div>
+          </div></div>
+          <div class="info green"><h3>&#10003; What happens next?</h3><ul><li>Logged directly into our system</li><li>Team checks fleet availability</li><li>We confirm rate and delivery date</li><li>Machine delivered to site</li></ul><div style="margin-top:11px"><strong>Need it today?</strong> Call <a href="tel:0469022535">046 902 2535</a></div></div>
+        </div>
+      </div>
+
+      <!-- INVOICES -->
+      <div class="view" id="v-invoices">
+        <div class="sh">Invoices</div><div class="sp">Your sales invoices from Navan Hire &amp; Hardware</div>
+        <div class="card"><div class="card-hdr"><div class="card-title">Invoice History</div><span style="font-size:12px;color:var(--red);font-weight:700">€14,280 outstanding</span></div>
+          <div class="tbl"><table><thead><tr><th>Invoice #</th><th>Date</th><th>Due</th><th>Net</th><th>VAT</th><th>Gross</th><th>Balance</th><th>Status</th><th></th></tr></thead><tbody>
+            <tr><td><strong>INV-25-0412</strong></td><td>1 Feb</td><td>28 Feb</td><td>€11,560</td><td>€2,888</td><td>€14,448</td><td style="color:var(--red);font-weight:700">€14,280</td><td><span class="badge bo">Outstanding</span></td><td style="white-space:nowrap"><button class="btn btn-xs btn-out" style="margin-right:4px">PDF ↓</button><button class="btn btn-xs btn-green" onclick="payInvoice('INV-25-0412','14280')">Pay Now</button></td></tr>
+            <tr><td><strong>INV-25-0318</strong></td><td>15 Jan</td><td>12 Feb</td><td>€8,200</td><td>€2,050</td><td>€10,250</td><td style="color:var(--green);font-weight:700">€0.00</td><td><span class="badge bpd">Paid</span></td><td><button class="btn btn-xs btn-out">PDF ↓</button></td></tr>
+            <tr><td><strong>INV-24-2940</strong></td><td>2 Dec</td><td>30 Dec</td><td>€6,450</td><td>€1,612</td><td>€8,062</td><td style="color:var(--green);font-weight:700">€0.00</td><td><span class="badge bpd">Paid</span></td><td><button class="btn btn-xs btn-out">PDF ↓</button></td></tr>
+            <tr><td><strong>INV-24-2711</strong></td><td>4 Nov</td><td>2 Dec</td><td>€9,800</td><td>€2,450</td><td>€12,250</td><td style="color:var(--green);font-weight:700">€0.00</td><td><span class="badge bpd">Paid</span></td><td><button class="btn btn-xs btn-out">PDF ↓</button></td></tr>
+          </tbody></table></div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- MACHINE / QR PAGE -->
+<div id="mp" style="display:none">
+  <div class="m-bar"><div class="m-bar-dot"></div><div class="m-bar-t"><strong>Navan Hire &amp; Hardware</strong> &nbsp;·&nbsp; Machine Record</div></div>
+  <div class="m-wrap"><div class="m-card" id="mach-card">
+    <div class="m-hero">
+      <div class="m-ghost" id="mc-fleet">NHH-005</div>
+      <div class="m-tag">Fleet Record</div>
+      <div class="m-name" id="mc-name">Manitou MRT 2150</div>
+      <div class="m-meta">Fleet No: <strong id="mc-fleetno">NHH-005</strong> &nbsp;·&nbsp; Contract: <strong id="mc-contract">H-24-8821</strong></div>
+    </div>
+    <div class="cert-row"><div class="c-dot ok"></div><div><div class="c-lbl">GA1 Certificate Status</div><div class="c-val" id="mc-cert-val">Valid — Next Inspection: 14 Sep 2025</div></div></div>
+    <div class="cert-row" style="border-bottom:none;padding-top:8px;padding-bottom:8px"><div class="c-dot" style="background:var(--blue);animation:none"></div><div><div class="c-lbl">Last Inspection Date</div><div class="c-val" style="color:var(--blue)" id="mc-last-insp">8 Jan 2025</div></div></div>
+    <div class="m-sec">
+      <div class="m-sec-lbl">Documents &amp; Certificates</div>
+      <a class="doc" href="#" onclick="return false"><div class="doc-ic">📋</div><div><div class="doc-n">GA1 Inspection Certificate</div><div class="doc-s" id="mc-ga1-sub">Thorough Examination · Valid to Sep 2025</div></div><div class="doc-arr"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div></a>
+      <a class="doc" href="#" onclick="return false"><div class="doc-ic">📖</div><div><div class="doc-n">Operator's Manual</div><div class="doc-s" id="mc-manual-sub">Equipment Operator Manual</div></div><div class="doc-arr"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div></a>
+      <a class="doc" href="#" onclick="return false" style="border-color:var(--red);background:#fff8f8"><div class="doc-ic">▶️</div><div><div class="doc-n" style="color:var(--red)">Quick Start Video</div><div class="doc-s">Safety briefing &amp; controls overview</div></div><div class="doc-arr"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></div></a>
+    </div>
+    <div class="m-foot"><div class="m-fi"><strong>Navan Hire &amp; Hardware</strong><br>046 902 2535 · hiredesk@nhh.ie</div><a href="tel:0469022535" class="call-btn"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Call Hire Desk</a></div>
+  </div></div>
+  <button class="back-fab" onclick="hideMach()"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back to Portal</button>
+</div>
+
+<!-- OFF-HIRE MODAL (from contracts table) -->
+<div class="overlay" id="ov-offhire"><div class="modal">
+  <div class="m-hdr"><h2>Request Off-Hire</h2><div class="m-x" onclick="closeM('ov-offhire')">&#10005;</div></div>
+  <div class="m-body">
+    <div class="m-ref" id="mref-offhire"></div>
+    <div class="section-divider">Collection Details</div>
+    <div class="g2">
+      <div class="fg"><label>Collection Date <span>*</span></label><input type="date" id="modal-date" value="2025-02-25"></div>
+      <div class="fg"><label>Ready by</label><input type="time" id="modal-time" value="08:00"></div>
+    </div>
+    <div class="fg"><label>Collection Address <span>*</span></label><input type="text" id="modal-addr" placeholder="Site address"></div>
+    <div class="section-divider">Site Contact</div>
+    <div class="g2">
+      <div class="fg"><label>Contact Name</label><input type="text" id="modal-contact" placeholder="Site contact"></div>
+      <div class="fg"><label>Contact Phone</label><input type="text" id="modal-phone" placeholder="Phone number"></div>
+    </div>
+    <div class="fg"><label>Collection Notes</label><textarea id="modal-notes" placeholder="Gate code, access, location of machine on site..."></textarea></div>
+  </div>
+  <div class="m-foot2"><button class="btn btn-sm btn-out" onclick="closeM('ov-offhire')">Cancel</button><button class="btn btn-sm btn-red" onclick="subModal()">Submit Off-Hire</button></div>
+</div></div>
+
+<!-- EDIT OFF-HIRE MODAL -->
+<div class="overlay" id="ov-edit-offhire"><div class="modal">
+  <div class="m-hdr"><h2>Edit Off-Hire Request</h2><div class="m-x" onclick="closeM('ov-edit-offhire')">&#10005;</div></div>
+  <div class="m-body">
+    <div class="m-ref" id="mref-edit"></div>
+    <div class="section-divider">Collection Details</div>
+    <div class="g2">
+      <div class="fg"><label>Collection Date <span>*</span></label><input type="date" id="edit-date"></div>
+      <div class="fg"><label>Ready by</label><input type="time" id="edit-time"></div>
+    </div>
+    <div class="fg"><label>Collection Address <span>*</span></label><input type="text" id="edit-addr"></div>
+    <div class="section-divider">Site Contact</div>
+    <div class="g2">
+      <div class="fg"><label>Contact Name</label><input type="text" id="edit-contact"></div>
+      <div class="fg"><label>Contact Phone</label><input type="text" id="edit-phone"></div>
+    </div>
+    <div class="fg"><label>Collection Notes</label><textarea id="edit-notes"></textarea></div>
+  </div>
+  <div class="m-foot2"><button class="btn btn-sm btn-out" onclick="closeM('ov-edit-offhire')">Cancel</button><button class="btn btn-sm btn-red" onclick="saveEditOffhire()">Save Changes</button></div>
+</div></div>
+
+<!-- FORGOT PASSWORD MODAL -->
+<div class="overlay" id="ov-forgot"><div class="modal" style="max-width:400px">
+  <div class="m-hdr"><h2>Forgot Password</h2><div class="m-x" onclick="closeM('ov-forgot')">&#10005;</div></div>
+  <div class="m-body">
+    <div id="fp-form-area">
+      <p style="font-size:13px;color:var(--grey);margin-bottom:14px">Enter your email address and we'll send you your login details.</p>
+      <div class="fg"><label>Email Address <span>*</span></label><input type="email" id="fp-email" placeholder="your@email.com"></div>
+    </div>
+    <div id="fp-sent-area" style="display:none;text-align:center;padding:10px 0">
+      <div style="font-size:32px;margin-bottom:10px">✉️</div>
+      <p style="font-size:14px;font-weight:700;margin-bottom:6px">Email sent!</p>
+      <p style="font-size:13px;color:var(--grey)">Check your inbox for your login details. If you don't receive an email within a few minutes, please call <a href="tel:0469022535" style="color:var(--red);font-weight:700">046 902 2535</a>.</p>
+    </div>
+  </div>
+  <div class="m-foot2" id="fp-foot">
+    <button class="btn btn-sm btn-out" onclick="closeM('ov-forgot')">Cancel</button>
+    <button class="btn btn-sm btn-red" onclick="sendForgotPw()">Send Email</button>
+  </div>
+</div></div>
+
+<!-- STRIPE PAYMENT MODAL -->
+<div class="overlay" id="ov-pay"><div class="modal" style="max-width:440px">
+  <div class="m-hdr"><h2>Pay Invoice</h2><div class="m-x" onclick="closeM('ov-pay')">&#10005;</div></div>
+  <div class="m-body">
+    <div class="m-ref" id="pay-ref"></div>
+    <div class="info blue" style="margin-bottom:14px"><h3>&#128274; Secure Payment via Stripe</h3>You will be redirected to our secure Stripe payment page to complete payment. Your card details are never stored by NHH.</div>
+    <div style="font-size:13px;color:var(--grey);margin-bottom:14px">Amount due: <strong style="color:#111;font-size:16px" id="pay-amount"></strong></div>
+    <div class="fg"><label>Your Name / Company</label><input type="text" value="McCormack Building Ltd"></div>
+    <div class="fg"><label>Email for Receipt</label><input type="email" id="pay-email"></div>
+  </div>
+  <div class="m-foot2">
+    <button class="btn btn-sm btn-out" onclick="closeM('ov-pay')">Cancel</button>
+    <button class="btn btn-sm btn-green" onclick="goStripe()">&#128274; Pay via Stripe →</button>
+  </div>
+</div></div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><div class="tic">&#10003;</div><span id="tmsg"></span></div>
+
+<!-- FOOTER -->
+<footer class="footer" id="ft">
+  <div class="fg-grid">
+    <div class="fc">
+      <svg viewBox="0 0 1500 630.25" xmlns="http://www.w3.org/2000/svg" style="height:36px;width:auto;display:block;margin-bottom:12px"><rect fill="#fe0000" width="1500" height="630.25"/><path fill="#fff" d="M69.38,444.09V50.86h157.48l197.27,299.32-2.62-299.32h93.63v393.24h-158.91L161.82,147.94l2.86,296.15h-95.3Z"/><path fill="#fff" d="M549.32,444.09V50.86h99.11v145.2h225.14V50.86h99.11v393.24h-99.11v-150.96h-225.14v150.96h-99.11Z"/><path fill="#fff" d="M1008.6,444.09V50.86h99.11v145.2h225.14V50.86h99.11v393.24h-99.11v-150.96h-225.14v150.96h-99.11Z"/><path fill="#fff" d="M65.77,577.81v-93.98h28.64v34.7h65.06v-34.7h28.64v93.98h-28.64v-36.08h-65.06v36.08h-28.64Z"/><path fill="#fff" d="M561.55,577.81v-93.98h28.64v34.7h65.06v-34.7h28.64v93.98h-28.64v-36.08h-65.06v36.08h-28.64Z"/></svg>
+      <p style="color:rgba(255,255,255,.6)">Whistlemount, Kells Road<br>Navan, Co. Meath, C15 FX6Y</p>
+      <p><a href="tel:0469022535" style="color:#fff">046 902 2535</a></p>
+      <p><a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a></p>
+      <div class="soc">
+        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+    </div>
+    <div class="fc"><h4>Hire</h4><ul><li><a href="#">Hire Fleet</a></li><li><a href="#">Plant &amp; Tool Hire</a></li><li><a href="#">Access &amp; Spider Lifts</a></li><li><a href="#">Telehandlers</a></li></ul></div>
+    <div class="fc"><h4>Company</h4><ul><li><a href="#">Hardware &amp; DIY</a></li><li><a href="#">Contact Us</a></li><li><a href="#">Trade Account</a></li></ul></div>
+    <div class="fc"><h4>Opening Hours</h4><p style="color:rgba(255,255,255,.6)">Mon–Fri: 7:00am – 5:00pm<br>Saturday: 8:30am – 1:00pm<br>Sunday: Closed</p></div>
+  </div>
+  <div class="f-bot">&#169; 2025 Navan Hire &amp; Hardware. All rights reserved.</div>
+</footer>
+
+<script>
+// ===== HIRE DATA (from Hire_Rates.csv) =====
+const HIRE_DATA = {"Access & Lifts": [{"n": "15M SPIDER BOOM LIFT", "d1": "450", "d2": "650", "d3": "750", "we": "450"}, {"n": "17M SPIDER BOOM LIFT", "d1": "550", "d2": "800", "d3": "950", "we": "550"}, {"n": "20M SCISSORS LIFT", "d1": "550", "d2": "750", "d3": "1050", "we": "550"}, {"n": "20M SPIDER BOOM LIFT", "d1": "800", "d2": "1200", "d3": "1500", "we": "800"}, {"n": "26M SPIDER BOOM LIFT", "d1": "1300", "d2": "1700", "d3": "2000", "we": "1300"}, {"n": "80 FT ARTICULATED BOOM LIFT", "d1": "450", "d2": "625", "d3": "750", "we": "450"}, {"n": "BOOM LIFT 135FT ARTICULATED", "d1": "850", "d2": "1250", "d3": "1550", "we": "850"}, {"n": "BOOM LIFT 30FT", "d1": "250", "d2": "350", "d3": "450", "we": "250"}, {"n": "BOOM LIFT 38'  5'WIDE UPRIGHT", "d1": "250", "d2": "350", "d3": "450", "we": "250"}, {"n": "BOOM LIFT 40FT TOWABLE", "d1": "250", "d2": "350", "d3": "395", "we": "250"}, {"n": "BOOM LIFT 40FT TOWABLE ARTICULATED", "d1": "250", "d2": "350", "d3": "395", "we": "250"}, {"n": "BOOM LIFT 45FT ELECTRIC", "d1": "295", "d2": "425", "d3": "550", "we": "350"}, {"n": "BOOM LIFT 45FT Z45", "d1": "250", "d2": "350", "d3": "450", "we": "295"}, {"n": "BOOM LIFT 60' ARTICULATED BOOM", "d1": "295", "d2": "450", "d3": "575", "we": "340"}, {"n": "BOOM LIFT 85FT STRAIGHT", "d1": "450", "d2": "625", "d3": "750", "we": "450"}, {"n": "GENIE LIFT SLA25", "d1": "125", "d2": "195", "d3": "265", "we": "150"}, {"n": "S125 BOOM LIFT", "d1": "850", "d2": "1250", "d3": "1550", "we": "850"}, {"n": "SCISSORS  LIFT 19FT", "d1": "95", "d2": "185", "d3": "225", "we": "150"}, {"n": "SCISSORS 10FT ELECTRIC", "d1": "85", "d2": "170", "d3": "200", "we": "130"}, {"n": "SCISSORS LIFT 26 ALL TERRAIN DIESEL", "d1": "270", "d2": "350", "d3": "400", "we": "270"}, {"n": "SCISSORS LIFT 26FT", "d1": "125", "d2": "225", "d3": "275", "we": "180"}, {"n": "SCISSORS LIFT 32 FT  110V", "d1": "165", "d2": "260", "d3": "295", "we": "195"}, {"n": "SCISSORS LIFT 40 FT ELECTRIC", "d1": "300", "d2": "450", "d3": "495", "we": "300"}, {"n": "SCISSORS LIFT 40FT ALL TERRAIN NARROW", "d1": "250", "d2": "375", "d3": "450", "we": "250"}, {"n": "SCISSORS LIFT 40FT ALL-TERRAIN ELECTRIC", "d1": "250", "d2": "375", "d3": "450", "we": "250"}, {"n": "SCISSORS LIFT 50FT ALL-TERRAIN", "d1": "275", "d2": "425", "d3": "475", "we": "295"}, {"n": "SKYJACK SJ16", "d1": "95", "d2": "185", "d3": "225", "we": "150"}, {"n": "TOUCAN 10E", "d1": "250", "d2": "350", "d3": "450", "we": "250"}], "Compaction": [{"n": "COMPACTOR 14\" PETROL", "d1": "37", "d2": "74", "d3": "111", "we": "55"}, {"n": "COMPACTOR 16\" PETROL C/W  WATER TANK  (WACKER)", "d1": "39", "d2": "79", "d3": "111", "we": "55"}, {"n": "COMPACTOR 16\" wacker plate", "d1": "39", "d2": "79", "d3": "111", "we": "55"}, {"n": "COMPACTOR DIESEL FOR/REV 2550", "d1": "42", "d2": "84", "d3": "125", "we": "63"}, {"n": "COMPACTOR JUMPING JACK PETROL", "d1": "40", "d2": "80", "d3": "120", "we": "55"}], "Compressors": [{"n": "COMPRESSOR 140 CFM", "d1": "110", "d2": "210", "d3": "250", "we": "150"}, {"n": "COMPRESSOR 180 CFM", "d1": "110", "d2": "210", "d3": "250", "we": "150"}, {"n": "COMPRESSOR 95 CFM", "d1": "95", "d2": "135", "d3": "175", "we": "110"}, {"n": "COMPRESSOR AIR ELECTRIC 90 LTR", "d1": "35", "d2": "70", "d3": "110", "we": "45"}, {"n": "COMPRESSOR ATLAS COPCO 260CFM", "d1": "180", "d2": "330", "d3": "395", "we": "225"}, {"n": "COMPRESSOR GENERATOR 130CFM/6KVA", "d1": "110", "d2": "210", "d3": "250", "we": "150"}, {"n": "COMPRESSOR HONDA ENG AIR 50 LIT", "d1": "58.5", "d2": "76.5", "d3": "120", "we": "58.5"}], "Concrete & Mixing": [{"n": "CEMENT MIXER 4 BAG (TOWABLE)", "d1": "60", "d2": "120", "d3": "160", "we": "80"}, {"n": "CEMENT MIXER DIESEL 2 BAG", "d1": "50", "d2": "100", "d3": "150", "we": "73"}, {"n": "CEMENT MIXER ELECTRIC 1/2 BAG", "d1": "30", "d2": "60", "d3": "90", "we": "43"}, {"n": "CEMENT MIXER ELECTRIC 1/2 BAG", "d1": "30", "d2": "60", "d3": "90", "we": "43"}, {"n": "CEMENT MIXER PETROL 1/2 BAG", "d1": "30", "d2": "60", "d3": "90", "we": "43"}, {"n": "CONCRETE PLANER 7\" 110V MAKITA", "d1": "66", "d2": "110", "d3": "145", "we": "80"}, {"n": "CONCRETE SKIP (1 MTR/2 TON)", "d1": "80", "d2": "125", "d3": "150", "we": "80"}, {"n": "CONCRETE SKIP (1.5MTR/3 TON)", "d1": "80", "d2": "125", "d3": "150", "we": "80"}, {"n": "CONCRETE SKIP 3/4 METRE BANANA", "d1": "80", "d2": "125", "d3": "150", "we": "80"}, {"n": "FLOAT BULL C/W 3 HANDLES", "d1": "35", "d2": "70", "d3": "102", "we": "51"}, {"n": "POKER ELECTRIC HIGH FREQ.", "d1": "44", "d2": "88", "d3": "132", "we": "66"}, {"n": "ROADSAW CONCRETE", "d1": "59", "d2": "118", "d3": "177", "we": "88.5"}, {"n": "TIPPING SKIP HOLDS 2000 KG 15000 LTRS", "d1": "80", "d2": "125", "d3": "150", "we": "80"}], "Drilling & Breaking": [{"n": "BREAKER HAMMER H65", "d1": "20", "d2": "35", "d3": "50", "we": "25"}, {"n": "BREAKER HAMMER H65", "d1": "40", "d2": "80", "d3": "120", "we": "40"}, {"n": "DRILL MAGNETIC", "d1": "44", "d2": "88", "d3": "132", "we": "66"}, {"n": "DRILL PLASTER MIXER RGE150", "d1": "34", "d2": "68", "d3": "102", "we": "51"}, {"n": "DRILL RIGHT ANGLE", "d1": "29", "d2": "58", "d3": "87", "we": "43"}, {"n": "DRILL SDS MAX 110V", "d1": "40", "d2": "80", "d3": "110", "we": "55"}, {"n": "DRILL SDS PLUS", "d1": "23", "d2": "46", "d3": "66", "we": "33"}, {"n": "HAMMER KANGO MAKITA", "d1": "37", "d2": "74", "d3": "111", "we": "55"}, {"n": "HAMMER/BREAKER 35KG (EXTRA LARGE)", "d1": "60", "d2": "120", "d3": "160", "we": "65"}, {"n": "HAMMER/BREAKER HEAVY DUTY", "d1": "44", "d2": "88", "d3": "132", "we": "66"}, {"n": "HILTI CORE DRILL DD200", "d1": "145", "d2": "290", "d3": "415", "we": "210"}, {"n": "HILTI CORE DRILL DD250", "d1": "145", "d2": "290", "d3": "415", "we": "210"}, {"n": "HYDRAULIC POWER PACK & HAMMER", "d1": "55", "d2": "110", "d3": "160", "we": "82.5"}, {"n": "ROAD HAMMER CP9 /  SK10 (LIGHT", "d1": "20", "d2": "35", "d3": "50", "we": "25"}], "Dumpers & Rollers": [{"n": "DUMPER 1 TON HIGH-TIP 48", "d1": "90", "d2": "150", "d3": "210", "we": "120"}, {"n": "DUMPER 3 TON SWIVEL SKIP", "d1": "120", "d2": "190", "d3": "270", "we": "150"}, {"n": "DUMPER 6 TON SWIVEL SKIP", "d1": "195", "d2": "230", "d3": "295", "we": "195"}, {"n": "DUMPER 9 TON 101\" WIDE", "d1": "200", "d2": "280", "d3": "350", "we": "200"}, {"n": "DUMPER 9 TON C/W CAB", "d1": "200", "d2": "280", "d3": "350", "we": "200"}, {"n": "DUMPER TRACK  HIGH TIP", "d1": "130", "d2": "180", "d3": "235", "we": "130"}, {"n": "ROLLER 120 TWIN DRUM", "d1": "125", "d2": "250", "d3": "295", "we": "150"}, {"n": "ROLLER 138", "d1": "250", "d2": "370", "d3": "425", "we": "250"}, {"n": "ROLLER 15 TONNE SINGLE DRUM", "d1": "395", "d2": "600", "d3": "750", "we": "450"}, {"n": "ROLLER 90  TWIN DRUM BOMAG", "d1": "115", "d2": "220", "d3": "250", "we": "135"}], "Excavators": [{"n": "DIGGER 1 TON", "d1": "125", "d2": "250", "d3": "295", "we": "150"}, {"n": "DIGGER 1.7 TON", "d1": "135", "d2": "270", "d3": "315", "we": "165"}, {"n": "DIGGER 1.7 TON C/W CAB", "d1": "135", "d2": "270", "d3": "315", "we": "165"}, {"n": "DIGGER 13 TON", "d1": "375", "d2": "575", "d3": "750", "we": "400"}, {"n": "DIGGER 3 TON", "d1": "160", "d2": "330", "d3": "425", "we": "230"}, {"n": "DIGGER 5 TON", "d1": "295", "d2": "450", "d3": "550", "we": "330"}, {"n": "DIGGER 8 TON", "d1": "350", "d2": "520", "d3": "650", "we": "350"}, {"n": "ROCK BREAKER 1 TON", "d1": "55", "d2": "110", "d3": "160", "we": "75"}, {"n": "ROCK BREAKER 1.5 TON DIGGER", "d1": "55", "d2": "110", "d3": "160", "we": "75"}, {"n": "ROCK BREAKER 12 TONNE", "d1": "220", "d2": "440", "d3": "440", "we": "220"}, {"n": "ROCK BREAKER 3 TON", "d1": "60", "d2": "120", "d3": "170", "we": "85"}, {"n": "ROCK BREAKER 5 TON DIGGER", "d1": "100", "d2": "132", "d3": "198", "we": "115"}, {"n": "ROCK BREAKER 8 TONNE", "d1": "110", "d2": "220", "d3": "330", "we": "150"}], "Fencing & Traffic": [{"n": "ACROW  PROP TRENCH C-W PIN", "d1": "2", "d2": "4", "d3": "6", "we": "3"}, {"n": "ACROW PROP C/W PIN NO.2", "d1": "2", "d2": "4", "d3": "6", "we": "3"}, {"n": "ACROW PROP C/W PIN NO.3", "d1": "2", "d2": "4", "d3": "6", "we": "3"}, {"n": "ACROW PROP C/W PIN NO.4", "d1": "2", "d2": "4", "d3": "6", "we": "3"}, {"n": "FENCE PANEL 3MTR X 2MTR", "d1": "3", "d2": "6", "d3": "7.5", "we": "4"}, {"n": "HOARDING", "d1": "", "d2": "", "d3": "", "we": ""}, {"n": "PLASTIC PEDESTRIAN BARRIER 2.MTR X 1.2MTR", "d1": "3", "d2": "6", "d3": "7.5", "we": "4"}, {"n": "SIGN (ARROW)", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"n": "SIGN (NO OVERTAKING) C/W STAND", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"n": "SIGN (RAMP AHEAD)", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"n": "SIGN (ROAD NARROWING)", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"n": "SIGN (SINGLE LINE TRAFFIC)", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"n": "SIGN (SLOW HEAVY MACH CROSSING", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"n": "SIGN (STOP AT RED LIGHT)", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"n": "SIGN (WAIT FOR GREEN)", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"n": "SIGN MEN AT WORK", "d1": "11", "d2": "11", "d3": "11", "we": "11"}, {"n": "SOLID SECURITY FENCE PANEL 2.2", "d1": "3", "d2": "6", "d3": "7.5", "we": "4"}, {"n": "STEEL HOARDING PANEL (2140 MM X 1980MM)", "d1": "8", "d2": "8", "d3": "8", "we": "8"}, {"n": "STEEL HOARDING PANEL (2140 MM X 1980MM)", "d1": "", "d2": "", "d3": "", "we": ""}, {"n": "TRAFFIC CONE 1M", "d1": "1.5", "d2": "3", "d3": "4.5", "we": "2.5"}, {"n": "TRAFFIC LIGHTS C-W MODULE", "d1": "95", "d2": "145", "d3": "195", "we": "125"}, {"n": "WALKWAY 18 FT", "d1": "33", "d2": "40", "d3": "40", "we": "33"}, {"n": "WATER FILLED BARRIER RED/WHITE", "d1": "5", "d2": "10", "d3": "10", "we": "5"}], "Gardening": [{"n": "GARDEN ROLLER", "d1": "20", "d2": "40", "d3": "51", "we": "25"}, {"n": "HEDGE CUTTER LONG ARM", "d1": "47", "d2": "94", "d3": "141", "we": "70"}, {"n": "HEDGECUTTER 30\" C/W GOGGLES", "d1": "40", "d2": "75", "d3": "115", "we": "60"}, {"n": "HEDGECUTTER STIHL 24\" HS45", "d1": "35", "d2": "70", "d3": "105", "we": "52.5"}, {"n": "LAWN   AIRRATOR  24 \" PLUG TYP", "d1": "100", "d2": "190", "d3": "280", "we": "120"}, {"n": "LAWN SCARAFIER", "d1": "47", "d2": "94", "d3": "141", "we": "70.5"}, {"n": "LAWNSEED SPREADER", "d1": "15", "d2": "22.5", "d3": "30", "we": "20"}, {"n": "LEAF BLOWER HAND HELD", "d1": "35", "d2": "70", "d3": "105", "we": "52.5"}, {"n": "LOG SPLITTER 40 TONNE", "d1": "155", "d2": "220", "d3": "300", "we": "170"}, {"n": "MOWER SELF DRIVE 21", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}, {"n": "POLE PRUNER SAW (BLADE 12\")", "d1": "70", "d2": "140", "d3": "180", "we": "80"}, {"n": "ROTOVATOR STANDARD", "d1": "47", "d2": "94", "d3": "141", "we": "70.5"}, {"n": "SHREDDER 6\" INDUSRLIAL DIESEL", "d1": "250", "d2": "400", "d3": "550", "we": "250"}, {"n": "SHREDDER 8\" INDUSTRIAL DIESEL", "d1": "300", "d2": "500", "d3": "650", "we": "300"}, {"n": "STRIMMER 26 CC MITSUBISHI", "d1": "35", "d2": "70", "d3": "105", "we": "52.5"}, {"n": "STRIMMER 43CC HEAVY DUTY`", "d1": "40", "d2": "80", "d3": "120", "we": "60"}], "General Tools": [{"n": "BAR & KEY", "d1": "25", "d2": "50", "d3": "75", "we": "25"}, {"n": "CARPET STRETCHER", "d1": "15", "d2": "25", "d3": "35", "we": "20"}, {"n": "DD130 HILTI WET CORE DRILL", "d1": "125", "d2": "185", "d3": "250", "we": "150"}, {"n": "DUCT CABLE ROD (250M)", "d1": "40", "d2": "80", "d3": "105", "we": "55"}, {"n": "DUCT CABLE ROD (6 MM X 100 MTR)", "d1": "30", "d2": "60", "d3": "90", "we": "40"}, {"n": "DUCT CABLE ROD (60 MTR)", "d1": "30", "d2": "60", "d3": "90", "we": "40"}, {"n": "DUCT CABLE ROD (80MTR)", "d1": "30", "d2": "60", "d3": "90", "we": "40"}, {"n": "DUST SUPRESSION BOTTLE", "d1": "20", "d2": "30", "d3": "45", "we": "25"}, {"n": "ELETRIC HEATER", "d1": "30", "d2": "50", "d3": "66", "we": "40"}, {"n": "EXTRACTION FAN C/W DUCTING", "d1": "40", "d2": "80", "d3": "120", "we": "50"}, {"n": "FALL ARREST SYSTEM", "d1": "150", "d2": "225", "d3": "295", "we": "165"}, {"n": "FERNOX  MK111 POWER FLUSHING MACHINE", "d1": "44", "d2": "88", "d3": "130", "we": "81"}, {"n": "IMPACT GUN 1", "d1": "44", "d2": "88", "d3": "132", "we": "44"}, {"n": "INPACT GUN 1/2\" BATTERY", "d1": "25", "d2": "50", "d3": "60", "we": "25"}, {"n": "LADDER 10FT A FRAME", "d1": "28", "d2": "56", "d3": "65", "we": "35"}, {"n": "LADDER 21ft ROOFING", "d1": "30", "d2": "60", "d3": "87", "we": "43.5"}, {"n": "LADDER 24 FT EXT", "d1": "30", "d2": "60", "d3": "87", "we": "43.5"}, {"n": "LADDER 28FT", "d1": "35", "d2": "70", "d3": "105", "we": "52.5"}, {"n": "LADDER 30FT", "d1": "35", "d2": "70", "d3": "105", "we": "52.5"}, {"n": "LADDER 6 FT A FRAME", "d1": "28", "d2": "55", "d3": "65", "we": "35"}, {"n": "LASER PIPE.17 LEGS/2 TARGETS/1", "d1": "60", "d2": "120", "d3": "140", "we": "80"}, {"n": "NAILER (SECRET NAILER)", "d1": "29", "d2": "58", "d3": "87", "we": "43"}, {"n": "PAINT SPRAYER AIRLESS", "d1": "113", "d2": "226", "d3": "339", "we": "113"}, {"n": "PAINT SPRAYER POT TYPE", "d1": "45", "d2": "85", "d3": "110", "we": "65"}, {"n": "PODIUM LADDER 1.8 MTRS-2.4 MTRE", "d1": "55", "d2": "100", "d3": "150", "we": "55"}, {"n": "POP RIVET GUN", "d1": "10", "d2": "20", "d3": "30", "we": "10"}, {"n": "POST DRIVER MANUAL", "d1": "25", "d2": "35", "d3": "50", "we": "30"}, {"n": "POST HOLE BORER C-W AUGER", "d1": "59", "d2": "118", "d3": "177", "we": "88.5"}, {"n": "ROAD HAMMER LARGE MK20/21", "d1": "30", "d2": "60", "d3": "75", "we": "45"}, {"n": "ROUTER", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}, {"n": "RUBBISH CHUTE C/W 2 CHAINS", "d1": "8", "d2": "16", "d3": "24", "we": "12"}, {"n": "RUBBISH CHUTE HOPPER X 1", "d1": "8", "d2": "16", "d3": "24", "we": "12"}, {"n": "SABRE SAW (CORDLESS)", "d1": "32", "d2": "64", "d3": "96", "we": "48"}, {"n": "SCAFFOLDING PLANK 8FT", "d1": "2", "d2": "4", "d3": "4", "we": "3"}, {"n": "SOLAR FILL PUMP", "d1": "44", "d2": "88", "d3": "132", "we": "66"}, {"n": "STAR ROLLER", "d1": "23", "d2": "46", "d3": "69", "we": "35"}, {"n": "STILSON WRENCH 48", "d1": "15", "d2": "30", "d3": "45", "we": "25"}, {"n": "STONE RAKE (1 TONNE)", "d1": "30", "d2": "60", "d3": "80", "we": "55"}, {"n": "STRAPPING UNIT (METALl", "d1": "65", "d2": "130", "d3": "195", "we": "65"}, {"n": "TABLE SAW 5\" MAKITA CIRCULAR", "d1": "50", "d2": "100", "d3": "150", "we": "75"}, {"n": "TORCH SINGLE HEAD", "d1": "20", "d2": "40", "d3": "60", "we": "30"}, {"n": "TOWER SCAFFOLDING 8 X 3", "d1": "150", "d2": "225", "d3": "275", "we": "225"}, {"n": "TOWER SCAFFOLDING 8 X 5", "d1": "150", "d2": "225", "d3": "275", "we": "225"}, {"n": "TOWER SCAFFOLDING4X2", "d1": "105", "d2": "170", "d3": "210", "we": "150"}, {"n": "TRESTLE 3FT TO 6 FT NO 3", "d1": "3", "d2": "6", "d3": "9", "we": "4.5"}, {"n": "VACCUM CLEANER INDUSTRIAL TYPE", "d1": "34", "d2": "68", "d3": "102", "we": "51"}, {"n": "VEHICLES", "d1": "0", "d2": "0", "d3": "0", "we": "0"}, {"n": "WALL SUPPORT(STRONG BOY)", "d1": "2", "d2": "4", "d3": "6", "we": "3"}, {"n": "WALLPAPER SPIKER", "d1": "6", "d2": "11", "d3": "17", "we": "6"}, {"n": "WALLPAPER STRIPPER", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}, {"n": "WATER TEST ADAPTOR TO BE SUPPLIED WITH PRESSURE WASHER", "d1": "43.33", "d2": "86.66", "d3": "129.99", "we": "43.33"}, {"n": "WELDER MAGIC 200AMP 2KVA 110V", "d1": "35", "d2": "70", "d3": "105", "we": "55"}, {"n": "WELDER/GEN 180AMP DC 4KVA .", "d1": "50", "d2": "100", "d3": "150", "we": "75"}], "Generators & Power": [{"n": "EXTENSION  LEAD 220V 25MTR", "d1": "5", "d2": "10", "d3": "15", "we": "5"}, {"n": "GENERATER 100 KVA", "d1": "250", "d2": "330", "d3": "375", "we": "250"}, {"n": "GENERATOR 10 KVA", "d1": "65", "d2": "130", "d3": "160", "we": "95"}, {"n": "GENERATOR 20K 3 PHASE", "d1": "150", "d2": "210", "d3": "250", "we": "150"}, {"n": "GENERATOR 3.4 KW", "d1": "30", "d2": "60", "d3": "81", "we": "45"}, {"n": "GENERATOR 40 KVA", "d1": "180", "d2": "260", "d3": "295", "we": "180"}, {"n": "GENERATOR 5KVA PETROL", "d1": "45", "d2": "90", "d3": "125", "we": "70"}, {"n": "GENERATOR 60KVA SDMO", "d1": "195", "d2": "280", "d3": "325", "we": "195"}, {"n": "GENERATOR 6KVA DIESEL", "d1": "45", "d2": "90", "d3": "125", "we": "70"}, {"n": "GENERATOR 6KVA DIESEL", "d1": "45", "d2": "90", "d3": "125", "we": "70"}, {"n": "GENERATOR SDMO 200KVA", "d1": "295", "d2": "375", "d3": "450", "we": "295"}, {"n": "HEATER DIESEL EXTRA LARGE", "d1": "40", "d2": "80", "d3": "120", "we": "40"}, {"n": "HEATER LARGE PROPANE GAS", "d1": "38", "d2": "76", "d3": "114", "we": "55"}, {"n": "HEATER LARGE SPACE", "d1": "38", "d2": "76", "d3": "114", "we": "55"}, {"n": "HEATER MEDIUM  PROPANE GAS", "d1": "35", "d2": "70", "d3": "105", "we": "45"}, {"n": "HEATER RADIENT DIESEL", "d1": "54", "d2": "108", "d3": "162", "we": "81"}, {"n": "INFRA RED DIESEL HEATER", "d1": "69", "d2": "138", "d3": "207", "we": "103.5"}, {"n": "LEAD 110V EXTENSION", "d1": "5", "d2": "10", "d3": "15", "we": "5"}, {"n": "LEAD 220V EXTENSION", "d1": "5", "d2": "10", "d3": "15", "we": "5"}, {"n": "LIGHTING TOWER 10 METRE", "d1": "140", "d2": "195", "d3": "225", "we": "165"}, {"n": "TRANSFORMER 10 KVA", "d1": "25", "d2": "45", "d3": "60", "we": "30"}, {"n": "TRANSFORMER 3 KVA", "d1": "5", "d2": "10", "d3": "15", "we": "7.5"}, {"n": "TRANSFORMER 3 KVA", "d1": "5", "d2": "10", "d3": "15", "we": "7.5"}, {"n": "TRANSFORMER 5 KVA", "d1": "17", "d2": "30", "d3": "30", "we": "20"}], "Lifting & Rigging": [{"n": "BLOCK & TACKLE", "d1": "30", "d2": "60", "d3": "60", "we": "30"}, {"n": "BLOCK GRAB C/W FORK ATTACHMENT", "d1": "70", "d2": "120", "d3": "150", "we": "70"}, {"n": "DOUBLE BLOCK GRAB C/W FORK ATTACHMENT", "d1": "75", "d2": "130", "d3": "160", "we": "75"}, {"n": "DOUBLE HEAD SUCTION PAID (PAIR 2) GLASS", "d1": "12", "d2": "24", "d3": "36", "we": "12"}, {"n": "ENGINE HOIST", "d1": "50", "d2": "100", "d3": "150", "we": "50"}, {"n": "HYDRAULIC PULLERS PRICE", "d1": "33", "d2": "66", "d3": "99", "we": "45"}, {"n": "JIB EXTENSION", "d1": "65", "d2": "120", "d3": "150", "we": "85"}, {"n": "KERB GRAB HYDRAULIC", "d1": "125", "d2": "195", "d3": "250", "we": "150"}, {"n": "MACHINE SKATES 20 TON", "d1": "60", "d2": "100", "d3": "125", "we": "80"}, {"n": "PALLET TRUCK", "d1": "29", "d2": "60", "d3": "87", "we": "43.5"}, {"n": "SCAFFOLD HOIST 200 KG (100FT)", "d1": "100", "d2": "150", "d3": "200", "we": "100"}, {"n": "SLAB LIFTER BATTERY SUCTION", "d1": "60", "d2": "120", "d3": "150", "we": "60"}], "Plumbing & Heating": [{"n": "ALU-PEX PIPE CRIMPER 16MM, 20MM, 26MM, 32MM", "d1": "35", "d2": "70", "d3": "95", "we": "48"}, {"n": "BITUMEN BOILER LARGE C/W BITUMENT TORCH AND REGULATOR", "d1": "35", "d2": "70", "d3": "95", "we": "35"}, {"n": "BITUMEN BOILER SMALL (C/W TORCH AND PROPANE REGULATOR", "d1": "30", "d2": "65", "d3": "90", "we": "30"}, {"n": "DE HUMIDIFIER INDUSTRIAL", "d1": "37", "d2": "74", "d3": "111", "we": "55"}, {"n": "FERNOX  MK111 POWER FLUSHING MACHINE", "d1": "44", "d2": "88", "d3": "130", "we": "81"}, {"n": "HEAT GUN", "d1": "15", "d2": "25", "d3": "35", "we": "18"}, {"n": "HILTI VACUUM PUMP 110V", "d1": "32", "d2": "50", "d3": "68", "we": "45"}, {"n": "PIPE BENDER HYDRAULIC", "d1": "40", "d2": "75", "d3": "95", "we": "60"}, {"n": "PIPE FREEZE KIT ELECTRIC 110V", "d1": "60", "d2": "120", "d3": "180", "we": "90"}, {"n": "PIPE THREADER ELECTRIC ON STAND", "d1": "125", "d2": "240", "d3": "290", "we": "150"}, {"n": "PIPE THREADER HAND R200 NO.2", "d1": "35", "d2": "55", "d3": "85", "we": "45"}, {"n": "PIPE THREADER HAND R200 NO.5", "d1": "40", "d2": "60", "d3": "95", "we": "50"}, {"n": "PIPE VISE & STAND", "d1": "20", "d2": "40", "d3": "60", "we": "30"}], "Pressure Washers": [{"n": "HOT BOX WATER HEATER", "d1": "80", "d2": "160", "d3": "240", "we": "120"}, {"n": "PATIO CLEANER 18\" WIDE", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}, {"n": "PATIO CLEANER 3000 PSI", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}, {"n": "PRESSURE WASH MOBILE UNIT PETROL", "d1": "92", "d2": "184", "d3": "276", "we": "138"}, {"n": "PRESSURE WASHER 2550 PSI DIESEL", "d1": "75", "d2": "150", "d3": "225", "we": "100"}, {"n": "PRESSURE WASHER 3000 PSI. COLD", "d1": "59", "d2": "118", "d3": "177", "we": "88.5"}, {"n": "PRESSURE WASHER COLD  2000 PSI", "d1": "42", "d2": "84", "d3": "126", "we": "63"}, {"n": "PRESSURE WASHER HOT", "d1": "80", "d2": "160", "d3": "240", "we": "120"}, {"n": "PRESSURE WASHER MOBILE UNIT DIESEL", "d1": "125", "d2": "250", "d3": "300", "we": "150"}, {"n": "WASHER EXTENSION 5MTR LANCE", "d1": "15", "d2": "30", "d3": "45", "we": "22.5"}], "Sanding & Flooring": [{"n": "FLOOR PLANER DIAMOND PETROL", "d1": "95", "d2": "150", "d3": "250", "we": "135"}, {"n": "FLOOR SCRUBBER 20\" BASE", "d1": "50", "d2": "85", "d3": "125", "we": "65"}, {"n": "PLANE WOOD ELECTRIC", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}, {"n": "SANDER 4 1/2\" BELT", "d1": "29", "d2": "58", "d3": "87", "we": "43.5"}, {"n": "SANDER FLOOR  BUFF TYPE", "d1": "50", "d2": "100", "d3": "135", "we": "75"}, {"n": "SANDER FLOOR DRUM", "d1": "50", "d2": "100", "d3": "150", "we": "75"}, {"n": "SANDER FLOOR EDGER", "d1": "29", "d2": "58", "d3": "87", "we": "43"}, {"n": "SANDER PALM ORBITAL", "d1": "22", "d2": "44", "d3": "66", "we": "33"}, {"n": "SANDER SQUARE ORBITAL", "d1": "24", "d2": "48", "d3": "72", "we": "36"}, {"n": "SCABBLER (TRIPPLE HEAD)", "d1": "35", "d2": "70", "d3": "105", "we": "55"}], "Saws & Cutting": [{"n": "ANGLE GRINDER 5", "d1": "19", "d2": "38", "d3": "57", "we": "28.5"}, {"n": "ANGLE GRINDER 9\" 110V", "d1": "22", "d2": "44", "d3": "66", "we": "33"}, {"n": "BLOCK SPLITTER", "d1": "28", "d2": "56", "d3": "84", "we": "45"}, {"n": "CIRCULAR SAW 9", "d1": "22", "d2": "44", "d3": "57", "we": "28"}, {"n": "CONSAW (12\" TS 400) STIHL", "d1": "32", "d2": "64", "d3": "96", "we": "48"}, {"n": "CONSAW 16\" TS 760 STIHL", "d1": "48", "d2": "95", "d3": "121", "we": "55"}, {"n": "CUT AND BREAK SAW", "d1": "125", "d2": "200", "d3": "295", "we": "125"}, {"n": "JIGSAW ATLAS COPCO 110V", "d1": "22", "d2": "44", "d3": "66", "we": "33"}, {"n": "SAW  CHOPSAW", "d1": "37", "d2": "74", "d3": "111", "we": "55.5"}, {"n": "SAW  SABRE SAW", "d1": "22", "d2": "44", "d3": "66", "we": "33"}, {"n": "SAW BRICK & TILE (110V)", "d1": "69", "d2": "138", "d3": "207", "we": "103.5"}, {"n": "STIHL TSA 230 9\" CONSAW", "d1": "32", "d2": "64", "d3": "96", "we": "48"}, {"n": "TILE CUTTER ELECTRIC", "d1": "55", "d2": "110", "d3": "165", "we": "85"}, {"n": "TILE CUTTER ELECTRIC IND.", "d1": "55", "d2": "110", "d3": "165", "we": "85"}, {"n": "TILE CUTTER HAND (CUT400) LRG", "d1": "27", "d2": "54", "d3": "81", "we": "40.5"}], "Surveying & Detection": [{"n": "CAT SCANNER", "d1": "35", "d2": "70", "d3": "105", "we": "52.5"}, {"n": "CAT SIGNAL GENERATOR", "d1": "24", "d2": "48", "d3": "72", "we": "36"}, {"n": "CAT SONDE SIGNAL UNIT", "d1": "20", "d2": "40", "d3": "60", "we": "30"}, {"n": "DUMPY LEVEL", "d1": "25", "d2": "44", "d3": "65", "we": "25"}, {"n": "LASER LEVEL 120SEMI-AUTO", "d1": "40", "d2": "80", "d3": "120", "we": "60"}, {"n": "LASER LEVEL GRADIANT", "d1": "40", "d2": "80", "d3": "120", "we": "60"}, {"n": "MEASURING WHEEL C/W COUNTER", "d1": "25", "d2": "50", "d3": "75", "we": "25"}, {"n": "METAL DETECTOR C/W DISC.", "d1": "29", "d2": "55", "d3": "83", "we": "43.5"}, {"n": "MOISTURE METER CONCRETE", "d1": "35", "d2": "70", "d3": "105", "we": "55"}, {"n": "SOUND METER", "d1": "30", "d2": "60", "d3": "90", "we": "45"}], "Telehandlers": [{"n": "BOBCAT FORK ATTACHMENT", "d1": "45", "d2": "65", "d3": "80", "we": "55"}, {"n": "FORKLIFT 2 TON ELECTRIC (HELI)", "d1": "120", "d2": "195", "d3": "250", "we": "150"}, {"n": "FORKLIFT 3 TON", "d1": "160", "d2": "250", "d3": "295", "we": "160"}, {"n": "MAGNI RTH 6.51 ROTO TELEHANDLER", "d1": "1550", "d2": "2150", "d3": "3350", "we": "1750"}, {"n": "MAGNI RTH 8.35 ROTO TELEHANDLER", "d1": "1150", "d2": "1750", "d3": "2100", "we": "1450"}, {"n": "MAGNI RTH 8.39 ROTO TELEHANDLER", "d1": "1350", "d2": "1950", "d3": "2500", "we": "1550"}, {"n": "MAN BASKET", "d1": "100", "d2": "150", "d3": "195", "we": "125"}, {"n": "P6000 PENCIL 2 HOOK JIB 6 TON", "d1": "65", "d2": "120", "d3": "150", "we": "85"}, {"n": "PC60 SHORT JIB 6 TON", "d1": "65", "d2": "120", "d3": "150", "we": "85"}, {"n": "PT2000 EXTENSION JIB C/W WINCH 2 TON", "d1": "65", "d2": "120", "d3": "150", "we": "85"}, {"n": "SKIDSTEER LOADER", "d1": "225", "d2": "350", "d3": "425", "we": "250"}, {"n": "SKIDSTEER PALLET FORKS", "d1": "35", "d2": "70", "d3": "85", "we": "55"}, {"n": "SWEEPER ATTACHMENT FOR SKIDSTEER C/W WATER TAN", "d1": "100", "d2": "175", "d3": "250", "we": "125"}, {"n": "SWEEPER ATTACHMENT FOR SKIDSTEER C/W WATER TANK", "d1": "100", "d2": "175", "d3": "250", "we": "125"}, {"n": "SWEEPER ATTACHMENT FOR TELEPORTER C/W WATER TANK", "d1": "100", "d2": "175", "d3": "250", "we": "125"}, {"n": "TELEPORTER 17-18 MTR", "d1": "325", "d2": "475", "d3": "450", "we": "325"}, {"n": "TELEPORTER 20 MTR", "d1": "350", "d2": "495", "d3": "600", "we": "350"}, {"n": "TELEPORTER 360 26 MTR 6 TON LIFT", "d1": "850", "d2": "1150", "d3": "1400", "we": "995"}, {"n": "TELEPORTER 360 30 MTR 6 TON LIFT", "d1": "1050", "d2": "1550", "d3": "1800", "we": "1250"}, {"n": "TELEPORTER 360 35 MTR 7 TON LIFT", "d1": "1150", "d2": "1750", "d3": "2100", "we": "1450"}, {"n": "TELEPORTER 4 FT CAGE BASKET", "d1": "65", "d2": "120", "d3": "150", "we": "85"}, {"n": "TELEPORTER 7M FARM HAND BUGGY", "d1": "250", "d2": "325", "d3": "395", "we": "250"}, {"n": "TELEPORTER BUGGYSCOPIC", "d1": "250", "d2": "325", "d3": "395", "we": "295"}, {"n": "TELEPORTER JCB 14mtr", "d1": "250", "d2": "325", "d3": "395", "we": "295"}, {"n": "WINCH 5 TON", "d1": "65", "d2": "120", "d3": "150", "we": "85"}], "Trailers": [{"n": "ROAD PLATE 8X4", "d1": "45", "d2": "45", "d3": "45", "we": "45"}, {"n": "ROAD PLATES 8X4", "d1": "45", "d2": "45", "d3": "45", "we": "45"}, {"n": "TRAILER", "d1": "85", "d2": "140", "d3": "180", "we": "85"}, {"n": "TRAILER 8FT 2 \" X 4FT 9\" SINGLE AXLE", "d1": "65", "d2": "100", "d3": "140", "we": "70"}, {"n": "TRAILER BOX 10 X 5", "d1": "100", "d2": "200", "d3": "260", "we": "120"}, {"n": "TRAILER CAR TRANSPORTER", "d1": "100", "d2": "180", "d3": "235", "we": "120"}, {"n": "TRAILER DUMPER TYPE 14 X 6.6", "d1": "100", "d2": "180", "d3": "250", "we": "120"}, {"n": "TRAILER DUMPER TYPE 14 X 6.6", "d1": "95", "d2": "180", "d3": "250", "we": "95"}, {"n": "TRAILER PLANT 10' X 6", "d1": "90", "d2": "170", "d3": "230", "we": "100"}, {"n": "TRAILER PLANT 10' X 6", "d1": "90", "d2": "170", "d3": "230", "we": "100"}], "Water & Pumps": [{"n": "BOWSER 250 GALLON ROAD TOW", "d1": "75", "d2": "120", "d3": "150", "we": "75"}, {"n": "BOWSER HIRE RATE", "d1": "75", "d2": "120", "d3": "150", "we": "75"}, {"n": "PUMP TRANFFER 12V", "d1": "35", "d2": "70", "d3": "99", "we": "50"}, {"n": "STAND PIPE (CLIP ON TYPE)", "d1": "11", "d2": "22", "d3": "33", "we": "15"}, {"n": "STAND PIPE BAYONET TYPE (CLIP ON TYPE)", "d1": "11", "d2": "22", "d3": "33", "we": "15"}, {"n": "WATER PUMP 1\" PUDDLE  ELEC.", "d1": "34", "d2": "68", "d3": "102", "we": "51"}, {"n": "WATER PUMP 1\" PUDDLE  ELEC.", "d1": "34", "d2": "68", "d3": "102", "we": "51"}, {"n": "WATER PUMP 2\" PETROL ENGINE", "d1": "34", "d2": "68", "d3": "102", "we": "51"}, {"n": "WATER PUMP 2\" SUBMERCIBLE ELEC", "d1": "34", "d2": "68", "d3": "102", "we": "51"}, {"n": "WATER PUMP 3\" PETROL ENGINE", "d1": "48", "d2": "96", "d3": "144", "we": "72"}]};
+
+// ===== STATE =====
+var currentUser = '';
+var selectedProduct = null;
+var selectedDuration = '';
+
+// ===== AUTH =====
+function doLogin() {
+  var email = document.getElementById('login-email').value.trim();
+  var pw = document.getElementById('login-pw').value;
+  if (!email || !pw) { showLoginAlert('Please enter your email and password.'); return; }
+  if (!email.includes('@')) { showLoginAlert('Please enter a valid email address.'); return; }
+  currentUser = email;
+  document.getElementById('lp').style.display = 'none';
+  document.getElementById('pp').style.display = 'block';
+  document.getElementById('ft').classList.add('on');
+  document.getElementById('dash-greet').textContent = 'Hello, ' + email;
+  document.getElementById('pay-email').value = email;
+  go('dash');
+}
+function showLoginAlert(msg) {
+  var a = document.getElementById('login-alert');
+  a.textContent = msg; a.className = 'alert a-err show'; a.style.display = 'block';
+  setTimeout(function() { a.style.display = 'none'; }, 5000);
+}
+function doLogout() {
+  document.getElementById('pp').style.display = 'none';
+  document.getElementById('ft').classList.remove('on');
+  document.getElementById('lp').style.display = 'flex';
+  document.getElementById('mp').style.display = 'none';
+}
+
+// ===== NAVIGATION =====
+function go(id) {
+  var views = document.querySelectorAll('.view');
+  for (var i = 0; i < views.length; i++) views[i].classList.remove('on');
+  var sbs = document.querySelectorAll('.sb-a');
+  for (var i = 0; i < sbs.length; i++) sbs[i].classList.remove('on');
+  var v = document.getElementById('v-' + id);
+  if (v) v.classList.add('on');
+  var sb = document.getElementById('sb-' + id);
+  if (sb) sb.classList.add('on');
+  window.scrollTo(0, 0);
+}
+
+// ===== MACHINE / GA1 PAGE =====
+function showMach(contract, name, fleet, startDate, lastInsp) {
+  document.getElementById('mc-name').textContent = name;
+  document.getElementById('mc-fleet').textContent = fleet;
+  document.getElementById('mc-fleetno').textContent = fleet;
+  document.getElementById('mc-contract').textContent = contract;
+  document.getElementById('mc-last-insp').textContent = lastInsp;
+  document.getElementById('mc-ga1-sub').textContent = 'Thorough Examination · Last: ' + lastInsp;
+  document.getElementById('mc-manual-sub').textContent = name + ' · EN/IE Edition';
+  document.getElementById('mp').style.display = 'block';
+  document.getElementById('pp').style.display = 'none';
+  document.getElementById('ft').classList.remove('on');
+  window.scrollTo(0, 0);
+}
+function hideMach() {
+  document.getElementById('mp').style.display = 'none';
+  document.getElementById('pp').style.display = 'block';
+  document.getElementById('ft').classList.add('on');
+}
+
+// ===== MODALS =====
+function closeM(id) { document.getElementById(id).classList.remove('on'); }
+function openModal(contract, equip, addr, contact, phone) {
+  document.getElementById('mref-offhire').textContent = contract + ' — ' + equip;
+  document.getElementById('modal-addr').value = addr;
+  document.getElementById('modal-contact').value = contact;
+  document.getElementById('modal-phone').value = phone;
+  document.getElementById('ov-offhire').classList.add('on');
+}
+function subModal() {
+  closeM('ov-offhire');
+  showToast('Off-hire request submitted — we\'ll confirm collection.');
+}
+function editOffhire(ref, contract, equip, date, time, addr, contact, phone, notes) {
+  document.getElementById('mref-edit').textContent = ref + ' — ' + equip;
+  document.getElementById('edit-date').value = date;
+  document.getElementById('edit-time').value = time;
+  document.getElementById('edit-addr').value = addr;
+  document.getElementById('edit-contact').value = contact;
+  document.getElementById('edit-phone').value = phone;
+  document.getElementById('edit-notes').value = notes;
+  document.getElementById('ov-edit-offhire').classList.add('on');
+}
+function saveEditOffhire() {
+  closeM('ov-edit-offhire');
+  showToast('Off-hire request updated successfully.');
+}
+function cancelOffhire(ref) {
+  if (confirm('Cancel off-hire request ' + ref + '? The machine will remain on hire.')) {
+    showToast('Off-hire ' + ref + ' has been cancelled.');
+  }
+}
+function openForgotPw() {
+  document.getElementById('fp-form-area').style.display = 'block';
+  document.getElementById('fp-sent-area').style.display = 'none';
+  document.getElementById('fp-foot').style.display = 'flex';
+  var em = document.getElementById('login-email').value;
+  if (em) document.getElementById('fp-email').value = em;
+  document.getElementById('ov-forgot').classList.add('on');
+}
+function sendForgotPw() {
+  var em = document.getElementById('fp-email').value.trim();
+  if (!em || !em.includes('@')) { alert('Please enter a valid email address.'); return; }
+  document.getElementById('fp-form-area').style.display = 'none';
+  document.getElementById('fp-sent-area').style.display = 'block';
+  document.getElementById('fp-foot').style.display = 'none';
+}
+function payInvoice(inv, amount) {
+  document.getElementById('pay-ref').textContent = inv;
+  document.getElementById('pay-amount').textContent = '€' + parseFloat(amount).toLocaleString('en-IE', {minimumFractionDigits:2});
+  document.getElementById('ov-pay').classList.add('on');
+}
+function goStripe() {
+  closeM('ov-pay');
+  showToast('Redirecting to Stripe secure payment...');
+  setTimeout(function() {
+    window.open('https://buy.stripe.com/nhh', '_blank');
+  }, 800);
+}
+
+// ===== OFF-HIRE FORM =====
+function onContractSelect() {
+  var sel = document.getElementById('oh-sel');
+  var val = sel.value;
+  if (!val) {
+    document.getElementById('oh-addr').value = '';
+    document.getElementById('oh-addr').readOnly = true;
+    document.getElementById('oh-contact').value = '';
+    document.getElementById('oh-phone').value = '';
+    return;
+  }
+  var parts = val.split('|');
+  document.getElementById('oh-addr').value = parts[2] || '';
+  document.getElementById('oh-addr').readOnly = true;
+  document.getElementById('oh-contact').value = parts[3] || '';
+  document.getElementById('oh-phone').value = parts[4] || '';
+}
+function unlockAddr() {
+  var addr = document.getElementById('oh-addr');
+  addr.readOnly = false;
+  addr.focus();
+}
+function subOH() {
+  var c = document.getElementById('oh-sel').value;
+  var d = document.getElementById('oh-dt').value;
+  var addr = document.getElementById('oh-addr').value.trim();
+  var contact = document.getElementById('oh-contact').value.trim();
+  var a = document.getElementById('oh-al');
+  if (!c) { showAlert(a, 'err', 'Please select a contract.'); return; }
+  if (!d) { showAlert(a, 'err', 'Please select a collection date.'); return; }
+  if (!addr) { showAlert(a, 'err', 'Please confirm the collection address.'); return; }
+  if (!contact) { showAlert(a, 'err', 'Please enter a site contact name.'); return; }
+  showAlert(a, 'ok', 'Off-hire submitted! Reference: OFN-25-0093. Our hire desk will confirm collection.');
+  showToast('Off-hire request submitted');
+}
+
+// ===== HIRE REQUEST / EQUIPMENT SEARCH =====
+function initEquipment() {
+  var catSel = document.getElementById('eq-cat');
+  var cats = Object.keys(HIRE_DATA).sort();
+  cats.forEach(function(c) {
+    var opt = document.createElement('option');
+    opt.value = c; opt.textContent = c;
+    catSel.appendChild(opt);
+  });
+  renderProductList('', '');
+}
+function renderProductList(search, cat) {
+  var list = document.getElementById('prod-list');
+  list.innerHTML = '';
+  var s = search.toLowerCase();
+  var cats = cat ? [cat] : Object.keys(HIRE_DATA).sort();
+  var count = 0;
+  cats.forEach(function(c) {
+    var items = HIRE_DATA[c] || [];
+    var filtered = items.filter(function(p) {
+      return !s || p.n.toLowerCase().includes(s) || c.toLowerCase().includes(s);
+    });
+    if (filtered.length === 0) return;
+    var lbl = document.createElement('div');
+    lbl.className = 'prod-cat-label';
+    lbl.textContent = c + ' (' + filtered.length + ')';
+    list.appendChild(lbl);
+    filtered.forEach(function(p) {
+      var div = document.createElement('div');
+      div.className = 'prod-item' + (selectedProduct && selectedProduct.n === p.n ? ' sel' : '');
+      div.textContent = p.n;
+      div.onclick = function() { selectProduct(p, c); };
+      list.appendChild(div);
+      count++;
+    });
+  });
+  if (count === 0) {
+    list.innerHTML = '<div style="padding:14px;text-align:center;font-size:13px;color:var(--grey)">No equipment found — try a different search</div>';
+  }
+}
+function filterEquipment() {
+  var s = document.getElementById('eq-search').value;
+  var c = document.getElementById('eq-cat').value;
+  renderProductList(s, c);
+}
+function selectProduct(p, cat) {
+  selectedProduct = p;
+  document.getElementById('sel-eq-name').textContent = p.n;
+  document.getElementById('sel-eq-cat').textContent = cat;
+  document.getElementById('sel-eq-display').classList.add('show');
+  document.getElementById('rate-section').style.display = 'block';
+  document.getElementById('rate-display').style.display = 'none';
+  document.getElementById('hr-duration').value = '';
+  selectedDuration = '';
+  // Update all rate cells
+  document.getElementById('rv-d1').textContent = p.d1 ? '€' + p.d1 : '—';
+  document.getElementById('rv-d2').textContent = p.d2 ? '€' + p.d2 : '—';
+  document.getElementById('rv-d3').textContent = p.d3 ? '€' + p.d3 : '—';
+  document.getElementById('rv-we').textContent = p.we ? '€' + p.we : '—';
+  filterEquipment();
+}
+function clearEquipment() {
+  selectedProduct = null;
+  document.getElementById('sel-eq-display').classList.remove('show');
+  document.getElementById('rate-section').style.display = 'none';
+  document.getElementById('rate-display').style.display = 'none';
+  filterEquipment();
+}
+function onDurationChange() {
+  var dur = document.getElementById('hr-duration').value;
+  selectedDuration = dur;
+  if (!dur || !selectedProduct) return;
+  document.getElementById('rate-display').style.display = 'block';
+  var map = {d1:'rc-d1',d2:'rc-d2',d3:'rc-d3',we:'rc-we'};
+  ['d1','d2','d3','we'].forEach(function(k) {
+    var el = document.getElementById(map[k]);
+    if (k === dur) el.classList.add('sel'); else el.classList.remove('sel');
+  });
+}
+function subHR() {
+  var a = document.getElementById('hr-al');
+  if (!selectedProduct) { showAlert(a, 'err', 'Please select equipment from the list.'); return; }
+  if (!document.getElementById('hr-duration').value) { showAlert(a, 'err', 'Please select a duration.'); return; }
+  if (!document.getElementById('hr-addr1').value.trim()) { showAlert(a, 'err', 'Please enter the delivery address.'); return; }
+  if (!document.getElementById('hr-town').value.trim()) { showAlert(a, 'err', 'Please enter the town/city.'); return; }
+  if (!document.getElementById('hr-eircode').value.trim()) { showAlert(a, 'err', 'Please enter the Eircode.'); return; }
+  if (!document.getElementById('hr-contact').value.trim()) { showAlert(a, 'err', 'Please enter a site contact name.'); return; }
+  if (!document.getElementById('hr-phone').value.trim()) { showAlert(a, 'err', 'Please enter a site contact phone.'); return; }
+  showAlert(a, 'ok', 'Hire request logged! Reference: HRQ-25-0045. We\'ll contact you to confirm availability and delivery.');
+  showToast('Hire request submitted!');
+}
+
+// ===== UTILS =====
+function showAlert(el, t, msg) {
+  el.className = 'alert a-' + (t === 'ok' ? 'ok' : 'err') + ' show';
+  el.textContent = msg;
+  setTimeout(function() { el.classList.remove('show'); }, 8000);
+}
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  document.getElementById('tmsg').textContent = msg;
+  t.classList.add('on');
+  setTimeout(function() { t.classList.remove('on'); }, 4500);
+}
+
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded', function() {
+  initEquipment();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    ['ov-offhire','ov-edit-offhire','ov-forgot','ov-pay'].forEach(function(id) {
+      document.getElementById(id).classList.remove('on');
+    });
+  }
+  if (e.key === 'Enter' && document.getElementById('lp').style.display !== 'none') doLogin();
+});
+['ov-offhire','ov-edit-offhire','ov-forgot','ov-pay'].forEach(function(id) {
+  document.getElementById(id).addEventListener('click', function(e) {
+    if (e.target === this) this.classList.remove('on');
+  });
+});
+</script>
+</body>
+</html>
