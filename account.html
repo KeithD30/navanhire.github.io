@@ -136,7 +136,11 @@
           </div>
         </div>
 
-        <form class="account-form" id="applyForm" onsubmit="handleApply(event)">
+        <form class="account-form" id="applyForm" action="https://formspree.io/f/mkovvdww" method="POST">
+          <!-- Hidden fields for FormSpree -->
+          <input type="hidden" name="_subject" value="New Trade Credit Application">
+          <input type="hidden" name="formType" value="Trade Credit Application">
+          <input type="text" name="_gotcha" style="display:none">
 
           <!-- ACCORDION 1: Business Details -->
           <div class="af-acc af-acc--open" id="acc-biz">
@@ -157,16 +161,16 @@
               <div class="af-acc-inner">
                 <div class="af-group">
                   <label for="bizName">Business / Company Name *</label>
-                  <input type="text" id="bizName" placeholder="Murphy Construction Ltd" required/>
+                  <input type="text" id="bizName" name="businessName" placeholder="Murphy Construction Ltd" required/>
                 </div>
                 <div class="af-row">
                   <div class="af-group">
                     <label for="bizAddr1">Trading Address *</label>
-                    <input type="text" id="bizAddr1" placeholder="123 Main Street" required/>
+                    <input type="text" id="bizAddr1" name="tradingAddress1" placeholder="123 Main Street" required/>
                   </div>
                   <div class="af-group">
                     <label for="bizType">Type of Business *</label>
-                    <select id="bizType" required>
+                    <select id="bizType" name="businessType" required>
                       <option value="">Select&hellip;</option>
                       <option>Limited Company</option>
                       <option>Independent / Sole Trader</option>
@@ -177,36 +181,36 @@
                 <div class="af-row">
                   <div class="af-group">
                     <label for="bizAddr2">Address Line 2</label>
-                    <input type="text" id="bizAddr2" placeholder="Navan, Co. Meath"/>
+                    <input type="text" id="bizAddr2" name="tradingAddress2" placeholder="Navan, Co. Meath"/>
                   </div>
                   <div class="af-group">
                     <label for="bizEircode">Eircode *</label>
-                    <input type="text" id="bizEircode" placeholder="C15 FX6Y" required/>
+                    <input type="text" id="bizEircode" name="eircode" placeholder="C15 FX6Y" required/>
                   </div>
                 </div>
                 <div class="af-row">
                   <div class="af-group">
                     <label for="bizTel">Telephone No. *</label>
-                    <input type="tel" id="bizTel" placeholder="046 902 2535" required/>
+                    <input type="tel" id="bizTel" name="businessPhone" placeholder="046 902 2535" required/>
                   </div>
                   <div class="af-group">
                     <label for="bizEmail">Business Email *</label>
-                    <input type="email" id="bizEmail" placeholder="accounts@company.ie" required/>
+                    <input type="email" id="bizEmail" name="businessEmail" placeholder="accounts@company.ie" required/>
                   </div>
                 </div>
                 <div class="af-row">
                   <div class="af-group">
                     <label for="bizVat">VAT Reg No.</label>
-                    <input type="text" id="bizVat" placeholder="IE1234567T"/>
+                    <input type="text" id="bizVat" name="vatNumber" placeholder="IE1234567T"/>
                   </div>
                   <div class="af-group">
                     <label for="bizCoReg">Company Reg No.</label>
-                    <input type="text" id="bizCoReg" placeholder="123456"/>
+                    <input type="text" id="bizCoReg" name="companyRegNumber" placeholder="123456"/>
                   </div>
                 </div>
                 <div class="af-group">
                   <label for="bizSoleTrader">Sole Trader / Personal Name (if applicable)</label>
-                  <input type="text" id="bizSoleTrader" placeholder="John Murphy"/>
+                  <input type="text" id="bizSoleTrader" name="soleTraderName" placeholder="John Murphy"/>
                 </div>
               </div>
             </div>
@@ -230,25 +234,25 @@
               <div class="af-acc-inner">
                 <div class="af-group">
                   <label for="propName">Name *</label>
-                  <input type="text" id="propName" placeholder="John Murphy" required/>
+                  <input type="text" id="propName" name="proprietorName" placeholder="John Murphy" required/>
                 </div>
                 <div class="af-group">
                   <label for="propAddr">Address *</label>
-                  <input type="text" id="propAddr" placeholder="12 Oak Drive, Navan, Co. Meath" required/>
+                  <input type="text" id="propAddr" name="proprietorAddress" placeholder="12 Oak Drive, Navan, Co. Meath" required/>
                 </div>
                 <div class="af-row">
                   <div class="af-group">
                     <label for="propHomePhone">Home Phone</label>
-                    <input type="tel" id="propHomePhone" placeholder="046 123 4567"/>
+                    <input type="tel" id="propHomePhone" name="proprietorHomePhone" placeholder="046 123 4567"/>
                   </div>
                   <div class="af-group">
                     <label for="propMobile">Mobile Phone *</label>
-                    <input type="tel" id="propMobile" placeholder="086 123 4567" required/>
+                    <input type="tel" id="propMobile" name="proprietorMobile" placeholder="086 123 4567" required/>
                   </div>
                 </div>
                 <div class="af-group">
                   <label for="propEmail">Email *</label>
-                  <input type="email" id="propEmail" placeholder="john@company.ie" required/>
+                  <input type="email" id="propEmail" name="proprietorEmail" placeholder="john@company.ie" required/>
                 </div>
               </div>
             </div>
@@ -272,20 +276,20 @@
               <div class="af-acc-inner">
                 <div class="af-group">
                   <label for="accName">Name of Person Responsible for Accounts *</label>
-                  <input type="text" id="accName" placeholder="Mary Murphy" required/>
+                  <input type="text" id="accName" name="accountsContactName" placeholder="Mary Murphy" required/>
                 </div>
                 <div class="af-group">
                   <label for="accBillingAddr">Billing Address *</label>
-                  <input type="text" id="accBillingAddr" placeholder="Same as trading address, or enter different" required/>
+                  <input type="text" id="accBillingAddr" name="billingAddress" placeholder="Same as trading address, or enter different" required/>
                 </div>
                 <div class="af-row">
                   <div class="af-group">
                     <label for="accTel">Telephone No. *</label>
-                    <input type="tel" id="accTel" placeholder="046 902 1234" required/>
+                    <input type="tel" id="accTel" name="accountsContactPhone" placeholder="046 902 1234" required/>
                   </div>
                   <div class="af-group">
                     <label for="accEmail">Email Address *</label>
-                    <input type="email" id="accEmail" placeholder="accounts@company.ie" required/>
+                    <input type="email" id="accEmail" name="accountsContactEmail" placeholder="accounts@company.ie" required/>
                   </div>
                 </div>
                 <p style="font-size:.78rem;color:#888;margin:4px 0 0">All invoices and statements will be forwarded by email.</p>
@@ -311,16 +315,16 @@
             <div class="af-acc-body">
               <div class="af-acc-inner">
                 <div class="af-ref-block"><div class="af-ref-num">1</div><div class="af-ref-fields">
-                  <div class="af-row"><div class="af-group"><label for="ref1Name">Name *</label><input type="text" id="ref1Name" placeholder="Supplier or trade contact" required/></div><div class="af-group"><label for="ref1Addr">Address *</label><input type="text" id="ref1Addr" placeholder="Address" required/></div></div>
-                  <div class="af-row"><div class="af-group"><label for="ref1Tel">Telephone No. *</label><input type="tel" id="ref1Tel" placeholder="01 234 5678" required/></div><div class="af-group"><label for="ref1Email">Email *</label><input type="email" id="ref1Email" placeholder="contact@supplier.ie" required/></div></div>
+                  <div class="af-row"><div class="af-group"><label for="ref1Name">Name *</label><input type="text" id="ref1Name" name="reference1Name" placeholder="Supplier or trade contact" required/></div><div class="af-group"><label for="ref1Addr">Address *</label><input type="text" id="ref1Addr" name="reference1Address" placeholder="Address" required/></div></div>
+                  <div class="af-row"><div class="af-group"><label for="ref1Tel">Telephone No. *</label><input type="tel" id="ref1Tel" name="reference1Phone" placeholder="01 234 5678" required/></div><div class="af-group"><label for="ref1Email">Email *</label><input type="email" id="ref1Email" name="reference1Email" placeholder="contact@supplier.ie" required/></div></div>
                 </div></div>
                 <div class="af-ref-block"><div class="af-ref-num">2</div><div class="af-ref-fields">
-                  <div class="af-row"><div class="af-group"><label for="ref2Name">Name *</label><input type="text" id="ref2Name" placeholder="Supplier or trade contact" required/></div><div class="af-group"><label for="ref2Addr">Address *</label><input type="text" id="ref2Addr" placeholder="Address" required/></div></div>
-                  <div class="af-row"><div class="af-group"><label for="ref2Tel">Telephone No. *</label><input type="tel" id="ref2Tel" placeholder="01 234 5678" required/></div><div class="af-group"><label for="ref2Email">Email *</label><input type="email" id="ref2Email" placeholder="contact@supplier.ie" required/></div></div>
+                  <div class="af-row"><div class="af-group"><label for="ref2Name">Name *</label><input type="text" id="ref2Name" name="reference2Name" placeholder="Supplier or trade contact" required/></div><div class="af-group"><label for="ref2Addr">Address *</label><input type="text" id="ref2Addr" name="reference2Address" placeholder="Address" required/></div></div>
+                  <div class="af-row"><div class="af-group"><label for="ref2Tel">Telephone No. *</label><input type="tel" id="ref2Tel" name="reference2Phone" placeholder="01 234 5678" required/></div><div class="af-group"><label for="ref2Email">Email *</label><input type="email" id="ref2Email" name="reference2Email" placeholder="contact@supplier.ie" required/></div></div>
                 </div></div>
                 <div class="af-ref-block"><div class="af-ref-num">3</div><div class="af-ref-fields">
-                  <div class="af-row"><div class="af-group"><label for="ref3Name">Name *</label><input type="text" id="ref3Name" placeholder="Supplier or trade contact" required/></div><div class="af-group"><label for="ref3Addr">Address *</label><input type="text" id="ref3Addr" placeholder="Address" required/></div></div>
-                  <div class="af-row"><div class="af-group"><label for="ref3Tel">Telephone No. *</label><input type="tel" id="ref3Tel" placeholder="01 234 5678" required/></div><div class="af-group"><label for="ref3Email">Email *</label><input type="email" id="ref3Email" placeholder="contact@supplier.ie" required/></div></div>
+                  <div class="af-row"><div class="af-group"><label for="ref3Name">Name *</label><input type="text" id="ref3Name" name="reference3Name" placeholder="Supplier or trade contact" required/></div><div class="af-group"><label for="ref3Addr">Address *</label><input type="text" id="ref3Addr" name="reference3Address" placeholder="Address" required/></div></div>
+                  <div class="af-row"><div class="af-group"><label for="ref3Tel">Telephone No. *</label><input type="tel" id="ref3Tel" name="reference3Phone" placeholder="01 234 5678" required/></div><div class="af-group"><label for="ref3Email">Email *</label><input type="email" id="ref3Email" name="reference3Email" placeholder="contact@supplier.ie" required/></div></div>
                 </div></div>
               </div>
             </div>
@@ -343,16 +347,16 @@
             <div class="af-acc-body">
               <div class="af-acc-inner">
                 <div class="af-row">
-                  <div class="af-group"><label for="bankName">Banker Name *</label><input type="text" id="bankName" placeholder="Bank of Ireland" required/></div>
-                  <div class="af-group"><label for="bankAddr">Bank Address *</label><input type="text" id="bankAddr" placeholder="Main Street, Navan" required/></div>
+                  <div class="af-group"><label for="bankName">Banker Name *</label><input type="text" id="bankName" name="bankName" placeholder="Bank of Ireland" required/></div>
+                  <div class="af-group"><label for="bankAddr">Bank Address *</label><input type="text" id="bankAddr" name="bankAddress" placeholder="Main Street, Navan" required/></div>
                 </div>
                 <div class="af-row">
-                  <div class="af-group"><label for="bankAccNo">Bank Account No. *</label><input type="text" id="bankAccNo" placeholder="12345678" required/></div>
-                  <div class="af-group"><label for="bankSort">Sort Code *</label><input type="text" id="bankSort" placeholder="90-00-17" required/></div>
+                  <div class="af-group"><label for="bankAccNo">Bank Account No. *</label><input type="text" id="bankAccNo" name="bankAccountNumber" placeholder="12345678" required/></div>
+                  <div class="af-group"><label for="bankSort">Sort Code *</label><input type="text" id="bankSort" name="bankSortCode" placeholder="90-00-17" required/></div>
                 </div>
                 <div class="af-group">
                   <label for="creditRequired">How Much Credit Do You Require? *</label>
-                  <input type="text" id="creditRequired" placeholder="e.g. &euro;2,000" required/>
+                  <input type="text" id="creditRequired" name="creditRequired" placeholder="e.g. &euro;2,000" required/>
                 </div>
               </div>
             </div>
@@ -382,11 +386,11 @@
                 <div class="af-row">
                   <div class="af-group">
                     <label for="directorName">Director Name *</label>
-                    <input type="text" id="directorName" placeholder="Full name of signing director" required/>
+                    <input type="text" id="directorName" name="directorName" placeholder="Full name of signing director" required/>
                   </div>
                   <div class="af-group">
                     <label for="signDate">Date *</label>
-                    <input type="date" id="signDate" required/>
+                    <input type="date" id="signDate" name="signatureDate" required/>
                   </div>
                 </div>
               </div>
@@ -395,7 +399,7 @@
 
           <!-- Submit -->
           <label class="af-check af-check--terms">
-            <input type="checkbox" id="applyTerms" required/>
+            <input type="checkbox" id="applyTerms" name="termsAccepted" required/>
             I confirm all information is accurate. I agree to the Terms &amp; Conditions of Trade and the Personal Guarantee. *
           </label>
           <button type="submit" class="btn btn-primary af-submit">Submit Credit Application</button>
@@ -440,67 +444,8 @@
       showMsg('loginMsg','info','<strong>Online portal coming soon.</strong><br>Contact us: <a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a> or <a href="tel:0469022535">046 902 2535</a>.');
     }, 900);
   }
-  function handleApply(e) {
-    e.preventDefault();
-    // If browser skipped validation (non-Chromium), open first invalid accordion
-    var bad = document.getElementById('applyForm').querySelectorAll(':invalid');
-    if (bad.length) {
-      var acc = bad[0].closest('.af-acc');
-      if (acc) acc.classList.add('af-acc--open');
-      bad[0].focus(); return;
-    }
-    var btn = e.target.querySelector('.af-submit');
-    var g = function(id){ var el=document.getElementById(id); return el?el.value.trim():''; };
-    var biz = g('bizName');
-    var nl  = '%0D%0A';
-    var body =
-      'CREDIT+APPLICATION+FORM+-+TRADE' + nl +
-      '================================' + nl + nl +
-      'BUSINESS+DETAILS' + nl +
-      'Business+%2F+Company+Name%3A+' + encodeURIComponent(biz) + nl +
-      'Trading+Address%3A+' + encodeURIComponent(g('bizAddr1')+(g('bizAddr2')?', '+g('bizAddr2'):'')) + nl +
-      'Eircode%3A+' + encodeURIComponent(g('bizEircode')) + nl +
-      'Type+of+Business%3A+' + encodeURIComponent(g('bizType')) + nl +
-      'Telephone%3A+' + encodeURIComponent(g('bizTel')) + nl +
-      'Email%3A+' + encodeURIComponent(g('bizEmail')) + nl +
-      'VAT+Reg+No%3A+' + encodeURIComponent(g('bizVat')||'N/A') + nl +
-      'Co.+Reg+No%3A+' + encodeURIComponent(g('bizCoReg')||'N/A') + nl +
-      'Sole+Trader+Name%3A+' + encodeURIComponent(g('bizSoleTrader')||'N/A') + nl + nl +
-      'DETAILS+OF+PROPRIETOR' + nl +
-      'Name%3A+' + encodeURIComponent(g('propName')) + nl +
-      'Address%3A+' + encodeURIComponent(g('propAddr')) + nl +
-      'Home+Phone%3A+' + encodeURIComponent(g('propHomePhone')||'N/A') + nl +
-      'Mobile%3A+' + encodeURIComponent(g('propMobile')) + nl +
-      'Email%3A+' + encodeURIComponent(g('propEmail')) + nl + nl +
-      'ACCOUNTS+CONTACT' + nl +
-      'Name%3A+' + encodeURIComponent(g('accName')) + nl +
-      'Billing+Address%3A+' + encodeURIComponent(g('accBillingAddr')) + nl +
-      'Telephone%3A+' + encodeURIComponent(g('accTel')) + nl +
-      'Email%3A+' + encodeURIComponent(g('accEmail')) + nl + nl +
-      'TRADE+REFERENCES' + nl +
-      '%281%29+Name%3A+' + encodeURIComponent(g('ref1Name')) + '+Address%3A+' + encodeURIComponent(g('ref1Addr')) + nl +
-      '++Tel%3A+' + encodeURIComponent(g('ref1Tel')) + '+Email%3A+' + encodeURIComponent(g('ref1Email')) + nl +
-      '%282%29+Name%3A+' + encodeURIComponent(g('ref2Name')) + '+Address%3A+' + encodeURIComponent(g('ref2Addr')) + nl +
-      '++Tel%3A+' + encodeURIComponent(g('ref2Tel')) + '+Email%3A+' + encodeURIComponent(g('ref2Email')) + nl +
-      '%283%29+Name%3A+' + encodeURIComponent(g('ref3Name')) + '+Address%3A+' + encodeURIComponent(g('ref3Addr')) + nl +
-      '++Tel%3A+' + encodeURIComponent(g('ref3Tel')) + '+Email%3A+' + encodeURIComponent(g('ref3Email')) + nl + nl +
-      'BANKING+DETAILS' + nl +
-      'Banker%3A+' + encodeURIComponent(g('bankName')) + nl +
-      'Bank+Address%3A+' + encodeURIComponent(g('bankAddr')) + nl +
-      'Account+No%3A+' + encodeURIComponent(g('bankAccNo')) + nl +
-      'Sort+Code%3A+' + encodeURIComponent(g('bankSort')) + nl +
-      'Credit+Required%3A+' + encodeURIComponent(g('creditRequired')) + nl + nl +
-      'DECLARATION' + nl +
-      'Director+Name%3A+' + encodeURIComponent(g('directorName')) + nl +
-      'Date%3A+' + encodeURIComponent(g('signDate'));
-    btn.textContent = 'Sending...'; btn.disabled = true;
-    setTimeout(function(){
-      window.location.href = 'mailto:hiredesk@nhh.ie?subject=Credit+Application+-+Trade%3A+' + encodeURIComponent(biz) + '&body=' + body;
-      btn.textContent = 'Application Ready';
-      btn.style.background = '#22a84d';
-      showMsg('applyMsg','success','<strong>Thank you!</strong> Your email client should have opened with the completed application. If not, email <a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a> or call <a href="tel:0469022535">046 902 2535</a>.');
-    }, 700);
-  }
+  // Trade application form now uses FormSpree (https://formspree.io/f/mkovvdww)
+  // Removed old handleApply() function that used unreliable mailto: links
   </script>
 
   <footer class="footer">
