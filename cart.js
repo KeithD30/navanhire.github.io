@@ -7,23 +7,6 @@
 (function () {
   'use strict';
 
-  // Immediate visual test - adds a banner so we know the script loaded
-  (function selfTest() {
-    function go() {
-      console.log('[NHH Cart] Script loaded and executing');
-      var b = document.createElement('div');
-      b.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:#1a7a3c;color:#fff;text-align:center;padding:10px;font-size:14px;font-weight:bold;';
-      b.textContent = '✅ cart.js IS LOADED — panels: ' + document.querySelectorAll('.hw-product-panel').length + ' | items: ' + document.querySelectorAll('.hw-product-item').length;
-      document.body.appendChild(b);
-      setTimeout(function(){ b.remove(); }, 8000);
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', go);
-    } else {
-      go();
-    }
-  })();
-
   // ─── Price ranges by subcategory prefix ───
   // Each maps to [minPrice, maxPrice, step] — products get spread across the range
   var SUB_PRICES = {
@@ -619,9 +602,9 @@
     var total = cartTotal() + delCharge;
 
     var confMethods = {
-      collect: 'Your order will be ready for collection from our Navan store (Kells Road) within 1–2 hours. We'll send you a text when it's ready.',
-      truck: 'Your order will be delivered by truck to your Leinster address on the next working day. We'll call to confirm a delivery window.',
-      post: 'Your order will be dispatched via An Post / DPD within 1 working day. You'll receive tracking details by email.'
+      collect: "Your order will be ready for collection from our Navan store (Kells Road) within 1\u20132 hours. We'll send you a text when it's ready.",
+      truck: "Your order will be delivered by truck to your Leinster address on the next working day. We'll call to confirm a delivery window.",
+      post: "Your order will be dispatched via An Post / DPD within 1 working day. You'll receive tracking details by email."
     };
 
     document.getElementById('co-conf-ref').textContent = 'Order Reference: ' + ref;
@@ -676,30 +659,12 @@
 
   // ─── Init ───
   function init() {
-    console.log('[NHH Cart] init() starting...');
-    try {
-      injectCartDrawer();
-      console.log('[NHH Cart] Cart drawer injected');
-    } catch (e) { console.error('[NHH Cart] injectCartDrawer failed:', e); }
-    try {
-      injectCheckoutModal();
-      console.log('[NHH Cart] Checkout modal injected');
-    } catch (e) { console.error('[NHH Cart] injectCheckoutModal failed:', e); }
-    try {
-      var panels = document.querySelectorAll('.hw-product-panel');
-      console.log('[NHH Cart] Found ' + panels.length + ' product panels');
-      var items = document.querySelectorAll('.hw-product-item');
-      console.log('[NHH Cart] Found ' + items.length + ' product items');
-      enhanceProducts();
-      console.log('[NHH Cart] Products enhanced');
-    } catch (e) { console.error('[NHH Cart] enhanceProducts failed:', e); }
-    try {
-      injectCartIcon();
-      console.log('[NHH Cart] Cart icon injected');
-    } catch (e) { console.error('[NHH Cart] injectCartIcon failed:', e); }
+    injectCartDrawer();
+    injectCheckoutModal();
+    enhanceProducts();
+    injectCartIcon();
     updateCartBadge();
     if (typeof lucide !== 'undefined') lucide.createIcons();
-    console.log('[NHH Cart] init() complete ✅');
   }
 
   if (document.readyState === 'loading') {
