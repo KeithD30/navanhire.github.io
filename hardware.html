@@ -2281,6 +2281,15 @@
   <script src="search.js"></script>
   <script src="main.js"></script>
   <script src="cart.js"></script>
-  <script>lucide.createIcons();</script>
+  <script>
+    lucide.createIcons();
+    // DEBUG: visual check
+    (function(){
+      var d = document.createElement('div');
+      d.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:99999;background:red;color:#fff;text-align:center;padding:12px;font-size:16px;font-weight:bold;';
+      d.textContent = 'THIS IS THE UPDATED FILE — URL: ' + window.location.href;
+      document.body.appendChild(d);
+    })();
+  </script>
 </body>
 </html>
