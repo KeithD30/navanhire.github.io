@@ -917,6 +917,18 @@ function showToast(msg) {
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', function() {
   initEquipment();
+  // Auto-login if redirected from account.html with ?email= param
+  var params = new URLSearchParams(window.location.search);
+  var autoEmail = params.get('email');
+  if (autoEmail) {
+    currentUser = autoEmail;
+    document.getElementById('lp').style.display = 'none';
+    document.getElementById('pp').style.display = 'block';
+    document.getElementById('ft').classList.add('on');
+    document.getElementById('dash-greet').textContent = 'Hello, ' + autoEmail;
+    document.getElementById('pay-email').value = autoEmail;
+    go('dash');
+  }
 });
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {

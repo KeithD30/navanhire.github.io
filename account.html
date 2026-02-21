@@ -379,7 +379,7 @@
     var btn = e.target.querySelector('.af-submit');
     btn.textContent = 'Logging in...'; btn.disabled = true;
     setTimeout(function(){
-      window.location.href = 'nhh-portal-demo.html';
+      window.location.href = 'nhh-portal-demo.html?email=' + encodeURIComponent(email);
     }, 900);
   }
   // Trade application form now uses FormSpree (https://formspree.io/f/mkovvdww)
