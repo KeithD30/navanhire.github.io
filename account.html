@@ -352,6 +352,8 @@
   function showApplyForm() {
     document.getElementById('apply').style.display = 'block';
     document.getElementById('applyCta').style.display = 'none';
+    // Switch to single-column layout for the full-width form
+    document.querySelector('.account-grid').style.gridTemplateColumns = '1fr';
     setTimeout(function(){ document.getElementById('apply').scrollIntoView({behavior:'smooth',block:'start'}); }, 60);
   }
   function toggleAcc(id) {
@@ -371,11 +373,13 @@
   }
   function handleLogin(e) {
     e.preventDefault();
+    var email = document.getElementById('loginEmail').value.trim();
+    var pass = document.getElementById('loginPass').value;
+    if (!email || !pass) { showMsg('loginMsg','error','Please enter your email and password.'); return; }
     var btn = e.target.querySelector('.af-submit');
     btn.textContent = 'Logging in...'; btn.disabled = true;
     setTimeout(function(){
-      btn.textContent = 'Log In'; btn.disabled = false;
-      showMsg('loginMsg','info','<strong>Online portal coming soon.</strong><br>Contact us: <a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a> or <a href="tel:0469022535">046 902 2535</a>.');
+      window.location.href = 'nhh-portal-demo.html';
     }, 900);
   }
   // Trade application form now uses FormSpree (https://formspree.io/f/mkovvdww)

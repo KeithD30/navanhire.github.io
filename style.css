@@ -2329,6 +2329,8 @@ ul { list-style: none; }
 .account-panel--apply {
   border-color: var(--red);
   box-shadow: 0 8px 40px rgba(254,0,0,0.08);
+  display: none;
+  grid-column: 1 / -1;
 }
 
 .account-panel-header {
