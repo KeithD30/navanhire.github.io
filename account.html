@@ -8,54 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span>&#128222; <a href="tel:0469022535">046 902 2535</a></span>
-      <span>&#128336; Mon&ndash;Fri: 7am&ndash;5pm &nbsp;|&nbsp; Sat: 8:30am&ndash;1pm</span>
-      <span>&#128205; Kells Road, Navan, Co. Meath</span>
-    </div>
-  </div>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="logo.svg" alt="Navan Hire &amp; Hardware" class="logo-img"/>
-      </a>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="hardware.html" class="nav-link">Hardware &amp; DIY</a>
-        <a href="telehandlers.html" class="nav-link">Telehandlers</a>
-        <a href="hire.html" class="nav-link">Plant &amp; Tool Hire</a>
-        <a href="powered-access.html" class="nav-link">Access &amp; Spider Lifts</a>
-      </nav>
-      <div class="nhh-search-wrap">
-        <input type="search" id="nhhSearch" class="nhh-search-input" placeholder="Search equipment..." autocomplete="off" spellcheck="false"/>
-        <span class="nhh-search-icon">&#128269;</span>
-        <div class="nhh-search-results" id="nhhSearchResults"></div>
-      </div>
-      <a href="contact.html" class="btn btn-white header-cta">Get a Quote</a>
-      <a href="account.html" class="nhh-account-btn nhh-account-btn--active" title="Trade Login / Apply" aria-label="Account">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="8" r="4"/>
-          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-        </svg>
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
-    </div>
-    <div class="mobile-nav" id="mobileNav">
-      <a href="index.html">Home</a>
-      <a href="hardware.html">Hardware & DIY</a>
-      <a href="telehandlers.html">Telehandlers</a>
-      <a href="hire.html">Plant & Tool Hire</a>
-      <a href="powered-access.html">Access & Spider Lifts</a>
-      <a href="contact.html">Get a Quote</a>
-      <div class="mobile-search-wrap">
-        <input type="search" id="nhhSearchMob" class="nhh-search-input" placeholder="Search all equipment..." autocomplete="off" spellcheck="false"/>
-        <div class="nhh-search-results" id="nhhSearchResultsMob"></div>
-      </div>
-    </div>
-  </header>
+  <div class="topbar" data-component></div>
+  <header class="header" data-component></header>
   <section class="pa-hero">
     <div class="container">
       <div class="hc-breadcrumb"><a href="index.html" class="hc-bc-item">Home</a> <span class="hc-bc-sep">&rsaquo;</span> <span class="hc-bc-item hc-bc-active">Trade Account</span></div>
@@ -71,9 +28,7 @@
       <div class="account-panel account-panel--login">
         <div class="account-panel-header">
           <div class="account-panel-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-            </svg>
+            <i data-lucide="user"></i>
           </div>
           <div>
             <h2>Customer Login</h2>
@@ -89,7 +44,7 @@
             <label for="loginPass">Password</label>
             <div class="af-pass-wrap">
               <input type="password" id="loginPass" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" required autocomplete="current-password"/>
-              <button type="button" class="af-pass-toggle" onclick="togglePass('loginPass',this)" aria-label="Show/hide password">&#128065;</button>
+              <button type="button" class="af-pass-toggle" onclick="togglePass('loginPass',this)" aria-label="Show/hide password"><i data-lucide="eye" style="width:18px;height:18px;pointer-events:none"></i></button>
             </div>
           </div>
           <div class="af-row af-row--spread">
@@ -105,10 +60,7 @@
       <!-- APPLY CTA — shown by default, hides when form opens -->
       <div class="account-apply-cta" id="applyCta">
         <div class="aac-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <path d="M14 2v6h6"/><path d="M12 11v6m-3-3h6"/>
-          </svg>
+          <i data-lucide="file-plus"></i>
         </div>
         <h3>Apply for a Trade Account</h3>
         <p>Get access to trade pricing, 30-day invoicing and priority hire availability across our full fleet.</p>
@@ -125,10 +77,7 @@
       <div class="account-panel account-panel--apply" id="apply">
         <div class="account-panel-header">
           <div class="account-panel-icon account-panel-icon--red">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <path d="M14 2v6h6"/><path d="M12 11v6m-3-3h6"/>
-            </svg>
+            <i data-lucide="file-plus"></i>
           </div>
           <div>
             <h2>Credit Application &mdash; Trade</h2>
@@ -146,16 +95,13 @@
           <div class="af-acc af-acc--open" id="acc-biz">
             <button type="button" class="af-acc-hdr" onclick="toggleAcc('biz')">
               <span class="af-acc-ico">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                  <polyline points="9 22 9 12 15 12 15 22"/>
-                </svg>
+                <i data-lucide="home"></i>
               </span>
               <span class="af-acc-titles">
                 <span class="af-acc-title">Business Details</span>
                 <span class="af-acc-sub">Company name, address, VAT &amp; registration</span>
               </span>
-              <svg class="af-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              <i data-lucide="chevron-down" class="af-acc-chev"></i>
             </button>
             <div class="af-acc-body">
               <div class="af-acc-inner">
@@ -220,15 +166,13 @@
           <div class="af-acc" id="acc-prop">
             <button type="button" class="af-acc-hdr" onclick="toggleAcc('prop')">
               <span class="af-acc-ico">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-                </svg>
+                <i data-lucide="user"></i>
               </span>
               <span class="af-acc-titles">
                 <span class="af-acc-title">Details of Proprietor(s)</span>
                 <span class="af-acc-sub">Name, address and contact details of owner(s)</span>
               </span>
-              <svg class="af-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              <i data-lucide="chevron-down" class="af-acc-chev"></i>
             </button>
             <div class="af-acc-body">
               <div class="af-acc-inner">
@@ -262,15 +206,13 @@
           <div class="af-acc" id="acc-accnt">
             <button type="button" class="af-acc-hdr" onclick="toggleAcc('accnt')">
               <span class="af-acc-ico">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                </svg>
+                <i data-lucide="briefcase"></i>
               </span>
               <span class="af-acc-titles">
                 <span class="af-acc-title">Accounts Contact</span>
                 <span class="af-acc-sub">Billing address and person responsible for accounts</span>
               </span>
-              <svg class="af-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              <i data-lucide="chevron-down" class="af-acc-chev"></i>
             </button>
             <div class="af-acc-body">
               <div class="af-acc-inner">
@@ -301,16 +243,13 @@
           <div class="af-acc" id="acc-refs">
             <button type="button" class="af-acc-hdr" onclick="toggleAcc('refs')">
               <span class="af-acc-ico">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
+                <i data-lucide="users"></i>
               </span>
               <span class="af-acc-titles">
                 <span class="af-acc-title">Trade References</span>
                 <span class="af-acc-sub">3 trade references required</span>
               </span>
-              <svg class="af-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              <i data-lucide="chevron-down" class="af-acc-chev"></i>
             </button>
             <div class="af-acc-body">
               <div class="af-acc-inner">
@@ -334,15 +273,13 @@
           <div class="af-acc" id="acc-bank">
             <button type="button" class="af-acc-hdr" onclick="toggleAcc('bank')">
               <span class="af-acc-ico">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>
-                </svg>
+                <i data-lucide="credit-card"></i>
               </span>
               <span class="af-acc-titles">
                 <span class="af-acc-title">Banking Details</span>
                 <span class="af-acc-sub">Bank name, account number, sort code and credit required</span>
               </span>
-              <svg class="af-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              <i data-lucide="chevron-down" class="af-acc-chev"></i>
             </button>
             <div class="af-acc-body">
               <div class="af-acc-inner">
@@ -366,16 +303,13 @@
           <div class="af-acc" id="acc-decl">
             <button type="button" class="af-acc-hdr" onclick="toggleAcc('decl')">
               <span class="af-acc-ico">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                  <path d="M14 2v6h6M9 13h6m-6 4h4"/>
-                </svg>
+                <i data-lucide="file-text"></i>
               </span>
               <span class="af-acc-titles">
                 <span class="af-acc-title">Declaration &amp; Signature</span>
                 <span class="af-acc-sub">Director name, date and agreement to terms</span>
               </span>
-              <svg class="af-acc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+              <i data-lucide="chevron-down" class="af-acc-chev"></i>
             </button>
             <div class="af-acc-body">
               <div class="af-acc-inner">
@@ -426,7 +360,7 @@
   function togglePass(id, btn) {
     var inp = document.getElementById(id);
     inp.type = inp.type==='password' ? 'text' : 'password';
-    btn.innerHTML = inp.type==='password' ? '&#128065;' : '&#128064;';
+    btn.innerHTML = inp.type==='password' ? '<i data-lucide="eye" style="width:18px;height:18px;pointer-events:none"></i>' : '<i data-lucide="eye-off" style="width:18px;height:18px;pointer-events:none"></i>'; lucide.createIcons();
   }
   function showMsg(id, type, html) {
     var el = document.getElementById(id);
@@ -447,55 +381,10 @@
   // Trade application form now uses FormSpree (https://formspree.io/f/mkovvdww)
   // Removed old handleApply() function that used unreliable mailto: links
   </script>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <img src="logo-footer.svg" alt="Navan Hire &amp; Hardware" class="footer-logo-img"/>
-        <p style="margin-top:14px;color:rgba(255,255,255,0.7)">Whistlemount, Kells Road<br>Navan, Co. Meath, C15 FX6Y</p>
-        <p><a href="tel:0469022535" style="color:#fff">046 902 2535</a></p>
-        <p><a href="mailto:hiredesk@nhh.ie" style="color:rgba(255,255,255,0.7)">hiredesk@nhh.ie</a></p>
-      </div>
-      <div class="footer-col">
-        <h4>Hire</h4>
-        <ul>
-          <li><a href="fleet.html">Hire Fleet</a></li>
-          <li><a href="hire.html">Plant &amp; Tool Hire</a></li>
-          <li><a href="powered-access.html">Access &amp; Spider Lifts</a></li>
-          <li><a href="telehandlers.html">Telehandlers</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="hardware.html">Hardware &amp; DIY</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="account.html">Trade Account</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Opening Hours</h4>
-        <p style="color:rgba(255,255,255,0.7)">Mon&ndash;Fri: 7:00am &ndash; 5:00pm<br>Saturday: 8:30am &ndash; 1:00pm<br>Sunday: Closed</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/NavanHireHardware" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/navanhirehardware" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/company/navan-hire-hardware" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 Navan Hire &amp; Hardware. All rights reserved. | 100% Irish Owned</p>
-      </div>
-    </div>
-  </footer>
+  <footer class="footer" data-component></footer>
+  <script src="components.js"></script>
   <script src="search.js"></script>
   <script src="main.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>

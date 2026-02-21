@@ -8,55 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span>&#128222; <a href="tel:0469022535">046 902 2535</a></span>
-      <span>&#128336; Mon&ndash;Fri: 7am&ndash;5pm &nbsp;|&nbsp; Sat: 8:30am&ndash;1pm</span>
-      <span>&#128205; Kells Road, Navan, Co. Meath</span>
-    </div>
-  </div>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="logo.svg" alt="Navan Hire &amp; Hardware" class="logo-img"/>
-      </a>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="hardware.html" class="nav-link active">Hardware &amp; DIY</a>
-        <a href="telehandlers.html" class="nav-link">Telehandlers</a>
-        <a href="hire.html" class="nav-link">Plant &amp; Tool Hire</a>
-        <a href="powered-access.html" class="nav-link">Access &amp; Spider Lifts</a>
-      </nav>
-      <div class="nhh-search-wrap">
-        <input type="search" id="nhhSearch" class="nhh-search-input" placeholder="Search equipment..." autocomplete="off" spellcheck="false"/>
-        <span class="nhh-search-icon">&#128269;</span>
-        <div class="nhh-search-results" id="nhhSearchResults"></div>
-      </div>
-      <a href="contact.html" class="btn btn-white header-cta">Get a Quote</a>
-      <a href="account.html" class="nhh-account-btn" title="Trade Login / Apply" aria-label="Account">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="8" r="4"/>
-          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-        </svg>
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
-    </div>
-    <div class="mobile-nav" id="mobileNav">
-      <a href="index.html">Home</a>
-      <a href="hardware.html">Hardware & DIY</a>
-      <a href="telehandlers.html">Telehandlers</a>
-      <a href="hire.html">Plant & Tool Hire</a>
-      <a href="powered-access.html">Access & Spider Lifts</a>
-      <a href="contact.html">Get a Quote</a>
-      <a href="account.html">My Account</a>
-      <div class="mobile-search-wrap">
-        <input type="search" id="nhhSearchMob" class="nhh-search-input" placeholder="Search all equipment..." autocomplete="off" spellcheck="false"/>
-        <div class="nhh-search-results" id="nhhSearchResultsMob"></div>
-      </div>
-    </div>
-  </header>
+  <div class="topbar" data-component></div>
+  <header class="header" data-component></header>
 
   <section class="page-hero">
     <div class="container page-hero-content">
@@ -76,67 +32,67 @@
         <span class="hw-cat-icon">🧱</span>
         <span class="hw-cat-label">Building Supplies</span>
         <span class="hw-cat-count">12 sections</span>
-        <svg class="hw-cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
       </button>
       <button class="hw-cat-card" onclick="hwOpenCat('timber')" aria-expanded="false" data-cat="timber">
         <span class="hw-cat-icon">🪵</span>
         <span class="hw-cat-label">Timber & Sheet Materials</span>
         <span class="hw-cat-count">8 sections</span>
-        <svg class="hw-cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
       </button>
       <button class="hw-cat-card" onclick="hwOpenCat('insulation')" aria-expanded="false" data-cat="insulation">
         <span class="hw-cat-icon">🏠</span>
         <span class="hw-cat-label">Insulation & Plasterboard</span>
         <span class="hw-cat-count">6 sections</span>
-        <svg class="hw-cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
       </button>
       <button class="hw-cat-card" onclick="hwOpenCat('plumbing')" aria-expanded="false" data-cat="plumbing">
-        <span class="hw-cat-icon">🔧</span>
+        <span class="hw-cat-icon"><i data-lucide="wrench"></i></span>
         <span class="hw-cat-label">Plumbing & Heating</span>
         <span class="hw-cat-count">8 sections</span>
-        <svg class="hw-cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
       </button>
       <button class="hw-cat-card" onclick="hwOpenCat('bathroom')" aria-expanded="false" data-cat="bathroom">
         <span class="hw-cat-icon">🛁</span>
         <span class="hw-cat-label">Bathroom Showroom</span>
         <span class="hw-cat-count">6 sections</span>
-        <svg class="hw-cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
       </button>
       <button class="hw-cat-card" onclick="hwOpenCat('doors')" aria-expanded="false" data-cat="doors">
         <span class="hw-cat-icon">🚪</span>
         <span class="hw-cat-label">Doors & Floors</span>
         <span class="hw-cat-count">6 sections</span>
-        <svg class="hw-cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
       </button>
       <button class="hw-cat-card" onclick="hwOpenCat('paint')" aria-expanded="false" data-cat="paint">
         <span class="hw-cat-icon">🎨</span>
         <span class="hw-cat-label">Paints & Decorating</span>
         <span class="hw-cat-count">6 sections</span>
-        <svg class="hw-cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
       </button>
       <button class="hw-cat-card" onclick="hwOpenCat('tools')" aria-expanded="false" data-cat="tools">
         <span class="hw-cat-icon">🔨</span>
         <span class="hw-cat-label">Tools & Fixings</span>
         <span class="hw-cat-count">7 sections</span>
-        <svg class="hw-cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
       </button>
       <button class="hw-cat-card" onclick="hwOpenCat('ppe')" aria-expanded="false" data-cat="ppe">
         <span class="hw-cat-icon">🦺</span>
         <span class="hw-cat-label">PPE & Workwear</span>
         <span class="hw-cat-count">6 sections</span>
-        <svg class="hw-cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
       </button>
       <button class="hw-cat-card" onclick="hwOpenCat('garden')" aria-expanded="false" data-cat="garden">
         <span class="hw-cat-icon">🌿</span>
         <span class="hw-cat-label">Garden Centre</span>
         <span class="hw-cat-count">6 sections</span>
-        <svg class="hw-cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
       </button>
       <button class="hw-cat-card" onclick="hwOpenCat('fuel')" aria-expanded="false" data-cat="fuel">
         <span class="hw-cat-icon">🔥</span>
         <span class="hw-cat-label">Fuel & Solid Fuel</span>
         <span class="hw-cat-count">2 sections</span>
-        <svg class="hw-cat-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
       </button>
       </div>
     </div>
@@ -146,7 +102,7 @@
       <div class="hw-sub-panel" id="hw-sub-building" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToCats()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             All Categories
           </button>
           <div class="hw-sub-title">
@@ -159,69 +115,69 @@
           <button class="hw-sub-card" onclick="hwOpenSub('building_blocks_and_bricks')" data-sub="building_blocks_and_bricks">
             <span class="hw-sub-label">Blocks & Bricks</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('building_cements_concretes_and_mortars')" data-sub="building_cements_concretes_and_mortars">
             <span class="hw-sub-label">Cements, Concretes & Mortars</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('building_aggregates_and_sand')" data-sub="building_aggregates_and_sand">
             <span class="hw-sub-label">Aggregates & Sand</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('building_roof_materials')" data-sub="building_roof_materials">
             <span class="hw-sub-label">Roof Materials</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('building_slates_and_tiles')" data-sub="building_slates_and_tiles">
             <span class="hw-sub-label">Slates & Tiles</span>
             <span class="hw-sub-count">7 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('building_roof_windows')" data-sub="building_roof_windows">
             <span class="hw-sub-label">Roof Windows</span>
             <span class="hw-sub-count">7 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('building_gutter_downpipe_and_waste')" data-sub="building_gutter_downpipe_and_waste">
             <span class="hw-sub-label">Gutter, Downpipe & Waste</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('building_underground_drainage')" data-sub="building_underground_drainage">
             <span class="hw-sub-label">Underground Drainage</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('building_damp_proof_membranes')" data-sub="building_damp_proof_membranes">
             <span class="hw-sub-label">Damp Proof Membranes</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('building_caps_and_lintels')" data-sub="building_caps_and_lintels">
             <span class="hw-sub-label">Caps & Lintels</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('building_fascias_and_soffits')" data-sub="building_fascias_and_soffits">
             <span class="hw-sub-label">Fascias & Soffits</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('building_pvc_sheeting_and_ventilation')" data-sub="building_pvc_sheeting_and_ventilation">
             <span class="hw-sub-label">PVC Sheeting & Ventilation</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
         </div>
       </div>
       <div class="hw-sub-panel" id="hw-sub-timber" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToCats()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             All Categories
           </button>
           <div class="hw-sub-title">
@@ -234,49 +190,49 @@
           <button class="hw-sub-card" onclick="hwOpenSub('timber_construction_and_treated_timber')" data-sub="timber_construction_and_treated_timber">
             <span class="hw-sub-label">Construction & Treated Timber</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('timber_rough_and_sawn_timber')" data-sub="timber_rough_and_sawn_timber">
             <span class="hw-sub-label">Rough & Sawn Timber</span>
             <span class="hw-sub-count">6 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('timber_pao_and_planed_timber')" data-sub="timber_pao_and_planed_timber">
             <span class="hw-sub-label">PAO & Planed Timber</span>
             <span class="hw-sub-count">6 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('timber_plywood')" data-sub="timber_plywood">
             <span class="hw-sub-label">Plywood</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('timber_mdf_and_hardboard')" data-sub="timber_mdf_and_hardboard">
             <span class="hw-sub-label">MDF & Hardboard</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('timber_patio_and_composite_decking')" data-sub="timber_patio_and_composite_decking">
             <span class="hw-sub-label">Patio & Composite Decking</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('timber_skirting_and_architrave')" data-sub="timber_skirting_and_architrave">
             <span class="hw-sub-label">Skirting & Architrave</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('timber_mouldings_and_hardwood')" data-sub="timber_mouldings_and_hardwood">
             <span class="hw-sub-label">Mouldings & Hardwood</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
         </div>
       </div>
       <div class="hw-sub-panel" id="hw-sub-insulation" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToCats()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             All Categories
           </button>
           <div class="hw-sub-title">
@@ -289,43 +245,43 @@
           <button class="hw-sub-card" onclick="hwOpenSub('insulation_plasterboard')" data-sub="insulation_plasterboard">
             <span class="hw-sub-label">Plasterboard</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('insulation_pir_board_insulation')" data-sub="insulation_pir_board_insulation">
             <span class="hw-sub-label">PIR Board Insulation</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('insulation_attic_and_loft_insulation')" data-sub="insulation_attic_and_loft_insulation">
             <span class="hw-sub-label">Attic & Loft Insulation</span>
             <span class="hw-sub-count">7 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('insulation_foilback_and_cavity_insulation')" data-sub="insulation_foilback_and_cavity_insulation">
             <span class="hw-sub-label">Foilback & Cavity Insulation</span>
             <span class="hw-sub-count">7 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('insulation_plaster_and_accessories')" data-sub="insulation_plaster_and_accessories">
             <span class="hw-sub-label">Plaster & Accessories</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('insulation_cement_board')" data-sub="insulation_cement_board">
             <span class="hw-sub-label">Cement Board</span>
             <span class="hw-sub-count">6 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
         </div>
       </div>
       <div class="hw-sub-panel" id="hw-sub-plumbing" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToCats()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             All Categories
           </button>
           <div class="hw-sub-title">
-            <span class="hw-sub-icon">🔧</span>
+            <span class="hw-sub-icon"><i data-lucide="wrench"></i></span>
             <h2>Plumbing & Heating</h2>
           </div>
           <p class="hw-sub-desc">Boilers, cylinders, radiators, underfloor heating and all pipework.</p>
@@ -334,49 +290,49 @@
           <button class="hw-sub-card" onclick="hwOpenSub('plumbing_boilers')" data-sub="plumbing_boilers">
             <span class="hw-sub-label">Boilers</span>
             <span class="hw-sub-count">7 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('plumbing_cylinders_and_tanks')" data-sub="plumbing_cylinders_and_tanks">
             <span class="hw-sub-label">Cylinders & Tanks</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('plumbing_radiators')" data-sub="plumbing_radiators">
             <span class="hw-sub-label">Radiators</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('plumbing_underfloor_heating')" data-sub="plumbing_underfloor_heating">
             <span class="hw-sub-label">Underfloor Heating</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('plumbing_copper_tubes_and_fittings')" data-sub="plumbing_copper_tubes_and_fittings">
             <span class="hw-sub-label">Copper Tubes & Fittings</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('plumbing_pex_and_multilayer_pipe')" data-sub="plumbing_pex_and_multilayer_pipe">
             <span class="hw-sub-label">PEX & Multi-Layer Pipe</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('plumbing_heat_pumps_and_renewables')" data-sub="plumbing_heat_pumps_and_renewables">
             <span class="hw-sub-label">Heat Pumps & Renewables</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('plumbing_heating_controls')" data-sub="plumbing_heating_controls">
             <span class="hw-sub-label">Heating Controls</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
         </div>
       </div>
       <div class="hw-sub-panel" id="hw-sub-bathroom" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToCats()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             All Categories
           </button>
           <div class="hw-sub-title">
@@ -389,39 +345,39 @@
           <button class="hw-sub-card" onclick="hwOpenSub('bathroom_sanitaryware')" data-sub="bathroom_sanitaryware">
             <span class="hw-sub-label">Sanitaryware</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('bathroom_baths')" data-sub="bathroom_baths">
             <span class="hw-sub-label">Baths</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('bathroom_showers_and_enclosures')" data-sub="bathroom_showers_and_enclosures">
             <span class="hw-sub-label">Showers & Enclosures</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('bathroom_taps')" data-sub="bathroom_taps">
             <span class="hw-sub-label">Taps</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('bathroom_bathroom_furniture')" data-sub="bathroom_bathroom_furniture">
             <span class="hw-sub-label">Bathroom Furniture</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('bathroom_wall_panels_and_tiling')" data-sub="bathroom_wall_panels_and_tiling">
             <span class="hw-sub-label">Wall Panels & Tiling</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
         </div>
       </div>
       <div class="hw-sub-panel" id="hw-sub-doors" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToCats()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             All Categories
           </button>
           <div class="hw-sub-title">
@@ -434,39 +390,39 @@
           <button class="hw-sub-card" onclick="hwOpenSub('doors_internal_doors')" data-sub="doors_internal_doors">
             <span class="hw-sub-label">Internal Doors</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('doors_external_doors')" data-sub="doors_external_doors">
             <span class="hw-sub-label">External Doors</span>
             <span class="hw-sub-count">7 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('doors_laminate_flooring')" data-sub="doors_laminate_flooring">
             <span class="hw-sub-label">Laminate Flooring</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('doors_flooring_accessories')" data-sub="doors_flooring_accessories">
             <span class="hw-sub-label">Flooring Accessories</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('doors_shelving_and_storage')" data-sub="doors_shelving_and_storage">
             <span class="hw-sub-label">Shelving & Storage</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('doors_brassware_and_ironmongery')" data-sub="doors_brassware_and_ironmongery">
             <span class="hw-sub-label">Brassware & Ironmongery</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
         </div>
       </div>
       <div class="hw-sub-panel" id="hw-sub-paint" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToCats()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             All Categories
           </button>
           <div class="hw-sub-title">
@@ -479,39 +435,39 @@
           <button class="hw-sub-card" onclick="hwOpenSub('paint_fleetwood_interior_paints')" data-sub="paint_fleetwood_interior_paints">
             <span class="hw-sub-label">Fleetwood Interior Paints</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('paint_fleetwood_exterior_paints')" data-sub="paint_fleetwood_exterior_paints">
             <span class="hw-sub-label">Fleetwood Exterior Paints</span>
             <span class="hw-sub-count">7 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('paint_ronseal_woodcare')" data-sub="paint_ronseal_woodcare">
             <span class="hw-sub-label">Ronseal Woodcare</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('paint_sadolin_and_specialist')" data-sub="paint_sadolin_and_specialist">
             <span class="hw-sub-label">Sadolin & Specialist</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('paint_floor_and_garden_paints')" data-sub="paint_floor_and_garden_paints">
             <span class="hw-sub-label">Floor & Garden Paints</span>
             <span class="hw-sub-count">7 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('paint_brushes_rollers_and_prep')" data-sub="paint_brushes_rollers_and_prep">
             <span class="hw-sub-label">Brushes, Rollers & Prep</span>
             <span class="hw-sub-count">12 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
         </div>
       </div>
       <div class="hw-sub-panel" id="hw-sub-tools" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToCats()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             All Categories
           </button>
           <div class="hw-sub-title">
@@ -524,44 +480,44 @@
           <button class="hw-sub-card" onclick="hwOpenSub('tools_power_tools_—_makita')" data-sub="tools_power_tools_—_makita">
             <span class="hw-sub-label">Power Tools — Makita</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('tools_power_tools_—_dewalt')" data-sub="tools_power_tools_—_dewalt">
             <span class="hw-sub-label">Power Tools — DeWalt</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('tools_hand_tools')" data-sub="tools_hand_tools">
             <span class="hw-sub-label">Hand Tools</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('tools_drill_bits_and_cutting')" data-sub="tools_drill_bits_and_cutting">
             <span class="hw-sub-label">Drill Bits & Cutting</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('tools_fixings_and_screws')" data-sub="tools_fixings_and_screws">
             <span class="hw-sub-label">Fixings & Screws</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('tools_groundwork_tools')" data-sub="tools_groundwork_tools">
             <span class="hw-sub-label">Groundwork Tools</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('tools_site_safety_and_signage')" data-sub="tools_site_safety_and_signage">
             <span class="hw-sub-label">Site Safety & Signage</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
         </div>
       </div>
       <div class="hw-sub-panel" id="hw-sub-ppe" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToCats()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             All Categories
           </button>
           <div class="hw-sub-title">
@@ -574,39 +530,39 @@
           <button class="hw-sub-card" onclick="hwOpenSub('ppe_head_protection')" data-sub="ppe_head_protection">
             <span class="hw-sub-label">Head Protection</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('ppe_hivis_and_workwear')" data-sub="ppe_hivis_and_workwear">
             <span class="hw-sub-label">Hi-Vis & Workwear</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('ppe_safety_footwear')" data-sub="ppe_safety_footwear">
             <span class="hw-sub-label">Safety Footwear</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('ppe_gloves')" data-sub="ppe_gloves">
             <span class="hw-sub-label">Gloves</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('ppe_respiratory_and_eye_protection')" data-sub="ppe_respiratory_and_eye_protection">
             <span class="hw-sub-label">Respiratory & Eye Protection</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('ppe_hearing_and_body_protection')" data-sub="ppe_hearing_and_body_protection">
             <span class="hw-sub-label">Hearing & Body Protection</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
         </div>
       </div>
       <div class="hw-sub-panel" id="hw-sub-garden" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToCats()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             All Categories
           </button>
           <div class="hw-sub-title">
@@ -619,39 +575,39 @@
           <button class="hw-sub-card" onclick="hwOpenSub('garden_stihl_lawnmowers')" data-sub="garden_stihl_lawnmowers">
             <span class="hw-sub-label">Stihl Lawnmowers</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('garden_stihl_chainsaws_and_strimmers')" data-sub="garden_stihl_chainsaws_and_strimmers">
             <span class="hw-sub-label">Stihl Chainsaws & Strimmers</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('garden_power_washers_and_blowers')" data-sub="garden_power_washers_and_blowers">
             <span class="hw-sub-label">Power Washers & Blowers</span>
             <span class="hw-sub-count">8 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('garden_fencing_and_weed_control')" data-sub="garden_fencing_and_weed_control">
             <span class="hw-sub-label">Fencing & Weed Control</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('garden_lawn_care')" data-sub="garden_lawn_care">
             <span class="hw-sub-label">Lawn Care</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('garden_compost_bark_and_garden_tools')" data-sub="garden_compost_bark_and_garden_tools">
             <span class="hw-sub-label">Compost, Bark & Garden Tools</span>
             <span class="hw-sub-count">10 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
         </div>
       </div>
       <div class="hw-sub-panel" id="hw-sub-fuel" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToCats()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             All Categories
           </button>
           <div class="hw-sub-title">
@@ -664,12 +620,12 @@
           <button class="hw-sub-card" onclick="hwOpenSub('fuel_coal_and_smokeless')" data-sub="fuel_coal_and_smokeless">
             <span class="hw-sub-label">Coal & Smokeless</span>
             <span class="hw-sub-count">7 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
           <button class="hw-sub-card" onclick="hwOpenSub('fuel_briquettes_and_logs')" data-sub="fuel_briquettes_and_logs">
             <span class="hw-sub-label">Briquettes & Logs</span>
             <span class="hw-sub-count">9 products</span>
-            <svg class="hw-sub-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            <i data-lucide="chevron-right" class="hw-sub-arrow"></i>
           </button>
         </div>
       </div>
@@ -679,7 +635,7 @@
       <div class="hw-product-panel" id="hw-prod-building_blocks_and_bricks" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('building')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Building Supplies
           </button>
           <div class="hw-sub-title">
@@ -702,7 +658,7 @@
       <div class="hw-product-panel" id="hw-prod-building_cements_concretes_and_mortars" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('building')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Building Supplies
           </button>
           <div class="hw-sub-title">
@@ -725,7 +681,7 @@
       <div class="hw-product-panel" id="hw-prod-building_aggregates_and_sand" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('building')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Building Supplies
           </button>
           <div class="hw-sub-title">
@@ -746,7 +702,7 @@
       <div class="hw-product-panel" id="hw-prod-building_roof_materials" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('building')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Building Supplies
           </button>
           <div class="hw-sub-title">
@@ -769,7 +725,7 @@
       <div class="hw-product-panel" id="hw-prod-building_slates_and_tiles" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('building')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Building Supplies
           </button>
           <div class="hw-sub-title">
@@ -789,7 +745,7 @@
       <div class="hw-product-panel" id="hw-prod-building_roof_windows" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('building')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Building Supplies
           </button>
           <div class="hw-sub-title">
@@ -809,7 +765,7 @@
       <div class="hw-product-panel" id="hw-prod-building_gutter_downpipe_and_waste" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('building')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Building Supplies
           </button>
           <div class="hw-sub-title">
@@ -832,7 +788,7 @@
       <div class="hw-product-panel" id="hw-prod-building_underground_drainage" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('building')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Building Supplies
           </button>
           <div class="hw-sub-title">
@@ -855,7 +811,7 @@
       <div class="hw-product-panel" id="hw-prod-building_damp_proof_membranes" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('building')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Building Supplies
           </button>
           <div class="hw-sub-title">
@@ -877,7 +833,7 @@
       <div class="hw-product-panel" id="hw-prod-building_caps_and_lintels" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('building')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Building Supplies
           </button>
           <div class="hw-sub-title">
@@ -898,7 +854,7 @@
       <div class="hw-product-panel" id="hw-prod-building_fascias_and_soffits" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('building')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Building Supplies
           </button>
           <div class="hw-sub-title">
@@ -919,7 +875,7 @@
       <div class="hw-product-panel" id="hw-prod-building_pvc_sheeting_and_ventilation" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('building')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Building Supplies
           </button>
           <div class="hw-sub-title">
@@ -942,7 +898,7 @@
       <div class="hw-product-panel" id="hw-prod-timber_construction_and_treated_timber" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('timber')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Timber & Sheet Materials
           </button>
           <div class="hw-sub-title">
@@ -964,7 +920,7 @@
       <div class="hw-product-panel" id="hw-prod-timber_rough_and_sawn_timber" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('timber')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Timber & Sheet Materials
           </button>
           <div class="hw-sub-title">
@@ -983,7 +939,7 @@
       <div class="hw-product-panel" id="hw-prod-timber_pao_and_planed_timber" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('timber')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Timber & Sheet Materials
           </button>
           <div class="hw-sub-title">
@@ -1002,7 +958,7 @@
       <div class="hw-product-panel" id="hw-prod-timber_plywood" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('timber')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Timber & Sheet Materials
           </button>
           <div class="hw-sub-title">
@@ -1024,7 +980,7 @@
       <div class="hw-product-panel" id="hw-prod-timber_mdf_and_hardboard" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('timber')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Timber & Sheet Materials
           </button>
           <div class="hw-sub-title">
@@ -1045,7 +1001,7 @@
       <div class="hw-product-panel" id="hw-prod-timber_patio_and_composite_decking" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('timber')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Timber & Sheet Materials
           </button>
           <div class="hw-sub-title">
@@ -1066,7 +1022,7 @@
       <div class="hw-product-panel" id="hw-prod-timber_skirting_and_architrave" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('timber')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Timber & Sheet Materials
           </button>
           <div class="hw-sub-title">
@@ -1087,7 +1043,7 @@
       <div class="hw-product-panel" id="hw-prod-timber_mouldings_and_hardwood" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('timber')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Timber & Sheet Materials
           </button>
           <div class="hw-sub-title">
@@ -1108,7 +1064,7 @@
       <div class="hw-product-panel" id="hw-prod-insulation_plasterboard" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('insulation')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Insulation & Plasterboard
           </button>
           <div class="hw-sub-title">
@@ -1129,7 +1085,7 @@
       <div class="hw-product-panel" id="hw-prod-insulation_pir_board_insulation" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('insulation')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Insulation & Plasterboard
           </button>
           <div class="hw-sub-title">
@@ -1150,7 +1106,7 @@
       <div class="hw-product-panel" id="hw-prod-insulation_attic_and_loft_insulation" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('insulation')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Insulation & Plasterboard
           </button>
           <div class="hw-sub-title">
@@ -1170,7 +1126,7 @@
       <div class="hw-product-panel" id="hw-prod-insulation_foilback_and_cavity_insulation" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('insulation')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Insulation & Plasterboard
           </button>
           <div class="hw-sub-title">
@@ -1190,7 +1146,7 @@
       <div class="hw-product-panel" id="hw-prod-insulation_plaster_and_accessories" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('insulation')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Insulation & Plasterboard
           </button>
           <div class="hw-sub-title">
@@ -1213,7 +1169,7 @@
       <div class="hw-product-panel" id="hw-prod-insulation_cement_board" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('insulation')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Insulation & Plasterboard
           </button>
           <div class="hw-sub-title">
@@ -1232,7 +1188,7 @@
       <div class="hw-product-panel" id="hw-prod-plumbing_boilers" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('plumbing')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Plumbing & Heating
           </button>
           <div class="hw-sub-title">
@@ -1252,7 +1208,7 @@
       <div class="hw-product-panel" id="hw-prod-plumbing_cylinders_and_tanks" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('plumbing')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Plumbing & Heating
           </button>
           <div class="hw-sub-title">
@@ -1273,7 +1229,7 @@
       <div class="hw-product-panel" id="hw-prod-plumbing_radiators" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('plumbing')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Plumbing & Heating
           </button>
           <div class="hw-sub-title">
@@ -1296,7 +1252,7 @@
       <div class="hw-product-panel" id="hw-prod-plumbing_underfloor_heating" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('plumbing')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Plumbing & Heating
           </button>
           <div class="hw-sub-title">
@@ -1318,7 +1274,7 @@
       <div class="hw-product-panel" id="hw-prod-plumbing_copper_tubes_and_fittings" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('plumbing')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Plumbing & Heating
           </button>
           <div class="hw-sub-title">
@@ -1341,7 +1297,7 @@
       <div class="hw-product-panel" id="hw-prod-plumbing_pex_and_multilayer_pipe" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('plumbing')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Plumbing & Heating
           </button>
           <div class="hw-sub-title">
@@ -1363,7 +1319,7 @@
       <div class="hw-product-panel" id="hw-prod-plumbing_heat_pumps_and_renewables" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('plumbing')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Plumbing & Heating
           </button>
           <div class="hw-sub-title">
@@ -1384,7 +1340,7 @@
       <div class="hw-product-panel" id="hw-prod-plumbing_heating_controls" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('plumbing')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Plumbing & Heating
           </button>
           <div class="hw-sub-title">
@@ -1406,7 +1362,7 @@
       <div class="hw-product-panel" id="hw-prod-bathroom_sanitaryware" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('bathroom')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Bathroom Showroom
           </button>
           <div class="hw-sub-title">
@@ -1429,7 +1385,7 @@
       <div class="hw-product-panel" id="hw-prod-bathroom_baths" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('bathroom')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Bathroom Showroom
           </button>
           <div class="hw-sub-title">
@@ -1451,7 +1407,7 @@
       <div class="hw-product-panel" id="hw-prod-bathroom_showers_and_enclosures" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('bathroom')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Bathroom Showroom
           </button>
           <div class="hw-sub-title">
@@ -1474,7 +1430,7 @@
       <div class="hw-product-panel" id="hw-prod-bathroom_taps" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('bathroom')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Bathroom Showroom
           </button>
           <div class="hw-sub-title">
@@ -1496,7 +1452,7 @@
       <div class="hw-product-panel" id="hw-prod-bathroom_bathroom_furniture" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('bathroom')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Bathroom Showroom
           </button>
           <div class="hw-sub-title">
@@ -1517,7 +1473,7 @@
       <div class="hw-product-panel" id="hw-prod-bathroom_wall_panels_and_tiling" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('bathroom')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Bathroom Showroom
           </button>
           <div class="hw-sub-title">
@@ -1540,7 +1496,7 @@
       <div class="hw-product-panel" id="hw-prod-doors_internal_doors" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('doors')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Doors & Floors
           </button>
           <div class="hw-sub-title">
@@ -1562,7 +1518,7 @@
       <div class="hw-product-panel" id="hw-prod-doors_external_doors" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('doors')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Doors & Floors
           </button>
           <div class="hw-sub-title">
@@ -1582,7 +1538,7 @@
       <div class="hw-product-panel" id="hw-prod-doors_laminate_flooring" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('doors')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Doors & Floors
           </button>
           <div class="hw-sub-title">
@@ -1603,7 +1559,7 @@
       <div class="hw-product-panel" id="hw-prod-doors_flooring_accessories" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('doors')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Doors & Floors
           </button>
           <div class="hw-sub-title">
@@ -1625,7 +1581,7 @@
       <div class="hw-product-panel" id="hw-prod-doors_shelving_and_storage" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('doors')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Doors & Floors
           </button>
           <div class="hw-sub-title">
@@ -1646,7 +1602,7 @@
       <div class="hw-product-panel" id="hw-prod-doors_brassware_and_ironmongery" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('doors')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Doors & Floors
           </button>
           <div class="hw-sub-title">
@@ -1669,7 +1625,7 @@
       <div class="hw-product-panel" id="hw-prod-paint_fleetwood_interior_paints" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('paint')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Paints & Decorating
           </button>
           <div class="hw-sub-title">
@@ -1692,7 +1648,7 @@
       <div class="hw-product-panel" id="hw-prod-paint_fleetwood_exterior_paints" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('paint')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Paints & Decorating
           </button>
           <div class="hw-sub-title">
@@ -1712,7 +1668,7 @@
       <div class="hw-product-panel" id="hw-prod-paint_ronseal_woodcare" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('paint')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Paints & Decorating
           </button>
           <div class="hw-sub-title">
@@ -1733,7 +1689,7 @@
       <div class="hw-product-panel" id="hw-prod-paint_sadolin_and_specialist" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('paint')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Paints & Decorating
           </button>
           <div class="hw-sub-title">
@@ -1756,7 +1712,7 @@
       <div class="hw-product-panel" id="hw-prod-paint_floor_and_garden_paints" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('paint')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Paints & Decorating
           </button>
           <div class="hw-sub-title">
@@ -1776,7 +1732,7 @@
       <div class="hw-product-panel" id="hw-prod-paint_brushes_rollers_and_prep" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('paint')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Paints & Decorating
           </button>
           <div class="hw-sub-title">
@@ -1801,7 +1757,7 @@
       <div class="hw-product-panel" id="hw-prod-tools_power_tools_—_makita" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('tools')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Tools & Fixings
           </button>
           <div class="hw-sub-title">
@@ -1823,7 +1779,7 @@
       <div class="hw-product-panel" id="hw-prod-tools_power_tools_—_dewalt" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('tools')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Tools & Fixings
           </button>
           <div class="hw-sub-title">
@@ -1845,7 +1801,7 @@
       <div class="hw-product-panel" id="hw-prod-tools_hand_tools" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('tools')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Tools & Fixings
           </button>
           <div class="hw-sub-title">
@@ -1868,7 +1824,7 @@
       <div class="hw-product-panel" id="hw-prod-tools_drill_bits_and_cutting" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('tools')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Tools & Fixings
           </button>
           <div class="hw-sub-title">
@@ -1891,7 +1847,7 @@
       <div class="hw-product-panel" id="hw-prod-tools_fixings_and_screws" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('tools')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Tools & Fixings
           </button>
           <div class="hw-sub-title">
@@ -1914,7 +1870,7 @@
       <div class="hw-product-panel" id="hw-prod-tools_groundwork_tools" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('tools')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Tools & Fixings
           </button>
           <div class="hw-sub-title">
@@ -1937,7 +1893,7 @@
       <div class="hw-product-panel" id="hw-prod-tools_site_safety_and_signage" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('tools')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Tools & Fixings
           </button>
           <div class="hw-sub-title">
@@ -1960,7 +1916,7 @@
       <div class="hw-product-panel" id="hw-prod-ppe_head_protection" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('ppe')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             PPE & Workwear
           </button>
           <div class="hw-sub-title">
@@ -1981,7 +1937,7 @@
       <div class="hw-product-panel" id="hw-prod-ppe_hivis_and_workwear" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('ppe')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             PPE & Workwear
           </button>
           <div class="hw-sub-title">
@@ -2003,7 +1959,7 @@
       <div class="hw-product-panel" id="hw-prod-ppe_safety_footwear" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('ppe')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             PPE & Workwear
           </button>
           <div class="hw-sub-title">
@@ -2025,7 +1981,7 @@
       <div class="hw-product-panel" id="hw-prod-ppe_gloves" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('ppe')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             PPE & Workwear
           </button>
           <div class="hw-sub-title">
@@ -2047,7 +2003,7 @@
       <div class="hw-product-panel" id="hw-prod-ppe_respiratory_and_eye_protection" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('ppe')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             PPE & Workwear
           </button>
           <div class="hw-sub-title">
@@ -2069,7 +2025,7 @@
       <div class="hw-product-panel" id="hw-prod-ppe_hearing_and_body_protection" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('ppe')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             PPE & Workwear
           </button>
           <div class="hw-sub-title">
@@ -2092,7 +2048,7 @@
       <div class="hw-product-panel" id="hw-prod-garden_stihl_lawnmowers" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('garden')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Garden Centre
           </button>
           <div class="hw-sub-title">
@@ -2113,7 +2069,7 @@
       <div class="hw-product-panel" id="hw-prod-garden_stihl_chainsaws_and_strimmers" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('garden')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Garden Centre
           </button>
           <div class="hw-sub-title">
@@ -2135,7 +2091,7 @@
       <div class="hw-product-panel" id="hw-prod-garden_power_washers_and_blowers" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('garden')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Garden Centre
           </button>
           <div class="hw-sub-title">
@@ -2156,7 +2112,7 @@
       <div class="hw-product-panel" id="hw-prod-garden_fencing_and_weed_control" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('garden')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Garden Centre
           </button>
           <div class="hw-sub-title">
@@ -2179,7 +2135,7 @@
       <div class="hw-product-panel" id="hw-prod-garden_lawn_care" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('garden')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Garden Centre
           </button>
           <div class="hw-sub-title">
@@ -2202,7 +2158,7 @@
       <div class="hw-product-panel" id="hw-prod-garden_compost_bark_and_garden_tools" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('garden')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Garden Centre
           </button>
           <div class="hw-sub-title">
@@ -2225,7 +2181,7 @@
       <div class="hw-product-panel" id="hw-prod-fuel_coal_and_smokeless" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('fuel')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Fuel & Solid Fuel
           </button>
           <div class="hw-sub-title">
@@ -2245,7 +2201,7 @@
       <div class="hw-product-panel" id="hw-prod-fuel_briquettes_and_logs" style="display:none">
         <div class="hw-sub-header">
           <button class="hw-back-btn" onclick="hwBackToSubs('fuel')" >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+            <i data-lucide="chevron-left"></i>
             Fuel & Solid Fuel
           </button>
           <div class="hw-sub-title">
@@ -2315,53 +2271,15 @@
         <p>Call us and our team will source it for you — we stock thousands of products.</p>
       </div>
       <div class="cta-actions">
-        <a href="tel:0469022535" class="btn btn-white btn-lg">📞 046 902 2535</a>
+        <a href="tel:0469022535" class="btn btn-white btn-lg"><i data-lucide="phone" class="btn-icon"></i> 046 902 2535</a>
         <a href="contact.html" class="btn btn-outline-white btn-lg">Send Enquiry</a>
       </div>
     </div>
   </section>
-
-    <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <img src="logo.svg" alt="Navan Hire &amp; Hardware" class="footer-logo-img"/>
-        <p style="margin-top:14px;color:rgba(255,255,255,0.7)">Whistlemount, Kells Road<br>Navan, Co. Meath, C15 FX6Y</p>
-        <p><a href="tel:0469022535" style="color:#fff">046 902 2535</a></p>
-        <p><a href="mailto:hiredesk@nhh.ie" style="color:rgba(255,255,255,0.7)">hiredesk@nhh.ie</a></p>
-      </div>
-      <div class="footer-col">
-        <h4>Hire</h4>
-        <ul>
-          <li><a href="fleet.html">Hire Fleet</a></li>
-          <li><a href="hire.html">Plant &amp; Tool Hire</a></li>
-          <li><a href="powered-access.html">Access &amp; Spider Lifts</a></li>
-          <li><a href="telehandlers.html">Telehandlers</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="hardware.html">Hardware &amp; DIY</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="account.html">Trade Account</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Opening Hours</h4>
-        <p style="color:rgba(255,255,255,0.7)">Mon&ndash;Fri: 7:00am &ndash; 5:00pm<br>Saturday: 8:30am &ndash; 1:00pm<br>Sunday: Closed</p>
-        <div class="social-links" style="margin-top:12px">
-          <a href="https://www.facebook.com/NavanHireHardware" target="_blank">Facebook</a>
-          <a href="https://www.instagram.com/navanhirehardware" target="_blank">Instagram</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 Navan Hire &amp; Hardware. All rights reserved. | 100% Irish Owned</p>
-      </div>
-    </div>
-  </footer>
+  <footer class="footer" data-component></footer>
+  <script src="components.js"></script>
   <script src="search.js"></script>
   <script src="main.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>

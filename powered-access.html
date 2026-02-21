@@ -8,54 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span>&#128222; <a href="tel:0469022535">046 902 2535</a></span>
-      <span>&#128336; Mon&ndash;Fri: 7am&ndash;5pm &nbsp;|&nbsp; Sat: 8:30am&ndash;1pm</span>
-      <span>&#128205; Kells Road, Navan, Co. Meath</span>
-    </div>
-  </div>
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <img src="logo.svg" alt="Navan Hire &amp; Hardware" class="logo-img"/>
-      </a>
-            <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="hardware.html" class="nav-link">Hardware &amp; DIY</a>
-        <a href="telehandlers.html" class="nav-link">Telehandlers</a>
-        <a href="hire.html" class="nav-link">Plant &amp; Tool Hire</a>
-        <a href="powered-access.html" class="nav-link active">Access &amp; Spider Lifts</a>
-      </nav>
-      <div class="nhh-search-wrap">
-        <input type="search" id="nhhSearch" class="nhh-search-input" placeholder="Search equipment..." autocomplete="off" spellcheck="false"/>
-        <span class="nhh-search-icon">&#128269;</span>
-        <div class="nhh-search-results" id="nhhSearchResults"></div>
-      </div>
-      <a href="contact.html" class="btn btn-white header-cta">Get a Quote</a>
-      <a href="account.html" class="nhh-account-btn" title="Trade Login / Apply" aria-label="Account">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="8" r="4"/>
-          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-        </svg>
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">&#9776;</button>
-    </div>
-        <div class="mobile-nav" id="mobileNav">
-      <a href="index.html">Home</a>
-      <a href="hardware.html">Hardware & DIY</a>
-      <a href="telehandlers.html">Telehandlers</a>
-      <a href="hire.html">Plant & Tool Hire</a>
-      <a href="powered-access.html">Access & Spider Lifts</a>
-      <a href="contact.html">Get a Quote</a>
-      <div class="mobile-search-wrap">
-        <input type="search" id="nhhSearchMob" class="nhh-search-input" placeholder="Search all equipment..." autocomplete="off" spellcheck="false"/>
-        <div class="nhh-search-results" id="nhhSearchResultsMob"></div>
-      </div>
-    </div>
-  </header>
+  <div class="topbar" data-component></div>
+  <header class="header" data-component></header>
 
   <section class="pa-hero">
     <div class="container">
@@ -79,7 +36,7 @@
           <!-- IMAGE SLOT: save photo as images/access/diesel-boom.jpg -->
           <div class="pa-card-img" style="background-image:url('images/access/diesel-boom.jpg')">
             <div class="pa-card-img-placeholder">
-              <span class="pa-card-img-icon">🏗</span>
+              <span class="pa-card-img-icon"><i data-lucide="crane"></i></span>
               <span class="pa-card-img-hint">&#128247; images/access/diesel-boom.jpg</span>
             </div>
           </div>
@@ -94,7 +51,7 @@
           <!-- IMAGE SLOT: save photo as images/access/electric-boom.jpg -->
           <div class="pa-card-img" style="background-image:url('images/access/electric-boom.jpg')">
             <div class="pa-card-img-placeholder">
-              <span class="pa-card-img-icon">⚡</span>
+              <span class="pa-card-img-icon"><i data-lucide="zap"></i></span>
               <span class="pa-card-img-hint">&#128247; images/access/electric-boom.jpg</span>
             </div>
           </div>
@@ -109,7 +66,7 @@
           <!-- IMAGE SLOT: save photo as images/access/spider-lift.jpg -->
           <div class="pa-card-img" style="background-image:url('images/access/spider-lift.jpg')">
             <div class="pa-card-img-placeholder">
-              <span class="pa-card-img-icon">🕷</span>
+              <span class="pa-card-img-icon"><i data-lucide="bug"></i></span>
               <span class="pa-card-img-hint">&#128247; images/access/spider-lift.jpg</span>
             </div>
           </div>
@@ -124,7 +81,7 @@
           <!-- IMAGE SLOT: save photo as images/access/diesel-scissors.jpg -->
           <div class="pa-card-img" style="background-image:url('images/access/diesel-scissors.jpg')">
             <div class="pa-card-img-placeholder">
-              <span class="pa-card-img-icon">🛣</span>
+              <span class="pa-card-img-icon"><i data-lucide="move-vertical"></i></span>
               <span class="pa-card-img-hint">&#128247; images/access/diesel-scissors.jpg</span>
             </div>
           </div>
@@ -139,7 +96,7 @@
           <!-- IMAGE SLOT: save photo as images/access/electric-scissors.jpg -->
           <div class="pa-card-img" style="background-image:url('images/access/electric-scissors.jpg')">
             <div class="pa-card-img-placeholder">
-              <span class="pa-card-img-icon">🟦</span>
+              <span class="pa-card-img-icon"><i data-lucide="square"></i></span>
               <span class="pa-card-img-hint">&#128247; images/access/electric-scissors.jpg</span>
             </div>
           </div>
@@ -175,7 +132,7 @@
         <p>Not sure which machine suits your job? We'll visit the site and advise &mdash; free of charge.</p>
       </div>
       <div class="cta-actions">
-        <a href="tel:0469022535" class="btn btn-white btn-lg">&#128222; 046 902 2535</a>
+        <a href="tel:0469022535" class="btn btn-white btn-lg"><i data-lucide="phone" class="btn-icon"></i> 046 902 2535</a>
         <a href="contact.html" class="btn btn-outline-white btn-lg">Request Site Survey</a>
       </div>
     </div>
@@ -184,7 +141,7 @@
   <script>
   var PA_DATA = {"Diesel Boom Lifts": [{"name": "BOOM LIFT 135FT ARTICULATED", "d1": "850", "d2": "1250", "d3": "1550", "we": "850"}, {"name": "S125 BOOM LIFT", "d1": "850", "d2": "1250", "d3": "1550", "we": "850"}, {"name": "BOOM LIFT 85FT STRAIGHT", "d1": "450", "d2": "625", "d3": "750", "we": "450"}, {"name": "80 FT ARTICULATED BOOM LIFT", "d1": "450", "d2": "625", "d3": "750", "we": "450"}, {"name": "BOOM LIFT 60' ARTICULATED BOOM", "d1": "295", "d2": "450", "d3": "575", "we": "340"}, {"name": "BOOM LIFT 45FT Z45", "d1": "250", "d2": "350", "d3": "450", "we": "295"}, {"name": "BOOM LIFT 40FT TOWABLE ARTICULATED", "d1": "250", "d2": "350", "d3": "395", "we": "250"}, {"name": "BOOM LIFT 40FT TOWABLE", "d1": "250", "d2": "350", "d3": "395", "we": "250"}, {"name": "BOOM LIFT 38'  5'WIDE UPRIGHT", "d1": "250", "d2": "350", "d3": "450", "we": "250"}, {"name": "BOOM LIFT 30FT", "d1": "250", "d2": "350", "d3": "450", "we": "250"}], "Electric Boom Lifts": [{"name": "BOOM LIFT 45FT ELECTRIC", "d1": "295", "d2": "425", "d3": "550", "we": "350"}, {"name": "TOUCAN 10E", "d1": "250", "d2": "350", "d3": "450", "we": "250"}], "Spider Lifts": [{"name": "26M SPIDER BOOM LIFT", "d1": "1300", "d2": "1700", "d3": "2000", "we": "1300"}, {"name": "20M SPIDER BOOM LIFT", "d1": "800", "d2": "1200", "d3": "1500", "we": "800"}, {"name": "17M SPIDER BOOM LIFT", "d1": "550", "d2": "800", "d3": "950", "we": "550"}, {"name": "15M SPIDER BOOM LIFT", "d1": "450", "d2": "650", "d3": "750", "we": "450"}], "Diesel Scissor Lifts": [{"name": "20M SCISSORS LIFT", "d1": "550", "d2": "750", "d3": "1050", "we": "550"}, {"name": "SCISSORS LIFT 50FT ALL-TERRAIN", "d1": "275", "d2": "425", "d3": "475", "we": "295"}, {"name": "SCISSORS LIFT 40FT ALL TERRAIN NARROW", "d1": "250", "d2": "375", "d3": "450", "we": "250"}, {"name": "SCISSORS LIFT 26 ALL TERRAIN DIESEL", "d1": "270", "d2": "350", "d3": "400", "we": "270"}], "Electric Scissor Lifts": [{"name": "SCISSORS LIFT 40 FT ELECTRIC", "d1": "300", "d2": "450", "d3": "495", "we": "300"}, {"name": "SCISSORS LIFT 40FT ALL-TERRAIN ELECTRIC", "d1": "250", "d2": "375", "d3": "450", "we": "250"}, {"name": "SCISSORS LIFT 32 FT  110V", "d1": "165", "d2": "260", "d3": "295", "we": "195"}, {"name": "SCISSORS LIFT 26FT", "d1": "125", "d2": "225", "d3": "275", "we": "180"}, {"name": "SCISSORS  LIFT 19FT", "d1": "95", "d2": "185", "d3": "225", "we": "150"}, {"name": "SKYJACK SJ16", "d1": "95", "d2": "185", "d3": "225", "we": "150"}, {"name": "SCISSORS 10FT ELECTRIC", "d1": "85", "d2": "170", "d3": "200", "we": "130"}]};
   var PA_CAT_NAMES = ["Diesel Boom Lifts", "Electric Boom Lifts", "Spider Lifts", "Diesel Scissor Lifts", "Electric Scissor Lifts"];
-  var PA_CAT_INFO  = {"Diesel Boom Lifts": {"icon": "🏗", "desc": "Articulated and telescopic diesel boom lifts from 40ft to 135ft. Rough-terrain 4WD — ideal for outdoor construction, facade work and large sites.", "img": "images/access/diesel-boom.jpg"}, "Electric Boom Lifts": {"icon": "⚡", "desc": "Zero-emission electric boom lifts from 30ft to 45ft. Quiet and clean — perfect for indoor use, environmentally sensitive sites and warehouses.", "img": "images/access/electric-boom.jpg"}, "Spider Lifts": {"icon": "🕷", "desc": "Track-mounted spider boom lifts from 15m to 26m. Works on slopes, lawns, delicate floors and in confined spaces where no other machine can reach.", "img": "images/access/spider-lift.jpg"}, "Diesel Scissor Lifts": {"icon": "🛣", "desc": "Rough-terrain and all-terrain diesel scissor lifts from 26ft to 65ft. Built for outdoor sites with uneven ground.", "img": "images/access/diesel-scissors.jpg"}, "Electric Scissor Lifts": {"icon": "🟦", "desc": "Electric scissor lifts from 10ft to 40ft. Compact, quiet and zero-emissions — the most popular machine for indoor maintenance, fit-out and retail.", "img": "images/access/electric-scissors.jpg"}};
+var PA_CAT_INFO  = {"Diesel Boom Lifts": {"icon": "<i data-lucide=\"crane\"></i>", "desc": "Articulated and telescopic diesel boom lifts from 40ft to 135ft. Rough-terrain 4WD — ideal for outdoor construction, facade work and large sites.", "img": "images/access/diesel-boom.jpg"}, "Electric Boom Lifts": {"icon": "<i data-lucide=\"zap\"></i>", "desc": "Zero-emission electric boom lifts from 30ft to 45ft. Quiet and clean — perfect for indoor use, environmentally sensitive sites and warehouses.", "img": "images/access/electric-boom.jpg"}, "Spider Lifts": {"icon": "<i data-lucide=\"bug\"></i>", "desc": "Track-mounted spider boom lifts from 15m to 26m. Works on slopes, lawns, delicate floors and in confined spaces where no other machine can reach.", "img": "images/access/spider-lift.jpg"}, "Diesel Scissor Lifts": {"icon": "<i data-lucide=\"move-vertical\"></i>", "desc": "Rough-terrain and all-terrain diesel scissor lifts from 26ft to 65ft. Built for outdoor sites with uneven ground.", "img": "images/access/diesel-scissors.jpg"}, "Electric Scissor Lifts": {"icon": "<i data-lucide=\"square\"></i>", "desc": "Electric scissor lifts from 10ft to 40ft. Compact, quiet and zero-emissions — the most popular machine for indoor maintenance, fit-out and retail.", "img": "images/access/electric-scissors.jpg"}};
 
   var paCurCat = null;
 
@@ -331,7 +288,7 @@
     if (btn) { btn.textContent = '\u2705 Ready to Send!'; btn.disabled = true; btn.style.background = '#22a84d'; }
     var msg = document.createElement('div');
     msg.className = 'hc-success';
-    msg.innerHTML = 'Hi <strong>' + escH(name) + '</strong>! Click below to open your email, or call <a href="tel:0469022535">046 902 2535</a>.<br><br><a href="mailto:hiredesk@nhh.ie?subject=' + subj + '&body=' + body + '" class="btn btn-primary" style="display:inline-block;margin-top:8px">&#128231; Open Email to Send</a>';
+    msg.innerHTML = 'Hi <strong>' + escH(name) + '</strong>! Click below to open your email, or call <a href="tel:0469022535">046 902 2535</a>.<br><br><a href="mailto:hiredesk@nhh.ie?subject=' + subj + '&body=' + body + '" class="btn btn-primary" style="display:inline-block;margin-top:8px"><i data-lucide="mail" class="btn-icon"></i> Open Email to Send</a>';
     document.getElementById('paProdDetail').appendChild(msg);
   }
 
@@ -355,56 +312,11 @@
     onReset: function() {}
   });
   </script>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <img src="logo-footer.svg" alt="Navan Hire &amp; Hardware" class="footer-logo-img"/>
-        <p style="margin-top:14px;color:rgba(255,255,255,0.7)">Whistlemount, Kells Road<br>Navan, Co. Meath, C15 FX6Y</p>
-        <p><a href="tel:0469022535" style="color:#fff">046 902 2535</a></p>
-        <p><a href="mailto:hiredesk@nhh.ie" style="color:rgba(255,255,255,0.7)">hiredesk@nhh.ie</a></p>
-      </div>
-      <div class="footer-col">
-        <h4>Hire</h4>
-        <ul>
-          <li><a href="fleet.html">Hire Fleet</a></li>
-          <li><a href="hire.html">Plant &amp; Tool Hire</a></li>
-          <li><a href="powered-access.html">Access &amp; Spider Lifts</a></li>
-          <li><a href="telehandlers.html">Telehandlers</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="hardware.html">Hardware &amp; DIY</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="account.html">Trade Account</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Opening Hours</h4>
-        <p style="color:rgba(255,255,255,0.7)">Mon&ndash;Fri: 7:00am &ndash; 5:00pm<br>Saturday: 8:30am &ndash; 1:00pm<br>Sunday: Closed</p>
-        <div class="social-links">
-          <a href="https://www.facebook.com/NavanHireHardware" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/navanhirehardware" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/company/navan-hire-hardware" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; 2026 Navan Hire &amp; Hardware. All rights reserved. | 100% Irish Owned</p>
-      </div>
-    </div>
-  </footer>
+  <footer class="footer" data-component></footer>
+  <script src="components.js"></script>
   <script src="prod-tabs.js"></script>
   <script src="search.js"></script>
   <script src="main.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
