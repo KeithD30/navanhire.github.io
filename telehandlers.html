@@ -52,12 +52,7 @@
           <span class="hc-arrow">&#8250;</span>
         </div>
         <div class="pa-group-card" data-idx="1" onclick="thOpenCat(this)">
-          <!-- IMAGE SLOT: save photo as images/telehandlers/straight.jpg -->
           <div class="pa-card-img" style="background-image:url('images/telehandlers/straight.jpg')">
-            <div class="pa-card-img-placeholder">
-              <span class="pa-card-img-icon"><i data-lucide="ruler"></i></span>
-              <span class="pa-card-img-hint">&#128247; images/telehandlers/straight.jpg</span>
-            </div>
           </div>
           <div class="pa-card-body">
             <div class="pa-card-title">Straight Telehandlers</div>
@@ -67,12 +62,7 @@
           <span class="hc-arrow">&#8250;</span>
         </div>
         <div class="pa-group-card" data-idx="2" onclick="thOpenCat(this)">
-          <!-- IMAGE SLOT: save photo as images/telehandlers/buggyscopic.jpg -->
           <div class="pa-card-img" style="background-image:url('images/telehandlers/buggyscopic.jpg')">
-            <div class="pa-card-img-placeholder">
-              <span class="pa-card-img-icon"><i data-lucide="tractor"></i></span>
-              <span class="pa-card-img-hint">&#128247; images/telehandlers/buggyscopic.jpg</span>
-            </div>
           </div>
           <div class="pa-card-body">
             <div class="pa-card-title">Buggyscopic Telehandlers</div>
@@ -82,12 +72,7 @@
           <span class="hc-arrow">&#8250;</span>
         </div>
         <div class="pa-group-card" data-idx="3" onclick="thOpenCat(this)">
-          <!-- IMAGE SLOT: save photo as images/telehandlers/forklifts.jpg -->
           <div class="pa-card-img" style="background-image:url('images/telehandlers/forklifts.jpg')">
-            <div class="pa-card-img-placeholder">
-              <span class="pa-card-img-icon"><i data-lucide="factory"></i></span>
-              <span class="pa-card-img-hint">&#128247; images/telehandlers/forklifts.jpg</span>
-            </div>
           </div>
           <div class="pa-card-body">
             <div class="pa-card-title">Forklifts</div>
@@ -203,8 +188,9 @@
       var item = items[i];
       var slug = item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '');
       var prodImg = 'images/telehandlers/products/' + slug + '.jpg';
+      var containCls = (cat === 'Telehandler Attachments') ? ' img-contain' : '';
       html += '<div class="pa-prod-row" data-prodidx="' + i + '" onclick="thOpenProdByIdx(this)">';
-      html += '<div class="pa-prod-thumb" style="background-image:url(\'' + prodImg + '\')">';
+      html += '<div class="pa-prod-thumb' + containCls + '" style="background-image:url(\'' + prodImg + '\')">'; 
       html += '<div class="pa-prod-thumb-ph">&#128247;</div>';
       html += '</div>';
       html += '<div class="pa-prod-info">';
@@ -228,54 +214,90 @@
     thSetCrumb([thCurCat, item.name]);
     var slug = item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '');
     var prodImg = 'images/telehandlers/products/' + slug + '.jpg';
+    var prodImg2 = 'images/telehandlers/products/' + slug + '-2.jpg';
+    var bgPos = item.imgPos || 'center';
     var d = document.getElementById('thProdDetail');
+    var containCls = (thCurCat === 'Telehandler Attachments') ? ' img-contain' : '';
     d.innerHTML =
-      '<div class="pt-tab-bar" id="pt-bar-' + slug + '"></div>' +
-      '<div class="pt-tab-content" data-slug="' + slug + '">' +
-        '<div class="pt-pane pt-rates-pane">' +
-          '<div class="hc-detail">' +
-            '<div class="pa-product-hero-img" style="background-image:url(\'' + prodImg + '\')">' +
-              '<div class="pa-product-hero-ph">' +
-                '<span style="font-size:2.5rem">&#128247;</span>' +
-                '<p class="pa-img-hint" style="margin:8px 0 0">Save photo as: ' + prodImg + '</p>' +
+      '<div class="hc-detail" data-slug="' + slug + '">' +
+        '<div class="hc-detail-left">' +
+          '<div class="th-gallery">' +
+            '<div class="th-gallery-track">' +
+              '<div class="pa-product-hero-img th-gallery-slide th-gallery-slide--active' + containCls + '" style="background-image:url(\'' + prodImg + '\');background-position:' + bgPos + '">' +
+                '<div class="pa-product-hero-ph">' +
+                  '<span style="font-size:2.5rem">&#128247;</span>' +
+                  '<p class="pa-img-hint" style="margin:8px 0 0">Save photo as: ' + prodImg + '</p>' +
+                '</div>' +
+              '</div>' +
+              '<div class="pa-product-hero-img th-gallery-slide" style="background-image:url(\'' + prodImg2 + '\');display:none">' +
+                '<div class="pa-product-hero-ph">' +
+                  '<span style="font-size:2.5rem">&#128247;</span>' +
+                  '<p class="pa-img-hint" style="margin:8px 0 0">Save photo as: ' + prodImg2 + '</p>' +
+                '</div>' +
               '</div>' +
             '</div>' +
-            '<div class="hc-detail-name">' + escH(item.name) + '</div>' +
-            '<div class="hc-rates">' +
-              '<div class="hc-rate-box"><div class="hc-rate-label">Day 1</div><div class="hc-rate-value">' + fmtPrice(item.d1) + '</div></div>' +
-              '<div class="hc-rate-box"><div class="hc-rate-label">Day 2</div><div class="hc-rate-value">' + fmtPrice(item.d2) + '</div></div>' +
-              '<div class="hc-rate-box"><div class="hc-rate-label">Day 3+</div><div class="hc-rate-value">' + fmtPrice(item.d3) + '</div></div>' +
-              '<div class="hc-rate-box hc-rate-box--we"><div class="hc-rate-label">Weekend</div><div class="hc-rate-value">' + fmtPrice(item.we) + '</div></div>' +
-            '</div>' +
-            '<p class="hc-vat-note">All prices ex VAT &nbsp;&middot;&nbsp; Longer than 1 week? <a href="mailto:hiredesk@nhh.ie">Email us</a> or call <a href="tel:0469022535">046 902 2535</a></p>' +
-            '<div class="hc-book-form">' +
-              '<h3>Enquire About This Machine</h3>' +
-              '<div class="hc-item-ref">Machine: <strong>' + escH(item.name) + '</strong></div>' +
-              '<div class="hc-form-row">' +
-                '<div class="hc-form-group"><label>Your Name *</label><input type="text" id="thBfName" required placeholder="John Murphy"/></div>' +
-                '<div class="hc-form-group"><label>Phone Number *</label><input type="tel" id="thBfPhone" required placeholder="086 123 4567"/></div>' +
-              '</div>' +
-              '<div class="hc-form-row">' +
-                '<div class="hc-form-group"><label>Email</label><input type="email" id="thBfEmail" placeholder="john@example.com"/></div>' +
-                '<div class="hc-form-group"><label>Duration</label><select id="thBfDuration"><option>1 Day</option><option>2 Days</option><option>3+ Days</option><option>Weekend</option><option>1+ Week (we\'ll quote)</option></select></div>' +
-              '</div>' +
-              '<div class="hc-form-row">' +
-                '<div class="hc-form-group"><label>Start Date</label><input type="date" id="thBfDate"/></div>' +
-                '<div class="hc-form-group"><label>Delivery / Collection</label><input type="text" id="thBfAddr" placeholder="Site address or collection from Navan"/></div>' +
-              '</div>' +
-              '<div class="hc-form-group hc-form-group--full"><label>Notes</label><textarea id="thBfNotes" rows="3" placeholder="Ground conditions, lifting requirements, attachments needed, etc."></textarea></div>' +
-              '<button class="btn btn-primary hc-submit-btn" onclick="thSubmit(this.dataset.name)" data-name="' + escH(item.name) + '">Send Enquiry</button>' +
-              '<p class="hc-or-call">Or email: <a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a> &nbsp;&middot;&nbsp; <a href="tel:0469022535">046 902 2535</a></p>' +
-            '</div>' +
+            '<button class="th-gallery-arrow th-gallery-prev" onclick="thGalleryNav(this,-1)">&#8249;</button>' +
+            '<button class="th-gallery-arrow th-gallery-next" onclick="thGalleryNav(this,1)">&#8250;</button>' +
+            '<div class="th-gallery-dots" id="th-dots-' + slug + '"><span class="th-dot th-dot--active"></span><span class="th-dot"></span></div>' +
+          '</div>' +
+          '<div class="hc-accordion">' +
+            '<button class="hc-accordion-btn" onclick="hcToggleAccordion(this)"><span>Machine Specs</span><span class="hc-accordion-icon">&#9662;</span></button>' +
+            '<div class="hc-accordion-panel pt-specs-pane"><p class="pt-loading">Loading specs…</p></div>' +
+          '</div>' +
+          '<div class="hc-accordion">' +
+            '<button class="hc-accordion-btn" onclick="hcToggleAccordion(this)"><span>Downloads</span><span class="hc-accordion-icon">&#9662;</span></button>' +
+            '<div class="hc-accordion-panel pt-downloads-pane"><p class="pt-loading">Loading downloads…</p></div>' +
           '</div>' +
         '</div>' +
-        '<div class="pt-pane pt-specs-pane" style="display:none"><p class="pt-loading">Loading specs…</p></div>' +
-        '<div class="pt-pane pt-downloads-pane" style="display:none"><p class="pt-loading">Loading downloads…</p></div>' +
+        '<div class="hc-detail-right">' +
+          '<div class="hc-detail-name">' + escH(item.name) + '</div>' +
+          '<div class="hc-rates">' +
+            '<div class="hc-rate-box"><div class="hc-rate-label">Day 1</div><div class="hc-rate-value">' + fmtPrice(item.d1) + '</div></div>' +
+            '<div class="hc-rate-box"><div class="hc-rate-label">Day 2</div><div class="hc-rate-value">' + fmtPrice(item.d2) + '</div></div>' +
+            '<div class="hc-rate-box"><div class="hc-rate-label">Day 3+</div><div class="hc-rate-value">' + fmtPrice(item.d3) + '</div></div>' +
+            '<div class="hc-rate-box hc-rate-box--we"><div class="hc-rate-label">Weekend</div><div class="hc-rate-value">' + fmtPrice(item.we) + '</div></div>' +
+          '</div>' +
+          '<p class="hc-vat-note">All prices ex VAT &nbsp;&middot;&nbsp; Longer than 1 week? <a href="mailto:hiredesk@nhh.ie">Email us</a> or call <a href="tel:0469022535">046 902 2535</a></p>' +
+          '<div class="hc-book-form">' +
+            '<h3>Enquire About This Machine</h3>' +
+            '<div class="hc-item-ref">Machine: <strong>' + escH(item.name) + '</strong></div>' +
+            '<div class="hc-form-row">' +
+              '<div class="hc-form-group"><label>Your Name *</label><input type="text" id="thBfName" required placeholder="John Murphy"/></div>' +
+              '<div class="hc-form-group"><label>Phone Number *</label><input type="tel" id="thBfPhone" required placeholder="086 123 4567"/></div>' +
+            '</div>' +
+            '<div class="hc-form-row">' +
+              '<div class="hc-form-group"><label>Email</label><input type="email" id="thBfEmail" placeholder="john@example.com"/></div>' +
+              '<div class="hc-form-group"><label>Duration</label><select id="thBfDuration"><option>1 Day</option><option>2 Days</option><option>3+ Days</option><option>Weekend</option><option>1+ Week (we\'ll quote)</option></select></div>' +
+            '</div>' +
+            '<div class="hc-form-row">' +
+              '<div class="hc-form-group"><label>Start Date</label><input type="date" id="thBfDate"/></div>' +
+              '<div class="hc-form-group"><label>Delivery / Collection</label><input type="text" id="thBfAddr" placeholder="Site address or collection from Navan"/></div>' +
+            '</div>' +
+            '<div class="hc-form-group hc-form-group--full"><label>Notes</label><textarea id="thBfNotes" rows="3" placeholder="Ground conditions, lifting requirements, attachments needed, etc."></textarea></div>' +
+            '<button class="btn btn-primary hc-submit-btn" onclick="thSubmit(this.dataset.name)" data-name="' + escH(item.name) + '">Send Enquiry</button>' +
+            '<p class="hc-or-call">Or email: <a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a> &nbsp;&middot;&nbsp; <a href="tel:0469022535">046 902 2535</a></p>' +
+          '</div>' +
+        '</div>' +
       '</div>';
     var di = document.getElementById('thBfDate');
     if (di) di.min = new Date().toISOString().split('T')[0];
-    NHH_TABS.render(slug, document.getElementById('pt-bar-' + slug), document.querySelector('[data-slug="' + slug + '"]'));
+    hcPrepareAccordions(slug, d);
     thShow(3);
+  }
+
+  function thGalleryNav(btn, dir) {
+    var gallery = btn.closest('.th-gallery');
+    var slides = gallery.querySelectorAll('.th-gallery-slide');
+    var dots = gallery.querySelectorAll('.th-dot');
+    var cur = 0;
+    slides.forEach(function(s, i) { if (s.classList.contains('th-gallery-slide--active')) cur = i; });
+    slides[cur].style.display = 'none';
+    slides[cur].classList.remove('th-gallery-slide--active');
+    if (dots[cur]) dots[cur].classList.remove('th-dot--active');
+    var next = (cur + dir + slides.length) % slides.length;
+    slides[next].style.display = '';
+    slides[next].classList.add('th-gallery-slide--active');
+    if (dots[next]) dots[next].classList.add('th-dot--active');
   }
 
   function thSubmit(itemName) {

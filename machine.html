@@ -358,24 +358,35 @@
       }
 
       // Build document links
-      // The base URL for your cloud storage — UPDATE THIS when you set up cloud sync
-      var baseUrl = 'machine-docs/';
+      // If the URL starts with http, use it directly (SharePoint link)
+      // Otherwise treat it as a local path under machine-docs/
+      function resolveDocUrl(path) {
+        if (!path) return null;
+        if (path.startsWith('http://') || path.startsWith('https://')) return path;
+        return 'machine-docs/' + path;
+      }
 
       if (machine.docs.cert) {
-        elDocList.appendChild(createDocItem(
-          'cert',
-          'GA1 Certificate',
-          'Current inspection / thorough examination certificate',
-          baseUrl + machine.docs.cert
-        ));
+        var certUrl = resolveDocUrl(machine.docs.cert);
+        if (certUrl) {
+          elDocList.appendChild(createDocItem(
+            'cert',
+            'GA1 Certificate',
+            'Current inspection / thorough examination certificate',
+            certUrl
+          ));
+        }
       }
       if (machine.docs.manual) {
-        elDocList.appendChild(createDocItem(
-          'manual',
-          "Operator's Manual",
-          'Machine operating instructions and safety information',
-          baseUrl + machine.docs.manual
-        ));
+        var manualUrl = resolveDocUrl(machine.docs.manual);
+        if (manualUrl) {
+          elDocList.appendChild(createDocItem(
+            'manual',
+            "Operator's Manual",
+            'Machine operating instructions and safety information',
+            manualUrl
+          ));
+        }
       }
 
       // Add Quick Guide Video if present

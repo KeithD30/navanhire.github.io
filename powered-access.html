@@ -16,14 +16,14 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css?v=2"/>
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
   <div class="topbar" data-component></div>
   <header class="header" data-component></header>
 
-  <section class="pa-hero">
+  <section class="pa-hero pa-access-hero">
     <div class="container">
       <nav class="hc-breadcrumb" id="paBreadcrumb">
         <span class="hc-bc-item hc-bc-active">Access &amp; Spider Lifts</span>
@@ -235,51 +235,56 @@ var PA_CAT_INFO  = {"Diesel Boom Lifts": {"icon": "<i data-lucide=\"crane\"></i>
     var prodImg = 'images/access/products/' + slug + '.jpg';
     var d = document.getElementById('paProdDetail');
     d.innerHTML =
-      '<div class="pt-tab-bar" id="pt-bar-' + slug + '"></div>' +
-      '<div class="pt-tab-content" data-slug="' + slug + '">' +
-        '<div class="pt-pane pt-rates-pane">' +
-          '<div class="hc-detail">' +
-            '<div class="pa-product-hero-img" style="background-image:url(\'' + prodImg + '\')">' +
-              '<div class="pa-product-hero-ph">' +
-                '<span style="font-size:2.5rem">&#128247;</span>' +
-                '<p class="pa-img-hint" style="margin:8px 0 0">Save photo as: ' + prodImg + '</p>' +
-              '</div>' +
-            '</div>' +
-            '<div class="hc-detail-name">' + escH(item.name) + '</div>' +
-            '<div class="hc-rates">' +
-              '<div class="hc-rate-box"><div class="hc-rate-label">Day 1</div><div class="hc-rate-value">' + fmtPrice(item.d1) + '</div></div>' +
-              '<div class="hc-rate-box"><div class="hc-rate-label">Day 2</div><div class="hc-rate-value">' + fmtPrice(item.d2) + '</div></div>' +
-              '<div class="hc-rate-box"><div class="hc-rate-label">Day 3+</div><div class="hc-rate-value">' + fmtPrice(item.d3) + '</div></div>' +
-              '<div class="hc-rate-box hc-rate-box--we"><div class="hc-rate-label">Weekend</div><div class="hc-rate-value">' + fmtPrice(item.we) + '</div></div>' +
-            '</div>' +
-            '<p class="hc-vat-note">All prices ex VAT &nbsp;&middot;&nbsp; Longer than 1 week? <a href="mailto:hiredesk@nhh.ie">Email us</a> or call <a href="tel:0469022535">046 902 2535</a></p>' +
-            '<div class="hc-book-form">' +
-              '<h3>Enquire About This Machine</h3>' +
-              '<div class="hc-item-ref">Machine: <strong>' + escH(item.name) + '</strong></div>' +
-              '<div class="hc-form-row">' +
-                '<div class="hc-form-group"><label>Your Name *</label><input type="text" id="paBfName" required placeholder="John Murphy"/></div>' +
-                '<div class="hc-form-group"><label>Phone Number *</label><input type="tel" id="paBfPhone" required placeholder="086 123 4567"/></div>' +
-              '</div>' +
-              '<div class="hc-form-row">' +
-                '<div class="hc-form-group"><label>Email</label><input type="email" id="paBfEmail" placeholder="john@example.com"/></div>' +
-                '<div class="hc-form-group"><label>Duration</label><select id="paBfDuration"><option>1 Day</option><option>2 Days</option><option>3+ Days</option><option>Weekend</option><option>1+ Week (we\'ll quote)</option></select></div>' +
-              '</div>' +
-              '<div class="hc-form-row">' +
-                '<div class="hc-form-group"><label>Start Date</label><input type="date" id="paBfDate"/></div>' +
-                '<div class="hc-form-group"><label>Delivery / Collection</label><input type="text" id="paBfAddr" placeholder="Site address or collection from Navan"/></div>' +
-              '</div>' +
-              '<div class="hc-form-group hc-form-group--full"><label>Notes</label><textarea id="paBfNotes" rows="3" placeholder="Site access, ground conditions, heights required, etc."></textarea></div>' +
-              '<button class="btn btn-primary hc-submit-btn" onclick="paSubmit(this.dataset.name)" data-name="' + escH(item.name) + '">Send Enquiry</button>' +
-              '<p class="hc-or-call">Or email: <a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a> &nbsp;&middot;&nbsp; <a href="tel:0469022535">046 902 2535</a></p>' +
+      '<div class="hc-detail" data-slug="' + slug + '">' +
+        '<div class="hc-detail-left">' +
+          '<div class="pa-product-hero-img" style="background-image:url(\'' + prodImg + '\')">' +
+            '<div class="pa-product-hero-ph">' +
+              '<span style="font-size:2.5rem">&#128247;</span>' +
+              '<p class="pa-img-hint" style="margin:8px 0 0">Save photo as: ' + prodImg + '</p>' +
             '</div>' +
           '</div>' +
+          '<div class="hc-accordion">' +
+            '<button class="hc-accordion-btn" onclick="hcToggleAccordion(this)"><span>Machine Specs</span><span class="hc-accordion-icon">&#9662;</span></button>' +
+            '<div class="hc-accordion-panel pt-specs-pane"><p class="pt-loading">Loading specs…</p></div>' +
+          '</div>' +
+          '<div class="hc-accordion">' +
+            '<button class="hc-accordion-btn" onclick="hcToggleAccordion(this)"><span>Downloads</span><span class="hc-accordion-icon">&#9662;</span></button>' +
+            '<div class="hc-accordion-panel pt-downloads-pane"><p class="pt-loading">Loading downloads…</p></div>' +
+          '</div>' +
         '</div>' +
-        '<div class="pt-pane pt-specs-pane" style="display:none"><p class="pt-loading">Loading specs…</p></div>' +
-        '<div class="pt-pane pt-downloads-pane" style="display:none"><p class="pt-loading">Loading downloads…</p></div>' +
+        '<div class="hc-detail-right">' +
+          '<div class="hc-detail-name">' + escH(item.name) + '</div>' +
+          '<div class="hc-rates">' +
+            '<div class="hc-rate-box"><div class="hc-rate-label">Day 1</div><div class="hc-rate-value">' + fmtPrice(item.d1) + '</div></div>' +
+            '<div class="hc-rate-box"><div class="hc-rate-label">Day 2</div><div class="hc-rate-value">' + fmtPrice(item.d2) + '</div></div>' +
+            '<div class="hc-rate-box"><div class="hc-rate-label">Day 3+</div><div class="hc-rate-value">' + fmtPrice(item.d3) + '</div></div>' +
+            '<div class="hc-rate-box hc-rate-box--we"><div class="hc-rate-label">Weekend</div><div class="hc-rate-value">' + fmtPrice(item.we) + '</div></div>' +
+          '</div>' +
+          '<p class="hc-vat-note">All prices ex VAT &nbsp;&middot;&nbsp; Longer than 1 week? <a href="mailto:hiredesk@nhh.ie">Email us</a> or call <a href="tel:0469022535">046 902 2535</a></p>' +
+          '<div class="hc-book-form">' +
+            '<h3>Enquire About This Machine</h3>' +
+            '<div class="hc-item-ref">Machine: <strong>' + escH(item.name) + '</strong></div>' +
+            '<div class="hc-form-row">' +
+              '<div class="hc-form-group"><label>Your Name *</label><input type="text" id="paBfName" required placeholder="John Murphy"/></div>' +
+              '<div class="hc-form-group"><label>Phone Number *</label><input type="tel" id="paBfPhone" required placeholder="086 123 4567"/></div>' +
+            '</div>' +
+            '<div class="hc-form-row">' +
+              '<div class="hc-form-group"><label>Email</label><input type="email" id="paBfEmail" placeholder="john@example.com"/></div>' +
+              '<div class="hc-form-group"><label>Duration</label><select id="paBfDuration"><option>1 Day</option><option>2 Days</option><option>3+ Days</option><option>Weekend</option><option>1+ Week (we\'ll quote)</option></select></div>' +
+            '</div>' +
+            '<div class="hc-form-row">' +
+              '<div class="hc-form-group"><label>Start Date</label><input type="date" id="paBfDate"/></div>' +
+              '<div class="hc-form-group"><label>Delivery / Collection</label><input type="text" id="paBfAddr" placeholder="Site address or collection from Navan"/></div>' +
+            '</div>' +
+            '<div class="hc-form-group hc-form-group--full"><label>Notes</label><textarea id="paBfNotes" rows="3" placeholder="Site access, ground conditions, heights required, etc."></textarea></div>' +
+            '<button class="btn btn-primary hc-submit-btn" onclick="paSubmit(this.dataset.name)" data-name="' + escH(item.name) + '">Send Enquiry</button>' +
+            '<p class="hc-or-call">Or email: <a href="mailto:hiredesk@nhh.ie">hiredesk@nhh.ie</a> &nbsp;&middot;&nbsp; <a href="tel:0469022535">046 902 2535</a></p>' +
+          '</div>' +
+        '</div>' +
       '</div>';
     var di = document.getElementById('paBfDate');
     if (di) di.min = new Date().toISOString().split('T')[0];
-    NHH_TABS.render(slug, document.getElementById('pt-bar-' + slug), document.querySelector('[data-slug="' + slug + '"]'));
+    hcPrepareAccordions(slug, d);
     paShow(3);
   }
 

@@ -1,29 +1,3 @@
 {
-  "machines": [
-    {
-      "id": "PA001",
-      "name": "Genie Z-45 Boom Lift",
-      "type": "powered-access",
-      "serial": "EXAMPLE-SERIAL-002",
-      "docs": {
-        "cert": "PA001/public/ga1/PLACEHOLDER.pdf",
-        "manual": "PA001/public/manual/PLACEHOLDER.pdf"
-      },
-      "certExpiry": "2026-11-20",
-      "videoUrl": "https://www.youtube.com/watch?v=EXAMPLE"
-    }
-    ,
-    {
-      "id": "TH001",
-      "name": "JCB 535-95 Telehandler",
-      "type": "telehandler",
-      "serial": "EXAMPLE-SERIAL-001",
-      "docs": {
-        "cert": "TH001/public/ga1/PLACEHOLDER.pdf",
-        "manual": "TH001/public/manual/PLACEHOLDER.pdf"
-      },
-      "certExpiry": "2026-08-15",
-      "videoUrl": "https://www.youtube.com/watch?v=EXAMPLE"
-    }
-  ]
+  "machines": []
 }

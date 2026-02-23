@@ -117,6 +117,12 @@ window.NHH_TABS = (function() {
 
   window.NHH_TABS = {
 
+    // Expose internals for accordion use
+    _getSpecs: getSpecs,
+    _getDownloads: getDownloads,
+    _buildSpecsDisplay: buildSpecsDisplay,
+    _buildDownloadsDisplay: buildDownloadsDisplay,
+
     render: function(slug, tabBar, tabContent) {
       // Build the 3 tab buttons
       tabBar.innerHTML =
@@ -203,3 +209,29 @@ window.NHH_TABS = (function() {
 
   return window.NHH_TABS;
 })();
+
+// ── Accordion helpers (used by both powered-access.html & telehandlers.html) ──
+window.hcToggleAccordion = async function(btn) {
+  var panel = btn.nextElementSibling;
+  var icon = btn.querySelector('.hc-accordion-icon');
+  var isOpen = panel.classList.toggle('hc-accordion-panel--open');
+  if (icon) icon.textContent = isOpen ? '\u25B4' : '\u25BE';
+
+  // Lazy-load content on first open
+  if (isOpen && panel.dataset.loaded !== '1') {
+    panel.dataset.loaded = '1';
+    var wrapper = btn.closest('[data-slug]');
+    var slug = wrapper ? wrapper.dataset.slug : '';
+    if (panel.classList.contains('pt-specs-pane')) {
+      var specs = await NHH_TABS._getSpecs(slug);
+      NHH_TABS._buildSpecsDisplay(slug, specs, panel);
+    } else if (panel.classList.contains('pt-downloads-pane')) {
+      var dls = await NHH_TABS._getDownloads(slug);
+      NHH_TABS._buildDownloadsDisplay(slug, dls, panel);
+    }
+  }
+};
+
+window.hcPrepareAccordions = function(slug, container) {
+  // No-op placeholder — accordions load lazily on click
+};
