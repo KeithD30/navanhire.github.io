@@ -21,88 +21,267 @@
 </head>
 <body>
   <div class="topbar" data-component></div>
-  <header class="header" data-component></header>
 
-  <section class="page-hero">
-    <div class="container page-hero-content">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Hardware & DIY</div>
-      <h1>Hardware & DIY</h1>
-      <p>Thousands of products in stock — from building supplies and timber to paints, plumbing, PPE and garden equipment. All at competitive trade and retail prices.</p>
+  <!-- Hardware-specific header: logo row + category nav -->
+  <header class="hw-header">
+    <div class="container hw-header-top">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="Navan Hire &amp; Hardware" class="logo-img"/>
+      </a>
+      <div class="nhh-search-wrap">
+        <input type="search" id="nhhSearch" class="nhh-search-input" placeholder="Search products..." autocomplete="off" spellcheck="false"/>
+        <span class="nhh-search-icon"><i data-lucide="search"></i></span>
+        <div class="nhh-search-results" id="nhhSearchResults"></div>
+      </div>
+      <a href="tel:0469022535" class="hw-header-phone"><i data-lucide="phone" style="width:16px;height:16px"></i> 046 902 2535</a>
+      <a href="contact.html" class="btn btn-primary hw-header-cta">Get a Quote</a>
+      <a href="account.html" class="nhh-account-btn" title="Trade Login / Apply" aria-label="Account"><i data-lucide="user"></i></a>
+      <button class="hamburger" id="hwHamburger" aria-label="Open menu"><i data-lucide="menu"></i></button>
     </div>
-  </section>
+
+    <!-- Category nav row -->
+    <nav class="hw-cat-nav" id="hwDeptBar">
+      <div class="container hw-cat-nav-inner">
+        <ul class="hw-dept-list">
+
+          <li class="hw-dept-item" data-cat="building">
+            <a href="#" onclick="hwOpenCat('building');return false">Building Supplies <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+            <div class="hw-dropdown">
+              <ul>
+                <li><a href="#" onclick="hwOpenSub('building_blocks_and_bricks');return false">Blocks &amp; Bricks</a></li>
+                <li><a href="#" onclick="hwOpenSub('building_cements_concretes_and_mortars');return false">Cements, Concretes &amp; Mortars</a></li>
+                <li><a href="#" onclick="hwOpenSub('building_aggregates_and_sand');return false">Aggregates &amp; Sand</a></li>
+                <li><a href="#" onclick="hwOpenSub('building_roof_materials');return false">Roof Materials</a></li>
+                <li><a href="#" onclick="hwOpenSub('building_slates_and_tiles');return false">Slates &amp; Tiles</a></li>
+                <li><a href="#" onclick="hwOpenSub('building_roof_windows');return false">Roof Windows</a></li>
+                <li><a href="#" onclick="hwOpenSub('building_gutter_downpipe_and_waste');return false">Gutter, Downpipe &amp; Waste</a></li>
+                <li><a href="#" onclick="hwOpenSub('building_underground_drainage');return false">Underground Drainage</a></li>
+                <li><a href="#" onclick="hwOpenSub('building_damp_proof_membranes');return false">Damp Proof Membranes</a></li>
+                <li><a href="#" onclick="hwOpenSub('building_caps_and_lintels');return false">Caps &amp; Lintels</a></li>
+                <li><a href="#" onclick="hwOpenSub('building_fascias_and_soffits');return false">Fascias &amp; Soffits</a></li>
+                <li><a href="#" onclick="hwOpenSub('building_pvc_sheeting_and_ventilation');return false">PVC Sheeting &amp; Ventilation</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="hw-dept-item" data-cat="timber">
+            <a href="#" onclick="hwOpenCat('timber');return false">Timber <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+            <div class="hw-dropdown">
+              <ul>
+                <li><a href="#" onclick="hwOpenSub('timber_construction_and_treated_timber');return false">Construction &amp; Treated Timber</a></li>
+                <li><a href="#" onclick="hwOpenSub('timber_rough_and_sawn_timber');return false">Rough &amp; Sawn Timber</a></li>
+                <li><a href="#" onclick="hwOpenSub('timber_pao_and_planed_timber');return false">PAO &amp; Planed Timber</a></li>
+                <li><a href="#" onclick="hwOpenSub('timber_plywood');return false">Plywood</a></li>
+                <li><a href="#" onclick="hwOpenSub('timber_mdf_and_hardboard');return false">MDF &amp; Hardboard</a></li>
+                <li><a href="#" onclick="hwOpenSub('timber_patio_and_composite_decking');return false">Patio &amp; Composite Decking</a></li>
+                <li><a href="#" onclick="hwOpenSub('timber_skirting_and_architrave');return false">Skirting &amp; Architrave</a></li>
+                <li><a href="#" onclick="hwOpenSub('timber_mouldings_and_hardwood');return false">Mouldings &amp; Hardwood</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="hw-dept-item" data-cat="insulation">
+            <a href="#" onclick="hwOpenCat('insulation');return false">Insulation <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+            <div class="hw-dropdown">
+              <ul>
+                <li><a href="#" onclick="hwOpenSub('insulation_plasterboard');return false">Plasterboard</a></li>
+                <li><a href="#" onclick="hwOpenSub('insulation_pir_board_insulation');return false">PIR Board Insulation</a></li>
+                <li><a href="#" onclick="hwOpenSub('insulation_attic_and_loft_insulation');return false">Attic &amp; Loft Insulation</a></li>
+                <li><a href="#" onclick="hwOpenSub('insulation_foilback_and_cavity_insulation');return false">Foilback &amp; Cavity Insulation</a></li>
+                <li><a href="#" onclick="hwOpenSub('insulation_plaster_and_accessories');return false">Plaster &amp; Accessories</a></li>
+                <li><a href="#" onclick="hwOpenSub('insulation_cement_board');return false">Cement Board</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="hw-dept-item" data-cat="plumbing">
+            <a href="#" onclick="hwOpenCat('plumbing');return false">Plumbing <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+            <div class="hw-dropdown">
+              <ul>
+                <li><a href="#" onclick="hwOpenSub('plumbing_boilers');return false">Boilers</a></li>
+                <li><a href="#" onclick="hwOpenSub('plumbing_cylinders_and_tanks');return false">Cylinders &amp; Tanks</a></li>
+                <li><a href="#" onclick="hwOpenSub('plumbing_radiators');return false">Radiators</a></li>
+                <li><a href="#" onclick="hwOpenSub('plumbing_underfloor_heating');return false">Underfloor Heating</a></li>
+                <li><a href="#" onclick="hwOpenSub('plumbing_copper_tubes_and_fittings');return false">Copper Tubes &amp; Fittings</a></li>
+                <li><a href="#" onclick="hwOpenSub('plumbing_pex_and_multilayer_pipe');return false">PEX &amp; Multi-Layer Pipe</a></li>
+                <li><a href="#" onclick="hwOpenSub('plumbing_heat_pumps_and_renewables');return false">Heat Pumps &amp; Renewables</a></li>
+                <li><a href="#" onclick="hwOpenSub('plumbing_heating_controls');return false">Heating Controls</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="hw-dept-item" data-cat="bathroom">
+            <a href="#" onclick="hwOpenCat('bathroom');return false">Bathroom <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+            <div class="hw-dropdown">
+              <ul>
+                <li><a href="#" onclick="hwOpenSub('bathroom_sanitaryware');return false">Sanitaryware</a></li>
+                <li><a href="#" onclick="hwOpenSub('bathroom_baths');return false">Baths</a></li>
+                <li><a href="#" onclick="hwOpenSub('bathroom_showers_and_enclosures');return false">Showers &amp; Enclosures</a></li>
+                <li><a href="#" onclick="hwOpenSub('bathroom_taps');return false">Taps</a></li>
+                <li><a href="#" onclick="hwOpenSub('bathroom_bathroom_furniture');return false">Bathroom Furniture</a></li>
+                <li><a href="#" onclick="hwOpenSub('bathroom_wall_panels_and_tiling');return false">Wall Panels &amp; Tiling</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="hw-dept-item" data-cat="doors">
+            <a href="#" onclick="hwOpenCat('doors');return false">Doors &amp; Floors <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+            <div class="hw-dropdown">
+              <ul>
+                <li><a href="#" onclick="hwOpenSub('doors_internal_doors');return false">Internal Doors</a></li>
+                <li><a href="#" onclick="hwOpenSub('doors_external_doors');return false">External Doors</a></li>
+                <li><a href="#" onclick="hwOpenSub('doors_laminate_flooring');return false">Laminate Flooring</a></li>
+                <li><a href="#" onclick="hwOpenSub('doors_flooring_accessories');return false">Flooring Accessories</a></li>
+                <li><a href="#" onclick="hwOpenSub('doors_shelving_and_storage');return false">Shelving &amp; Storage</a></li>
+                <li><a href="#" onclick="hwOpenSub('doors_brassware_and_ironmongery');return false">Brassware &amp; Ironmongery</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="hw-dept-item" data-cat="paint">
+            <a href="#" onclick="hwOpenCat('paint');return false">Paints <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+            <div class="hw-dropdown">
+              <ul>
+                <li><a href="#" onclick="hwOpenSub('paint_fleetwood_interior_paints');return false">Fleetwood Interior Paints</a></li>
+                <li><a href="#" onclick="hwOpenSub('paint_fleetwood_exterior_paints');return false">Fleetwood Exterior Paints</a></li>
+                <li><a href="#" onclick="hwOpenSub('paint_ronseal_woodcare');return false">Ronseal Woodcare</a></li>
+                <li><a href="#" onclick="hwOpenSub('paint_sadolin_and_specialist');return false">Sadolin &amp; Specialist</a></li>
+                <li><a href="#" onclick="hwOpenSub('paint_floor_and_garden_paints');return false">Floor &amp; Garden Paints</a></li>
+                <li><a href="#" onclick="hwOpenSub('paint_brushes_rollers_and_prep');return false">Brushes, Rollers &amp; Prep</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="hw-dept-item" data-cat="tools">
+            <a href="#" onclick="hwOpenCat('tools');return false">Tools <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+            <div class="hw-dropdown">
+              <ul>
+                <li><a href="#" onclick="hwOpenSub('tools_power_tools_—_makita');return false">Power Tools — Makita</a></li>
+                <li><a href="#" onclick="hwOpenSub('tools_power_tools_—_dewalt');return false">Power Tools — DeWalt</a></li>
+                <li><a href="#" onclick="hwOpenSub('tools_hand_tools');return false">Hand Tools</a></li>
+                <li><a href="#" onclick="hwOpenSub('tools_drill_bits_and_cutting');return false">Drill Bits &amp; Cutting</a></li>
+                <li><a href="#" onclick="hwOpenSub('tools_fixings_and_screws');return false">Fixings &amp; Screws</a></li>
+                <li><a href="#" onclick="hwOpenSub('tools_groundwork_tools');return false">Groundwork Tools</a></li>
+                <li><a href="#" onclick="hwOpenSub('tools_site_safety_and_signage');return false">Site Safety &amp; Signage</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="hw-dept-item" data-cat="ppe">
+            <a href="#" onclick="hwOpenCat('ppe');return false">PPE <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+            <div class="hw-dropdown">
+              <ul>
+                <li><a href="#" onclick="hwOpenSub('ppe_head_protection');return false">Head Protection</a></li>
+                <li><a href="#" onclick="hwOpenSub('ppe_hivis_and_workwear');return false">Hi-Vis &amp; Workwear</a></li>
+                <li><a href="#" onclick="hwOpenSub('ppe_safety_footwear');return false">Safety Footwear</a></li>
+                <li><a href="#" onclick="hwOpenSub('ppe_gloves');return false">Gloves</a></li>
+                <li><a href="#" onclick="hwOpenSub('ppe_respiratory_and_eye_protection');return false">Respiratory &amp; Eye Protection</a></li>
+                <li><a href="#" onclick="hwOpenSub('ppe_hearing_and_body_protection');return false">Hearing &amp; Body Protection</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="hw-dept-item" data-cat="garden">
+            <a href="#" onclick="hwOpenCat('garden');return false">Garden <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+            <div class="hw-dropdown">
+              <ul>
+                <li><a href="#" onclick="hwOpenSub('garden_stihl_lawnmowers');return false">Stihl Lawnmowers</a></li>
+                <li><a href="#" onclick="hwOpenSub('garden_stihl_chainsaws_and_strimmers');return false">Stihl Chainsaws &amp; Strimmers</a></li>
+                <li><a href="#" onclick="hwOpenSub('garden_power_washers_and_blowers');return false">Power Washers &amp; Blowers</a></li>
+                <li><a href="#" onclick="hwOpenSub('garden_fencing_and_weed_control');return false">Fencing &amp; Weed Control</a></li>
+                <li><a href="#" onclick="hwOpenSub('garden_lawn_care');return false">Lawn Care</a></li>
+                <li><a href="#" onclick="hwOpenSub('garden_compost_bark_and_garden_tools');return false">Compost, Bark &amp; Garden Tools</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="hw-dept-item" data-cat="fuel">
+            <a href="#" onclick="hwOpenCat('fuel');return false">Fuel <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+            <div class="hw-dropdown">
+              <ul>
+                <li><a href="#" onclick="hwOpenSub('fuel_coal_and_smokeless');return false">Coal &amp; Smokeless</a></li>
+                <li><a href="#" onclick="hwOpenSub('fuel_briquettes_and_logs');return false">Briquettes &amp; Logs</a></li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Mobile nav drawer -->
+    <div class="hw-mobile-nav" id="hwMobileNav">
+      <a href="index.html">Home</a>
+      <a href="hardware.html" class="active">Hardware &amp; DIY</a>
+      <a href="telehandlers.html">Telehandlers</a>
+      <a href="hire.html">Plant &amp; Tool Hire</a>
+      <a href="powered-access.html">Access &amp; Spider Lifts</a>
+      <a href="contact.html">Get a Quote</a>
+    </div>
+  </header>
 
   <!-- HARDWARE DRILL-DOWN -->
   <div class="container hw-container">
 
-    <!-- LEVEL 1: Main categories -->
-    <div class="hw-cat-panel" id="hw-cats">
-      <div class="hw-cat-grid">
-      <button class="hw-cat-card" onclick="hwOpenCat('building')" aria-expanded="false" data-cat="building">
-        <span class="hw-cat-icon">🧱</span>
-        <span class="hw-cat-label">Building Supplies</span>
-        <span class="hw-cat-count">12 sections</span>
-        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
-      </button>
-      <button class="hw-cat-card" onclick="hwOpenCat('timber')" aria-expanded="false" data-cat="timber">
-        <span class="hw-cat-icon">🪵</span>
-        <span class="hw-cat-label">Timber & Sheet Materials</span>
-        <span class="hw-cat-count">8 sections</span>
-        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
-      </button>
-      <button class="hw-cat-card" onclick="hwOpenCat('insulation')" aria-expanded="false" data-cat="insulation">
-        <span class="hw-cat-icon">🏠</span>
-        <span class="hw-cat-label">Insulation & Plasterboard</span>
-        <span class="hw-cat-count">6 sections</span>
-        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
-      </button>
-      <button class="hw-cat-card" onclick="hwOpenCat('plumbing')" aria-expanded="false" data-cat="plumbing">
-        <span class="hw-cat-icon"><i data-lucide="wrench"></i></span>
-        <span class="hw-cat-label">Plumbing & Heating</span>
-        <span class="hw-cat-count">8 sections</span>
-        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
-      </button>
-      <button class="hw-cat-card" onclick="hwOpenCat('bathroom')" aria-expanded="false" data-cat="bathroom">
-        <span class="hw-cat-icon">🛁</span>
-        <span class="hw-cat-label">Bathroom Showroom</span>
-        <span class="hw-cat-count">6 sections</span>
-        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
-      </button>
-      <button class="hw-cat-card" onclick="hwOpenCat('doors')" aria-expanded="false" data-cat="doors">
-        <span class="hw-cat-icon">🚪</span>
-        <span class="hw-cat-label">Doors & Floors</span>
-        <span class="hw-cat-count">6 sections</span>
-        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
-      </button>
-      <button class="hw-cat-card" onclick="hwOpenCat('paint')" aria-expanded="false" data-cat="paint">
-        <span class="hw-cat-icon">🎨</span>
-        <span class="hw-cat-label">Paints & Decorating</span>
-        <span class="hw-cat-count">6 sections</span>
-        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
-      </button>
-      <button class="hw-cat-card" onclick="hwOpenCat('tools')" aria-expanded="false" data-cat="tools">
-        <span class="hw-cat-icon">🔨</span>
-        <span class="hw-cat-label">Tools & Fixings</span>
-        <span class="hw-cat-count">7 sections</span>
-        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
-      </button>
-      <button class="hw-cat-card" onclick="hwOpenCat('ppe')" aria-expanded="false" data-cat="ppe">
-        <span class="hw-cat-icon">🦺</span>
-        <span class="hw-cat-label">PPE & Workwear</span>
-        <span class="hw-cat-count">6 sections</span>
-        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
-      </button>
-      <button class="hw-cat-card" onclick="hwOpenCat('garden')" aria-expanded="false" data-cat="garden">
-        <span class="hw-cat-icon">🌿</span>
-        <span class="hw-cat-label">Garden Centre</span>
-        <span class="hw-cat-count">6 sections</span>
-        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
-      </button>
-      <button class="hw-cat-card" onclick="hwOpenCat('fuel')" aria-expanded="false" data-cat="fuel">
-        <span class="hw-cat-icon">🔥</span>
-        <span class="hw-cat-label">Fuel & Solid Fuel</span>
-        <span class="hw-cat-count">2 sections</span>
-        <i data-lucide="chevron-right" class="hw-cat-arrow"></i>
-      </button>
+    <!-- LANDING: Screwfix-style department tiles -->
+    <div id="hw-cats" class="hw-landing">
+      <h1 class="hw-landing-title">Shop by Department</h1>
+      <div class="hw-landing-grid">
+        <a href="#" class="hw-landing-tile" onclick="hwOpenCat('building');return false">
+          <span class="hw-landing-tile-icon">🧱</span>
+          <span class="hw-landing-tile-name">Building Supplies</span>
+          <span class="hw-landing-tile-count">12 sections</span>
+        </a>
+        <a href="#" class="hw-landing-tile" onclick="hwOpenCat('timber');return false">
+          <span class="hw-landing-tile-icon">🪵</span>
+          <span class="hw-landing-tile-name">Timber &amp; Sheet Materials</span>
+          <span class="hw-landing-tile-count">8 sections</span>
+        </a>
+        <a href="#" class="hw-landing-tile" onclick="hwOpenCat('insulation');return false">
+          <span class="hw-landing-tile-icon">🏠</span>
+          <span class="hw-landing-tile-name">Insulation &amp; Plasterboard</span>
+          <span class="hw-landing-tile-count">6 sections</span>
+        </a>
+        <a href="#" class="hw-landing-tile" onclick="hwOpenCat('plumbing');return false">
+          <span class="hw-landing-tile-icon">🔧</span>
+          <span class="hw-landing-tile-name">Plumbing &amp; Heating</span>
+          <span class="hw-landing-tile-count">8 sections</span>
+        </a>
+        <a href="#" class="hw-landing-tile" onclick="hwOpenCat('bathroom');return false">
+          <span class="hw-landing-tile-icon">🛁</span>
+          <span class="hw-landing-tile-name">Bathroom Showroom</span>
+          <span class="hw-landing-tile-count">6 sections</span>
+        </a>
+        <a href="#" class="hw-landing-tile" onclick="hwOpenCat('doors');return false">
+          <span class="hw-landing-tile-icon">🚪</span>
+          <span class="hw-landing-tile-name">Doors &amp; Floors</span>
+          <span class="hw-landing-tile-count">6 sections</span>
+        </a>
+        <a href="#" class="hw-landing-tile" onclick="hwOpenCat('paint');return false">
+          <span class="hw-landing-tile-icon">🎨</span>
+          <span class="hw-landing-tile-name">Paints &amp; Decorating</span>
+          <span class="hw-landing-tile-count">6 sections</span>
+        </a>
+        <a href="#" class="hw-landing-tile" onclick="hwOpenCat('tools');return false">
+          <span class="hw-landing-tile-icon">🔨</span>
+          <span class="hw-landing-tile-name">Tools &amp; Fixings</span>
+          <span class="hw-landing-tile-count">7 sections</span>
+        </a>
+        <a href="#" class="hw-landing-tile" onclick="hwOpenCat('ppe');return false">
+          <span class="hw-landing-tile-icon">🦺</span>
+          <span class="hw-landing-tile-name">PPE &amp; Workwear</span>
+          <span class="hw-landing-tile-count">6 sections</span>
+        </a>
+        <a href="#" class="hw-landing-tile" onclick="hwOpenCat('garden');return false">
+          <span class="hw-landing-tile-icon">🌿</span>
+          <span class="hw-landing-tile-name">Garden Centre</span>
+          <span class="hw-landing-tile-count">6 sections</span>
+        </a>
+        <a href="#" class="hw-landing-tile" onclick="hwOpenCat('fuel');return false">
+          <span class="hw-landing-tile-icon">🔥</span>
+          <span class="hw-landing-tile-name">Fuel &amp; Solid Fuel</span>
+          <span class="hw-landing-tile-count">2 sections</span>
+        </a>
       </div>
     </div>
 
@@ -2233,6 +2412,42 @@
   </div>
 
   <script>
+  /* Dropdown toggle for category nav */
+  (function() {
+    var items = document.querySelectorAll('.hw-dept-item');
+
+    // Hover open/close on desktop
+    items.forEach(function(item) {
+      item.addEventListener('mouseenter', function() {
+        if (window.innerWidth > 768) {
+          items.forEach(function(i) { i.classList.remove('hw-dept-open'); });
+          item.classList.add('hw-dept-open');
+        }
+      });
+      item.addEventListener('mouseleave', function() {
+        if (window.innerWidth > 768) {
+          item.classList.remove('hw-dept-open');
+        }
+      });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.hw-cat-nav')) {
+        items.forEach(function(i) { i.classList.remove('hw-dept-open'); });
+      }
+    });
+
+    // Mobile hamburger toggle
+    var hamburger = document.getElementById('hwHamburger');
+    var mobileNav = document.getElementById('hwMobileNav');
+    if (hamburger && mobileNav) {
+      hamburger.addEventListener('click', function() {
+        mobileNav.classList.toggle('open');
+      });
+    }
+  })();
+
   (function() {
     var activeCat = null;
     var activeSub = null;
@@ -2243,16 +2458,32 @@
       document.querySelectorAll('.hw-product-panel').forEach(function(p) { p.style.display = 'none'; });
     }
 
+    function closeDropdowns() {
+      document.querySelectorAll('.hw-dept-item').forEach(function(i) { i.classList.remove('hw-dept-open'); });
+    }
+
+    function highlightDept(catId) {
+      document.querySelectorAll('.hw-dept-item').forEach(function(item) {
+        item.classList.toggle('hw-dept-active', item.getAttribute('data-cat') === catId);
+      });
+    }
+
     window.hwOpenCat = function(catId) {
+      closeDropdowns();
       activeCat = catId;
       hideAll();
+      highlightDept(catId);
       var panel = document.getElementById('hw-sub-' + catId);
       if (panel) { panel.style.display = 'block'; panel.scrollIntoView({behavior:'smooth', block:'start'}); }
     };
 
     window.hwOpenSub = function(subId) {
+      closeDropdowns();
       activeSub = subId;
       hideAll();
+      // Highlight parent dept
+      var parts = subId.split('_');
+      if (parts.length > 0) highlightDept(parts[0]);
       var panel = document.getElementById('hw-prod-' + subId);
       if (panel) { panel.style.display = 'block'; panel.scrollIntoView({behavior:'smooth', block:'start'}); }
     };
@@ -2260,6 +2491,7 @@
     window.hwBackToCats = function() {
       activeCat = null; activeSub = null;
       hideAll();
+      highlightDept(null);
       document.getElementById('hw-cats').style.display = 'block';
       document.querySelector('.hw-container').scrollIntoView({behavior:'smooth', block:'start'});
     };
@@ -2267,6 +2499,7 @@
     window.hwBackToSubs = function(catId) {
       activeSub = null;
       hideAll();
+      highlightDept(catId);
       var panel = document.getElementById('hw-sub-' + catId);
       if (panel) { panel.style.display = 'block'; panel.scrollIntoView({behavior:'smooth', block:'start'}); }
     };
