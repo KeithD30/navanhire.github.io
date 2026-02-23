@@ -85,9 +85,9 @@ i.af-acc-chev { width: 20px; height: 20px; transition: transform 0.25s ease; }
 /* Hamburger menu icon */
 .hamburger [data-lucide] { width: 24px; height: 24px; }
 
-html { scroll-behavior: smooth; }
-@media (min-width: 1024px) {
-  html { scrollbar-gutter: stable; }
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;          /* always show scrollbar – prevents layout shift between pages */
 }
 
 body {
@@ -2882,6 +2882,7 @@ ul { list-style: none; }
 .hw-cat-nav {
   background: var(--red);
   position: relative;
+  border-top: 1px solid rgba(255,255,255,0.15);  /* subtle separator from header */
 }
 .hw-cat-nav-inner {
   padding: 0;
