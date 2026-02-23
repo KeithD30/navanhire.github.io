@@ -167,8 +167,8 @@ var PA_CAT_INFO  = {"Diesel Boom Lifts": {"icon": "<i data-lucide=\"crane\"></i>
       var el = document.getElementById('paLevel' + i);
       if (el) el.style.display = (i === n) ? 'block' : 'none';
     }
-    var hero = document.querySelector('.pa-hero');
-    if (hero) window.scrollTo({top: hero.offsetTop - 80, behavior: 'smooth'});
+    var container = document.querySelector('.hc-container');
+    if (container) container.scrollIntoView({behavior: 'smooth', block: 'start'});
   }
   function paSetHero(title, sub) {
     var t = document.getElementById('paTitle');    if (t) t.textContent = title;

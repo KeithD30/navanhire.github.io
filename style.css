@@ -1415,7 +1415,7 @@ ul { list-style: none; }
 .hc-bc-sep { color: rgba(255,255,255,.3); }
 
 /* CONTAINER */
-.hc-container { padding-top: 40px; padding-bottom: 80px; }
+.hc-container { padding-top: 40px; padding-bottom: 80px; scroll-margin-top: 80px; }
 
 /* LEVELS */
 .hc-level { display: none; }
