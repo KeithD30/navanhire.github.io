@@ -3085,8 +3085,7 @@ ul { list-style: none; }
 
 /* Offset scroll targets so sticky header + category bar don't cover content */
 .hw-container,
-.hw-sub-panel,
-.hw-product-panel,
+.hw-cat-panel,
 .hw-landing {
   scroll-margin-top: 130px;   /* header (~75px) + cat-nav (~45px) + breathing room */
 }
@@ -3138,58 +3137,50 @@ ul { list-style: none; }
   padding-left: 4px;
 }
 
-/* ── LEVEL 2: Sub-category grid ── */
-.hw-sub-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 12px;
-}
-.hw-sub-card {
+/* ── Subcategory filter bar ── */
+.hw-filter-bar {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #fafafa;
-  border: 1.5px solid var(--border);
-  border-radius: 10px;
-  padding: 16px 16px;
-  cursor: pointer;
-  text-align: left;
-  transition: all 0.16s;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
 }
-.hw-sub-card:hover {
-  background: #fff;
-  border-color: var(--red);
-  box-shadow: 0 4px 16px rgba(254,0,0,0.09);
-  transform: translateY(-2px);
-}
-.hw-sub-label {
+.hw-filter-pill {
   font-family: var(--font-head);
-  font-size: 0.98rem;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  padding: 7px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  background: #fff;
   color: var(--black);
-  flex: 1;
-  line-height: 1.25;
-}
-.hw-sub-count {
-  font-size: 0.7rem;
-  color: var(--mid);
+  cursor: pointer;
+  transition: all 0.15s;
   white-space: nowrap;
-  flex-shrink: 0;
 }
-.hw-sub-arrow {
-  width: 16px;
-  height: 16px;
+.hw-filter-pill:hover {
+  border-color: var(--red);
   color: var(--red);
-  flex-shrink: 0;
-  opacity: 0.6;
-  transition: opacity 0.15s, transform 0.15s;
 }
-.hw-sub-card:hover .hw-sub-arrow { opacity: 1; transform: translateX(3px); }
+.hw-filter-pill.hw-filter-active {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
 
-/* ── LEVEL 3: Product grid ── */
+/* Product count */
+.hw-product-count {
+  font-size: 0.82rem;
+  color: var(--mid);
+  margin: 0 0 16px;
+}
+.hw-product-count span {
+  font-weight: 700;
+  color: var(--black);
+}
+
+/* ── Product grid ── */
 .hw-product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -3235,10 +3226,10 @@ ul { list-style: none; }
 .hw-product-cta:hover { background: var(--red); color: #fff; }
 
 @media (max-width: 600px) {
-  .hw-cat-grid  { grid-template-columns: 1fr; }
-  .hw-sub-grid  { grid-template-columns: 1fr; }
   .hw-product-grid { grid-template-columns: 1fr; }
   .hw-sub-title h2 { font-size: 1.6rem; }
+  .hw-filter-bar { gap: 6px; }
+  .hw-filter-pill { font-size: 0.72rem; padding: 6px 12px; }
 }
 
 /* =============================================
