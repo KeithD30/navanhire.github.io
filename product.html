@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>Product | Navan Hire & Hardware</title>
+  <meta name="description" content="Shop hardware & DIY products at Navan Hire & Hardware — competitive prices, click & collect, or delivery."/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div class="topbar" data-component></div>
+  <header class="header" data-component></header>
+
+  <!-- Category nav bar (same as hardware page) -->
+  <nav class="hw-cat-nav" id="hwDeptBar">
+    <div class="container hw-cat-nav-inner">
+      <ul class="hw-dept-list">
+        <li class="hw-dept-item" data-cat="building">
+          <a href="hardware.html" onclick="hwOpenCatNav('building');return false">Building Supplies <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+          <div class="hw-dropdown">
+            <ul>
+              <li><a href="hardware.html#building_blocks_and_bricks">Blocks &amp; Bricks</a></li>
+              <li><a href="hardware.html#building_cements_concretes_and_mortars">Cements, Concretes &amp; Mortars</a></li>
+              <li><a href="hardware.html#building_aggregates_and_sand">Aggregates &amp; Sand</a></li>
+              <li><a href="hardware.html#building_roof_materials">Roof Materials</a></li>
+              <li><a href="hardware.html#building_slates_and_tiles">Slates &amp; Tiles</a></li>
+              <li><a href="hardware.html#building_roof_windows">Roof Windows</a></li>
+              <li><a href="hardware.html#building_gutter_downpipe_and_waste">Gutter, Downpipe &amp; Waste</a></li>
+              <li><a href="hardware.html#building_underground_drainage">Underground Drainage</a></li>
+              <li><a href="hardware.html#building_damp_proof_membranes">Damp Proof Membranes</a></li>
+              <li><a href="hardware.html#building_caps_and_lintels">Caps &amp; Lintels</a></li>
+              <li><a href="hardware.html#building_fascias_and_soffits">Fascias &amp; Soffits</a></li>
+              <li><a href="hardware.html#building_pvc_sheeting_and_ventilation">PVC Sheeting &amp; Ventilation</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="hw-dept-item" data-cat="timber">
+          <a href="hardware.html" onclick="hwOpenCatNav('timber');return false">Timber <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+          <div class="hw-dropdown">
+            <ul>
+              <li><a href="hardware.html#timber_construction_and_treated_timber">Construction &amp; Treated</a></li>
+              <li><a href="hardware.html#timber_rough_and_sawn_timber">Rough &amp; Sawn</a></li>
+              <li><a href="hardware.html#timber_pao_and_planed_timber">PAO &amp; Planed</a></li>
+              <li><a href="hardware.html#timber_plywood">Plywood</a></li>
+              <li><a href="hardware.html#timber_mdf_and_hardboard">MDF &amp; Hardboard</a></li>
+              <li><a href="hardware.html#timber_patio_and_composite_decking">Decking</a></li>
+              <li><a href="hardware.html#timber_skirting_and_architrave">Skirting &amp; Architrave</a></li>
+              <li><a href="hardware.html#timber_mouldings_and_hardwood">Mouldings &amp; Hardwood</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="hw-dept-item" data-cat="insulation">
+          <a href="hardware.html" onclick="hwOpenCatNav('insulation');return false">Insulation <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+          <div class="hw-dropdown">
+            <ul>
+              <li><a href="hardware.html#insulation_plasterboard">Plasterboard</a></li>
+              <li><a href="hardware.html#insulation_pir_board_insulation">PIR Board</a></li>
+              <li><a href="hardware.html#insulation_attic_and_loft_insulation">Attic &amp; Loft</a></li>
+              <li><a href="hardware.html#insulation_foilback_and_cavity_insulation">Foilback &amp; Cavity</a></li>
+              <li><a href="hardware.html#insulation_plaster_and_accessories">Plaster &amp; Accessories</a></li>
+              <li><a href="hardware.html#insulation_cement_board">Cement Board</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="hw-dept-item" data-cat="plumbing">
+          <a href="hardware.html" onclick="hwOpenCatNav('plumbing');return false">Plumbing <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+          <div class="hw-dropdown">
+            <ul>
+              <li><a href="hardware.html#plumbing_boilers">Boilers</a></li>
+              <li><a href="hardware.html#plumbing_cylinders_and_tanks">Cylinders &amp; Tanks</a></li>
+              <li><a href="hardware.html#plumbing_radiators">Radiators</a></li>
+              <li><a href="hardware.html#plumbing_underfloor_heating">Underfloor Heating</a></li>
+              <li><a href="hardware.html#plumbing_copper_tubes_and_fittings">Copper Tubes &amp; Fittings</a></li>
+              <li><a href="hardware.html#plumbing_pex_and_multilayer_pipe">PEX &amp; Multilayer Pipe</a></li>
+              <li><a href="hardware.html#plumbing_heat_pumps_and_renewables">Heat Pumps &amp; Renewables</a></li>
+              <li><a href="hardware.html#plumbing_heating_controls">Heating Controls</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="hw-dept-item" data-cat="bathroom">
+          <a href="hardware.html" onclick="hwOpenCatNav('bathroom');return false">Bathrooms <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+          <div class="hw-dropdown">
+            <ul>
+              <li><a href="hardware.html#bathroom_sanitaryware">Sanitaryware</a></li>
+              <li><a href="hardware.html#bathroom_baths">Baths</a></li>
+              <li><a href="hardware.html#bathroom_showers_and_enclosures">Showers &amp; Enclosures</a></li>
+              <li><a href="hardware.html#bathroom_taps">Taps</a></li>
+              <li><a href="hardware.html#bathroom_bathroom_furniture">Bathroom Furniture</a></li>
+              <li><a href="hardware.html#bathroom_wall_panels_and_tiling">Wall Panels &amp; Tiling</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="hw-dept-item" data-cat="doors">
+          <a href="hardware.html" onclick="hwOpenCatNav('doors');return false">Doors &amp; Floors <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+          <div class="hw-dropdown">
+            <ul>
+              <li><a href="hardware.html#doors_internal_doors">Internal Doors</a></li>
+              <li><a href="hardware.html#doors_external_doors">External Doors</a></li>
+              <li><a href="hardware.html#doors_door_frames_and_liners">Frames &amp; Liners</a></li>
+              <li><a href="hardware.html#doors_door_furniture">Door Furniture</a></li>
+              <li><a href="hardware.html#doors_laminate_and_vinyl_flooring">Laminate &amp; Vinyl</a></li>
+              <li><a href="hardware.html#doors_carpet_and_underlay">Carpet &amp; Underlay</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="hw-dept-item" data-cat="paint">
+          <a href="hardware.html" onclick="hwOpenCatNav('paint');return false">Paints <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+          <div class="hw-dropdown">
+            <ul>
+              <li><a href="hardware.html#paint_emulsions_and_interior">Emulsions &amp; Interior</a></li>
+              <li><a href="hardware.html#paint_exterior_and_masonry">Exterior &amp; Masonry</a></li>
+              <li><a href="hardware.html#paint_woodstains_and_varnishes">Woodstains &amp; Varnishes</a></li>
+              <li><a href="hardware.html#paint_spray_paint_and_specialty">Spray Paint &amp; Specialty</a></li>
+              <li><a href="hardware.html#paint_brushes_and_rollers">Brushes &amp; Rollers</a></li>
+              <li><a href="hardware.html#paint_wallpaper_and_adhesives">Wallpaper &amp; Adhesives</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="hw-dept-item" data-cat="tools">
+          <a href="hardware.html" onclick="hwOpenCatNav('tools');return false">Tools <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+          <div class="hw-dropdown">
+            <ul>
+              <li><a href="hardware.html#tools_hand_tools">Hand Tools</a></li>
+              <li><a href="hardware.html#tools_power_tools">Power Tools</a></li>
+              <li><a href="hardware.html#tools_measuring_and_levelling">Measuring &amp; Levelling</a></li>
+              <li><a href="hardware.html#tools_screws_and_nails">Screws &amp; Nails</a></li>
+              <li><a href="hardware.html#tools_bolts_and_fixings">Bolts &amp; Fixings</a></li>
+              <li><a href="hardware.html#tools_adhesives_and_sealants">Adhesives &amp; Sealants</a></li>
+              <li><a href="hardware.html#tools_cable_and_electrical">Cable &amp; Electrical</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="hw-dept-item" data-cat="ppe">
+          <a href="hardware.html" onclick="hwOpenCatNav('ppe');return false">PPE <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+          <div class="hw-dropdown">
+            <ul>
+              <li><a href="hardware.html#ppe_hi_vis_and_jackets">Hi-Vis &amp; Jackets</a></li>
+              <li><a href="hardware.html#ppe_gloves">Gloves</a></li>
+              <li><a href="hardware.html#ppe_helmets_and_head_protection">Helmets &amp; Head</a></li>
+              <li><a href="hardware.html#ppe_safety_boots">Safety Boots</a></li>
+              <li><a href="hardware.html#ppe_ear_and_eye_protection">Ear &amp; Eye</a></li>
+              <li><a href="hardware.html#ppe_dust_masks_and_respirators">Dust Masks &amp; Respirators</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="hw-dept-item" data-cat="garden">
+          <a href="hardware.html" onclick="hwOpenCatNav('garden');return false">Garden <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+          <div class="hw-dropdown">
+            <ul>
+              <li><a href="hardware.html#garden_lawnmowers_and_strimmers">Lawnmowers &amp; Strimmers</a></li>
+              <li><a href="hardware.html#garden_hand_tools_and_barrows">Hand Tools &amp; Barrows</a></li>
+              <li><a href="hardware.html#garden_fencing_and_screening">Fencing &amp; Screening</a></li>
+              <li><a href="hardware.html#garden_paving_and_gravel">Paving &amp; Gravel</a></li>
+              <li><a href="hardware.html#garden_garden_decor_and_pots">Decor &amp; Pots</a></li>
+              <li><a href="hardware.html#garden_sheds_and_storage">Sheds &amp; Storage</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="hw-dept-item" data-cat="fuel">
+          <a href="hardware.html" onclick="hwOpenCatNav('fuel');return false">Fuel <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
+          <div class="hw-dropdown">
+            <ul>
+              <li><a href="hardware.html#fuel_coal_and_smokeless_fuels">Coal &amp; Smokeless</a></li>
+              <li><a href="hardware.html#fuel_briquettes_and_logs">Briquettes &amp; Logs</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Product detail page content (populated by JS) -->
+  <main class="pdp-wrap">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="pdp-breadcrumb" id="pdpBreadcrumb">
+        <a href="hardware.html">Hardware &amp; DIY</a>
+        <span class="pdp-bc-sep">/</span>
+        <span class="pdp-bc-cat" id="pdpBcCat"></span>
+        <span class="pdp-bc-sep">/</span>
+        <span class="pdp-bc-sub" id="pdpBcSub"></span>
+        <span class="pdp-bc-sep">/</span>
+        <span class="pdp-bc-name" id="pdpBcName"></span>
+      </nav>
+
+      <div class="pdp-layout">
+        <!-- Product Image -->
+        <div class="pdp-image-col">
+          <div class="pdp-image-box" id="pdpImageBox">
+            <i data-lucide="package" class="pdp-placeholder-icon"></i>
+            <img id="pdpImage" src="" alt="" style="display:none" onload="this.style.display='block';this.previousElementSibling.style.display='none'" onerror="this.style.display='none'"/>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="pdp-info-col">
+          <h1 class="pdp-title" id="pdpTitle"></h1>
+          <div class="pdp-meta">
+            <span class="pdp-cat-label" id="pdpCatLabel"></span>
+            <span class="pdp-meta-sep">|</span>
+            <span class="pdp-sub-label" id="pdpSubLabel"></span>
+          </div>
+
+          <div class="pdp-price" id="pdpPrice"></div>
+          <p class="pdp-vat">Inc. VAT</p>
+
+          <!-- Stock -->
+          <div class="pdp-stock" id="pdpStock"></div>
+
+          <!-- Quantity selector + Add to cart -->
+          <div class="pdp-actions">
+            <div class="pdp-qty-wrap">
+              <button class="pdp-qty-btn" id="pdpQtyMinus" aria-label="Decrease quantity">−</button>
+              <input type="number" class="pdp-qty-input" id="pdpQty" value="1" min="1" max="99"/>
+              <button class="pdp-qty-btn" id="pdpQtyPlus" aria-label="Increase quantity">+</button>
+            </div>
+            <button class="pdp-add-btn" id="pdpAddBtn" disabled>
+              <i data-lucide="shopping-cart"></i> Add to Cart
+            </button>
+          </div>
+
+          <!-- Delivery options -->
+          <div class="pdp-delivery">
+            <h3 class="pdp-delivery-title">Delivery Options</h3>
+            <div class="pdp-delivery-option">
+              <i data-lucide="store" class="pdp-del-icon"></i>
+              <div>
+                <strong>Click &amp; Collect</strong>
+                <span class="pdp-del-sub">FREE — Ready in store, Navan</span>
+              </div>
+            </div>
+            <div class="pdp-delivery-option">
+              <i data-lucide="truck" class="pdp-del-icon"></i>
+              <div>
+                <strong>Truck Delivery</strong>
+                <span class="pdp-del-sub">From €35 — Leinster area</span>
+              </div>
+            </div>
+            <div class="pdp-delivery-option">
+              <i data-lucide="mail" class="pdp-del-icon"></i>
+              <div>
+                <strong>Postage / Courier</strong>
+                <span class="pdp-del-sub">From €7.95 — Nationwide</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="pdp-help">
+            <i data-lucide="phone" class="pdp-help-icon"></i>
+            Need advice? Call <a href="tel:0469022535">046 902 2535</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related products -->
+      <section class="pdp-related" id="pdpRelated" style="display:none">
+        <h2 class="pdp-related-title">Related Products</h2>
+        <div class="pdp-related-grid" id="pdpRelatedGrid"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer" data-component></footer>
+
+  <script src="components.js"></script>
+  <script src="cart.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    var params = new URLSearchParams(window.location.search);
+    var slug = params.get('p');
+    if (!slug) { window.location.href = 'hardware.html'; return; }
+
+    // Load catalog
+    fetch('hw-products.json')
+      .then(function (r) { return r.json(); })
+      .then(function (catalog) {
+        var product = catalog.find(function (p) { return p.slug === slug; });
+        if (!product) { window.location.href = 'hardware.html'; return; }
+
+        // Page title
+        document.title = product.name + ' | Navan Hire & Hardware';
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.content = 'Buy ' + product.name + ' at Navan Hire & Hardware. Competitive prices, click & collect or delivery.';
+
+        // Breadcrumb
+        var bcCat = document.getElementById('pdpBcCat');
+        var bcSub = document.getElementById('pdpBcSub');
+        var bcName = document.getElementById('pdpBcName');
+        bcCat.innerHTML = '<a href="hardware.html#' + product.cat + '">' + product.catLabel + '</a>';
+        bcSub.innerHTML = '<a href="hardware.html#' + product.sub + '">' + product.subLabel + '</a>';
+        bcName.textContent = product.name;
+
+        // Product info
+        document.getElementById('pdpTitle').textContent = product.name;
+        document.getElementById('pdpCatLabel').textContent = product.catLabel;
+        document.getElementById('pdpSubLabel').textContent = product.subLabel;
+        document.getElementById('pdpPrice').textContent = '€' + product.price.toFixed(2);
+
+        // Image — try to load from images/hardware/<cat>/<slug>.jpg, fallback to placeholder icon
+        var img = document.getElementById('pdpImage');
+        img.src = 'images/hardware/' + product.cat + '/' + product.slug + '.jpg';
+        img.alt = product.name;
+
+        // Stock
+        var stockEl = document.getElementById('pdpStock');
+        if (product.stock > 0) {
+          var label = product.stock >= 20 ? 'In Stock' : (product.stock >= 5 ? 'Low Stock — ' + product.stock + ' left' : 'Only ' + product.stock + ' left');
+          var cls = product.stock >= 5 ? 'pdp-stock-badge in-stock' : 'pdp-stock-badge low-stock';
+          stockEl.innerHTML = '<span class="' + cls + '"><i data-lucide="check-circle"></i> ' + label + '</span>';
+        } else {
+          stockEl.innerHTML = '<span class="pdp-stock-badge out-of-stock"><i data-lucide="x-circle"></i> Out of Stock — Call to Order</span>';
+        }
+
+        // Qty controls
+        var qtyInput = document.getElementById('pdpQty');
+        var maxQty = product.stock > 0 ? product.stock : 99;
+        qtyInput.max = maxQty;
+
+        document.getElementById('pdpQtyMinus').addEventListener('click', function () {
+          var v = parseInt(qtyInput.value) || 1;
+          if (v > 1) qtyInput.value = v - 1;
+        });
+        document.getElementById('pdpQtyPlus').addEventListener('click', function () {
+          var v = parseInt(qtyInput.value) || 1;
+          if (v < maxQty) qtyInput.value = v + 1;
+        });
+        qtyInput.addEventListener('change', function () {
+          var v = parseInt(this.value) || 1;
+          if (v < 1) v = 1;
+          if (v > maxQty) v = maxQty;
+          this.value = v;
+        });
+
+        // Add to Cart
+        var addBtn = document.getElementById('pdpAddBtn');
+        addBtn.disabled = false;
+        if (product.stock === 0) {
+          addBtn.textContent = 'Out of Stock — Call Us';
+          addBtn.disabled = true;
+          addBtn.classList.add('pdp-add-disabled');
+        }
+
+        addBtn.addEventListener('click', function () {
+          if (product.stock === 0) return;
+          var qty = parseInt(qtyInput.value) || 1;
+          for (var i = 0; i < qty; i++) {
+            if (window.NHH_CART) {
+              window.NHH_CART.add(product.name, product.price, product.sub);
+            }
+          }
+          // Visual feedback
+          addBtn.innerHTML = '<i data-lucide="check"></i> Added to Cart';
+          addBtn.classList.add('pdp-add-success');
+          if (typeof lucide !== 'undefined') lucide.createIcons();
+          setTimeout(function () {
+            addBtn.innerHTML = '<i data-lucide="shopping-cart"></i> Add to Cart';
+            addBtn.classList.remove('pdp-add-success');
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+          }, 2000);
+        });
+
+        // Related products (same subcategory, exclude current)
+        var related = catalog.filter(function (p) {
+          return p.sub === product.sub && p.slug !== product.slug;
+        }).slice(0, 8);
+
+        if (related.length > 0) {
+          var relSection = document.getElementById('pdpRelated');
+          var relGrid = document.getElementById('pdpRelatedGrid');
+          relSection.style.display = '';
+          var relHTML = '';
+          related.forEach(function (rp) {
+            relHTML += '<a href="product.html?p=' + rp.slug + '" class="pdp-related-item">';
+            relHTML += '  <div class="pdp-rel-img"><i data-lucide="package"></i></div>';
+            relHTML += '  <span class="pdp-rel-name">' + rp.name + '</span>';
+            relHTML += '  <span class="pdp-rel-price">€' + rp.price.toFixed(2) + '</span>';
+            relHTML += '</a>';
+          });
+          relGrid.innerHTML = relHTML;
+        }
+
+        // Re-init icons
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      })
+      .catch(function () {
+        window.location.href = 'hardware.html';
+      });
+
+    // Dept bar hover dropdowns (same logic as hardware page)
+    document.querySelectorAll('.hw-dept-item').forEach(function (item) {
+      var timer;
+      item.addEventListener('mouseenter', function () {
+        clearTimeout(timer);
+        document.querySelectorAll('.hw-dept-item').forEach(function (i) { i.classList.remove('hw-dept-open'); });
+        item.classList.add('hw-dept-open');
+      });
+      item.addEventListener('mouseleave', function () {
+        timer = setTimeout(function () { item.classList.remove('hw-dept-open'); }, 200);
+      });
+    });
+  })();
+
+  function hwOpenCatNav(cat) {
+    window.location.href = 'hardware.html#' + cat;
+  }
+  </script>
+</body>
+</html>

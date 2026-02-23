@@ -152,20 +152,30 @@
 
   // ─── Assign prices to product items ───
   function enhanceProducts() {
-    var panels = document.querySelectorAll('.hw-product-panel');
-    panels.forEach(function (panel) {
-      var subId = panel.id.replace('hw-prod-', '');
+    // Products are now <a> links inside .hw-cat-panel, grouped by data-sub
+    var allItems = document.querySelectorAll('.hw-product-item[data-sub]');
+    if (!allItems.length) return;
+
+    // Group by sub to spread prices
+    var groups = {};
+    allItems.forEach(function (item) {
+      var sub = item.getAttribute('data-sub');
+      if (!groups[sub]) groups[sub] = [];
+      groups[sub].push(item);
+    });
+
+    Object.keys(groups).forEach(function (subId) {
+      var items = groups[subId];
       var priceRange = SUB_PRICES[subId];
       if (!priceRange) return;
 
-      var items = panel.querySelectorAll('.hw-product-item');
       var min = priceRange[0], max = priceRange[1];
       var count = items.length;
 
       items.forEach(function (item, idx) {
         var nameEl = item.querySelector('.hw-product-name');
         var ctaEl = item.querySelector('.hw-product-cta');
-        if (!nameEl || !ctaEl) return;
+        if (!nameEl) return;
 
         // Calculate price spread across the range
         var price;
@@ -181,31 +191,39 @@
 
         var productName = nameEl.textContent.trim();
 
-        // Add price display
+        // Add price display before CTA
         var priceEl = document.createElement('span');
         priceEl.className = 'hw-product-price';
         priceEl.textContent = '€' + price.toFixed(2);
-        item.insertBefore(priceEl, ctaEl);
+        if (ctaEl) {
+          item.insertBefore(priceEl, ctaEl);
+        } else {
+          item.appendChild(priceEl);
+        }
 
-        // Transform CTA to Add to Cart
-        ctaEl.href = '#';
-        ctaEl.className = 'hw-add-to-cart';
-        ctaEl.innerHTML = '<i data-lucide="shopping-cart"></i> Add';
-        ctaEl.onclick = function (e) {
+        // Add a small "Add" cart button (separate element so it doesn't navigate)
+        var addBtn = document.createElement('span');
+        addBtn.className = 'hw-add-to-cart';
+        addBtn.innerHTML = '<i data-lucide="shopping-cart"></i>';
+        addBtn.title = 'Add to Cart';
+        addBtn.addEventListener('click', function (e) {
           e.preventDefault();
           e.stopPropagation();
           addToCart(productName, price, subId);
           // Visual feedback
-          var btn = this;
-          btn.classList.add('added');
-          btn.innerHTML = '<i data-lucide="check"></i> Added';
+          addBtn.classList.add('added');
+          addBtn.innerHTML = '<i data-lucide="check"></i>';
           if (typeof lucide !== 'undefined') lucide.createIcons();
           setTimeout(function () {
-            btn.classList.remove('added');
-            btn.innerHTML = '<i data-lucide="shopping-cart"></i> Add';
+            addBtn.classList.remove('added');
+            addBtn.innerHTML = '<i data-lucide="shopping-cart"></i>';
             if (typeof lucide !== 'undefined') lucide.createIcons();
           }, 1500);
-        };
+        });
+        item.appendChild(addBtn);
+
+        // Hide the old "View" CTA since we have price + cart icon now
+        if (ctaEl) ctaEl.style.display = 'none';
       });
     });
 
@@ -648,6 +666,7 @@
   window.NHH_CART = {
     open: openCartDrawer,
     close: closeCartDrawer,
+    add: addToCart,
     qty: updateQty,
     remove: removeFromCart,
     clear: clearCart,

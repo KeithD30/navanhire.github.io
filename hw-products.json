@@ -1,0 +1,5662 @@
+[
+ {
+  "slug": "concrete-blocks-4",
+  "name": "Concrete Blocks 4\"",
+  "price": 2.0,
+  "stock": 3,
+  "sub": "building_blocks_and_bricks",
+  "subLabel": "Blocks And Bricks",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "concrete-blocks-6",
+  "name": "Concrete Blocks 6\"",
+  "price": 2.5,
+  "stock": 12,
+  "sub": "building_blocks_and_bricks",
+  "subLabel": "Blocks And Bricks",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "concrete-blocks-9",
+  "name": "Concrete Blocks 9\"",
+  "price": 3.5,
+  "stock": 5,
+  "sub": "building_blocks_and_bricks",
+  "subLabel": "Blocks And Bricks",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "dense-concrete-blocks",
+  "name": "Dense Concrete Blocks",
+  "price": 4.5,
+  "stock": 40,
+  "sub": "building_blocks_and_bricks",
+  "subLabel": "Blocks And Bricks",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "thermolite-blocks",
+  "name": "Thermolite Blocks",
+  "price": 4.5,
+  "stock": 0,
+  "sub": "building_blocks_and_bricks",
+  "subLabel": "Blocks And Bricks",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "common-bricks",
+  "name": "Common Bricks",
+  "price": 5.5,
+  "stock": 3,
+  "sub": "building_blocks_and_bricks",
+  "subLabel": "Blocks And Bricks",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "facing-bricks",
+  "name": "Facing Bricks",
+  "price": 5.5,
+  "stock": 0,
+  "sub": "building_blocks_and_bricks",
+  "subLabel": "Blocks And Bricks",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "engineering-bricks",
+  "name": "Engineering Bricks",
+  "price": 6.5,
+  "stock": 50,
+  "sub": "building_blocks_and_bricks",
+  "subLabel": "Blocks And Bricks",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "fire-bricks",
+  "name": "Fire Bricks",
+  "price": 6.5,
+  "stock": 0,
+  "sub": "building_blocks_and_bricks",
+  "subLabel": "Blocks And Bricks",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "ordinary-portland-cement-25kg",
+  "name": "Ordinary Portland Cement 25kg",
+  "price": 7.5,
+  "stock": 40,
+  "sub": "building_cements_concretes_and_mortars",
+  "subLabel": "Cements Concretes And Mortars",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "rapid-set-cement-25kg",
+  "name": "Rapid-Set Cement 25kg",
+  "price": 9.5,
+  "stock": 30,
+  "sub": "building_cements_concretes_and_mortars",
+  "subLabel": "Cements Concretes And Mortars",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "blue-circle-mastercrete-25kg",
+  "name": "Blue Circle Mastercrete 25kg",
+  "price": 10.95,
+  "stock": 3,
+  "sub": "building_cements_concretes_and_mortars",
+  "subLabel": "Cements Concretes And Mortars",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "postcrete-20kg",
+  "name": "Postcrete 20kg",
+  "price": 12.95,
+  "stock": 8,
+  "sub": "building_cements_concretes_and_mortars",
+  "subLabel": "Cements Concretes And Mortars",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "ballast-25kg",
+  "name": "Ballast 25kg",
+  "price": 13.95,
+  "stock": 20,
+  "sub": "building_cements_concretes_and_mortars",
+  "subLabel": "Cements Concretes And Mortars",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "sharp-sand-25kg",
+  "name": "Sharp Sand 25kg",
+  "price": 14.95,
+  "stock": 12,
+  "sub": "building_cements_concretes_and_mortars",
+  "subLabel": "Cements Concretes And Mortars",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "soft-sand-25kg",
+  "name": "Soft Sand 25kg",
+  "price": 16.95,
+  "stock": 20,
+  "sub": "building_cements_concretes_and_mortars",
+  "subLabel": "Cements Concretes And Mortars",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "mortar-mix-25kg",
+  "name": "Mortar Mix 25kg",
+  "price": 17.95,
+  "stock": 0,
+  "sub": "building_cements_concretes_and_mortars",
+  "subLabel": "Cements Concretes And Mortars",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "concrete-mix-25kg",
+  "name": "Concrete Mix 25kg",
+  "price": 19.95,
+  "stock": 20,
+  "sub": "building_cements_concretes_and_mortars",
+  "subLabel": "Cements Concretes And Mortars",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "10mm-gravel-bag",
+  "name": "10mm Gravel Bag",
+  "price": 4.5,
+  "stock": 50,
+  "sub": "building_aggregates_and_sand",
+  "subLabel": "Aggregates And Sand",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "20mm-gravel-bag",
+  "name": "20mm Gravel Bag",
+  "price": 6.5,
+  "stock": 3,
+  "sub": "building_aggregates_and_sand",
+  "subLabel": "Aggregates And Sand",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "mot-type-1-bag",
+  "name": "MOT Type 1 Bag",
+  "price": 7.5,
+  "stock": 40,
+  "sub": "building_aggregates_and_sand",
+  "subLabel": "Aggregates And Sand",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "pea-gravel-bag",
+  "name": "Pea Gravel Bag",
+  "price": 8.5,
+  "stock": 25,
+  "sub": "building_aggregates_and_sand",
+  "subLabel": "Aggregates And Sand",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "sharp-sand-bulk-bag",
+  "name": "Sharp Sand Bulk Bag",
+  "price": 10.5,
+  "stock": 0,
+  "sub": "building_aggregates_and_sand",
+  "subLabel": "Aggregates And Sand",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "soft-sand-bulk-bag",
+  "name": "Soft Sand Bulk Bag",
+  "price": 11.95,
+  "stock": 50,
+  "sub": "building_aggregates_and_sand",
+  "subLabel": "Aggregates And Sand",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "building-sand-bulk-bag",
+  "name": "Building Sand Bulk Bag",
+  "price": 13.95,
+  "stock": 20,
+  "sub": "building_aggregates_and_sand",
+  "subLabel": "Aggregates And Sand",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "roofing-felt-type-1f",
+  "name": "Roofing Felt Type 1F",
+  "price": 8.5,
+  "stock": 5,
+  "sub": "building_roof_materials",
+  "subLabel": "Roof Materials",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "roofing-felt-type-5u",
+  "name": "Roofing Felt Type 5U",
+  "price": 12.95,
+  "stock": 0,
+  "sub": "building_roof_materials",
+  "subLabel": "Roof Materials",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "roofing-nails-galv",
+  "name": "Roofing Nails Galv",
+  "price": 16.95,
+  "stock": 15,
+  "sub": "building_roof_materials",
+  "subLabel": "Roof Materials",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "ridge-tiles",
+  "name": "Ridge Tiles",
+  "price": 20.95,
+  "stock": 12,
+  "sub": "building_roof_materials",
+  "subLabel": "Roof Materials",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "hip-tiles",
+  "name": "Hip Tiles",
+  "price": 23.95,
+  "stock": 25,
+  "sub": "building_roof_materials",
+  "subLabel": "Roof Materials",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "valley-troughs",
+  "name": "Valley Troughs",
+  "price": 27.95,
+  "stock": 20,
+  "sub": "building_roof_materials",
+  "subLabel": "Roof Materials",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "soakers",
+  "name": "Soakers",
+  "price": 31.95,
+  "stock": 20,
+  "sub": "building_roof_materials",
+  "subLabel": "Roof Materials",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "lead-code-4-flashing",
+  "name": "Lead Code 4 Flashing",
+  "price": 35.95,
+  "stock": 15,
+  "sub": "building_roof_materials",
+  "subLabel": "Roof Materials",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "lead-code-5-flashing",
+  "name": "Lead Code 5 Flashing",
+  "price": 39.95,
+  "stock": 5,
+  "sub": "building_roof_materials",
+  "subLabel": "Roof Materials",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "tegral-slates-500x250",
+  "name": "Tegral Slates 500x250",
+  "price": 3.0,
+  "stock": 8,
+  "sub": "building_slates_and_tiles",
+  "subLabel": "Slates And Tiles",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "tegral-slates-400x200",
+  "name": "Tegral Slates 400x200",
+  "price": 5.5,
+  "stock": 12,
+  "sub": "building_slates_and_tiles",
+  "subLabel": "Slates And Tiles",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "redland-plain-tiles",
+  "name": "Redland Plain Tiles",
+  "price": 7.5,
+  "stock": 25,
+  "sub": "building_slates_and_tiles",
+  "subLabel": "Slates And Tiles",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "redland-stonewold",
+  "name": "Redland Stonewold",
+  "price": 10.5,
+  "stock": 40,
+  "sub": "building_slates_and_tiles",
+  "subLabel": "Slates And Tiles",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "marley-melodie",
+  "name": "Marley Melodie",
+  "price": 12.95,
+  "stock": 20,
+  "sub": "building_slates_and_tiles",
+  "subLabel": "Slates And Tiles",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "fibre-cement-slates",
+  "name": "Fibre Cement Slates",
+  "price": 14.95,
+  "stock": 3,
+  "sub": "building_slates_and_tiles",
+  "subLabel": "Slates And Tiles",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "velux-ggl-timber-centre-pivot",
+  "name": "Velux GGL Timber Centre-Pivot",
+  "price": 195.95,
+  "stock": 3,
+  "sub": "building_roof_windows",
+  "subLabel": "Roof Windows",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "velux-ggu-pu-centre-pivot",
+  "name": "Velux GGU PU Centre-Pivot",
+  "price": 253.95,
+  "stock": 25,
+  "sub": "building_roof_windows",
+  "subLabel": "Roof Windows",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "velux-gpu-top-hung",
+  "name": "Velux GPU Top-Hung",
+  "price": 311.95,
+  "stock": 12,
+  "sub": "building_roof_windows",
+  "subLabel": "Roof Windows",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "keylite-centre-pivot",
+  "name": "Keylite Centre-Pivot",
+  "price": 369.95,
+  "stock": 50,
+  "sub": "building_roof_windows",
+  "subLabel": "Roof Windows",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "fakro-ftp-v-u3",
+  "name": "FAKRO FTP-V U3",
+  "price": 427.95,
+  "stock": 20,
+  "sub": "building_roof_windows",
+  "subLabel": "Roof Windows",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "roof-window-flashing-kit",
+  "name": "Roof Window Flashing Kit",
+  "price": 485.95,
+  "stock": 30,
+  "sub": "building_roof_windows",
+  "subLabel": "Roof Windows",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "ogee-guttering-4m",
+  "name": "Ogee Guttering 4m",
+  "price": 3.5,
+  "stock": 30,
+  "sub": "building_gutter_downpipe_and_waste",
+  "subLabel": "Gutter Downpipe And Waste",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "half-round-guttering-4m",
+  "name": "Half-Round Guttering 4m",
+  "price": 5.5,
+  "stock": 8,
+  "sub": "building_gutter_downpipe_and_waste",
+  "subLabel": "Gutter Downpipe And Waste",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "square-guttering-4m",
+  "name": "Square Guttering 4m",
+  "price": 7.5,
+  "stock": 40,
+  "sub": "building_gutter_downpipe_and_waste",
+  "subLabel": "Gutter Downpipe And Waste",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "fascia-bracket",
+  "name": "Fascia Bracket",
+  "price": 9.5,
+  "stock": 50,
+  "sub": "building_gutter_downpipe_and_waste",
+  "subLabel": "Gutter Downpipe And Waste",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "stop-end",
+  "name": "Stop End",
+  "price": 11.95,
+  "stock": 50,
+  "sub": "building_gutter_downpipe_and_waste",
+  "subLabel": "Gutter Downpipe And Waste",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "running-outlet",
+  "name": "Running Outlet",
+  "price": 13.95,
+  "stock": 12,
+  "sub": "building_gutter_downpipe_and_waste",
+  "subLabel": "Gutter Downpipe And Waste",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "90-angle",
+  "name": "90\u00b0 Angle",
+  "price": 15.95,
+  "stock": 8,
+  "sub": "building_gutter_downpipe_and_waste",
+  "subLabel": "Gutter Downpipe And Waste",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "downpipe-2-5m",
+  "name": "Downpipe 2.5m",
+  "price": 17.95,
+  "stock": 5,
+  "sub": "building_gutter_downpipe_and_waste",
+  "subLabel": "Gutter Downpipe And Waste",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "pipe-clip",
+  "name": "Pipe Clip",
+  "price": 19.95,
+  "stock": 5,
+  "sub": "building_gutter_downpipe_and_waste",
+  "subLabel": "Gutter Downpipe And Waste",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "110mm-drain-pipe-3m",
+  "name": "110mm Drain Pipe 3m",
+  "price": 5.5,
+  "stock": 8,
+  "sub": "building_underground_drainage",
+  "subLabel": "Underground Drainage",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "110mm-45-bend",
+  "name": "110mm 45\u00b0 Bend",
+  "price": 8.5,
+  "stock": 25,
+  "sub": "building_underground_drainage",
+  "subLabel": "Underground Drainage",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "110mm-90-bend",
+  "name": "110mm 90\u00b0 Bend",
+  "price": 12.95,
+  "stock": 25,
+  "sub": "building_underground_drainage",
+  "subLabel": "Underground Drainage",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "110mm-inspection-chamber",
+  "name": "110mm Inspection Chamber",
+  "price": 15.95,
+  "stock": 30,
+  "sub": "building_underground_drainage",
+  "subLabel": "Underground Drainage",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "110mm-hopper",
+  "name": "110mm Hopper",
+  "price": 18.95,
+  "stock": 40,
+  "sub": "building_underground_drainage",
+  "subLabel": "Underground Drainage",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "160mm-drain-pipe-3m",
+  "name": "160mm Drain Pipe 3m",
+  "price": 22.95,
+  "stock": 3,
+  "sub": "building_underground_drainage",
+  "subLabel": "Underground Drainage",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "rodding-eye",
+  "name": "Rodding Eye",
+  "price": 25.95,
+  "stock": 5,
+  "sub": "building_underground_drainage",
+  "subLabel": "Underground Drainage",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "gully-trap",
+  "name": "Gully Trap",
+  "price": 29.95,
+  "stock": 40,
+  "sub": "building_underground_drainage",
+  "subLabel": "Underground Drainage",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "drain-connector",
+  "name": "Drain Connector",
+  "price": 32.95,
+  "stock": 20,
+  "sub": "building_underground_drainage",
+  "subLabel": "Underground Drainage",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "dpm-250mu-4m-roll",
+  "name": "DPM 250mu 4m Roll",
+  "price": 13.95,
+  "stock": 0,
+  "sub": "building_damp_proof_membranes",
+  "subLabel": "Damp Proof Membranes",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "dpm-300mu-4m-roll",
+  "name": "DPM 300mu 4m Roll",
+  "price": 19.95,
+  "stock": 30,
+  "sub": "building_damp_proof_membranes",
+  "subLabel": "Damp Proof Membranes",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "radon-barrier-300mu",
+  "name": "Radon Barrier 300mu",
+  "price": 25.95,
+  "stock": 0,
+  "sub": "building_damp_proof_membranes",
+  "subLabel": "Damp Proof Membranes",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "dpc-100mm-roll",
+  "name": "DPC 100mm Roll",
+  "price": 31.95,
+  "stock": 15,
+  "sub": "building_damp_proof_membranes",
+  "subLabel": "Damp Proof Membranes",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "dpc-150mm-roll",
+  "name": "DPC 150mm Roll",
+  "price": 37.95,
+  "stock": 8,
+  "sub": "building_damp_proof_membranes",
+  "subLabel": "Damp Proof Membranes",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "dpc-225mm-roll",
+  "name": "DPC 225mm Roll",
+  "price": 43.95,
+  "stock": 5,
+  "sub": "building_damp_proof_membranes",
+  "subLabel": "Damp Proof Membranes",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "cavity-tray",
+  "name": "Cavity Tray",
+  "price": 49.95,
+  "stock": 15,
+  "sub": "building_damp_proof_membranes",
+  "subLabel": "Damp Proof Membranes",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "lintol-dpc",
+  "name": "Lintol DPC",
+  "price": 55.95,
+  "stock": 40,
+  "sub": "building_damp_proof_membranes",
+  "subLabel": "Damp Proof Membranes",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "catnic-steel-lintel-900mm",
+  "name": "Catnic Steel Lintel 900mm",
+  "price": 6.5,
+  "stock": 8,
+  "sub": "building_caps_and_lintels",
+  "subLabel": "Caps And Lintels",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "catnic-steel-lintel-1200mm",
+  "name": "Catnic Steel Lintel 1200mm",
+  "price": 12.95,
+  "stock": 8,
+  "sub": "building_caps_and_lintels",
+  "subLabel": "Caps And Lintels",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "catnic-steel-lintel-1800mm",
+  "name": "Catnic Steel Lintel 1800mm",
+  "price": 18.95,
+  "stock": 40,
+  "sub": "building_caps_and_lintels",
+  "subLabel": "Caps And Lintels",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "concrete-boot-lintel",
+  "name": "Concrete Boot Lintel",
+  "price": 24.95,
+  "stock": 50,
+  "sub": "building_caps_and_lintels",
+  "subLabel": "Caps And Lintels",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "hi-therm-lintel",
+  "name": "Hi-Therm Lintel",
+  "price": 30.95,
+  "stock": 3,
+  "sub": "building_caps_and_lintels",
+  "subLabel": "Caps And Lintels",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "cavity-closer",
+  "name": "Cavity Closer",
+  "price": 36.95,
+  "stock": 0,
+  "sub": "building_caps_and_lintels",
+  "subLabel": "Caps And Lintels",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "wall-tie-standard",
+  "name": "Wall Tie Standard",
+  "price": 42.95,
+  "stock": 15,
+  "sub": "building_caps_and_lintels",
+  "subLabel": "Caps And Lintels",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "pvc-fascia-board-white-5m",
+  "name": "PVC Fascia Board White 5m",
+  "price": 9.5,
+  "stock": 12,
+  "sub": "building_fascias_and_soffits",
+  "subLabel": "Fascias And Soffits",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "pvc-fascia-board-mahogany-5m",
+  "name": "PVC Fascia Board Mahogany 5m",
+  "price": 13.95,
+  "stock": 5,
+  "sub": "building_fascias_and_soffits",
+  "subLabel": "Fascias And Soffits",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "pvc-soffit-300mm-white",
+  "name": "PVC Soffit 300mm White",
+  "price": 17.95,
+  "stock": 0,
+  "sub": "building_fascias_and_soffits",
+  "subLabel": "Fascias And Soffits",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "pvc-soffit-400mm-white",
+  "name": "PVC Soffit 400mm White",
+  "price": 21.95,
+  "stock": 5,
+  "sub": "building_fascias_and_soffits",
+  "subLabel": "Fascias And Soffits",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "vented-soffit-panel",
+  "name": "Vented Soffit Panel",
+  "price": 25.95,
+  "stock": 40,
+  "sub": "building_fascias_and_soffits",
+  "subLabel": "Fascias And Soffits",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "fascia-connector",
+  "name": "Fascia Connector",
+  "price": 29.95,
+  "stock": 8,
+  "sub": "building_fascias_and_soffits",
+  "subLabel": "Fascias And Soffits",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "external-corner",
+  "name": "External Corner",
+  "price": 33.95,
+  "stock": 40,
+  "sub": "building_fascias_and_soffits",
+  "subLabel": "Fascias And Soffits",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "corrugated-pvc-clear-sheet",
+  "name": "Corrugated PVC Clear Sheet",
+  "price": 4.5,
+  "stock": 40,
+  "sub": "building_pvc_sheeting_and_ventilation",
+  "subLabel": "Pvc Sheeting And Ventilation",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "box-profile-pvc-sheet",
+  "name": "Box Profile PVC Sheet",
+  "price": 6.5,
+  "stock": 25,
+  "sub": "building_pvc_sheeting_and_ventilation",
+  "subLabel": "Pvc Sheeting And Ventilation",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "roof-vent-tile",
+  "name": "Roof Vent Tile",
+  "price": 9.5,
+  "stock": 40,
+  "sub": "building_pvc_sheeting_and_ventilation",
+  "subLabel": "Pvc Sheeting And Ventilation",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "eaves-vent-50mm",
+  "name": "Eaves Vent 50mm",
+  "price": 11.95,
+  "stock": 12,
+  "sub": "building_pvc_sheeting_and_ventilation",
+  "subLabel": "Pvc Sheeting And Ventilation",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "soffit-vent-strip",
+  "name": "Soffit Vent Strip",
+  "price": 14.95,
+  "stock": 25,
+  "sub": "building_pvc_sheeting_and_ventilation",
+  "subLabel": "Pvc Sheeting And Ventilation",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "gable-vent",
+  "name": "Gable Vent",
+  "price": 17.95,
+  "stock": 20,
+  "sub": "building_pvc_sheeting_and_ventilation",
+  "subLabel": "Pvc Sheeting And Ventilation",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "ridge-vent",
+  "name": "Ridge Vent",
+  "price": 19.95,
+  "stock": 40,
+  "sub": "building_pvc_sheeting_and_ventilation",
+  "subLabel": "Pvc Sheeting And Ventilation",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "airbrick-terracotta",
+  "name": "Airbrick Terracotta",
+  "price": 22.95,
+  "stock": 12,
+  "sub": "building_pvc_sheeting_and_ventilation",
+  "subLabel": "Pvc Sheeting And Ventilation",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "airbrick-pvc",
+  "name": "Airbrick PVC",
+  "price": 24.95,
+  "stock": 20,
+  "sub": "building_pvc_sheeting_and_ventilation",
+  "subLabel": "Pvc Sheeting And Ventilation",
+  "cat": "building",
+  "catLabel": "Building Supplies"
+ },
+ {
+  "slug": "47-100-c16-treated-3-6m",
+  "name": "47\u00d7100 C16 Treated 3.6m",
+  "price": 4.5,
+  "stock": 0,
+  "sub": "timber_construction_and_treated_timber",
+  "subLabel": "Construction And Treated Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "47-150-c16-treated-3-6m",
+  "name": "47\u00d7150 C16 Treated 3.6m",
+  "price": 8.5,
+  "stock": 50,
+  "sub": "timber_construction_and_treated_timber",
+  "subLabel": "Construction And Treated Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "47-200-c16-treated-3-6m",
+  "name": "47\u00d7200 C16 Treated 3.6m",
+  "price": 11.95,
+  "stock": 5,
+  "sub": "timber_construction_and_treated_timber",
+  "subLabel": "Construction And Treated Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "50-50-treated-batten",
+  "name": "50\u00d750 Treated Batten",
+  "price": 15.95,
+  "stock": 3,
+  "sub": "timber_construction_and_treated_timber",
+  "subLabel": "Construction And Treated Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "75-75-treated-post",
+  "name": "75\u00d775 Treated Post",
+  "price": 18.95,
+  "stock": 3,
+  "sub": "timber_construction_and_treated_timber",
+  "subLabel": "Construction And Treated Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "100-100-treated-post",
+  "name": "100\u00d7100 Treated Post",
+  "price": 21.95,
+  "stock": 5,
+  "sub": "timber_construction_and_treated_timber",
+  "subLabel": "Construction And Treated Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "38-25-treated-batten",
+  "name": "38\u00d725 Treated Batten",
+  "price": 25.95,
+  "stock": 15,
+  "sub": "timber_construction_and_treated_timber",
+  "subLabel": "Construction And Treated Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "cls-timber-38-89-3-0m",
+  "name": "CLS Timber 38\u00d789 3.0m",
+  "price": 28.95,
+  "stock": 12,
+  "sub": "timber_construction_and_treated_timber",
+  "subLabel": "Construction And Treated Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "25-150-rough-sawn-3-6m",
+  "name": "25\u00d7150 Rough Sawn 3.6m",
+  "price": 4.5,
+  "stock": 50,
+  "sub": "timber_rough_and_sawn_timber",
+  "subLabel": "Rough And Sawn Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "50-150-rough-sawn-3-6m",
+  "name": "50\u00d7150 Rough Sawn 3.6m",
+  "price": 7.5,
+  "stock": 12,
+  "sub": "timber_rough_and_sawn_timber",
+  "subLabel": "Rough And Sawn Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "50-200-rough-sawn-3-6m",
+  "name": "50\u00d7200 Rough Sawn 3.6m",
+  "price": 11.95,
+  "stock": 25,
+  "sub": "timber_rough_and_sawn_timber",
+  "subLabel": "Rough And Sawn Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "75-150-rough-sawn-3-6m",
+  "name": "75\u00d7150 Rough Sawn 3.6m",
+  "price": 15.95,
+  "stock": 5,
+  "sub": "timber_rough_and_sawn_timber",
+  "subLabel": "Rough And Sawn Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "fencing-rail-75-38-3-0m",
+  "name": "Fencing Rail 75\u00d738 3.0m",
+  "price": 18.95,
+  "stock": 20,
+  "sub": "timber_rough_and_sawn_timber",
+  "subLabel": "Rough And Sawn Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "19-119-pao-2-4m",
+  "name": "19\u00d7119 PAO 2.4m",
+  "price": 4.5,
+  "stock": 30,
+  "sub": "timber_pao_and_planed_timber",
+  "subLabel": "Pao And Planed Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "32-119-pao-2-4m",
+  "name": "32\u00d7119 PAO 2.4m",
+  "price": 9.5,
+  "stock": 3,
+  "sub": "timber_pao_and_planed_timber",
+  "subLabel": "Pao And Planed Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "32-144-pao-2-4m",
+  "name": "32\u00d7144 PAO 2.4m",
+  "price": 13.95,
+  "stock": 5,
+  "sub": "timber_pao_and_planed_timber",
+  "subLabel": "Pao And Planed Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "44-119-pao-2-4m",
+  "name": "44\u00d7119 PAO 2.4m",
+  "price": 17.95,
+  "stock": 0,
+  "sub": "timber_pao_and_planed_timber",
+  "subLabel": "Pao And Planed Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "pao-quadrant-19mm",
+  "name": "PAO Quadrant 19mm",
+  "price": 22.95,
+  "stock": 5,
+  "sub": "timber_pao_and_planed_timber",
+  "subLabel": "Pao And Planed Timber",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "12mm-osb-3-2440-1220",
+  "name": "12mm OSB 3 2440\u00d71220",
+  "price": 18.95,
+  "stock": 12,
+  "sub": "timber_plywood",
+  "subLabel": "Plywood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "18mm-osb-3-2440-1220",
+  "name": "18mm OSB 3 2440\u00d71220",
+  "price": 24.95,
+  "stock": 8,
+  "sub": "timber_plywood",
+  "subLabel": "Plywood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "6mm-plywood-2440-1220",
+  "name": "6mm Plywood 2440\u00d71220",
+  "price": 31.95,
+  "stock": 15,
+  "sub": "timber_plywood",
+  "subLabel": "Plywood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "9mm-plywood-2440-1220",
+  "name": "9mm Plywood 2440\u00d71220",
+  "price": 37.95,
+  "stock": 5,
+  "sub": "timber_plywood",
+  "subLabel": "Plywood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "12mm-plywood-2440-1220",
+  "name": "12mm Plywood 2440\u00d71220",
+  "price": 43.95,
+  "stock": 40,
+  "sub": "timber_plywood",
+  "subLabel": "Plywood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "18mm-plywood-2440-1220",
+  "name": "18mm Plywood 2440\u00d71220",
+  "price": 49.95,
+  "stock": 0,
+  "sub": "timber_plywood",
+  "subLabel": "Plywood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "22mm-plywood-2440-1220",
+  "name": "22mm Plywood 2440\u00d71220",
+  "price": 56.95,
+  "stock": 40,
+  "sub": "timber_plywood",
+  "subLabel": "Plywood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "marine-ply-12mm",
+  "name": "Marine Ply 12mm",
+  "price": 62.95,
+  "stock": 5,
+  "sub": "timber_plywood",
+  "subLabel": "Plywood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "6mm-mdf-2440-1220",
+  "name": "6mm MDF 2440\u00d71220",
+  "price": 13.95,
+  "stock": 12,
+  "sub": "timber_mdf_and_hardboard",
+  "subLabel": "Mdf And Hardboard",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "9mm-mdf-2440-1220",
+  "name": "9mm MDF 2440\u00d71220",
+  "price": 18.95,
+  "stock": 30,
+  "sub": "timber_mdf_and_hardboard",
+  "subLabel": "Mdf And Hardboard",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "12mm-mdf-2440-1220",
+  "name": "12mm MDF 2440\u00d71220",
+  "price": 22.95,
+  "stock": 25,
+  "sub": "timber_mdf_and_hardboard",
+  "subLabel": "Mdf And Hardboard",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "18mm-mdf-2440-1220",
+  "name": "18mm MDF 2440\u00d71220",
+  "price": 27.95,
+  "stock": 8,
+  "sub": "timber_mdf_and_hardboard",
+  "subLabel": "Mdf And Hardboard",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "25mm-mdf-2440-1220",
+  "name": "25mm MDF 2440\u00d71220",
+  "price": 32.95,
+  "stock": 25,
+  "sub": "timber_mdf_and_hardboard",
+  "subLabel": "Mdf And Hardboard",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "standard-hardboard-2440-1220",
+  "name": "Standard Hardboard 2440\u00d71220",
+  "price": 37.95,
+  "stock": 30,
+  "sub": "timber_mdf_and_hardboard",
+  "subLabel": "Mdf And Hardboard",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "perforated-hardboard",
+  "name": "Perforated Hardboard",
+  "price": 42.95,
+  "stock": 40,
+  "sub": "timber_mdf_and_hardboard",
+  "subLabel": "Mdf And Hardboard",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "treated-pine-decking-28-120-3-6m",
+  "name": "Treated Pine Decking 28\u00d7120 3.6m",
+  "price": 9.5,
+  "stock": 30,
+  "sub": "timber_patio_and_composite_decking",
+  "subLabel": "Patio And Composite Decking",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "hardwood-decking-28-145-3-6m",
+  "name": "Hardwood Decking 28\u00d7145 3.6m",
+  "price": 14.95,
+  "stock": 15,
+  "sub": "timber_patio_and_composite_decking",
+  "subLabel": "Patio And Composite Decking",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "composite-decking-board-3-6m-grey",
+  "name": "Composite Decking Board 3.6m Grey",
+  "price": 19.95,
+  "stock": 3,
+  "sub": "timber_patio_and_composite_decking",
+  "subLabel": "Patio And Composite Decking",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "composite-decking-board-3-6m-brown",
+  "name": "Composite Decking Board 3.6m Brown",
+  "price": 23.95,
+  "stock": 40,
+  "sub": "timber_patio_and_composite_decking",
+  "subLabel": "Patio And Composite Decking",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "composite-fascia-board",
+  "name": "Composite Fascia Board",
+  "price": 28.95,
+  "stock": 0,
+  "sub": "timber_patio_and_composite_decking",
+  "subLabel": "Patio And Composite Decking",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "decking-starter-clip",
+  "name": "Decking Starter Clip",
+  "price": 33.95,
+  "stock": 3,
+  "sub": "timber_patio_and_composite_decking",
+  "subLabel": "Patio And Composite Decking",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "decking-end-cap",
+  "name": "Decking End Cap",
+  "price": 38.95,
+  "stock": 40,
+  "sub": "timber_patio_and_composite_decking",
+  "subLabel": "Patio And Composite Decking",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "ogee-skirting-95mm-4-2m",
+  "name": "Ogee Skirting 95mm 4.2m",
+  "price": 2.5,
+  "stock": 40,
+  "sub": "timber_skirting_and_architrave",
+  "subLabel": "Skirting And Architrave",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "ogee-skirting-120mm-4-2m",
+  "name": "Ogee Skirting 120mm 4.2m",
+  "price": 4.5,
+  "stock": 40,
+  "sub": "timber_skirting_and_architrave",
+  "subLabel": "Skirting And Architrave",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "ogee-architrave-70mm-4-2m",
+  "name": "Ogee Architrave 70mm 4.2m",
+  "price": 6.5,
+  "stock": 0,
+  "sub": "timber_skirting_and_architrave",
+  "subLabel": "Skirting And Architrave",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "torus-skirting-95mm-4-2m",
+  "name": "Torus Skirting 95mm 4.2m",
+  "price": 7.5,
+  "stock": 50,
+  "sub": "timber_skirting_and_architrave",
+  "subLabel": "Skirting And Architrave",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "torus-architrave-70mm-4-2m",
+  "name": "Torus Architrave 70mm 4.2m",
+  "price": 9.5,
+  "stock": 0,
+  "sub": "timber_skirting_and_architrave",
+  "subLabel": "Skirting And Architrave",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "square-edge-skirting-95mm",
+  "name": "Square Edge Skirting 95mm",
+  "price": 11.95,
+  "stock": 25,
+  "sub": "timber_skirting_and_architrave",
+  "subLabel": "Skirting And Architrave",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "square-edge-architrave-70mm",
+  "name": "Square Edge Architrave 70mm",
+  "price": 13.95,
+  "stock": 0,
+  "sub": "timber_skirting_and_architrave",
+  "subLabel": "Skirting And Architrave",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "pine-coving-90mm-3-6m",
+  "name": "Pine Coving 90mm 3.6m",
+  "price": 3.5,
+  "stock": 12,
+  "sub": "timber_mouldings_and_hardwood",
+  "subLabel": "Mouldings And Hardwood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "mdf-coving-90mm-3-6m",
+  "name": "MDF Coving 90mm 3.6m",
+  "price": 6.5,
+  "stock": 3,
+  "sub": "timber_mouldings_and_hardwood",
+  "subLabel": "Mouldings And Hardwood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "primed-coving-127mm",
+  "name": "Primed Coving 127mm",
+  "price": 10.5,
+  "stock": 25,
+  "sub": "timber_mouldings_and_hardwood",
+  "subLabel": "Mouldings And Hardwood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "oak-hardwood-board-25-200",
+  "name": "Oak Hardwood Board 25\u00d7200",
+  "price": 13.95,
+  "stock": 50,
+  "sub": "timber_mouldings_and_hardwood",
+  "subLabel": "Mouldings And Hardwood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "ash-hardwood-board",
+  "name": "Ash Hardwood Board",
+  "price": 16.95,
+  "stock": 15,
+  "sub": "timber_mouldings_and_hardwood",
+  "subLabel": "Mouldings And Hardwood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "walnut-hardwood-board",
+  "name": "Walnut Hardwood Board",
+  "price": 19.95,
+  "stock": 20,
+  "sub": "timber_mouldings_and_hardwood",
+  "subLabel": "Mouldings And Hardwood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "timber-dowel-18mm",
+  "name": "Timber Dowel 18mm",
+  "price": 22.95,
+  "stock": 25,
+  "sub": "timber_mouldings_and_hardwood",
+  "subLabel": "Mouldings And Hardwood",
+  "cat": "timber",
+  "catLabel": "Timber & Sheet Materials"
+ },
+ {
+  "slug": "gyproc-wallboard-12-5mm-2400-1200",
+  "name": "Gyproc WallBoard 12.5mm 2400\u00d71200",
+  "price": 7.5,
+  "stock": 15,
+  "sub": "insulation_plasterboard",
+  "subLabel": "Plasterboard",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "gyproc-wallboard-9-5mm-2400-1200",
+  "name": "Gyproc WallBoard 9.5mm 2400\u00d71200",
+  "price": 10.5,
+  "stock": 5,
+  "sub": "insulation_plasterboard",
+  "subLabel": "Plasterboard",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "gyproc-fireline-15mm-2400-1200",
+  "name": "Gyproc FireLine 15mm 2400\u00d71200",
+  "price": 13.95,
+  "stock": 0,
+  "sub": "insulation_plasterboard",
+  "subLabel": "Plasterboard",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "gyproc-moisture-resistant-12-5mm",
+  "name": "Gyproc Moisture Resistant 12.5mm",
+  "price": 15.95,
+  "stock": 50,
+  "sub": "insulation_plasterboard",
+  "subLabel": "Plasterboard",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "gyproc-soundbloc-12-5mm",
+  "name": "Gyproc SoundBloc 12.5mm",
+  "price": 18.95,
+  "stock": 5,
+  "sub": "insulation_plasterboard",
+  "subLabel": "Plasterboard",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "rigidur-h-tile-backer-12-5mm",
+  "name": "Rigidur H Tile Backer 12.5mm",
+  "price": 21.95,
+  "stock": 40,
+  "sub": "insulation_plasterboard",
+  "subLabel": "Plasterboard",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "fermacell-12-5mm-2400-1200",
+  "name": "Fermacell 12.5mm 2400\u00d71200",
+  "price": 24.95,
+  "stock": 20,
+  "sub": "insulation_plasterboard",
+  "subLabel": "Plasterboard",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "kingspan-k5-60mm-2400-1200",
+  "name": "Kingspan K5 60mm 2400\u00d71200",
+  "price": 14.95,
+  "stock": 12,
+  "sub": "insulation_pir_board_insulation",
+  "subLabel": "Pir Board Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "kingspan-k5-100mm-2400-1200",
+  "name": "Kingspan K5 100mm 2400\u00d71200",
+  "price": 20.95,
+  "stock": 8,
+  "sub": "insulation_pir_board_insulation",
+  "subLabel": "Pir Board Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "kingspan-k5-120mm-2400-1200",
+  "name": "Kingspan K5 120mm 2400\u00d71200",
+  "price": 25.95,
+  "stock": 40,
+  "sub": "insulation_pir_board_insulation",
+  "subLabel": "Pir Board Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "quinn-therm-60mm-2400-1200",
+  "name": "Quinn Therm 60mm 2400\u00d71200",
+  "price": 31.95,
+  "stock": 50,
+  "sub": "insulation_pir_board_insulation",
+  "subLabel": "Pir Board Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "quinn-therm-100mm-2400-1200",
+  "name": "Quinn Therm 100mm 2400\u00d71200",
+  "price": 37.95,
+  "stock": 40,
+  "sub": "insulation_pir_board_insulation",
+  "subLabel": "Pir Board Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "recticel-eurowall-60mm",
+  "name": "Recticel Eurowall 60mm",
+  "price": 42.95,
+  "stock": 0,
+  "sub": "insulation_pir_board_insulation",
+  "subLabel": "Pir Board Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "recticel-eurowall-100mm",
+  "name": "Recticel Eurowall 100mm",
+  "price": 48.95,
+  "stock": 15,
+  "sub": "insulation_pir_board_insulation",
+  "subLabel": "Pir Board Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "knauf-earthwool-100mm-roll",
+  "name": "Knauf Earthwool 100mm Roll",
+  "price": 19.95,
+  "stock": 5,
+  "sub": "insulation_attic_and_loft_insulation",
+  "subLabel": "Attic And Loft Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "knauf-earthwool-200mm-roll",
+  "name": "Knauf Earthwool 200mm Roll",
+  "price": 25.95,
+  "stock": 8,
+  "sub": "insulation_attic_and_loft_insulation",
+  "subLabel": "Attic And Loft Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "isover-spacesaver-150mm-roll",
+  "name": "Isover Spacesaver 150mm Roll",
+  "price": 32.95,
+  "stock": 5,
+  "sub": "insulation_attic_and_loft_insulation",
+  "subLabel": "Attic And Loft Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "knauf-rafter-roll-100mm",
+  "name": "Knauf Rafter Roll 100mm",
+  "price": 39.95,
+  "stock": 8,
+  "sub": "insulation_attic_and_loft_insulation",
+  "subLabel": "Attic And Loft Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "rockwool-roll-100mm",
+  "name": "Rockwool Roll 100mm",
+  "price": 45.95,
+  "stock": 50,
+  "sub": "insulation_attic_and_loft_insulation",
+  "subLabel": "Attic And Loft Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "sheep-wool-insulation-roll",
+  "name": "Sheep Wool Insulation Roll",
+  "price": 52.95,
+  "stock": 20,
+  "sub": "insulation_attic_and_loft_insulation",
+  "subLabel": "Attic And Loft Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "gyproc-gyptherm-37-5mm",
+  "name": "Gyproc Gyptherm 37.5mm",
+  "price": 22.95,
+  "stock": 15,
+  "sub": "insulation_foilback_and_cavity_insulation",
+  "subLabel": "Foilback And Cavity Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "gyproc-gyptherm-52-5mm",
+  "name": "Gyproc Gyptherm 52.5mm",
+  "price": 31.95,
+  "stock": 15,
+  "sub": "insulation_foilback_and_cavity_insulation",
+  "subLabel": "Foilback And Cavity Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "foilback-insulation-25mm",
+  "name": "Foilback Insulation 25mm",
+  "price": 39.95,
+  "stock": 3,
+  "sub": "insulation_foilback_and_cavity_insulation",
+  "subLabel": "Foilback And Cavity Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "foilback-insulation-50mm",
+  "name": "Foilback Insulation 50mm",
+  "price": 48.95,
+  "stock": 0,
+  "sub": "insulation_foilback_and_cavity_insulation",
+  "subLabel": "Foilback And Cavity Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "quinn-cavityboard-50mm",
+  "name": "Quinn Cavityboard 50mm",
+  "price": 56.95,
+  "stock": 15,
+  "sub": "insulation_foilback_and_cavity_insulation",
+  "subLabel": "Foilback And Cavity Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "isover-cavity-slab-50mm",
+  "name": "Isover Cavity Slab 50mm",
+  "price": 65.95,
+  "stock": 0,
+  "sub": "insulation_foilback_and_cavity_insulation",
+  "subLabel": "Foilback And Cavity Insulation",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "thistle-browning-25kg",
+  "name": "Thistle Browning 25kg",
+  "price": 8.5,
+  "stock": 8,
+  "sub": "insulation_plaster_and_accessories",
+  "subLabel": "Plaster And Accessories",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "thistle-bonding-25kg",
+  "name": "Thistle Bonding 25kg",
+  "price": 11.95,
+  "stock": 15,
+  "sub": "insulation_plaster_and_accessories",
+  "subLabel": "Plaster And Accessories",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "thistle-multi-finish-25kg",
+  "name": "Thistle Multi-Finish 25kg",
+  "price": 13.95,
+  "stock": 30,
+  "sub": "insulation_plaster_and_accessories",
+  "subLabel": "Plaster And Accessories",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "thistle-hardwall-25kg",
+  "name": "Thistle Hardwall 25kg",
+  "price": 16.95,
+  "stock": 25,
+  "sub": "insulation_plaster_and_accessories",
+  "subLabel": "Plaster And Accessories",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "drywall-screws-3-5-38mm",
+  "name": "Drywall Screws 3.5\u00d738mm",
+  "price": 18.95,
+  "stock": 5,
+  "sub": "insulation_plaster_and_accessories",
+  "subLabel": "Plaster And Accessories",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "drywall-screws-3-5-65mm",
+  "name": "Drywall Screws 3.5\u00d765mm",
+  "price": 21.95,
+  "stock": 0,
+  "sub": "insulation_plaster_and_accessories",
+  "subLabel": "Plaster And Accessories",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "metal-bead-2-4m",
+  "name": "Metal Bead 2.4m",
+  "price": 23.95,
+  "stock": 8,
+  "sub": "insulation_plaster_and_accessories",
+  "subLabel": "Plaster And Accessories",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "corner-bead-2-4m",
+  "name": "Corner Bead 2.4m",
+  "price": 26.95,
+  "stock": 20,
+  "sub": "insulation_plaster_and_accessories",
+  "subLabel": "Plaster And Accessories",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "jointing-tape-50m",
+  "name": "Jointing Tape 50m",
+  "price": 28.95,
+  "stock": 8,
+  "sub": "insulation_plaster_and_accessories",
+  "subLabel": "Plaster And Accessories",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "hardiebacker-6mm-1200-800",
+  "name": "Hardiebacker 6mm 1200\u00d7800",
+  "price": 12.95,
+  "stock": 3,
+  "sub": "insulation_cement_board",
+  "subLabel": "Cement Board",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "hardiebacker-12mm-1200-800",
+  "name": "Hardiebacker 12mm 1200\u00d7800",
+  "price": 19.95,
+  "stock": 3,
+  "sub": "insulation_cement_board",
+  "subLabel": "Cement Board",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "fermacell-powerpanel-12mm",
+  "name": "Fermacell Powerpanel 12mm",
+  "price": 25.95,
+  "stock": 12,
+  "sub": "insulation_cement_board",
+  "subLabel": "Cement Board",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "aquapanel-indoor-12-5mm",
+  "name": "Aquapanel Indoor 12.5mm",
+  "price": 31.95,
+  "stock": 5,
+  "sub": "insulation_cement_board",
+  "subLabel": "Cement Board",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "cement-board-screws",
+  "name": "Cement Board Screws",
+  "price": 38.95,
+  "stock": 40,
+  "sub": "insulation_cement_board",
+  "subLabel": "Cement Board",
+  "cat": "insulation",
+  "catLabel": "Insulation & Plasterboard"
+ },
+ {
+  "slug": "grant-vortex-pro-oil-boiler-21kw",
+  "name": "Grant Vortex Pro Oil Boiler 21kW",
+  "price": 1250.95,
+  "stock": 25,
+  "sub": "plumbing_boilers",
+  "subLabel": "Boilers",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "grant-vortex-pro-oil-boiler-26kw",
+  "name": "Grant Vortex Pro Oil Boiler 26kW",
+  "price": 1570.95,
+  "stock": 8,
+  "sub": "plumbing_boilers",
+  "subLabel": "Boilers",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "grant-spira-condensing-21kw",
+  "name": "Grant Spira Condensing 21kW",
+  "price": 1890.95,
+  "stock": 12,
+  "sub": "plumbing_boilers",
+  "subLabel": "Boilers",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "viessmann-vitodens-100-gas-26kw",
+  "name": "Viessmann Vitodens 100 Gas 26kW",
+  "price": 2210.95,
+  "stock": 8,
+  "sub": "plumbing_boilers",
+  "subLabel": "Boilers",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "worcester-bosch-greenstar-30i",
+  "name": "Worcester Bosch Greenstar 30i",
+  "price": 2530.95,
+  "stock": 3,
+  "sub": "plumbing_boilers",
+  "subLabel": "Boilers",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "baxi-800-combi-33kw",
+  "name": "Baxi 800 Combi 33kW",
+  "price": 2850.95,
+  "stock": 20,
+  "sub": "plumbing_boilers",
+  "subLabel": "Boilers",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "kingspan-albion-ultrasteel-150l",
+  "name": "Kingspan Albion Ultrasteel 150L",
+  "price": 185.95,
+  "stock": 25,
+  "sub": "plumbing_cylinders_and_tanks",
+  "subLabel": "Cylinders And Tanks",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "kingspan-albion-ultrasteel-210l",
+  "name": "Kingspan Albion Ultrasteel 210L",
+  "price": 267.95,
+  "stock": 12,
+  "sub": "plumbing_cylinders_and_tanks",
+  "subLabel": "Cylinders And Tanks",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "kingspan-albion-ultrasteel-300l",
+  "name": "Kingspan Albion Ultrasteel 300L",
+  "price": 350.95,
+  "stock": 5,
+  "sub": "plumbing_cylinders_and_tanks",
+  "subLabel": "Cylinders And Tanks",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "heatrae-sadia-megaflo-125l",
+  "name": "Heatrae Sadia Megaflo 125L",
+  "price": 432.95,
+  "stock": 3,
+  "sub": "plumbing_cylinders_and_tanks",
+  "subLabel": "Cylinders And Tanks",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "heatrae-sadia-megaflo-170l",
+  "name": "Heatrae Sadia Megaflo 170L",
+  "price": 515.95,
+  "stock": 12,
+  "sub": "plumbing_cylinders_and_tanks",
+  "subLabel": "Cylinders And Tanks",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "balmoral-oil-tank-1000l",
+  "name": "Balmoral Oil Tank 1000L",
+  "price": 597.95,
+  "stock": 30,
+  "sub": "plumbing_cylinders_and_tanks",
+  "subLabel": "Cylinders And Tanks",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "balmoral-oil-tank-1500l",
+  "name": "Balmoral Oil Tank 1500L",
+  "price": 680.95,
+  "stock": 12,
+  "sub": "plumbing_cylinders_and_tanks",
+  "subLabel": "Cylinders And Tanks",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "type-11-radiator-600-600",
+  "name": "Type 11 Radiator 600\u00d7600",
+  "price": 42.95,
+  "stock": 12,
+  "sub": "plumbing_radiators",
+  "subLabel": "Radiators",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "type-21-radiator-600-900",
+  "name": "Type 21 Radiator 600\u00d7900",
+  "price": 61.95,
+  "stock": 15,
+  "sub": "plumbing_radiators",
+  "subLabel": "Radiators",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "type-22-radiator-600-1200",
+  "name": "Type 22 Radiator 600\u00d71200",
+  "price": 80.95,
+  "stock": 15,
+  "sub": "plumbing_radiators",
+  "subLabel": "Radiators",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "type-22-radiator-600-1400",
+  "name": "Type 22 Radiator 600\u00d71400",
+  "price": 99.95,
+  "stock": 40,
+  "sub": "plumbing_radiators",
+  "subLabel": "Radiators",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "type-22-radiator-600-1800",
+  "name": "Type 22 Radiator 600\u00d71800",
+  "price": 118.95,
+  "stock": 40,
+  "sub": "plumbing_radiators",
+  "subLabel": "Radiators",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "towel-rail-chrome-600-800",
+  "name": "Towel Rail Chrome 600\u00d7800",
+  "price": 137.95,
+  "stock": 3,
+  "sub": "plumbing_radiators",
+  "subLabel": "Radiators",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "towel-rail-anthracite-600-800",
+  "name": "Towel Rail Anthracite 600\u00d7800",
+  "price": 157.95,
+  "stock": 0,
+  "sub": "plumbing_radiators",
+  "subLabel": "Radiators",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "trv-valve-set",
+  "name": "TRV Valve Set",
+  "price": 176.95,
+  "stock": 8,
+  "sub": "plumbing_radiators",
+  "subLabel": "Radiators",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "radiator-brackets",
+  "name": "Radiator Brackets",
+  "price": 195.95,
+  "stock": 15,
+  "sub": "plumbing_radiators",
+  "subLabel": "Radiators",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "emmeti-ufh-manifold-2-port",
+  "name": "Emmeti UFH Manifold 2-Port",
+  "price": 65.95,
+  "stock": 0,
+  "sub": "plumbing_underfloor_heating",
+  "subLabel": "Underfloor Heating",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "emmeti-ufh-manifold-4-port",
+  "name": "Emmeti UFH Manifold 4-Port",
+  "price": 101.95,
+  "stock": 20,
+  "sub": "plumbing_underfloor_heating",
+  "subLabel": "Underfloor Heating",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "emmeti-ufh-manifold-6-port",
+  "name": "Emmeti UFH Manifold 6-Port",
+  "price": 138.95,
+  "stock": 20,
+  "sub": "plumbing_underfloor_heating",
+  "subLabel": "Underfloor Heating",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "16mm-ufh-pipe-100m",
+  "name": "16mm UFH Pipe 100m",
+  "price": 174.95,
+  "stock": 40,
+  "sub": "plumbing_underfloor_heating",
+  "subLabel": "Underfloor Heating",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "16mm-ufh-pipe-200m",
+  "name": "16mm UFH Pipe 200m",
+  "price": 210.95,
+  "stock": 0,
+  "sub": "plumbing_underfloor_heating",
+  "subLabel": "Underfloor Heating",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "ufh-insulation-board-50mm",
+  "name": "UFH Insulation Board 50mm",
+  "price": 247.95,
+  "stock": 12,
+  "sub": "plumbing_underfloor_heating",
+  "subLabel": "Underfloor Heating",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "ufh-pipe-staples-1000pk",
+  "name": "UFH Pipe Staples 1000pk",
+  "price": 283.95,
+  "stock": 25,
+  "sub": "plumbing_underfloor_heating",
+  "subLabel": "Underfloor Heating",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "wiring-centre",
+  "name": "Wiring Centre",
+  "price": 320.95,
+  "stock": 0,
+  "sub": "plumbing_underfloor_heating",
+  "subLabel": "Underfloor Heating",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "15mm-copper-tube-3m",
+  "name": "15mm Copper Tube 3m",
+  "price": 2.0,
+  "stock": 40,
+  "sub": "plumbing_copper_tubes_and_fittings",
+  "subLabel": "Copper Tubes And Fittings",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "22mm-copper-tube-3m",
+  "name": "22mm Copper Tube 3m",
+  "price": 4.5,
+  "stock": 12,
+  "sub": "plumbing_copper_tubes_and_fittings",
+  "subLabel": "Copper Tubes And Fittings",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "28mm-copper-tube-3m",
+  "name": "28mm Copper Tube 3m",
+  "price": 6.5,
+  "stock": 5,
+  "sub": "plumbing_copper_tubes_and_fittings",
+  "subLabel": "Copper Tubes And Fittings",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "15mm-elbow-solder",
+  "name": "15mm Elbow Solder",
+  "price": 8.5,
+  "stock": 20,
+  "sub": "plumbing_copper_tubes_and_fittings",
+  "subLabel": "Copper Tubes And Fittings",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "22mm-elbow-solder",
+  "name": "22mm Elbow Solder",
+  "price": 10.5,
+  "stock": 5,
+  "sub": "plumbing_copper_tubes_and_fittings",
+  "subLabel": "Copper Tubes And Fittings",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "15mm-tee-solder",
+  "name": "15mm Tee Solder",
+  "price": 12.95,
+  "stock": 15,
+  "sub": "plumbing_copper_tubes_and_fittings",
+  "subLabel": "Copper Tubes And Fittings",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "22mm-straight-coupling",
+  "name": "22mm Straight Coupling",
+  "price": 14.95,
+  "stock": 25,
+  "sub": "plumbing_copper_tubes_and_fittings",
+  "subLabel": "Copper Tubes And Fittings",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "15mm-end-feed-valve",
+  "name": "15mm End Feed Valve",
+  "price": 16.95,
+  "stock": 15,
+  "sub": "plumbing_copper_tubes_and_fittings",
+  "subLabel": "Copper Tubes And Fittings",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "flux-paste-400g",
+  "name": "Flux Paste 400g",
+  "price": 18.95,
+  "stock": 12,
+  "sub": "plumbing_copper_tubes_and_fittings",
+  "subLabel": "Copper Tubes And Fittings",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "15mm-pex-pipe-25m",
+  "name": "15mm PEX Pipe 25m",
+  "price": 2.5,
+  "stock": 25,
+  "sub": "plumbing_pex_and_multilayer_pipe",
+  "subLabel": "Pex And Multilayer Pipe",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "22mm-pex-pipe-25m",
+  "name": "22mm PEX Pipe 25m",
+  "price": 5.5,
+  "stock": 8,
+  "sub": "plumbing_pex_and_multilayer_pipe",
+  "subLabel": "Pex And Multilayer Pipe",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "15mm-speedfit-elbow",
+  "name": "15mm Speedfit Elbow",
+  "price": 9.5,
+  "stock": 15,
+  "sub": "plumbing_pex_and_multilayer_pipe",
+  "subLabel": "Pex And Multilayer Pipe",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "22mm-speedfit-elbow",
+  "name": "22mm Speedfit Elbow",
+  "price": 12.95,
+  "stock": 3,
+  "sub": "plumbing_pex_and_multilayer_pipe",
+  "subLabel": "Pex And Multilayer Pipe",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "15mm-speedfit-tee",
+  "name": "15mm Speedfit Tee",
+  "price": 15.95,
+  "stock": 12,
+  "sub": "plumbing_pex_and_multilayer_pipe",
+  "subLabel": "Pex And Multilayer Pipe",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "22mm-speedfit-coupling",
+  "name": "22mm Speedfit Coupling",
+  "price": 18.95,
+  "stock": 50,
+  "sub": "plumbing_pex_and_multilayer_pipe",
+  "subLabel": "Pex And Multilayer Pipe",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "speedfit-stop-end-15mm",
+  "name": "Speedfit Stop End 15mm",
+  "price": 21.95,
+  "stock": 20,
+  "sub": "plumbing_pex_and_multilayer_pipe",
+  "subLabel": "Pex And Multilayer Pipe",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "push-fit-demount-tool",
+  "name": "Push-Fit Demount Tool",
+  "price": 24.95,
+  "stock": 30,
+  "sub": "plumbing_pex_and_multilayer_pipe",
+  "subLabel": "Pex And Multilayer Pipe",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "mitsubishi-ecodan-8-5kw-ashp",
+  "name": "Mitsubishi Ecodan 8.5kW ASHP",
+  "price": 2850.95,
+  "stock": 40,
+  "sub": "plumbing_heat_pumps_and_renewables",
+  "subLabel": "Heat Pumps And Renewables",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "daikin-altherma-8kw-ashp",
+  "name": "Daikin Altherma 8kW ASHP",
+  "price": 3458.95,
+  "stock": 8,
+  "sub": "plumbing_heat_pumps_and_renewables",
+  "subLabel": "Heat Pumps And Renewables",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "nibe-f2040-12kw-ashp",
+  "name": "Nibe F2040 12kW ASHP",
+  "price": 4066.95,
+  "stock": 15,
+  "sub": "plumbing_heat_pumps_and_renewables",
+  "subLabel": "Heat Pumps And Renewables",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "stiebel-eltron-wpl15-ashp",
+  "name": "Stiebel Eltron WPL15 ASHP",
+  "price": 4675.95,
+  "stock": 50,
+  "sub": "plumbing_heat_pumps_and_renewables",
+  "subLabel": "Heat Pumps And Renewables",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "solar-thermal-panel-flat",
+  "name": "Solar Thermal Panel Flat",
+  "price": 5283.95,
+  "stock": 12,
+  "sub": "plumbing_heat_pumps_and_renewables",
+  "subLabel": "Heat Pumps And Renewables",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "solar-thermal-evacuated-tube",
+  "name": "Solar Thermal Evacuated Tube",
+  "price": 5891.95,
+  "stock": 12,
+  "sub": "plumbing_heat_pumps_and_renewables",
+  "subLabel": "Heat Pumps And Renewables",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "mvhr-unit-whole-house",
+  "name": "MVHR Unit Whole House",
+  "price": 6500.95,
+  "stock": 8,
+  "sub": "plumbing_heat_pumps_and_renewables",
+  "subLabel": "Heat Pumps And Renewables",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "honeywell-evohome-smart-trv",
+  "name": "Honeywell Evohome Smart TRV",
+  "price": 18.95,
+  "stock": 0,
+  "sub": "plumbing_heating_controls",
+  "subLabel": "Heating Controls",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "hive-active-heating",
+  "name": "Hive Active Heating",
+  "price": 28.95,
+  "stock": 30,
+  "sub": "plumbing_heating_controls",
+  "subLabel": "Heating Controls",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "nest-thermostat-3rd-gen",
+  "name": "Nest Thermostat 3rd Gen",
+  "price": 37.95,
+  "stock": 5,
+  "sub": "plumbing_heating_controls",
+  "subLabel": "Heating Controls",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "drayton-wiser-smart-trv",
+  "name": "Drayton Wiser Smart TRV",
+  "price": 47.95,
+  "stock": 50,
+  "sub": "plumbing_heating_controls",
+  "subLabel": "Heating Controls",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "7-day-programmer",
+  "name": "7-Day Programmer",
+  "price": 56.95,
+  "stock": 25,
+  "sub": "plumbing_heating_controls",
+  "subLabel": "Heating Controls",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "room-thermostat-digital",
+  "name": "Room Thermostat Digital",
+  "price": 66.95,
+  "stock": 12,
+  "sub": "plumbing_heating_controls",
+  "subLabel": "Heating Controls",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "time-clock-immersion",
+  "name": "Time Clock Immersion",
+  "price": 75.95,
+  "stock": 3,
+  "sub": "plumbing_heating_controls",
+  "subLabel": "Heating Controls",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "frost-stat",
+  "name": "Frost Stat",
+  "price": 85.95,
+  "stock": 5,
+  "sub": "plumbing_heating_controls",
+  "subLabel": "Heating Controls",
+  "cat": "plumbing",
+  "catLabel": "Plumbing & Heating"
+ },
+ {
+  "slug": "close-coupled-wc-suite-white",
+  "name": "Close-Coupled WC Suite White",
+  "price": 45.95,
+  "stock": 12,
+  "sub": "bathroom_sanitaryware",
+  "subLabel": "Sanitaryware",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "wall-hung-wc-pan",
+  "name": "Wall-Hung WC Pan",
+  "price": 75.95,
+  "stock": 40,
+  "sub": "bathroom_sanitaryware",
+  "subLabel": "Sanitaryware",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "back-to-wall-wc",
+  "name": "Back-to-Wall WC",
+  "price": 105.95,
+  "stock": 40,
+  "sub": "bathroom_sanitaryware",
+  "subLabel": "Sanitaryware",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "rimless-wc-pan",
+  "name": "Rimless WC Pan",
+  "price": 135.95,
+  "stock": 5,
+  "sub": "bathroom_sanitaryware",
+  "subLabel": "Sanitaryware",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "wc-seat-soft-close",
+  "name": "WC Seat Soft-Close",
+  "price": 165.95,
+  "stock": 30,
+  "sub": "bathroom_sanitaryware",
+  "subLabel": "Sanitaryware",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "wc-seat-quick-release",
+  "name": "WC Seat Quick-Release",
+  "price": 195.95,
+  "stock": 40,
+  "sub": "bathroom_sanitaryware",
+  "subLabel": "Sanitaryware",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "concealed-cistern",
+  "name": "Concealed Cistern",
+  "price": 225.95,
+  "stock": 30,
+  "sub": "bathroom_sanitaryware",
+  "subLabel": "Sanitaryware",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "wall-hung-frame-geberit",
+  "name": "Wall-Hung Frame Geberit",
+  "price": 255.95,
+  "stock": 40,
+  "sub": "bathroom_sanitaryware",
+  "subLabel": "Sanitaryware",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "urinal-bowl",
+  "name": "Urinal Bowl",
+  "price": 285.95,
+  "stock": 40,
+  "sub": "bathroom_sanitaryware",
+  "subLabel": "Sanitaryware",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "acrylic-single-ended-bath-1700",
+  "name": "Acrylic Single-Ended Bath 1700",
+  "price": 185.95,
+  "stock": 8,
+  "sub": "bathroom_baths",
+  "subLabel": "Baths",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "acrylic-single-ended-bath-1500",
+  "name": "Acrylic Single-Ended Bath 1500",
+  "price": 251.95,
+  "stock": 30,
+  "sub": "bathroom_baths",
+  "subLabel": "Baths",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "straight-bath-steel-1700",
+  "name": "Straight Bath Steel 1700",
+  "price": 318.95,
+  "stock": 12,
+  "sub": "bathroom_baths",
+  "subLabel": "Baths",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "p-shape-shower-bath-1700",
+  "name": "P-Shape Shower Bath 1700",
+  "price": 384.95,
+  "stock": 15,
+  "sub": "bathroom_baths",
+  "subLabel": "Baths",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "l-shape-shower-bath-1700",
+  "name": "L-Shape Shower Bath 1700",
+  "price": 450.95,
+  "stock": 40,
+  "sub": "bathroom_baths",
+  "subLabel": "Baths",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "freestanding-bath-1600",
+  "name": "Freestanding Bath 1600",
+  "price": 517.95,
+  "stock": 12,
+  "sub": "bathroom_baths",
+  "subLabel": "Baths",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "bath-panel-white-1700",
+  "name": "Bath Panel White 1700",
+  "price": 583.95,
+  "stock": 5,
+  "sub": "bathroom_baths",
+  "subLabel": "Baths",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "bath-panel-side-750",
+  "name": "Bath Panel Side 750",
+  "price": 650.95,
+  "stock": 12,
+  "sub": "bathroom_baths",
+  "subLabel": "Baths",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "aqualisa-quartz-electric-9-5kw",
+  "name": "Aqualisa Quartz Electric 9.5kW",
+  "price": 125.95,
+  "stock": 20,
+  "sub": "bathroom_showers_and_enclosures",
+  "subLabel": "Showers And Enclosures",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "triton-t80-10-5kw",
+  "name": "Triton T80 10.5kW",
+  "price": 169.95,
+  "stock": 5,
+  "sub": "bathroom_showers_and_enclosures",
+  "subLabel": "Showers And Enclosures",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "mira-sport-max-10-8kw",
+  "name": "Mira Sport Max 10.8kW",
+  "price": 214.95,
+  "stock": 12,
+  "sub": "bathroom_showers_and_enclosures",
+  "subLabel": "Showers And Enclosures",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "grohe-precision-shower-system",
+  "name": "Grohe Precision Shower System",
+  "price": 258.95,
+  "stock": 8,
+  "sub": "bathroom_showers_and_enclosures",
+  "subLabel": "Showers And Enclosures",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "merlyn-8-series-pivot-door-900",
+  "name": "Merlyn 8 Series Pivot Door 900",
+  "price": 302.95,
+  "stock": 5,
+  "sub": "bathroom_showers_and_enclosures",
+  "subLabel": "Showers And Enclosures",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "merlyn-8-series-offset-quad",
+  "name": "Merlyn 8 Series Offset Quad",
+  "price": 347.95,
+  "stock": 20,
+  "sub": "bathroom_showers_and_enclosures",
+  "subLabel": "Showers And Enclosures",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "bi-fold-shower-door-800",
+  "name": "Bi-Fold Shower Door 800",
+  "price": 391.95,
+  "stock": 25,
+  "sub": "bathroom_showers_and_enclosures",
+  "subLabel": "Showers And Enclosures",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "shower-tray-low-profile-900-900",
+  "name": "Shower Tray Low Profile 900\u00d7900",
+  "price": 435.95,
+  "stock": 0,
+  "sub": "bathroom_showers_and_enclosures",
+  "subLabel": "Showers And Enclosures",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "shower-tray-1200-800",
+  "name": "Shower Tray 1200\u00d7800",
+  "price": 480.95,
+  "stock": 25,
+  "sub": "bathroom_showers_and_enclosures",
+  "subLabel": "Showers And Enclosures",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "crosswater-mpro-basin-mono",
+  "name": "Crosswater MPRO Basin Mono",
+  "price": 38.95,
+  "stock": 50,
+  "sub": "bathroom_taps",
+  "subLabel": "Taps",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "hansgrohe-logis-basin-mixer",
+  "name": "Hansgrohe Logis Basin Mixer",
+  "price": 59.95,
+  "stock": 3,
+  "sub": "bathroom_taps",
+  "subLabel": "Taps",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "grohe-eurostyle-basin-mixer",
+  "name": "Grohe Eurostyle Basin Mixer",
+  "price": 80.95,
+  "stock": 50,
+  "sub": "bathroom_taps",
+  "subLabel": "Taps",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "monobloc-bath-filler-chrome",
+  "name": "Monobloc Bath Filler Chrome",
+  "price": 101.95,
+  "stock": 3,
+  "sub": "bathroom_taps",
+  "subLabel": "Taps",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "freestanding-bath-filler",
+  "name": "Freestanding Bath Filler",
+  "price": 122.95,
+  "stock": 15,
+  "sub": "bathroom_taps",
+  "subLabel": "Taps",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "crosswater-deck-mixer",
+  "name": "Crosswater Deck Mixer",
+  "price": 143.95,
+  "stock": 25,
+  "sub": "bathroom_taps",
+  "subLabel": "Taps",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "kitchen-mono-mixer",
+  "name": "Kitchen Mono Mixer",
+  "price": 164.95,
+  "stock": 40,
+  "sub": "bathroom_taps",
+  "subLabel": "Taps",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "bathroom-pillar-taps",
+  "name": "Bathroom Pillar Taps",
+  "price": 185.95,
+  "stock": 12,
+  "sub": "bathroom_taps",
+  "subLabel": "Taps",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "vanity-unit-600mm-grey",
+  "name": "Vanity Unit 600mm Grey",
+  "price": 95.95,
+  "stock": 15,
+  "sub": "bathroom_bathroom_furniture",
+  "subLabel": "Furniture",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "vanity-unit-600mm-white",
+  "name": "Vanity Unit 600mm White",
+  "price": 149.95,
+  "stock": 3,
+  "sub": "bathroom_bathroom_furniture",
+  "subLabel": "Furniture",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "vanity-unit-800mm-wall-hung",
+  "name": "Vanity Unit 800mm Wall-Hung",
+  "price": 203.95,
+  "stock": 25,
+  "sub": "bathroom_bathroom_furniture",
+  "subLabel": "Furniture",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "mirror-cabinet-600mm",
+  "name": "Mirror Cabinet 600mm",
+  "price": 257.95,
+  "stock": 30,
+  "sub": "bathroom_bathroom_furniture",
+  "subLabel": "Furniture",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "mirror-cabinet-800mm",
+  "name": "Mirror Cabinet 800mm",
+  "price": 311.95,
+  "stock": 50,
+  "sub": "bathroom_bathroom_furniture",
+  "subLabel": "Furniture",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "tall-boy-unit-350mm",
+  "name": "Tall Boy Unit 350mm",
+  "price": 366.95,
+  "stock": 25,
+  "sub": "bathroom_bathroom_furniture",
+  "subLabel": "Furniture",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "wc-unit-back-to-wall",
+  "name": "WC Unit Back-to-Wall",
+  "price": 420.95,
+  "stock": 3,
+  "sub": "bathroom_bathroom_furniture",
+  "subLabel": "Furniture",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "pvc-wall-panel-white-gloss-2400mm",
+  "name": "PVC Wall Panel White Gloss 2400mm",
+  "price": 12.95,
+  "stock": 0,
+  "sub": "bathroom_wall_panels_and_tiling",
+  "subLabel": "Wall Panels And Tiling",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "pvc-wall-panel-marble-effect",
+  "name": "PVC Wall Panel Marble Effect",
+  "price": 16.95,
+  "stock": 30,
+  "sub": "bathroom_wall_panels_and_tiling",
+  "subLabel": "Wall Panels And Tiling",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "aquabord-tile-effect-2440mm",
+  "name": "Aquabord Tile Effect 2440mm",
+  "price": 20.95,
+  "stock": 15,
+  "sub": "bathroom_wall_panels_and_tiling",
+  "subLabel": "Wall Panels And Tiling",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "tile-trim-chrome-10mm",
+  "name": "Tile Trim Chrome 10mm",
+  "price": 23.95,
+  "stock": 12,
+  "sub": "bathroom_wall_panels_and_tiling",
+  "subLabel": "Wall Panels And Tiling",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "tile-trim-gold-10mm",
+  "name": "Tile Trim Gold 10mm",
+  "price": 27.95,
+  "stock": 20,
+  "sub": "bathroom_wall_panels_and_tiling",
+  "subLabel": "Wall Panels And Tiling",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "grout-epoxy-white",
+  "name": "Grout Epoxy White",
+  "price": 31.95,
+  "stock": 25,
+  "sub": "bathroom_wall_panels_and_tiling",
+  "subLabel": "Wall Panels And Tiling",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "grout-standard-grey",
+  "name": "Grout Standard Grey",
+  "price": 34.95,
+  "stock": 25,
+  "sub": "bathroom_wall_panels_and_tiling",
+  "subLabel": "Wall Panels And Tiling",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "tile-adhesive-grey-rapid",
+  "name": "Tile Adhesive Grey Rapid",
+  "price": 38.95,
+  "stock": 5,
+  "sub": "bathroom_wall_panels_and_tiling",
+  "subLabel": "Wall Panels And Tiling",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "tile-spacers-3mm-1000pk",
+  "name": "Tile Spacers 3mm 1000pk",
+  "price": 42.95,
+  "stock": 40,
+  "sub": "bathroom_wall_panels_and_tiling",
+  "subLabel": "Wall Panels And Tiling",
+  "cat": "bathroom",
+  "catLabel": "Bathroom Showroom"
+ },
+ {
+  "slug": "masonite-textured-smooth-2040-726",
+  "name": "Masonite Textured Smooth 2040\u00d7726",
+  "price": 65.95,
+  "stock": 0,
+  "sub": "doors_internal_doors",
+  "subLabel": "Internal Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "masonite-textured-smooth-2040-826",
+  "name": "Masonite Textured Smooth 2040\u00d7826",
+  "price": 96.95,
+  "stock": 12,
+  "sub": "doors_internal_doors",
+  "subLabel": "Internal Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "glazed-internal-door-2040-826",
+  "name": "Glazed Internal Door 2040\u00d7826",
+  "price": 128.95,
+  "stock": 3,
+  "sub": "doors_internal_doors",
+  "subLabel": "Internal Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "fire-door-fd30-2040-826",
+  "name": "Fire Door FD30 2040\u00d7826",
+  "price": 159.95,
+  "stock": 12,
+  "sub": "doors_internal_doors",
+  "subLabel": "Internal Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "fire-door-fd60-2040-826",
+  "name": "Fire Door FD60 2040\u00d7826",
+  "price": 190.95,
+  "stock": 3,
+  "sub": "doors_internal_doors",
+  "subLabel": "Internal Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "white-primed-panel-door-2040-826",
+  "name": "White Primed Panel Door 2040\u00d7826",
+  "price": 222.95,
+  "stock": 12,
+  "sub": "doors_internal_doors",
+  "subLabel": "Internal Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "oak-veneer-door-2040-826",
+  "name": "Oak Veneer Door 2040\u00d7826",
+  "price": 253.95,
+  "stock": 5,
+  "sub": "doors_internal_doors",
+  "subLabel": "Internal Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "folding-door-white",
+  "name": "Folding Door White",
+  "price": 285.95,
+  "stock": 12,
+  "sub": "doors_internal_doors",
+  "subLabel": "Internal Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "composite-front-door-840-2100",
+  "name": "Composite Front Door 840\u00d72100",
+  "price": 195.95,
+  "stock": 15,
+  "sub": "doors_external_doors",
+  "subLabel": "External Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "upvc-back-door-840-2100",
+  "name": "uPVC Back Door 840\u00d72100",
+  "price": 286.95,
+  "stock": 8,
+  "sub": "doors_external_doors",
+  "subLabel": "External Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "stable-door-upvc-white",
+  "name": "Stable Door uPVC White",
+  "price": 377.95,
+  "stock": 5,
+  "sub": "doors_external_doors",
+  "subLabel": "External Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "composite-door-with-side-panel",
+  "name": "Composite Door with Side Panel",
+  "price": 468.95,
+  "stock": 8,
+  "sub": "doors_external_doors",
+  "subLabel": "External Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "french-doors-upvc-1500-2100",
+  "name": "French Doors uPVC 1500\u00d72100",
+  "price": 559.95,
+  "stock": 5,
+  "sub": "doors_external_doors",
+  "subLabel": "External Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "bi-fold-doors-upvc-2400",
+  "name": "Bi-Fold Doors uPVC 2400",
+  "price": 650.95,
+  "stock": 15,
+  "sub": "doors_external_doors",
+  "subLabel": "External Doors",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "kronospan-8mm-ac4-honey-oak",
+  "name": "Kronospan 8mm AC4 Honey Oak",
+  "price": 5.5,
+  "stock": 25,
+  "sub": "doors_laminate_flooring",
+  "subLabel": "Laminate Flooring",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "kronospan-8mm-ac4-white-oak",
+  "name": "Kronospan 8mm AC4 White Oak",
+  "price": 8.5,
+  "stock": 12,
+  "sub": "doors_laminate_flooring",
+  "subLabel": "Laminate Flooring",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "quick-step-impressive-8mm",
+  "name": "Quick-Step Impressive 8mm",
+  "price": 11.95,
+  "stock": 0,
+  "sub": "doors_laminate_flooring",
+  "subLabel": "Laminate Flooring",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "quick-step-eligna-8mm",
+  "name": "Quick-Step Eligna 8mm",
+  "price": 15.95,
+  "stock": 12,
+  "sub": "doors_laminate_flooring",
+  "subLabel": "Laminate Flooring",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "balterio-tradition-8mm",
+  "name": "Balterio Tradition 8mm",
+  "price": 18.95,
+  "stock": 0,
+  "sub": "doors_laminate_flooring",
+  "subLabel": "Laminate Flooring",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "egger-classic-7mm",
+  "name": "Egger Classic 7mm",
+  "price": 21.95,
+  "stock": 50,
+  "sub": "doors_laminate_flooring",
+  "subLabel": "Laminate Flooring",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "12mm-ac5-commercial-lam",
+  "name": "12mm AC5 Commercial Lam",
+  "price": 25.95,
+  "stock": 50,
+  "sub": "doors_laminate_flooring",
+  "subLabel": "Laminate Flooring",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "standard-underlay-3mm-roll",
+  "name": "Standard Underlay 3mm Roll",
+  "price": 5.5,
+  "stock": 20,
+  "sub": "doors_flooring_accessories",
+  "subLabel": "Flooring Accessories",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "acoustic-underlay-5mm-roll",
+  "name": "Acoustic Underlay 5mm Roll",
+  "price": 8.5,
+  "stock": 20,
+  "sub": "doors_flooring_accessories",
+  "subLabel": "Flooring Accessories",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "moisture-barrier-underlay",
+  "name": "Moisture Barrier Underlay",
+  "price": 10.95,
+  "stock": 0,
+  "sub": "doors_flooring_accessories",
+  "subLabel": "Flooring Accessories",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "beading-t-bar-silver-0-9m",
+  "name": "Beading T-Bar Silver 0.9m",
+  "price": 13.95,
+  "stock": 3,
+  "sub": "doors_flooring_accessories",
+  "subLabel": "Flooring Accessories",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "beading-ramp-silver-0-9m",
+  "name": "Beading Ramp Silver 0.9m",
+  "price": 16.95,
+  "stock": 30,
+  "sub": "doors_flooring_accessories",
+  "subLabel": "Flooring Accessories",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "expansion-gap-kit",
+  "name": "Expansion Gap Kit",
+  "price": 19.95,
+  "stock": 0,
+  "sub": "doors_flooring_accessories",
+  "subLabel": "Flooring Accessories",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "flooring-pull-bar",
+  "name": "Flooring Pull Bar",
+  "price": 22.95,
+  "stock": 30,
+  "sub": "doors_flooring_accessories",
+  "subLabel": "Flooring Accessories",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "tapping-block",
+  "name": "Tapping Block",
+  "price": 25.95,
+  "stock": 25,
+  "sub": "doors_flooring_accessories",
+  "subLabel": "Flooring Accessories",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "melamine-shelf-white-1800-300",
+  "name": "Melamine Shelf White 1800\u00d7300",
+  "price": 5.5,
+  "stock": 40,
+  "sub": "doors_shelving_and_storage",
+  "subLabel": "Shelving And Storage",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "melamine-shelf-white-2400-300",
+  "name": "Melamine Shelf White 2400\u00d7300",
+  "price": 8.5,
+  "stock": 15,
+  "sub": "doors_shelving_and_storage",
+  "subLabel": "Shelving And Storage",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "adjustable-shelf-bracket-300mm",
+  "name": "Adjustable Shelf Bracket 300mm",
+  "price": 11.95,
+  "stock": 40,
+  "sub": "doors_shelving_and_storage",
+  "subLabel": "Shelving And Storage",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "heavy-duty-shelf-bracket-450mm",
+  "name": "Heavy Duty Shelf Bracket 450mm",
+  "price": 15.95,
+  "stock": 30,
+  "sub": "doors_shelving_and_storage",
+  "subLabel": "Shelving And Storage",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "floating-shelf-kit-1200mm",
+  "name": "Floating Shelf Kit 1200mm",
+  "price": 18.95,
+  "stock": 50,
+  "sub": "doors_shelving_and_storage",
+  "subLabel": "Shelving And Storage",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "wire-shelving-unit-5-tier",
+  "name": "Wire Shelving Unit 5 Tier",
+  "price": 21.95,
+  "stock": 12,
+  "sub": "doors_shelving_and_storage",
+  "subLabel": "Shelving And Storage",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "corner-shelf-unit",
+  "name": "Corner Shelf Unit",
+  "price": 25.95,
+  "stock": 5,
+  "sub": "doors_shelving_and_storage",
+  "subLabel": "Shelving And Storage",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "lever-handle-set-satin",
+  "name": "Lever Handle Set Satin",
+  "price": 5.5,
+  "stock": 30,
+  "sub": "doors_brassware_and_ironmongery",
+  "subLabel": "Brassware And Ironmongery",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "lever-handle-set-chrome",
+  "name": "Lever Handle Set Chrome",
+  "price": 7.5,
+  "stock": 30,
+  "sub": "doors_brassware_and_ironmongery",
+  "subLabel": "Brassware And Ironmongery",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "knob-set-polished-chrome",
+  "name": "Knob Set Polished Chrome",
+  "price": 10.5,
+  "stock": 25,
+  "sub": "doors_brassware_and_ironmongery",
+  "subLabel": "Brassware And Ironmongery",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "mortice-lock-3-lever",
+  "name": "Mortice Lock 3-Lever",
+  "price": 12.95,
+  "stock": 30,
+  "sub": "doors_brassware_and_ironmongery",
+  "subLabel": "Brassware And Ironmongery",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "mortice-lock-5-lever",
+  "name": "Mortice Lock 5-Lever",
+  "price": 15.95,
+  "stock": 8,
+  "sub": "doors_brassware_and_ironmongery",
+  "subLabel": "Brassware And Ironmongery",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "euro-cylinder-35-35",
+  "name": "Euro Cylinder 35/35",
+  "price": 17.95,
+  "stock": 20,
+  "sub": "doors_brassware_and_ironmongery",
+  "subLabel": "Brassware And Ironmongery",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "thumb-turn-euro-cylinder",
+  "name": "Thumb Turn Euro Cylinder",
+  "price": 20.95,
+  "stock": 20,
+  "sub": "doors_brassware_and_ironmongery",
+  "subLabel": "Brassware And Ironmongery",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "door-closer-overhead",
+  "name": "Door Closer Overhead",
+  "price": 22.95,
+  "stock": 50,
+  "sub": "doors_brassware_and_ironmongery",
+  "subLabel": "Brassware And Ironmongery",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "hinge-butt-100mm-s-s-pack",
+  "name": "Hinge Butt 100mm S/S Pack",
+  "price": 25.95,
+  "stock": 15,
+  "sub": "doors_brassware_and_ironmongery",
+  "subLabel": "Brassware And Ironmongery",
+  "cat": "doors",
+  "catLabel": "Doors & Floors"
+ },
+ {
+  "slug": "fleetwood-perfectly-white-5l",
+  "name": "Fleetwood Perfectly White 5L",
+  "price": 5.5,
+  "stock": 40,
+  "sub": "paint_fleetwood_interior_paints",
+  "subLabel": "Fleetwood Interior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-perfectly-white-10l",
+  "name": "Fleetwood Perfectly White 10L",
+  "price": 7.5,
+  "stock": 5,
+  "sub": "paint_fleetwood_interior_paints",
+  "subLabel": "Fleetwood Interior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-matt-emulsion-2-5l",
+  "name": "Fleetwood Matt Emulsion 2.5L",
+  "price": 10.5,
+  "stock": 25,
+  "sub": "paint_fleetwood_interior_paints",
+  "subLabel": "Fleetwood Interior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-matt-emulsion-5l",
+  "name": "Fleetwood Matt Emulsion 5L",
+  "price": 12.95,
+  "stock": 12,
+  "sub": "paint_fleetwood_interior_paints",
+  "subLabel": "Fleetwood Interior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-silk-emulsion-5l",
+  "name": "Fleetwood Silk Emulsion 5L",
+  "price": 15.95,
+  "stock": 30,
+  "sub": "paint_fleetwood_interior_paints",
+  "subLabel": "Fleetwood Interior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-satinwood-1l",
+  "name": "Fleetwood Satinwood 1L",
+  "price": 17.95,
+  "stock": 3,
+  "sub": "paint_fleetwood_interior_paints",
+  "subLabel": "Fleetwood Interior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-satinwood-2-5l",
+  "name": "Fleetwood Satinwood 2.5L",
+  "price": 20.95,
+  "stock": 0,
+  "sub": "paint_fleetwood_interior_paints",
+  "subLabel": "Fleetwood Interior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-undercoat-1l",
+  "name": "Fleetwood Undercoat 1L",
+  "price": 22.95,
+  "stock": 12,
+  "sub": "paint_fleetwood_interior_paints",
+  "subLabel": "Fleetwood Interior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-gloss-1l",
+  "name": "Fleetwood Gloss 1L",
+  "price": 25.95,
+  "stock": 50,
+  "sub": "paint_fleetwood_interior_paints",
+  "subLabel": "Fleetwood Interior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-weathercoat-5l",
+  "name": "Fleetwood Weathercoat 5L",
+  "price": 5.5,
+  "stock": 40,
+  "sub": "paint_fleetwood_exterior_paints",
+  "subLabel": "Fleetwood Exterior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-weathercoat-10l",
+  "name": "Fleetwood Weathercoat 10L",
+  "price": 9.5,
+  "stock": 25,
+  "sub": "paint_fleetwood_exterior_paints",
+  "subLabel": "Fleetwood Exterior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-masonry-smooth-5l",
+  "name": "Fleetwood Masonry Smooth 5L",
+  "price": 13.95,
+  "stock": 40,
+  "sub": "paint_fleetwood_exterior_paints",
+  "subLabel": "Fleetwood Exterior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-masonry-smooth-10l",
+  "name": "Fleetwood Masonry Smooth 10L",
+  "price": 17.95,
+  "stock": 30,
+  "sub": "paint_fleetwood_exterior_paints",
+  "subLabel": "Fleetwood Exterior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-sandtex-fine-5l",
+  "name": "Fleetwood Sandtex Fine 5L",
+  "price": 21.95,
+  "stock": 15,
+  "sub": "paint_fleetwood_exterior_paints",
+  "subLabel": "Fleetwood Exterior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "fleetwood-roof-wall-10l",
+  "name": "Fleetwood Roof & Wall 10L",
+  "price": 25.95,
+  "stock": 12,
+  "sub": "paint_fleetwood_exterior_paints",
+  "subLabel": "Fleetwood Exterior Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "ronseal-decking-stain-2-5l-golden-brown",
+  "name": "Ronseal Decking Stain 2.5L Golden Brown",
+  "price": 5.5,
+  "stock": 40,
+  "sub": "paint_ronseal_woodcare",
+  "subLabel": "Ronseal Woodcare",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "ronseal-decking-stain-2-5l-natural",
+  "name": "Ronseal Decking Stain 2.5L Natural",
+  "price": 8.5,
+  "stock": 8,
+  "sub": "paint_ronseal_woodcare",
+  "subLabel": "Ronseal Woodcare",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "ronseal-fence-life-plus-9l",
+  "name": "Ronseal Fence Life Plus 9L",
+  "price": 11.95,
+  "stock": 30,
+  "sub": "paint_ronseal_woodcare",
+  "subLabel": "Ronseal Woodcare",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "ronseal-fence-life-plus-5l",
+  "name": "Ronseal Fence Life Plus 5L",
+  "price": 15.95,
+  "stock": 50,
+  "sub": "paint_ronseal_woodcare",
+  "subLabel": "Ronseal Woodcare",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "ronseal-5-year-exterior-2-5l",
+  "name": "Ronseal 5-Year Exterior 2.5L",
+  "price": 18.95,
+  "stock": 40,
+  "sub": "paint_ronseal_woodcare",
+  "subLabel": "Ronseal Woodcare",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "ronseal-quick-dry-varnish-satin-750ml",
+  "name": "Ronseal Quick-Dry Varnish Satin 750ml",
+  "price": 21.95,
+  "stock": 5,
+  "sub": "paint_ronseal_woodcare",
+  "subLabel": "Ronseal Woodcare",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "ronseal-diamond-hard-floor-2-5l",
+  "name": "Ronseal Diamond Hard Floor 2.5L",
+  "price": 25.95,
+  "stock": 15,
+  "sub": "paint_ronseal_woodcare",
+  "subLabel": "Ronseal Woodcare",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "sadolin-base-1l",
+  "name": "Sadolin Base 1L",
+  "price": 5.5,
+  "stock": 8,
+  "sub": "paint_sadolin_and_specialist",
+  "subLabel": "Sadolin And Specialist",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "sadolin-classic-1l",
+  "name": "Sadolin Classic 1L",
+  "price": 7.5,
+  "stock": 40,
+  "sub": "paint_sadolin_and_specialist",
+  "subLabel": "Sadolin And Specialist",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "sadolin-extra-durable-1l",
+  "name": "Sadolin Extra Durable 1L",
+  "price": 10.5,
+  "stock": 3,
+  "sub": "paint_sadolin_and_specialist",
+  "subLabel": "Sadolin And Specialist",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "sadolin-hbs-exterior-5l",
+  "name": "Sadolin HBS Exterior 5L",
+  "price": 12.95,
+  "stock": 40,
+  "sub": "paint_sadolin_and_specialist",
+  "subLabel": "Sadolin And Specialist",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "sandtex-microseal-5l",
+  "name": "Sandtex Microseal 5L",
+  "price": 15.95,
+  "stock": 8,
+  "sub": "paint_sadolin_and_specialist",
+  "subLabel": "Sadolin And Specialist",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "dulux-trade-weathershield-5l",
+  "name": "Dulux Trade Weathershield 5L",
+  "price": 17.95,
+  "stock": 30,
+  "sub": "paint_sadolin_and_specialist",
+  "subLabel": "Sadolin And Specialist",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "crown-period-colour-2-5l",
+  "name": "Crown Period Colour 2.5L",
+  "price": 20.95,
+  "stock": 0,
+  "sub": "paint_sadolin_and_specialist",
+  "subLabel": "Sadolin And Specialist",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "zinsser-bin-shellac-primer",
+  "name": "Zinsser BIN Shellac Primer",
+  "price": 22.95,
+  "stock": 0,
+  "sub": "paint_sadolin_and_specialist",
+  "subLabel": "Sadolin And Specialist",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "zinsser-bulls-eye-1-2-3-primer-5l",
+  "name": "Zinsser Bulls Eye 1-2-3 Primer 5L",
+  "price": 25.95,
+  "stock": 30,
+  "sub": "paint_sadolin_and_specialist",
+  "subLabel": "Sadolin And Specialist",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "ronseal-diamond-hard-garage-2-5l",
+  "name": "Ronseal Diamond Hard Garage 2.5L",
+  "price": 5.5,
+  "stock": 8,
+  "sub": "paint_floor_and_garden_paints",
+  "subLabel": "Floor And Garden Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "thorndown-stone-grey-floor-2-5l",
+  "name": "Thorndown Stone Grey Floor 2.5L",
+  "price": 9.5,
+  "stock": 15,
+  "sub": "paint_floor_and_garden_paints",
+  "subLabel": "Floor And Garden Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "bedec-barn-paint-2-5l",
+  "name": "Bedec Barn Paint 2.5L",
+  "price": 13.95,
+  "stock": 30,
+  "sub": "paint_floor_and_garden_paints",
+  "subLabel": "Floor And Garden Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "cuprinol-garden-shades-2-5l",
+  "name": "Cuprinol Garden Shades 2.5L",
+  "price": 17.95,
+  "stock": 0,
+  "sub": "paint_floor_and_garden_paints",
+  "subLabel": "Floor And Garden Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "rust-oleum-chalked-750ml",
+  "name": "Rust-Oleum Chalked 750ml",
+  "price": 21.95,
+  "stock": 0,
+  "sub": "paint_floor_and_garden_paints",
+  "subLabel": "Floor And Garden Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "blackboard-paint-500ml",
+  "name": "Blackboard Paint 500ml",
+  "price": 25.95,
+  "stock": 50,
+  "sub": "paint_floor_and_garden_paints",
+  "subLabel": "Floor And Garden Paints",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "harris-3-trade-brush",
+  "name": "Harris 3\" Trade Brush",
+  "price": 5.5,
+  "stock": 3,
+  "sub": "paint_brushes_rollers_and_prep",
+  "subLabel": "Brushes Rollers And Prep",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "harris-4-trade-brush",
+  "name": "Harris 4\" Trade Brush",
+  "price": 7.5,
+  "stock": 50,
+  "sub": "paint_brushes_rollers_and_prep",
+  "subLabel": "Brushes Rollers And Prep",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "purdy-2-angled-brush",
+  "name": "Purdy 2\" Angled Brush",
+  "price": 9.5,
+  "stock": 5,
+  "sub": "paint_brushes_rollers_and_prep",
+  "subLabel": "Brushes Rollers And Prep",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "purdy-2-5-angled-brush",
+  "name": "Purdy 2.5\" Angled Brush",
+  "price": 11.95,
+  "stock": 5,
+  "sub": "paint_brushes_rollers_and_prep",
+  "subLabel": "Brushes Rollers And Prep",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "9-roller-sleeve-medium",
+  "name": "9\" Roller Sleeve Medium",
+  "price": 13.95,
+  "stock": 25,
+  "sub": "paint_brushes_rollers_and_prep",
+  "subLabel": "Brushes Rollers And Prep",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "9-roller-frame",
+  "name": "9\" Roller Frame",
+  "price": 15.95,
+  "stock": 50,
+  "sub": "paint_brushes_rollers_and_prep",
+  "subLabel": "Brushes Rollers And Prep",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "4-mini-roller-set",
+  "name": "4\" Mini Roller Set",
+  "price": 17.95,
+  "stock": 40,
+  "sub": "paint_brushes_rollers_and_prep",
+  "subLabel": "Brushes Rollers And Prep",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "extension-pole-2m",
+  "name": "Extension Pole 2m",
+  "price": 19.95,
+  "stock": 30,
+  "sub": "paint_brushes_rollers_and_prep",
+  "subLabel": "Brushes Rollers And Prep",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "masking-tape-25mm-50m",
+  "name": "Masking Tape 25mm 50m",
+  "price": 21.95,
+  "stock": 50,
+  "sub": "paint_brushes_rollers_and_prep",
+  "subLabel": "Brushes Rollers And Prep",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "dust-sheet-cotton-12-9",
+  "name": "Dust Sheet Cotton 12\u00d79",
+  "price": 23.95,
+  "stock": 15,
+  "sub": "paint_brushes_rollers_and_prep",
+  "subLabel": "Brushes Rollers And Prep",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "polycell-smoothover-5l",
+  "name": "Polycell Smoothover 5L",
+  "price": 25.95,
+  "stock": 3,
+  "sub": "paint_brushes_rollers_and_prep",
+  "subLabel": "Brushes Rollers And Prep",
+  "cat": "paint",
+  "catLabel": "Paints & Decorating"
+ },
+ {
+  "slug": "makita-dhp485-combi-drill-18v",
+  "name": "Makita DHP485 Combi Drill 18V",
+  "price": 5.5,
+  "stock": 5,
+  "sub": "tools_power_tools_\u2014_makita",
+  "subLabel": "Power \u2014 Makita",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "makita-dtd155-impact-driver-18v",
+  "name": "Makita DTD155 Impact Driver 18V",
+  "price": 8.5,
+  "stock": 12,
+  "sub": "tools_power_tools_\u2014_makita",
+  "subLabel": "Power \u2014 Makita",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "makita-dga504-angle-grinder-18v",
+  "name": "Makita DGA504 Angle Grinder 18V",
+  "price": 10.95,
+  "stock": 15,
+  "sub": "tools_power_tools_\u2014_makita",
+  "subLabel": "Power \u2014 Makita",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "makita-dss611-circular-saw-18v",
+  "name": "Makita DSS611 Circular Saw 18V",
+  "price": 13.95,
+  "stock": 8,
+  "sub": "tools_power_tools_\u2014_makita",
+  "subLabel": "Power \u2014 Makita",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "makita-djr187-recipro-saw-18v",
+  "name": "Makita DJR187 Recipro Saw 18V",
+  "price": 16.95,
+  "stock": 40,
+  "sub": "tools_power_tools_\u2014_makita",
+  "subLabel": "Power \u2014 Makita",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "makita-dbo180-sander-18v",
+  "name": "Makita DBO180 Sander 18V",
+  "price": 19.95,
+  "stock": 0,
+  "sub": "tools_power_tools_\u2014_makita",
+  "subLabel": "Power \u2014 Makita",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "makita-lxt-5ah-twin-pack",
+  "name": "Makita LXT 5Ah Twin Pack",
+  "price": 22.95,
+  "stock": 0,
+  "sub": "tools_power_tools_\u2014_makita",
+  "subLabel": "Power \u2014 Makita",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "makita-dhr182-sds-rotary-18v",
+  "name": "Makita DHR182 SDS Rotary 18V",
+  "price": 25.95,
+  "stock": 50,
+  "sub": "tools_power_tools_\u2014_makita",
+  "subLabel": "Power \u2014 Makita",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "dewalt-dcd796-combi-drill-18v",
+  "name": "DeWalt DCD796 Combi Drill 18V",
+  "price": 5.5,
+  "stock": 3,
+  "sub": "tools_power_tools_\u2014_dewalt",
+  "subLabel": "Power \u2014 Dewalt",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "dewalt-dcf887-impact-driver-18v",
+  "name": "DeWalt DCF887 Impact Driver 18V",
+  "price": 8.5,
+  "stock": 15,
+  "sub": "tools_power_tools_\u2014_dewalt",
+  "subLabel": "Power \u2014 Dewalt",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "dewalt-dcg405-grinder-18v",
+  "name": "DeWalt DCG405 Grinder 18V",
+  "price": 10.95,
+  "stock": 30,
+  "sub": "tools_power_tools_\u2014_dewalt",
+  "subLabel": "Power \u2014 Dewalt",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "dewalt-dcs391-circular-saw-18v",
+  "name": "DeWalt DCS391 Circular Saw 18V",
+  "price": 13.95,
+  "stock": 0,
+  "sub": "tools_power_tools_\u2014_dewalt",
+  "subLabel": "Power \u2014 Dewalt",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "dewalt-dcs367-recipro-saw-18v",
+  "name": "DeWalt DCS367 Recipro Saw 18V",
+  "price": 16.95,
+  "stock": 15,
+  "sub": "tools_power_tools_\u2014_dewalt",
+  "subLabel": "Power \u2014 Dewalt",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "dewalt-dcw210-sander-18v",
+  "name": "DeWalt DCW210 Sander 18V",
+  "price": 19.95,
+  "stock": 50,
+  "sub": "tools_power_tools_\u2014_dewalt",
+  "subLabel": "Power \u2014 Dewalt",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "dewalt-xr-5ah-twin-pack",
+  "name": "DeWalt XR 5Ah Twin Pack",
+  "price": 22.95,
+  "stock": 12,
+  "sub": "tools_power_tools_\u2014_dewalt",
+  "subLabel": "Power \u2014 Dewalt",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "dewalt-dch273-sds-18v",
+  "name": "DeWalt DCH273 SDS 18V",
+  "price": 25.95,
+  "stock": 40,
+  "sub": "tools_power_tools_\u2014_dewalt",
+  "subLabel": "Power \u2014 Dewalt",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "stanley-fatmax-tape-8m",
+  "name": "Stanley FatMax Tape 8m",
+  "price": 4.5,
+  "stock": 8,
+  "sub": "tools_hand_tools",
+  "subLabel": "Hand Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "stanley-fatmax-tape-5m",
+  "name": "Stanley FatMax Tape 5m",
+  "price": 8.5,
+  "stock": 8,
+  "sub": "tools_hand_tools",
+  "subLabel": "Hand Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "estwing-claw-hammer-20oz",
+  "name": "Estwing Claw Hammer 20oz",
+  "price": 13.95,
+  "stock": 0,
+  "sub": "tools_hand_tools",
+  "subLabel": "Hand Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "roughneck-lump-hammer-2-5lb",
+  "name": "Roughneck Lump Hammer 2.5lb",
+  "price": 17.95,
+  "stock": 15,
+  "sub": "tools_hand_tools",
+  "subLabel": "Hand Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "bahco-14-panel-saw",
+  "name": "Bahco 14\" Panel Saw",
+  "price": 21.95,
+  "stock": 50,
+  "sub": "tools_hand_tools",
+  "subLabel": "Hand Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "stanley-4-plane-set",
+  "name": "Stanley 4-Plane Set",
+  "price": 25.95,
+  "stock": 30,
+  "sub": "tools_hand_tools",
+  "subLabel": "Hand Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "rolson-spirit-level-600mm",
+  "name": "Rolson Spirit Level 600mm",
+  "price": 29.95,
+  "stock": 15,
+  "sub": "tools_hand_tools",
+  "subLabel": "Hand Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "stabila-level-1200mm",
+  "name": "Stabila Level 1200mm",
+  "price": 34.95,
+  "stock": 15,
+  "sub": "tools_hand_tools",
+  "subLabel": "Hand Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "screwdriver-set-7pc-bahco",
+  "name": "Screwdriver Set 7pc Bahco",
+  "price": 38.95,
+  "stock": 30,
+  "sub": "tools_hand_tools",
+  "subLabel": "Hand Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "sds-plus-drill-bit-10-160mm",
+  "name": "SDS Plus Drill Bit 10\u00d7160mm",
+  "price": 5.5,
+  "stock": 50,
+  "sub": "tools_drill_bits_and_cutting",
+  "subLabel": "Drill Bits And Cutting",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "sds-plus-drill-bit-14-260mm",
+  "name": "SDS Plus Drill Bit 14\u00d7260mm",
+  "price": 7.5,
+  "stock": 0,
+  "sub": "tools_drill_bits_and_cutting",
+  "subLabel": "Drill Bits And Cutting",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "hss-twist-bit-set-19pc",
+  "name": "HSS Twist Bit Set 19pc",
+  "price": 10.5,
+  "stock": 20,
+  "sub": "tools_drill_bits_and_cutting",
+  "subLabel": "Drill Bits And Cutting",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "masonry-bit-set-8pc",
+  "name": "Masonry Bit Set 8pc",
+  "price": 12.95,
+  "stock": 3,
+  "sub": "tools_drill_bits_and_cutting",
+  "subLabel": "Drill Bits And Cutting",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "spade-bit-set-6pc",
+  "name": "Spade Bit Set 6pc",
+  "price": 15.95,
+  "stock": 0,
+  "sub": "tools_drill_bits_and_cutting",
+  "subLabel": "Drill Bits And Cutting",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "hole-saw-65mm-bi-metal",
+  "name": "Hole Saw 65mm Bi-Metal",
+  "price": 17.95,
+  "stock": 50,
+  "sub": "tools_drill_bits_and_cutting",
+  "subLabel": "Drill Bits And Cutting",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "hole-saw-86mm-bi-metal",
+  "name": "Hole Saw 86mm Bi-Metal",
+  "price": 20.95,
+  "stock": 3,
+  "sub": "tools_drill_bits_and_cutting",
+  "subLabel": "Drill Bits And Cutting",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "jigsaw-blade-wood-5pk",
+  "name": "Jigsaw Blade Wood 5pk",
+  "price": 22.95,
+  "stock": 15,
+  "sub": "tools_drill_bits_and_cutting",
+  "subLabel": "Drill Bits And Cutting",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "circular-saw-blade-165-20mm-40t",
+  "name": "Circular Saw Blade 165\u00d720mm 40T",
+  "price": 25.95,
+  "stock": 8,
+  "sub": "tools_drill_bits_and_cutting",
+  "subLabel": "Drill Bits And Cutting",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "goldscrew-pz2-4-50mm-200pk",
+  "name": "Goldscrew PZ2 4\u00d750mm 200pk",
+  "price": 5.5,
+  "stock": 30,
+  "sub": "tools_fixings_and_screws",
+  "subLabel": "Fixings And Screws",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "goldscrew-pz2-5-80mm-200pk",
+  "name": "Goldscrew PZ2 5\u00d780mm 200pk",
+  "price": 7.5,
+  "stock": 8,
+  "sub": "tools_fixings_and_screws",
+  "subLabel": "Fixings And Screws",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "m10-rawlbolt-4pk",
+  "name": "M10 Rawlbolt 4pk",
+  "price": 10.5,
+  "stock": 25,
+  "sub": "tools_fixings_and_screws",
+  "subLabel": "Fixings And Screws",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "m8-masonry-bolt-4pk",
+  "name": "M8 Masonry Bolt 4pk",
+  "price": 12.95,
+  "stock": 30,
+  "sub": "tools_fixings_and_screws",
+  "subLabel": "Fixings And Screws",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "frame-fix-7-5-132mm-50pk",
+  "name": "Frame Fix 7.5\u00d7132mm 50pk",
+  "price": 15.95,
+  "stock": 30,
+  "sub": "tools_fixings_and_screws",
+  "subLabel": "Fixings And Screws",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "nylon-rawlplug-8mm-100pk",
+  "name": "Nylon Rawlplug 8mm 100pk",
+  "price": 17.95,
+  "stock": 20,
+  "sub": "tools_fixings_and_screws",
+  "subLabel": "Fixings And Screws",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "cavity-anchor-5-52mm-20pk",
+  "name": "Cavity Anchor 5\u00d752mm 20pk",
+  "price": 20.95,
+  "stock": 5,
+  "sub": "tools_fixings_and_screws",
+  "subLabel": "Fixings And Screws",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "joist-hanger-47mm-lh",
+  "name": "Joist Hanger 47mm LH",
+  "price": 22.95,
+  "stock": 20,
+  "sub": "tools_fixings_and_screws",
+  "subLabel": "Fixings And Screws",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "joist-hanger-47mm-rh",
+  "name": "Joist Hanger 47mm RH",
+  "price": 25.95,
+  "stock": 30,
+  "sub": "tools_fixings_and_screws",
+  "subLabel": "Fixings And Screws",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "roughneck-pickaxe-5lb",
+  "name": "Roughneck Pickaxe 5lb",
+  "price": 5.5,
+  "stock": 25,
+  "sub": "tools_groundwork_tools",
+  "subLabel": "Groundwork Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "roughneck-mattock-5lb",
+  "name": "Roughneck Mattock 5lb",
+  "price": 7.5,
+  "stock": 40,
+  "sub": "tools_groundwork_tools",
+  "subLabel": "Groundwork Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "fencing-bar-25lb",
+  "name": "Fencing Bar 25lb",
+  "price": 10.5,
+  "stock": 0,
+  "sub": "tools_groundwork_tools",
+  "subLabel": "Groundwork Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "post-hole-borer-100mm",
+  "name": "Post Hole Borer 100mm",
+  "price": 12.95,
+  "stock": 0,
+  "sub": "tools_groundwork_tools",
+  "subLabel": "Groundwork Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "concrete-float-120-280mm",
+  "name": "Concrete Float 120\u00d7280mm",
+  "price": 15.95,
+  "stock": 5,
+  "sub": "tools_groundwork_tools",
+  "subLabel": "Groundwork Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "plasterers-float-130-280mm",
+  "name": "Plasterers Float 130\u00d7280mm",
+  "price": 17.95,
+  "stock": 25,
+  "sub": "tools_groundwork_tools",
+  "subLabel": "Groundwork Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "gauging-trowel-6",
+  "name": "Gauging Trowel 6\"",
+  "price": 20.95,
+  "stock": 3,
+  "sub": "tools_groundwork_tools",
+  "subLabel": "Groundwork Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "brick-trowel-11",
+  "name": "Brick Trowel 11\"",
+  "price": 22.95,
+  "stock": 40,
+  "sub": "tools_groundwork_tools",
+  "subLabel": "Groundwork Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "pointing-trowel-6",
+  "name": "Pointing Trowel 6\"",
+  "price": 25.95,
+  "stock": 3,
+  "sub": "tools_groundwork_tools",
+  "subLabel": "Groundwork Tools",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "acrow-prop-no-2",
+  "name": "Acrow Prop No.2",
+  "price": 5.5,
+  "stock": 20,
+  "sub": "tools_site_safety_and_signage",
+  "subLabel": "Site Safety And Signage",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "acrow-prop-no-3",
+  "name": "Acrow Prop No.3",
+  "price": 7.5,
+  "stock": 30,
+  "sub": "tools_site_safety_and_signage",
+  "subLabel": "Site Safety And Signage",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "road-cone-500mm",
+  "name": "Road Cone 500mm",
+  "price": 10.5,
+  "stock": 3,
+  "sub": "tools_site_safety_and_signage",
+  "subLabel": "Site Safety And Signage",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "road-cone-750mm",
+  "name": "Road Cone 750mm",
+  "price": 12.95,
+  "stock": 40,
+  "sub": "tools_site_safety_and_signage",
+  "subLabel": "Site Safety And Signage",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "warning-tape-500m",
+  "name": "Warning Tape 500m",
+  "price": 15.95,
+  "stock": 15,
+  "sub": "tools_site_safety_and_signage",
+  "subLabel": "Site Safety And Signage",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "no-entry-sign",
+  "name": "No Entry Sign",
+  "price": 17.95,
+  "stock": 30,
+  "sub": "tools_site_safety_and_signage",
+  "subLabel": "Site Safety And Signage",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "caution-wet-floor",
+  "name": "Caution Wet Floor",
+  "price": 20.95,
+  "stock": 50,
+  "sub": "tools_site_safety_and_signage",
+  "subLabel": "Site Safety And Signage",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "danger-sign-a4",
+  "name": "Danger Sign A4",
+  "price": 22.95,
+  "stock": 8,
+  "sub": "tools_site_safety_and_signage",
+  "subLabel": "Site Safety And Signage",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "site-board-2-4-1-2m",
+  "name": "Site Board 2.4\u00d71.2m",
+  "price": 25.95,
+  "stock": 3,
+  "sub": "tools_site_safety_and_signage",
+  "subLabel": "Site Safety And Signage",
+  "cat": "tools",
+  "catLabel": "Tools & Fixings"
+ },
+ {
+  "slug": "jsp-evo3-hard-hat-white",
+  "name": "JSP EVO3 Hard Hat White",
+  "price": 5.5,
+  "stock": 5,
+  "sub": "ppe_head_protection",
+  "subLabel": "Head Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "jsp-evo3-hard-hat-yellow",
+  "name": "JSP EVO3 Hard Hat Yellow",
+  "price": 8.5,
+  "stock": 5,
+  "sub": "ppe_head_protection",
+  "subLabel": "Head Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "jsp-evo3-hard-hat-orange",
+  "name": "JSP EVO3 Hard Hat Orange",
+  "price": 11.95,
+  "stock": 5,
+  "sub": "ppe_head_protection",
+  "subLabel": "Head Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "jsp-evo3-hard-hat-red",
+  "name": "JSP EVO3 Hard Hat Red",
+  "price": 15.95,
+  "stock": 8,
+  "sub": "ppe_head_protection",
+  "subLabel": "Head Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "bump-cap-black",
+  "name": "Bump Cap Black",
+  "price": 18.95,
+  "stock": 15,
+  "sub": "ppe_head_protection",
+  "subLabel": "Head Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "hard-hat-chin-strap",
+  "name": "Hard Hat Chin Strap",
+  "price": 21.95,
+  "stock": 15,
+  "sub": "ppe_head_protection",
+  "subLabel": "Head Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "hard-hat-insert-liner",
+  "name": "Hard Hat Insert Liner",
+  "price": 25.95,
+  "stock": 30,
+  "sub": "ppe_head_protection",
+  "subLabel": "Head Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "hi-vis-waistcoat-yellow-en471-s",
+  "name": "Hi-Vis Waistcoat Yellow EN471 S",
+  "price": 5.5,
+  "stock": 12,
+  "sub": "ppe_hivis_and_workwear",
+  "subLabel": "Hivis And Workwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "hi-vis-waistcoat-yellow-en471-l",
+  "name": "Hi-Vis Waistcoat Yellow EN471 L",
+  "price": 8.5,
+  "stock": 8,
+  "sub": "ppe_hivis_and_workwear",
+  "subLabel": "Hivis And Workwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "hi-vis-waistcoat-yellow-en471-xl",
+  "name": "Hi-Vis Waistcoat Yellow EN471 XL",
+  "price": 10.95,
+  "stock": 50,
+  "sub": "ppe_hivis_and_workwear",
+  "subLabel": "Hivis And Workwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "hi-vis-jacket-yellow-l",
+  "name": "Hi-Vis Jacket Yellow L",
+  "price": 13.95,
+  "stock": 8,
+  "sub": "ppe_hivis_and_workwear",
+  "subLabel": "Hivis And Workwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "hi-vis-jacket-yellow-xl",
+  "name": "Hi-Vis Jacket Yellow XL",
+  "price": 16.95,
+  "stock": 15,
+  "sub": "ppe_hivis_and_workwear",
+  "subLabel": "Hivis And Workwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "hi-vis-trousers-yellow-l",
+  "name": "Hi-Vis Trousers Yellow L",
+  "price": 19.95,
+  "stock": 25,
+  "sub": "ppe_hivis_and_workwear",
+  "subLabel": "Hivis And Workwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "hi-vis-bomber-jacket-xl",
+  "name": "Hi-Vis Bomber Jacket XL",
+  "price": 22.95,
+  "stock": 40,
+  "sub": "ppe_hivis_and_workwear",
+  "subLabel": "Hivis And Workwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "hi-vis-class-3-jacket-orange-xl",
+  "name": "Hi-Vis Class 3 Jacket Orange XL",
+  "price": 25.95,
+  "stock": 3,
+  "sub": "ppe_hivis_and_workwear",
+  "subLabel": "Hivis And Workwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "caterpillar-second-shift-s3-7",
+  "name": "Caterpillar Second Shift S3 7",
+  "price": 5.5,
+  "stock": 15,
+  "sub": "ppe_safety_footwear",
+  "subLabel": "Safety Footwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "caterpillar-second-shift-s3-9",
+  "name": "Caterpillar Second Shift S3 9",
+  "price": 8.5,
+  "stock": 50,
+  "sub": "ppe_safety_footwear",
+  "subLabel": "Safety Footwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "caterpillar-second-shift-s3-11",
+  "name": "Caterpillar Second Shift S3 11",
+  "price": 10.95,
+  "stock": 30,
+  "sub": "ppe_safety_footwear",
+  "subLabel": "Safety Footwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "timberland-pro-splitrock-s3-8",
+  "name": "Timberland Pro Splitrock S3 8",
+  "price": 13.95,
+  "stock": 30,
+  "sub": "ppe_safety_footwear",
+  "subLabel": "Safety Footwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "timberland-pro-splitrock-s3-10",
+  "name": "Timberland Pro Splitrock S3 10",
+  "price": 16.95,
+  "stock": 20,
+  "sub": "ppe_safety_footwear",
+  "subLabel": "Safety Footwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "portwest-compositelite-s1p-9",
+  "name": "Portwest Compositelite S1P 9",
+  "price": 19.95,
+  "stock": 40,
+  "sub": "ppe_safety_footwear",
+  "subLabel": "Safety Footwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "safety-wellington-s5-9",
+  "name": "Safety Wellington S5 9",
+  "price": 22.95,
+  "stock": 20,
+  "sub": "ppe_safety_footwear",
+  "subLabel": "Safety Footwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "safety-wellington-s5-11",
+  "name": "Safety Wellington S5 11",
+  "price": 25.95,
+  "stock": 12,
+  "sub": "ppe_safety_footwear",
+  "subLabel": "Safety Footwear",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "nitrile-disposable-gloves-100pk-m",
+  "name": "Nitrile Disposable Gloves 100pk M",
+  "price": 3.5,
+  "stock": 12,
+  "sub": "ppe_gloves",
+  "subLabel": "Gloves",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "nitrile-disposable-gloves-100pk-l",
+  "name": "Nitrile Disposable Gloves 100pk L",
+  "price": 5.5,
+  "stock": 25,
+  "sub": "ppe_gloves",
+  "subLabel": "Gloves",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "portwest-a150-grip-glove-l",
+  "name": "Portwest A150 Grip Glove L",
+  "price": 6.5,
+  "stock": 0,
+  "sub": "ppe_gloves",
+  "subLabel": "Gloves",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "portwest-a140-cut-resistant-l",
+  "name": "Portwest A140 Cut Resistant L",
+  "price": 8.5,
+  "stock": 25,
+  "sub": "ppe_gloves",
+  "subLabel": "Gloves",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "latex-grip-glove-l",
+  "name": "Latex Grip Glove L",
+  "price": 10.5,
+  "stock": 8,
+  "sub": "ppe_gloves",
+  "subLabel": "Gloves",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "marigold-industrial-red-9",
+  "name": "Marigold Industrial Red 9",
+  "price": 11.95,
+  "stock": 3,
+  "sub": "ppe_gloves",
+  "subLabel": "Gloves",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "leather-work-glove-xl",
+  "name": "Leather Work Glove XL",
+  "price": 13.95,
+  "stock": 50,
+  "sub": "ppe_gloves",
+  "subLabel": "Gloves",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "anti-vibration-glove-l",
+  "name": "Anti-Vibration Glove L",
+  "price": 14.95,
+  "stock": 5,
+  "sub": "ppe_gloves",
+  "subLabel": "Gloves",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "3m-8210-ffp2-dust-mask-10pk",
+  "name": "3M 8210 FFP2 Dust Mask 10pk",
+  "price": 5.5,
+  "stock": 30,
+  "sub": "ppe_respiratory_and_eye_protection",
+  "subLabel": "Respiratory And Eye Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "3m-8822-ffp2-valve-mask-10pk",
+  "name": "3M 8822 FFP2 Valve Mask 10pk",
+  "price": 8.5,
+  "stock": 0,
+  "sub": "ppe_respiratory_and_eye_protection",
+  "subLabel": "Respiratory And Eye Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "3m-6200-half-mask-med",
+  "name": "3M 6200 Half Mask Med",
+  "price": 10.95,
+  "stock": 3,
+  "sub": "ppe_respiratory_and_eye_protection",
+  "subLabel": "Respiratory And Eye Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "3m-a1b1e1p3-filter",
+  "name": "3M A1B1E1P3 Filter",
+  "price": 13.95,
+  "stock": 25,
+  "sub": "ppe_respiratory_and_eye_protection",
+  "subLabel": "Respiratory And Eye Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "portwest-safety-spectacles-clear",
+  "name": "Portwest Safety Spectacles Clear",
+  "price": 16.95,
+  "stock": 8,
+  "sub": "ppe_respiratory_and_eye_protection",
+  "subLabel": "Respiratory And Eye Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "portwest-safety-spectacles-tinted",
+  "name": "Portwest Safety Spectacles Tinted",
+  "price": 19.95,
+  "stock": 0,
+  "sub": "ppe_respiratory_and_eye_protection",
+  "subLabel": "Respiratory And Eye Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "bolle-coverall-goggles",
+  "name": "Bolle Coverall Goggles",
+  "price": 22.95,
+  "stock": 15,
+  "sub": "ppe_respiratory_and_eye_protection",
+  "subLabel": "Respiratory And Eye Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "full-face-shield-flip-up",
+  "name": "Full Face Shield Flip-Up",
+  "price": 25.95,
+  "stock": 25,
+  "sub": "ppe_respiratory_and_eye_protection",
+  "subLabel": "Respiratory And Eye Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "3m-1100-ear-plugs-200pk",
+  "name": "3M 1100 Ear Plugs 200pk",
+  "price": 5.5,
+  "stock": 20,
+  "sub": "ppe_hearing_and_body_protection",
+  "subLabel": "Hearing And Body Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "howard-leight-laser-lite-200pk",
+  "name": "Howard Leight Laser Lite 200pk",
+  "price": 7.5,
+  "stock": 40,
+  "sub": "ppe_hearing_and_body_protection",
+  "subLabel": "Hearing And Body Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "jsp-sonis-ear-defenders-26db",
+  "name": "JSP Sonis Ear Defenders 26dB",
+  "price": 10.5,
+  "stock": 20,
+  "sub": "ppe_hearing_and_body_protection",
+  "subLabel": "Hearing And Body Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "ear-defender-helmet-mount",
+  "name": "Ear Defender Helmet-Mount",
+  "price": 12.95,
+  "stock": 30,
+  "sub": "ppe_hearing_and_body_protection",
+  "subLabel": "Hearing And Body Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "portwest-a10-coverall-white-m",
+  "name": "Portwest A10 Coverall White M",
+  "price": 15.95,
+  "stock": 3,
+  "sub": "ppe_hearing_and_body_protection",
+  "subLabel": "Hearing And Body Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "portwest-a10-coverall-white-xl",
+  "name": "Portwest A10 Coverall White XL",
+  "price": 17.95,
+  "stock": 12,
+  "sub": "ppe_hearing_and_body_protection",
+  "subLabel": "Hearing And Body Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "knee-pads-gel-insert",
+  "name": "Knee Pads Gel Insert",
+  "price": 20.95,
+  "stock": 15,
+  "sub": "ppe_hearing_and_body_protection",
+  "subLabel": "Hearing And Body Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "elbow-pads-foam",
+  "name": "Elbow Pads Foam",
+  "price": 22.95,
+  "stock": 5,
+  "sub": "ppe_hearing_and_body_protection",
+  "subLabel": "Hearing And Body Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "safety-harness-1-point",
+  "name": "Safety Harness 1-Point",
+  "price": 25.95,
+  "stock": 5,
+  "sub": "ppe_hearing_and_body_protection",
+  "subLabel": "Hearing And Body Protection",
+  "cat": "ppe",
+  "catLabel": "PPE & Workwear"
+ },
+ {
+  "slug": "stihl-rm-248-0-tc-petrol-self-propelled",
+  "name": "Stihl RM 248.0 TC Petrol Self-Propelled",
+  "price": 5.5,
+  "stock": 5,
+  "sub": "garden_stihl_lawnmowers",
+  "subLabel": "Stihl Lawnmowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-rm-248-4-tc-petrol",
+  "name": "Stihl RM 248.4 TC Petrol",
+  "price": 8.5,
+  "stock": 15,
+  "sub": "garden_stihl_lawnmowers",
+  "subLabel": "Stihl Lawnmowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-rma-248-tc-battery-36v",
+  "name": "Stihl RMA 248 TC Battery 36V",
+  "price": 11.95,
+  "stock": 3,
+  "sub": "garden_stihl_lawnmowers",
+  "subLabel": "Stihl Lawnmowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-rma-235-battery-36v",
+  "name": "Stihl RMA 235 Battery 36V",
+  "price": 15.95,
+  "stock": 3,
+  "sub": "garden_stihl_lawnmowers",
+  "subLabel": "Stihl Lawnmowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-rm-2-rt-petrol",
+  "name": "Stihl RM 2 RT Petrol",
+  "price": 18.95,
+  "stock": 20,
+  "sub": "garden_stihl_lawnmowers",
+  "subLabel": "Stihl Lawnmowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-rme-235-electric",
+  "name": "Stihl RME 235 Electric",
+  "price": 21.95,
+  "stock": 12,
+  "sub": "garden_stihl_lawnmowers",
+  "subLabel": "Stihl Lawnmowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-rm-655-v-ride-on",
+  "name": "Stihl RM 655 V Ride-On",
+  "price": 25.95,
+  "stock": 50,
+  "sub": "garden_stihl_lawnmowers",
+  "subLabel": "Stihl Lawnmowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-ms-170-14-petrol-chainsaw",
+  "name": "Stihl MS 170 14\" Petrol Chainsaw",
+  "price": 5.5,
+  "stock": 8,
+  "sub": "garden_stihl_chainsaws_and_strimmers",
+  "subLabel": "Stihl Chainsaws And Strimmers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-ms-211-16-petrol-chainsaw",
+  "name": "Stihl MS 211 16\" Petrol Chainsaw",
+  "price": 8.5,
+  "stock": 5,
+  "sub": "garden_stihl_chainsaws_and_strimmers",
+  "subLabel": "Stihl Chainsaws And Strimmers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-ms-251-18-petrol-chainsaw",
+  "name": "Stihl MS 251 18\" Petrol Chainsaw",
+  "price": 10.95,
+  "stock": 25,
+  "sub": "garden_stihl_chainsaws_and_strimmers",
+  "subLabel": "Stihl Chainsaws And Strimmers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-msa-220-c-b-battery-chainsaw",
+  "name": "Stihl MSA 220 C-B Battery Chainsaw",
+  "price": 13.95,
+  "stock": 12,
+  "sub": "garden_stihl_chainsaws_and_strimmers",
+  "subLabel": "Stihl Chainsaws And Strimmers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-fsa-57-battery-strimmer",
+  "name": "Stihl FSA 57 Battery Strimmer",
+  "price": 16.95,
+  "stock": 50,
+  "sub": "garden_stihl_chainsaws_and_strimmers",
+  "subLabel": "Stihl Chainsaws And Strimmers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-fs-56-petrol-strimmer",
+  "name": "Stihl FS 56 Petrol Strimmer",
+  "price": 19.95,
+  "stock": 30,
+  "sub": "garden_stihl_chainsaws_and_strimmers",
+  "subLabel": "Stihl Chainsaws And Strimmers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-fs-111-petrol-brushcutter",
+  "name": "Stihl FS 111 Petrol Brushcutter",
+  "price": 22.95,
+  "stock": 30,
+  "sub": "garden_stihl_chainsaws_and_strimmers",
+  "subLabel": "Stihl Chainsaws And Strimmers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-hsa-56-battery-hedgecutter",
+  "name": "Stihl HSA 56 Battery Hedgecutter",
+  "price": 25.95,
+  "stock": 3,
+  "sub": "garden_stihl_chainsaws_and_strimmers",
+  "subLabel": "Stihl Chainsaws And Strimmers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-re-110-k-electric-pw-120-bar",
+  "name": "Stihl RE 110 K Electric PW 120 Bar",
+  "price": 5.5,
+  "stock": 30,
+  "sub": "garden_power_washers_and_blowers",
+  "subLabel": "Power Washers And Blowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-re-130-k-electric-pw-130-bar",
+  "name": "Stihl RE 130 K Electric PW 130 Bar",
+  "price": 8.5,
+  "stock": 40,
+  "sub": "garden_power_washers_and_blowers",
+  "subLabel": "Power Washers And Blowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "karcher-k5-premium-145-bar",
+  "name": "Karcher K5 Premium 145 Bar",
+  "price": 11.95,
+  "stock": 30,
+  "sub": "garden_power_washers_and_blowers",
+  "subLabel": "Power Washers And Blowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "karcher-k7-premium-160-bar",
+  "name": "Karcher K7 Premium 160 Bar",
+  "price": 15.95,
+  "stock": 50,
+  "sub": "garden_power_washers_and_blowers",
+  "subLabel": "Power Washers And Blowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-bga-45-battery-blower",
+  "name": "Stihl BGA 45 Battery Blower",
+  "price": 18.95,
+  "stock": 25,
+  "sub": "garden_power_washers_and_blowers",
+  "subLabel": "Power Washers And Blowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-bg-86-petrol-blower",
+  "name": "Stihl BG 86 Petrol Blower",
+  "price": 21.95,
+  "stock": 30,
+  "sub": "garden_power_washers_and_blowers",
+  "subLabel": "Power Washers And Blowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "stihl-sh-86-petrol-vacuum-shredder",
+  "name": "Stihl SH 86 Petrol Vacuum Shredder",
+  "price": 25.95,
+  "stock": 12,
+  "sub": "garden_power_washers_and_blowers",
+  "subLabel": "Power Washers And Blowers",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "treated-panel-6-6-brown",
+  "name": "Treated Panel 6\u00d76 Brown",
+  "price": 5.5,
+  "stock": 30,
+  "sub": "garden_fencing_and_weed_control",
+  "subLabel": "Fencing And Weed Control",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "treated-panel-6-4-brown",
+  "name": "Treated Panel 6\u00d74 Brown",
+  "price": 7.5,
+  "stock": 0,
+  "sub": "garden_fencing_and_weed_control",
+  "subLabel": "Fencing And Weed Control",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "closeboard-panel-6-5",
+  "name": "Closeboard Panel 6\u00d75",
+  "price": 10.5,
+  "stock": 20,
+  "sub": "garden_fencing_and_weed_control",
+  "subLabel": "Fencing And Weed Control",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "concrete-post-100mm-1-8m",
+  "name": "Concrete Post 100mm 1.8m",
+  "price": 12.95,
+  "stock": 15,
+  "sub": "garden_fencing_and_weed_control",
+  "subLabel": "Fencing And Weed Control",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "concrete-spur-post",
+  "name": "Concrete Spur Post",
+  "price": 15.95,
+  "stock": 0,
+  "sub": "garden_fencing_and_weed_control",
+  "subLabel": "Fencing And Weed Control",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "timber-post-75-75-1-8m",
+  "name": "Timber Post 75\u00d775 1.8m",
+  "price": 17.95,
+  "stock": 25,
+  "sub": "garden_fencing_and_weed_control",
+  "subLabel": "Fencing And Weed Control",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "post-gravel-board-150mm",
+  "name": "Post Gravel Board 150mm",
+  "price": 20.95,
+  "stock": 50,
+  "sub": "garden_fencing_and_weed_control",
+  "subLabel": "Fencing And Weed Control",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "weed-control-fabric-1m-25m",
+  "name": "Weed Control Fabric 1m\u00d725m",
+  "price": 22.95,
+  "stock": 3,
+  "sub": "garden_fencing_and_weed_control",
+  "subLabel": "Fencing And Weed Control",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "ground-pegs-100pk",
+  "name": "Ground Pegs 100pk",
+  "price": 25.95,
+  "stock": 30,
+  "sub": "garden_fencing_and_weed_control",
+  "subLabel": "Fencing And Weed Control",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "aftercut-autumn-400m-14kg",
+  "name": "Aftercut Autumn 400m\u00b2 14kg",
+  "price": 5.5,
+  "stock": 15,
+  "sub": "garden_lawn_care",
+  "subLabel": "Lawn Care",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "aftercut-all-year-400m-14kg",
+  "name": "Aftercut All Year 400m\u00b2 14kg",
+  "price": 7.5,
+  "stock": 12,
+  "sub": "garden_lawn_care",
+  "subLabel": "Lawn Care",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "westland-safelawn-child-friendly-200m",
+  "name": "Westland SafeLawn Child Friendly 200m\u00b2",
+  "price": 10.5,
+  "stock": 20,
+  "sub": "garden_lawn_care",
+  "subLabel": "Lawn Care",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "resolva-lawn-weedkiller-1l",
+  "name": "Resolva Lawn Weedkiller 1L",
+  "price": 12.95,
+  "stock": 12,
+  "sub": "garden_lawn_care",
+  "subLabel": "Lawn Care",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "grass-seed-premium-1kg",
+  "name": "Grass Seed Premium 1kg",
+  "price": 15.95,
+  "stock": 8,
+  "sub": "garden_lawn_care",
+  "subLabel": "Lawn Care",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "grass-seed-shady-1kg",
+  "name": "Grass Seed Shady 1kg",
+  "price": 17.95,
+  "stock": 3,
+  "sub": "garden_lawn_care",
+  "subLabel": "Lawn Care",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "peat-free-lawn-dressing-40l",
+  "name": "Peat-Free Lawn Dressing 40L",
+  "price": 20.95,
+  "stock": 30,
+  "sub": "garden_lawn_care",
+  "subLabel": "Lawn Care",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "lawn-sand-14kg",
+  "name": "Lawn Sand 14kg",
+  "price": 22.95,
+  "stock": 0,
+  "sub": "garden_lawn_care",
+  "subLabel": "Lawn Care",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "top-dressing-loam-40l",
+  "name": "Top Dressing Loam 40L",
+  "price": 25.95,
+  "stock": 8,
+  "sub": "garden_lawn_care",
+  "subLabel": "Lawn Care",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "westland-multipurpose-compost-60l",
+  "name": "Westland Multipurpose Compost 60L",
+  "price": 5.5,
+  "stock": 0,
+  "sub": "garden_compost_bark_and_garden_tools",
+  "subLabel": "Compost Bark And Tools",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "peat-free-compost-60l",
+  "name": "Peat-Free Compost 60L",
+  "price": 7.5,
+  "stock": 25,
+  "sub": "garden_compost_bark_and_garden_tools",
+  "subLabel": "Compost Bark And Tools",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "premium-bark-chippings-60l",
+  "name": "Premium Bark Chippings 60L",
+  "price": 10.5,
+  "stock": 8,
+  "sub": "garden_compost_bark_and_garden_tools",
+  "subLabel": "Compost Bark And Tools",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "play-bark-60l",
+  "name": "Play Bark 60L",
+  "price": 12.95,
+  "stock": 20,
+  "sub": "garden_compost_bark_and_garden_tools",
+  "subLabel": "Compost Bark And Tools",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "garden-fork-stainless",
+  "name": "Garden Fork Stainless",
+  "price": 15.95,
+  "stock": 15,
+  "sub": "garden_compost_bark_and_garden_tools",
+  "subLabel": "Compost Bark And Tools",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "garden-spade-stainless",
+  "name": "Garden Spade Stainless",
+  "price": 17.95,
+  "stock": 15,
+  "sub": "garden_compost_bark_and_garden_tools",
+  "subLabel": "Compost Bark And Tools",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "long-handled-hoe",
+  "name": "Long-Handled Hoe",
+  "price": 20.95,
+  "stock": 30,
+  "sub": "garden_compost_bark_and_garden_tools",
+  "subLabel": "Compost Bark And Tools",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "garden-rake",
+  "name": "Garden Rake",
+  "price": 22.95,
+  "stock": 15,
+  "sub": "garden_compost_bark_and_garden_tools",
+  "subLabel": "Compost Bark And Tools",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "hand-trowel-set-3pc",
+  "name": "Hand Trowel Set 3pc",
+  "price": 25.95,
+  "stock": 20,
+  "sub": "garden_compost_bark_and_garden_tools",
+  "subLabel": "Compost Bark And Tools",
+  "cat": "garden",
+  "catLabel": "Garden Centre"
+ },
+ {
+  "slug": "cosyglo-coal-20kg",
+  "name": "Cosyglo Coal 20kg",
+  "price": 5.5,
+  "stock": 30,
+  "sub": "fuel_coal_and_smokeless",
+  "subLabel": "Coal And Smokeless",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "ecobrite-smokeless-20kg",
+  "name": "Ecobrite Smokeless 20kg",
+  "price": 9.5,
+  "stock": 8,
+  "sub": "fuel_coal_and_smokeless",
+  "subLabel": "Coal And Smokeless",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "phurnacite-smokeless-20kg",
+  "name": "Phurnacite Smokeless 20kg",
+  "price": 13.95,
+  "stock": 12,
+  "sub": "fuel_coal_and_smokeless",
+  "subLabel": "Coal And Smokeless",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "homefire-ovoids-20kg",
+  "name": "Homefire Ovoids 20kg",
+  "price": 17.95,
+  "stock": 25,
+  "sub": "fuel_coal_and_smokeless",
+  "subLabel": "Coal And Smokeless",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "homefire-ovals-10kg",
+  "name": "Homefire Ovals 10kg",
+  "price": 21.95,
+  "stock": 40,
+  "sub": "fuel_coal_and_smokeless",
+  "subLabel": "Coal And Smokeless",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "welsh-anthracite-singles-20kg",
+  "name": "Welsh Anthracite Singles 20kg",
+  "price": 25.95,
+  "stock": 25,
+  "sub": "fuel_coal_and_smokeless",
+  "subLabel": "Coal And Smokeless",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "ecoblaze-wood-briquettes-12pk",
+  "name": "Ecoblaze Wood Briquettes 12pk",
+  "price": 4.5,
+  "stock": 0,
+  "sub": "fuel_briquettes_and_logs",
+  "subLabel": "Briquettes And Logs",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "peat-briquettes-12pk-bord-na-m-na",
+  "name": "Peat Briquettes 12pk (Bord na M\u00f3na)",
+  "price": 6.5,
+  "stock": 30,
+  "sub": "fuel_briquettes_and_logs",
+  "subLabel": "Briquettes And Logs",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "heat-logs-10pk",
+  "name": "Heat Logs 10pk",
+  "price": 8.5,
+  "stock": 15,
+  "sub": "fuel_briquettes_and_logs",
+  "subLabel": "Briquettes And Logs",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "kiln-dried-hardwood-logs-net",
+  "name": "Kiln Dried Hardwood Logs Net",
+  "price": 10.95,
+  "stock": 20,
+  "sub": "fuel_briquettes_and_logs",
+  "subLabel": "Briquettes And Logs",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "kiln-dried-hardwood-logs-crate",
+  "name": "Kiln Dried Hardwood Logs Crate",
+  "price": 12.95,
+  "stock": 0,
+  "sub": "fuel_briquettes_and_logs",
+  "subLabel": "Briquettes And Logs",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "kindling-box-2kg",
+  "name": "Kindling Box 2kg",
+  "price": 14.95,
+  "stock": 3,
+  "sub": "fuel_briquettes_and_logs",
+  "subLabel": "Briquettes And Logs",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "kindling-bag-3kg",
+  "name": "Kindling Bag 3kg",
+  "price": 16.95,
+  "stock": 40,
+  "sub": "fuel_briquettes_and_logs",
+  "subLabel": "Briquettes And Logs",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ },
+ {
+  "slug": "firelighters-32pk",
+  "name": "Firelighters 32pk",
+  "price": 18.95,
+  "stock": 50,
+  "sub": "fuel_briquettes_and_logs",
+  "subLabel": "Briquettes And Logs",
+  "cat": "fuel",
+  "catLabel": "Fuel & Solid Fuel"
+ }
+]
