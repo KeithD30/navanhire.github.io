@@ -21,28 +21,12 @@
 </head>
 <body>
   <div class="topbar" data-component></div>
+  <header class="header" data-component></header>
 
-  <!-- Hardware-specific header: logo row + category nav -->
-  <header class="hw-header">
-    <div class="container hw-header-top">
-      <a href="index.html" class="logo">
-        <img src="logo.svg" alt="Navan Hire &amp; Hardware" class="logo-img"/>
-      </a>
-      <div class="nhh-search-wrap">
-        <input type="search" id="nhhSearch" class="nhh-search-input" placeholder="Search products..." autocomplete="off" spellcheck="false"/>
-        <span class="nhh-search-icon"><i data-lucide="search"></i></span>
-        <div class="nhh-search-results" id="nhhSearchResults"></div>
-      </div>
-      <a href="tel:0469022535" class="hw-header-phone"><i data-lucide="phone" style="width:16px;height:16px"></i> 046 902 2535</a>
-      <a href="contact.html" class="btn btn-primary hw-header-cta">Get a Quote</a>
-      <a href="account.html" class="nhh-account-btn" title="Trade Login / Apply" aria-label="Account"><i data-lucide="user"></i></a>
-      <button class="hamburger" id="hwHamburger" aria-label="Open menu"><i data-lucide="menu"></i></button>
-    </div>
-
-    <!-- Category nav row -->
-    <nav class="hw-cat-nav" id="hwDeptBar">
-      <div class="container hw-cat-nav-inner">
-        <ul class="hw-dept-list">
+  <!-- Category nav bar with mega-menu dropdowns -->
+  <nav class="hw-cat-nav" id="hwDeptBar">
+    <div class="container hw-cat-nav-inner">
+      <ul class="hw-dept-list">
 
           <li class="hw-dept-item" data-cat="building">
             <a href="#" onclick="hwOpenCat('building');return false">Building Supplies <i data-lucide="chevron-down" class="hw-dept-arrow"></i></a>
@@ -208,17 +192,6 @@
         </ul>
       </div>
     </nav>
-
-    <!-- Mobile nav drawer -->
-    <div class="hw-mobile-nav" id="hwMobileNav">
-      <a href="index.html">Home</a>
-      <a href="hardware.html" class="active">Hardware &amp; DIY</a>
-      <a href="telehandlers.html">Telehandlers</a>
-      <a href="hire.html">Plant &amp; Tool Hire</a>
-      <a href="powered-access.html">Access &amp; Spider Lifts</a>
-      <a href="contact.html">Get a Quote</a>
-    </div>
-  </header>
 
   <!-- HARDWARE DRILL-DOWN -->
   <div class="container hw-container">
@@ -2438,14 +2411,6 @@
       }
     });
 
-    // Mobile hamburger toggle
-    var hamburger = document.getElementById('hwHamburger');
-    var mobileNav = document.getElementById('hwMobileNav');
-    if (hamburger && mobileNav) {
-      hamburger.addEventListener('click', function() {
-        mobileNav.classList.toggle('open');
-      });
-    }
   })();
 
   (function() {
