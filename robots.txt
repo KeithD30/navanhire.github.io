@@ -6,5 +6,9 @@ Allow: /
 # Sitemap location
 Sitemap: https://KeithD30.github.io/navanhire.github.io/sitemap.xml
 
-# Disallow admin/demo pages from indexing
+# Disallow admin/demo/internal pages from indexing
 Disallow: /nhh-portal-demo.html
+Disallow: /qr-generate.html
+Disallow: /qr-demo.html
+Disallow: /machine.html
+Disallow: /machine-docs/

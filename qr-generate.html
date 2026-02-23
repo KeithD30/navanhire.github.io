@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Generator | NHH Machine Labels</title>
+  <meta name="robots" content="noindex, nofollow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- QR code library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  <style>
+    :root {
+      --red: #fe0000;
+      --red-dark: #cc0000;
+      --black: #0D0D0D;
+      --dark: #1A1A1A;
+      --dark2: #2A2A2A;
+      --mid: #444;
+      --grey: #888;
+      --light: #F5F4F2;
+      --white: #FFFFFF;
+      --yellow: #F5A623;
+      --font-head: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+      --radius: 4px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .qr-page-header {
+      background: var(--black);
+      color: var(--white);
+      padding: 32px 0;
+      text-align: center;
+    }
+    .qr-page-header h1 {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .qr-page-header p {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Config Section ── */
+    .qr-config {
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 28px 32px;
+      margin: 32px auto;
+      max-width: 700px;
+    }
+    .qr-config label {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .qr-config-note {
+      font-size: 0.82rem;
+      color: var(--grey);
+      margin-bottom: 12px;
+    }
+    .qr-config input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #ddd;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+    .qr-config input:focus {
+      outline: none;
+      border-color: var(--red);
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: var(--radius);
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .btn-primary { background: var(--red); color: var(--white); border-color: var(--red); }
+    .btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); }
+    .btn-outline { background: transparent; color: var(--dark); border-color: var(--dark); }
+    .btn-outline:hover { background: var(--dark); color: var(--white); }
+
+    .qr-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin: 24px 0;
+      flex-wrap: wrap;
+    }
+
+    /* ── Grid of QR Labels ── */
+    .qr-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+      padding: 16px 0 60px;
+    }
+
+    .qr-label-card {
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      break-inside: avoid;
+    }
+
+    .qr-label-header {
+      background: var(--dark);
+      color: var(--white);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .qr-label-id {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .qr-label-type {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      margin-left: auto;
+      text-transform: uppercase;
+    }
+
+    .qr-label-body {
+      padding: 20px;
+      text-align: center;
+    }
+    .qr-label-body canvas,
+    .qr-label-body img {
+      margin: 0 auto 12px;
+    }
+    .qr-label-name {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--dark);
+    }
+    .qr-label-url {
+      font-size: 0.72rem;
+      color: var(--grey);
+      word-break: break-all;
+      margin-top: 4px;
+    }
+
+    .qr-empty {
+      text-align: center;
+      padding: 60px 24px;
+      color: var(--grey);
+    }
+
+    /* ── Print Styles ── */
+    @media print {
+      body { background: white; }
+      .qr-page-header,
+      .qr-config,
+      .qr-actions,
+      .qr-empty,
+      .no-print { display: none !important; }
+
+      .qr-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 0;
+      }
+      .qr-label-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+      }
+    }
+
+    /* ── Printable Label (standalone for stickers) ── */
+    .qr-sticker {
+      width: 62mm;
+      border: 1px dashed #ccc;
+      padding: 6mm;
+      text-align: center;
+      page-break-inside: avoid;
+      display: inline-block;
+      margin: 4mm;
+    }
+    .qr-sticker-logo {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--red);
+      margin-bottom: 4px;
+    }
+    .qr-sticker-id {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 6px;
+      color: var(--dark);
+    }
+    .qr-sticker-text {
+      font-size: 7.5px;
+      color: var(--grey);
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="qr-page-header">
+    <div class="container">
+      <h1>NHH QR Label Generator</h1>
+      <p>Generate printable QR code labels for your machine fleet</p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Config -->
+    <div class="qr-config">
+      <label for="baseUrlInput">Your Website URL</label>
+      <p class="qr-config-note">
+        This is the base URL of your NHH website where <strong>machine.html</strong> is hosted.<br>
+        Example: <code>https://nhh.ie</code> or <code>https://www.navanhireandhardware.ie</code>
+      </p>
+      <input type="url" id="baseUrlInput" placeholder="https://nhh.ie" value="https://nhh.ie"/>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="qr-actions">
+      <button class="btn btn-primary" id="btnGenerate" onclick="generateAll()">
+        Generate QR Codes
+      </button>
+      <button class="btn btn-outline" id="btnPrint" onclick="window.print()" style="display:none;">
+        Print Labels
+      </button>
+      <button class="btn btn-outline" id="btnStickers" onclick="openStickerView()" style="display:none;">
+        Print Stickers (62mm)
+      </button>
+    </div>
+
+    <!-- QR Grid -->
+    <div class="qr-grid" id="qrGrid">
+      <div class="qr-empty">
+        <p>Click <strong>"Generate QR Codes"</strong> to create labels for all machines in your registry.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+  (function() {
+    'use strict';
+
+    var grid        = document.getElementById('qrGrid');
+    var btnPrint    = document.getElementById('btnPrint');
+    var btnStickers = document.getElementById('btnStickers');
+    var machinesData = null;
+
+    // Make generateAll available globally
+    window.generateAll = function() {
+      var baseUrl = document.getElementById('baseUrlInput').value.trim().replace(/\/+$/, '');
+      if (!baseUrl) {
+        alert('Please enter your website URL first.');
+        return;
+      }
+
+      // Fetch machines.json
+      fetch('machine-docs/machines.json')
+        .then(function(res) {
+          if (!res.ok) throw new Error('Could not load machines.json');
+          return res.json();
+        })
+        .then(function(data) {
+          machinesData = data;
+          renderQRCodes(data.machines, baseUrl);
+          btnPrint.style.display = '';
+          btnStickers.style.display = '';
+        })
+        .catch(function(err) {
+          grid.innerHTML = '<div class="qr-empty"><p style="color:#cc0000;">Error: ' + err.message + '<br>Make sure machine-docs/machines.json exists.</p></div>';
+        });
+    };
+
+    function renderQRCodes(machines, baseUrl) {
+      grid.innerHTML = '';
+
+      machines.forEach(function(m) {
+        var url = baseUrl + '/machine.html?id=' + encodeURIComponent(m.id);
+
+        // Generate QR code
+        var qr = qrcode(0, 'M');
+        qr.addData(url);
+        qr.make();
+
+        // Build card
+        var card = document.createElement('div');
+        card.className = 'qr-label-card';
+        card.setAttribute('data-machine-id', m.id);
+        card.innerHTML =
+          '<div class="qr-label-header">' +
+          '  <span class="qr-label-id">' + m.id + '</span>' +
+          '  <span class="qr-label-type">' + m.type + '</span>' +
+          '</div>' +
+          '<div class="qr-label-body">' +
+          '  ' + qr.createImgTag(5, 8) +
+          '  <div class="qr-label-name">' + m.name + '</div>' +
+          '  <div class="qr-label-url">' + url + '</div>' +
+          '</div>';
+
+        grid.appendChild(card);
+      });
+    }
+
+    // Open a new window with sticker-format labels (62mm, suitable for label printers)
+    window.openStickerView = function() {
+      if (!machinesData) return;
+
+      var baseUrl = document.getElementById('baseUrlInput').value.trim().replace(/\/+$/, '');
+      var win = window.open('', '_blank');
+
+      var html = '<!DOCTYPE html><html><head><meta charset="UTF-8"/>' +
+        '<title>NHH Machine Stickers</title>' +
+        '<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"><\/script>' +
+        '<style>' +
+        'body{font-family:"Barlow",sans-serif;margin:20px;text-align:center;}' +
+        '.sticker{width:62mm;border:1px dashed #ccc;padding:5mm;text-align:center;display:inline-block;margin:3mm;page-break-inside:avoid;}' +
+        '.sticker-logo{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:0.06em;color:#fe0000;margin-bottom:3px;}' +
+        '.sticker-id{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;margin-top:5px;color:#1a1a1a;}' +
+        '.sticker-name{font-size:8px;color:#888;margin-top:2px;}' +
+        '.sticker-scan{font-size:7px;color:#aaa;margin-top:3px;}' +
+        '@media print{body{margin:0;}.sticker{border:none;}}' +
+        '.print-btn{display:inline-block;padding:10px 28px;background:#fe0000;color:#fff;border:none;border-radius:4px;font-family:"Barlow Condensed",sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;cursor:pointer;margin:20px 0;}' +
+        '@media print{.print-btn{display:none;}}' +
+        '</style></head><body>' +
+        '<button class="print-btn" onclick="window.print()">Print Stickers</button><br>';
+
+      machinesData.machines.forEach(function(m) {
+        html += '<div class="sticker" id="s-' + m.id + '">' +
+          '<div class="sticker-logo">Navan Hire &amp; Hardware</div>' +
+          '<div id="qr-' + m.id + '"></div>' +
+          '<div class="sticker-id">' + m.id + '</div>' +
+          '<div class="sticker-name">' + m.name + '</div>' +
+          '<div class="sticker-scan">Scan for GA1 Cert &amp; Operator\'s Manual</div>' +
+          '</div>';
+      });
+
+      html += '<script>' +
+        'var baseUrl="' + baseUrl + '";' +
+        'var machines=' + JSON.stringify(machinesData.machines) + ';' +
+        'machines.forEach(function(m){' +
+        '  var url=baseUrl+"/machine.html?id="+encodeURIComponent(m.id);' +
+        '  var qr=qrcode(0,"M");qr.addData(url);qr.make();' +
+        '  document.getElementById("qr-"+m.id).innerHTML=qr.createImgTag(4,4);' +
+        '});' +
+        '<\/script></body></html>';
+
+      win.document.write(html);
+      win.document.close();
+    };
+
+  })();
+  </script>
+</body>
+</html>

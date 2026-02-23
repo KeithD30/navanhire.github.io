@@ -1,0 +1,5 @@
+name: Genie Z-45 Boom Lift
+type: powered-access
+serial: EXAMPLE-SERIAL-002
+expiry: 2026-11-20
+video: https://www.youtube.com/watch?v=EXAMPLE

@@ -116,4 +116,72 @@
   if (header) header.innerHTML = headerHTML;
   if (footer) footer.innerHTML = footerHTML;
 
+  // ── JSON-LD STRUCTURED DATA ──
+  // LocalBusiness schema (every page)
+  var localBusiness = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://KeithD30.github.io/navanhire.github.io/#business",
+    "name": "Navan Hire & Hardware",
+    "alternateName": "NHH",
+    "description": "Meath\u2019s leading provider of hardware, plant hire, powered access and building supplies since 1986.",
+    "url": "https://KeithD30.github.io/navanhire.github.io/",
+    "telephone": "+353-46-902-2535",
+    "email": "hiredesk@nhh.ie",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Whistlemount, Kells Road",
+      "addressLocality": "Navan",
+      "addressRegion": "Co. Meath",
+      "postalCode": "C15 FX6Y",
+      "addressCountry": "IE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 53.654,
+      "longitude": -6.683
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "17:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:30", "closes": "13:00" }
+    ],
+    "foundingDate": "1986",
+    "priceRange": "\u20AC\u20AC",
+    "currenciesAccepted": "EUR",
+    "paymentAccepted": "Cash, Credit Card, Debit Card, Bank Transfer",
+    "areaServed": [
+      { "@type": "AdministrativeArea", "name": "County Meath" },
+      { "@type": "AdministrativeArea", "name": "Dublin" },
+      { "@type": "AdministrativeArea", "name": "North East Ireland" }
+    ],
+    "sameAs": []
+  };
+
+  var schemaScript = document.createElement('script');
+  schemaScript.type = 'application/ld+json';
+  schemaScript.textContent = JSON.stringify(localBusiness);
+  document.head.appendChild(schemaScript);
+
+  // BreadcrumbList schema (pages with breadcrumbs)
+  var bcEl = document.querySelector('.hc-breadcrumb, .breadcrumb');
+  if (bcEl) {
+    var items = bcEl.querySelectorAll('.hc-bc-item, a');
+    var bcItems = [];
+    for (var i = 0; i < items.length; i++) {
+      bcItems.push({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": items[i].textContent.trim(),
+        "item": items[i].href || window.location.href
+      });
+    }
+    if (bcItems.length > 0) {
+      var bcSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": bcItems };
+      var bcScript = document.createElement('script');
+      bcScript.type = 'application/ld+json';
+      bcScript.textContent = JSON.stringify(bcSchema);
+      document.head.appendChild(bcScript);
+    }
+  }
+
 })();

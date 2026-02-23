@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>Machine Documents | Navan Hire & Hardware</title>
+  <meta name="description" content="Access machine operator manuals and GA1 certificates for Navan Hire & Hardware equipment."/>
+  <meta name="robots" content="noindex, nofollow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* ── Machine Doc Page Styles ── */
+    .md-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .md-hero {
+      background: var(--black);
+      color: var(--white);
+      padding: 48px 0 40px;
+      text-align: center;
+    }
+    .md-hero-title {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 4px;
+    }
+    .md-hero-sub {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95rem;
+    }
+    .md-machine-id {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 4px 14px;
+      border-radius: var(--radius);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .md-content {
+      flex: 1;
+      padding: 48px 0 80px;
+      background: var(--light);
+    }
+
+    .md-card {
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .md-card-header {
+      background: var(--dark);
+      color: var(--white);
+      padding: 24px 32px;
+    }
+    .md-card-machine-name {
+      font-family: var(--font-head);
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .md-card-serial {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+
+    .md-card-body {
+      padding: 32px;
+    }
+
+    .md-doc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .md-doc-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+      border: 2px solid #eee;
+      border-radius: 8px;
+      transition: all var(--transition);
+      text-decoration: none;
+      color: var(--dark);
+    }
+    .md-doc-item:hover {
+      border-color: var(--red);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(254,0,0,0.1);
+    }
+
+    .md-doc-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .md-doc-icon--cert {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    .md-doc-icon--manual {
+      background: #e3f2fd;
+      color: #1565c0;
+    }
+    .md-doc-icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .md-doc-info {
+      flex: 1;
+    }
+    .md-doc-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .md-doc-desc {
+      color: var(--grey);
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+
+    .md-doc-download {
+      color: var(--red);
+      flex-shrink: 0;
+    }
+    .md-doc-download svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    /* Video guide box */
+    .md-doc-icon--video {
+      background: #fce4ec;
+      color: #c62828;
+    }
+
+    .md-error {
+      text-align: center;
+      padding: 60px 24px;
+    }
+    .md-error-icon {
+      color: var(--red);
+      margin-bottom: 16px;
+    }
+    .md-error-icon svg {
+      width: 48px;
+      height: 48px;
+    }
+    .md-error h2 {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    .md-error p {
+      color: var(--grey);
+    }
+
+    .md-footer-note {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.85rem;
+      color: var(--grey);
+    }
+    .md-footer-note a {
+      color: var(--red);
+      font-weight: 600;
+    }
+
+    .md-loading {
+      text-align: center;
+      padding: 60px 24px;
+      color: var(--grey);
+    }
+    .md-loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid #eee;
+      border-top-color: var(--red);
+      border-radius: 50%;
+      animation: md-spin 0.8s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes md-spin { to { transform: rotate(360deg); } }
+
+    /* ── Mobile topbar: slim, phone + hours on one line, no address ── */
+    @media (max-width: 900px) {
+      .md-page .topbar { padding: 4px 0; font-size: 0.75rem; }
+      .md-page .topbar-inner { justify-content: center; gap: 12px; }
+      .md-page .topbar-inner > span:last-child { display: none; } /* hide address */
+    }
+
+    @media (max-width: 640px) {
+      .md-hero { padding: 32px 0 28px; }
+      .md-hero-title { font-size: 1.5rem; }
+      .md-content { padding: 32px 0 60px; }
+      .md-card-header { padding: 20px 24px; }
+      .md-card-body { padding: 24px; }
+      .md-doc-item { padding: 16px; gap: 12px; }
+      .md-doc-icon { width: 44px; height: 44px; }
+      .md-doc-title { font-size: 1rem; }
+      .md-page .topbar-inner { flex-direction: row; gap: 10px; }
+      .md-page .topbar-inner > span:last-child { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="md-page">
+    <div class="topbar" data-component></div>
+    <header class="header" data-component></header>
+
+    <!-- Hero -->
+    <section class="md-hero">
+      <div class="container">
+        <div class="md-machine-id" id="mdMachineId">—</div>
+        <h1 class="md-hero-title">Machine Documents</h1>
+        <p class="md-hero-sub">Operator resources for this machine</p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="md-content">
+      <div class="container">
+
+        <!-- Loading state -->
+        <div class="md-card" id="mdLoading">
+          <div class="md-loading">
+            <div class="md-loading-spinner"></div>
+            <p>Loading machine info&hellip;</p>
+          </div>
+        </div>
+
+        <!-- Machine card (hidden until loaded) -->
+        <div class="md-card" id="mdCard" style="display:none;">
+          <div class="md-card-header">
+            <div class="md-card-machine-name" id="mdName">—</div>
+            <div class="md-card-serial" id="mdSerial"></div>
+          </div>
+          <div class="md-card-body">
+            <div class="md-doc-list" id="mdDocList"></div>
+          </div>
+        </div>
+
+        <!-- Error state (hidden until needed) -->
+        <div class="md-card" id="mdError" style="display:none;">
+          <div class="md-error">
+            <div class="md-error-icon"><i data-lucide="alert-triangle"></i></div>
+            <h2>Machine Not Found</h2>
+            <p>The machine ID in the scanned code could not be found.<br>Please contact Navan Hire &amp; Hardware if you need help.</p>
+            <a href="contact.html" class="btn btn-primary" style="margin-top:20px;">Contact Us</a>
+          </div>
+        </div>
+
+        <p class="md-footer-note">
+          <i data-lucide="phone" style="width:14px;height:14px;vertical-align:-2px;"></i>
+          Need help? Call <a href="tel:0469022535">046 902 2535</a> or <a href="contact.html">contact us online</a>.
+        </p>
+
+      </div>
+    </section>
+
+    <footer class="footer" data-component></footer>
+  </div>
+
+  <script src="components.js"></script>
+  <script src="main.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    // ── Get machine ID from URL: machine.html?id=NHH-TH001 ──
+    var params = new URLSearchParams(window.location.search);
+    var machineId = (params.get('id') || '').trim().toUpperCase();
+
+    var elLoading  = document.getElementById('mdLoading');
+    var elCard     = document.getElementById('mdCard');
+    var elError    = document.getElementById('mdError');
+    var elId       = document.getElementById('mdMachineId');
+    var elName     = document.getElementById('mdName');
+    var elSerial   = document.getElementById('mdSerial');
+    var elDocList  = document.getElementById('mdDocList');
+
+
+    // Set machine ID badge immediately
+    if (machineId) {
+      elId.textContent = machineId;
+      document.title = machineId + ' — Machine Documents | NHH';
+    }
+
+    // ── Helpers ──
+    function formatDate(isoStr) {
+      var d = new Date(isoStr);
+      var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      return d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+    }
+
+    function createDocItem(type, label, desc, href) {
+      var iconClass = type === 'cert' ? 'md-doc-icon--cert' : (type === 'video' ? 'md-doc-icon--video' : 'md-doc-icon--manual');
+      var iconName  = type === 'cert' ? 'shield-check' : (type === 'video' ? 'play-circle' : 'book-open');
+
+      var a = document.createElement('a');
+      a.className = 'md-doc-item';
+      a.href = href;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML =
+        '<div class="md-doc-icon ' + iconClass + '"><i data-lucide="' + iconName + '"></i></div>' +
+        '<div class="md-doc-info">' +
+        '  <div class="md-doc-title">' + label + '</div>' +
+        '  <div class="md-doc-desc">' + desc + '</div>' +
+        '</div>' +
+        '<div class="md-doc-download"><i data-lucide="download"></i></div>';
+      return a;
+    }
+
+    function showError() {
+      elLoading.style.display = 'none';
+      elCard.style.display = 'none';
+      elError.style.display = 'block';
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function showMachine(machine) {
+      elLoading.style.display = 'none';
+      elError.style.display = 'none';
+
+      // Populate header
+      elName.textContent = machine.name;
+      if (machine.serial) {
+        elSerial.textContent = 'S/N: ' + machine.serial;
+      }
+
+      // Build document links
+      // The base URL for your cloud storage — UPDATE THIS when you set up cloud sync
+      var baseUrl = 'machine-docs/';
+
+      if (machine.docs.cert) {
+        elDocList.appendChild(createDocItem(
+          'cert',
+          'GA1 Certificate',
+          'Current inspection / thorough examination certificate',
+          baseUrl + machine.docs.cert
+        ));
+      }
+      if (machine.docs.manual) {
+        elDocList.appendChild(createDocItem(
+          'manual',
+          "Operator's Manual",
+          'Machine operating instructions and safety information',
+          baseUrl + machine.docs.manual
+        ));
+      }
+
+      // Add Quick Guide Video if present
+      if (machine.videoUrl) {
+        elDocList.appendChild(createDocItem(
+          'video',
+          'Quick Guide Video',
+          'Watch a short video on operating this machine',
+          machine.videoUrl
+        ));
+      }
+
+      elCard.style.display = 'block';
+
+      // Re-render Lucide icons for dynamically added elements
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // ── Load and find machine ──
+    if (!machineId) {
+      showError();
+    } else {
+      fetch('machine-docs/machines.json')
+        .then(function(res) {
+          if (!res.ok) throw new Error('Could not load machines list');
+          return res.json();
+        })
+        .then(function(data) {
+          var machine = null;
+          for (var i = 0; i < data.machines.length; i++) {
+            if (data.machines[i].id.toUpperCase() === machineId) {
+              machine = data.machines[i];
+              break;
+            }
+          }
+          if (machine) {
+            showMachine(machine);
+          } else {
+            showError();
+          }
+        })
+        .catch(function() {
+          showError();
+        });
+    }
+
+  })();
+  </script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

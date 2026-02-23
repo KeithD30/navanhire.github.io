@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
   <title>Plant & Tool Hire | Navan Hire & Hardware</title>
   <meta name="description" content="Hire diggers, dumpers, breakers, generators, compressors and more from Navan Hire & Hardware. Daily and weekly rates. Delivering across Dublin and the North East."/>
+  <link rel="canonical" href="https://KeithD30.github.io/navanhire.github.io/hire.html"/>
+  <meta property="og:title" content="Plant &amp; Tool Hire | Navan Hire &amp; Hardware"/>
+  <meta property="og:description" content="Hire diggers, dumpers, breakers, generators, compressors and more. Daily and weekly rates. Delivering across Dublin and the North East."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://KeithD30.github.io/navanhire.github.io/hire.html"/>
+  <meta property="og:site_name" content="Navan Hire &amp; Hardware"/>
+  <meta property="og:locale" content="en_IE"/>
+  <meta name="twitter:card" content="summary"/>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
@@ -251,19 +260,22 @@
 
     <!-- LEVEL 3: CATEGORIES -->
     <div id="hcLevel3" style="display:none">
-      <button class="hc-back-btn" id="hcBackBtn3" onclick="goBack3()">&#8592; Back</button>
+      <div class="hc-level3-toolbar">
+        <button class="hc-back-btn" id="hcBackBtn3" onclick="goBack3()">&#8592; Back</button>
+        <div class="hc-subcat-filters" id="hcSubcatPills"></div>
+      </div>
       <div class="hc-cat-grid" id="hcCatGrid"></div>
     </div>
 
     <!-- LEVEL 4: PRODUCT LIST -->
     <div id="hcLevel4" style="display:none">
-      <button class="hc-back-btn" id="hcBackBtn4" onclick="showLevel(3)">&#8592; Back to categories</button>
+      <button class="hc-back-btn" id="hcBackBtn4" onclick="showLevel(3);updateBreadcrumb([currentSection])">&#8592; Back to categories</button>
       <div class="hc-product-list" id="hcProductList"></div>
     </div>
 
     <!-- LEVEL 5: PRODUCT DETAIL -->
     <div id="hcLevel5" style="display:none">
-      <button class="hc-back-btn" onclick="history.go(-1)">&#8592; Back to products</button>
+      <button class="hc-back-btn" onclick="openCat(currentCat)">&#8592; Back to products</button>
       <div id="hcProductDetail"></div>
     </div>
 
@@ -331,33 +343,77 @@
 
     document.getElementById('hcTitle').textContent = label;
 
+    var pillsEl = document.getElementById('hcSubcatPills');
+
     if (isSub) {
-      // Show sub-category level (Level 2 sub)
+      // Show all subcategory products in Level 3 with filter pills
       var subcats = Object.keys(data);
-      document.getElementById('hcSubtitle').textContent = subcats.length + ' sub-categories';
-      var grid = document.getElementById('hcSubcatGrid');
-      var html = '';
-      subcats.forEach(function(sub, i) {
-        var total = Object.values(data[sub]).reduce(function(a, items) { return a + items.length; }, 0);
-        html += '<div class="hc-cat-card" data-subcatidx="' + i + '" onclick="openSubcatByIdx(this)">';
-        html += '<div class="hc-cat-name">' + escH(sub) + '</div>';
-        html += '<div class="hc-cat-count">' + total + ' item' + (total !== 1 ? 's' : '') + '</div>';
-        html += '<span class="hc-arrow">&#8250;</span>';
-        html += '</div>';
+      var allCats = [];
+      var catSubMap = {};  // maps cat name → subcategory name
+      subcats.forEach(function(sub) {
+        Object.keys(data[sub]).forEach(function(cat) {
+          allCats.push(cat);
+          catSubMap[cat] = sub;
+        });
       });
-      grid.innerHTML = html;
-      grid.dataset.subcatlist = JSON.stringify(subcats);
+      var totalItems = allCats.reduce(function(a, cat) {
+        var sub = catSubMap[cat];
+        return a + data[sub][cat].length;
+      }, 0);
+      document.getElementById('hcSubtitle').textContent = allCats.length + ' categories \u00b7 ' + totalItems + ' items';
+
+      var grid = document.getElementById('hcCatGrid');
+
+      // Build filter pills in the toolbar
+      var pillsHtml = '<span class="hc-subcat-pill active" data-filter="all" onclick="filterSubcat(this)">All</span>';
+      subcats.forEach(function(sub) {
+        pillsHtml += '<span class="hc-subcat-pill" data-filter="' + escH(sub) + '" onclick="filterSubcat(this)">' + escH(sub) + '</span>';
+      });
+      pillsEl.innerHTML = pillsHtml;
+      pillsEl.style.display = 'flex';
+
+      // Build category cards tagged with their subcategory
+      var cardsHtml = '';
+      allCats.forEach(function(cat, i) {
+        var sub = catSubMap[cat];
+        var count = data[sub][cat].length;
+        cardsHtml += '<div class="hc-cat-card" data-catidx="' + i + '" data-subcat="' + escH(sub) + '" onclick="openCatByIdx(this)">';
+        cardsHtml += '<div class="hc-cat-name">' + escH(cat) + '</div>';
+        cardsHtml += '<div class="hc-cat-count">' + count + ' item' + (count !== 1 ? 's' : '') + '</div>';
+        cardsHtml += '<span class="hc-arrow">&#8250;</span>';
+        cardsHtml += '</div>';
+      });
+      grid.innerHTML = cardsHtml;
+      grid.dataset.catlist = JSON.stringify(allCats);
+      grid.dataset.catsubmap = JSON.stringify(catSubMap);
+
+      // Store back-btn behaviour for Level 3
+      document.getElementById('hcBackBtn3').onclick = function() { showLevel(1); updateBreadcrumb([]); };
       updateBreadcrumb([label]);
-      showLevel(2);
+      showLevel(3);
     } else {
-      // Normal section: go straight to cat grid (Level 3)
+      // Normal section: show cat grid (Level 3) with category filter pills
       var cats = Object.keys(data);
       document.getElementById('hcSubtitle').textContent = cats.length + ' categories';
       var grid = document.getElementById('hcCatGrid');
+
+      // Build filter pills for categories
+      if (cats.length > 1) {
+        var pillsHtml = '<span class="hc-subcat-pill active" data-filter="all" onclick="filterSubcat(this)">All</span>';
+        cats.forEach(function(cat) {
+          pillsHtml += '<span class="hc-subcat-pill" data-filter="' + escH(cat) + '" onclick="filterSubcat(this)">' + escH(cat) + '</span>';
+        });
+        pillsEl.innerHTML = pillsHtml;
+        pillsEl.style.display = 'flex';
+      } else {
+        pillsEl.innerHTML = '';
+        pillsEl.style.display = 'none';
+      }
+
       var html = '';
       cats.forEach(function(cat, i) {
         var count = data[cat].length;
-        html += '<div class="hc-cat-card" data-catidx="' + i + '" onclick="openCatByIdx(this)">';
+        html += '<div class="hc-cat-card" data-catidx="' + i + '" data-subcat="' + escH(cat) + '" onclick="openCatByIdx(this)">';
         html += '<div class="hc-cat-name">' + escH(cat) + '</div>';
         html += '<div class="hc-cat-count">' + count + ' item' + (count !== 1 ? 's' : '') + '</div>';
         html += '<span class="hc-arrow">&#8250;</span>';
@@ -365,9 +421,27 @@
       });
       grid.innerHTML = html;
       grid.dataset.catlist = JSON.stringify(cats);
+      delete grid.dataset.catsubmap;
+      document.getElementById('hcBackBtn3').onclick = function() { showLevel(1); updateBreadcrumb([]); };
       updateBreadcrumb([label]);
       showLevel(3);
     }
+  }
+
+  // ── Filter pills for subcategory sections ──────────────────────────────────
+  function filterSubcat(pill) {
+    var pills = document.querySelectorAll('#hcSubcatPills .hc-subcat-pill');
+    pills.forEach(function(p) { p.classList.remove('active'); });
+    pill.classList.add('active');
+    var filter = pill.dataset.filter;
+    var cards = document.querySelectorAll('#hcCatGrid .hc-cat-card');
+    cards.forEach(function(card) {
+      if (filter === 'all' || card.dataset.subcat === filter) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
   }
 
   // ── Level 2 (sub-cat) → Level 3 (cat) ────────────────────────────────────
@@ -377,34 +451,24 @@
     openSubOrCat(subcats[parseInt(el.dataset.subcatidx)]);
   }
   function openSubOrCat(subName) {
-    currentSubcat = subName;
-    currentCat    = null;
-    var key  = '__sub__' + currentSection;
-    var data = HIRE_DATA[key][subName];
-    var cats = Object.keys(data);
-    document.getElementById('hcTitle').textContent    = subName;
-    document.getElementById('hcSubtitle').textContent = cats.length + ' categories';
-    var grid = document.getElementById('hcCatGrid');
-    var html = '';
-    cats.forEach(function(cat, i) {
-      var count = data[cat].length;
-      html += '<div class="hc-cat-card" data-catidx="' + i + '" onclick="openCatByIdx(this)">';
-      html += '<div class="hc-cat-name">' + escH(cat) + '</div>';
-      html += '<div class="hc-cat-count">' + count + ' item' + (count !== 1 ? 's' : '') + '</div>';
-      html += '<span class="hc-arrow">&#8250;</span>';
-      html += '</div>';
+    // Re-open the section to rebuild pills + cards, then activate the matching pill
+    openSection(null, currentSection);
+    var pills = document.querySelectorAll('#hcSubcatPills .hc-subcat-pill');
+    pills.forEach(function(p) {
+      p.classList.remove('active');
+      if (p.dataset.filter === subName) { p.classList.add('active'); filterSubcat(p); }
     });
-    grid.innerHTML = html;
-    grid.dataset.catlist = JSON.stringify(cats);
-    updateBreadcrumb([currentSection, subName]);
-    showLevel(3);
   }
 
   // ── Level 3 (cat list) → Level 4 (product list) ───────────────────────────
   function openCatByIdx(el) {
     var grid = document.getElementById('hcCatGrid');
     var cats = JSON.parse(grid.dataset.catlist);
-    openCat(cats[parseInt(el.dataset.catidx)]);
+    var catName = cats[parseInt(el.dataset.catidx)];
+    // If this card has a subcat data attribute, use it
+    var subcat = el.dataset.subcat || null;
+    if (subcat) { currentSubcat = subcat; }
+    openCat(catName);
   }
   function openCat(cat) {
     currentCat = cat;
@@ -514,7 +578,9 @@
 
 
   function goBack3() {
-    if (currentSubcat) { showLevel(2); } else { showLevel(1); updateBreadcrumb([]); }
+    // For sub-sections, back goes to Level 1 since Level 2 is replaced by filter pills on Level 3
+    showLevel(1);
+    updateBreadcrumb([]);
   }
   showLevel(1);
 

@@ -1,0 +1,5 @@
+name: JCB 535-95 Telehandler
+type: telehandler
+serial: EXAMPLE-SERIAL-001
+expiry: 2026-08-15
+video: https://www.youtube.com/watch?v=EXAMPLE

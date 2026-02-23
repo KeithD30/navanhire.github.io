@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scan This QR Code — NHH Demo</title>
+  <meta name="robots" content="noindex, nofollow"/>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #fe0000;
+      --dark: #1A1A1A;
+      --font-head: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background: #f5f4f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      text-align: center;
+    }
+    .demo-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+      padding: 40px 48px;
+      max-width: 420px;
+    }
+    .demo-badge {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 4px 14px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: var(--font-head);
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+    .subtitle {
+      color: #888;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+    #qrCode {
+      margin: 0 auto 20px;
+    }
+    #qrCode img {
+      border-radius: 8px;
+    }
+    .demo-url {
+      font-size: 0.75rem;
+      color: #aaa;
+      word-break: break-all;
+      margin-bottom: 16px;
+    }
+    .demo-instructions {
+      background: #f5f4f2;
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 0.85rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    .demo-instructions strong {
+      color: var(--dark);
+    }
+    .demo-step {
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-card">
+    <div class="demo-badge">Live Demo</div>
+    <h1>Scan Me</h1>
+    <p class="subtitle">Use your phone camera to scan this QR code</p>
+    <div id="qrCode"></div>
+    <div class="demo-url" id="demoUrl"></div>
+    <div class="demo-instructions">
+      <div class="demo-step"><strong>1.</strong> Make sure your phone is on the <strong>same WiFi</strong> as this computer</div>
+      <div class="demo-step"><strong>2.</strong> Open your phone camera and point at the QR code</div>
+      <div class="demo-step"><strong>3.</strong> Tap the link that appears — you'll see the NHH machine page</div>
+    </div>
+  </div>
+
+  <script>
+    var machineId = 'TH001';
+    var url = 'https://fifty-terms-sin.loca.lt/machine.html?id=' + machineId;
+
+    document.getElementById('demoUrl').textContent = url;
+
+    var qr = qrcode(0, 'M');
+    qr.addData(url);
+    qr.make();
+    document.getElementById('qrCode').innerHTML = qr.createImgTag(6, 12);
+  </script>
+</body>
+</html>

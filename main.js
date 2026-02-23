@@ -9,7 +9,12 @@ const mobileNav = document.getElementById('mobileNav');
 if (hamburger && mobileNav) {
   hamburger.addEventListener('click', () => {
     mobileNav.classList.toggle('open');
-    hamburger.innerHTML = mobileNav.classList.contains('open') ? '✕' : '&#9776;';
+    hamburger.innerHTML = mobileNav.classList.contains('open')
+      ? '<i data-lucide="x"></i>'
+      : '<i data-lucide="menu"></i>';
+    if (window.lucide) lucide.createIcons();
+    // Lock body scroll when nav is open
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
   });
 }
 
@@ -18,7 +23,9 @@ if (mobileNav) {
   mobileNav.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       mobileNav.classList.remove('open');
-      hamburger.innerHTML = '&#9776;';
+      hamburger.innerHTML = '<i data-lucide="menu"></i>';
+      if (window.lucide) lucide.createIcons();
+      document.body.style.overflow = '';
     });
   });
 }
@@ -96,4 +103,18 @@ window.addEventListener('scroll', () => {
       }
     }
   }
+})();
+
+// ── Auto-detect loaded background images and hide placeholders ──
+(function() {
+  var cards = document.querySelectorAll('.pa-card-img, .pa-cat-img, .pa-prod-thumb, .pa-product-hero-img');
+  cards.forEach(function(el) {
+    var bg = el.style.backgroundImage;
+    if (!bg || bg === 'none') return;
+    var m = bg.match(/url\(["']?([^"')]+)/);
+    if (!m) return;
+    var img = new Image();
+    img.onload = function() { el.classList.add('img-loaded'); };
+    img.src = m[1];
+  });
 })();

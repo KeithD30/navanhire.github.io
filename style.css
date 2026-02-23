@@ -85,7 +85,10 @@ i.af-acc-chev { width: 20px; height: 20px; transition: transform 0.25s ease; }
 /* Hamburger menu icon */
 .hamburger [data-lucide] { width: 24px; height: 24px; }
 
-html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+html { scroll-behavior: smooth; }
+@media (min-width: 1024px) {
+  html { scrollbar-gutter: stable; }
+}
 
 body {
   font-family: var(--font-body);
@@ -963,7 +966,8 @@ ul { list-style: none; }
   .form-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
-  .topbar-inner { flex-direction: column; gap: 4px; font-size: 0.75rem; }
+  .topbar-inner { flex-direction: row; justify-content: center; gap: 12px; font-size: 0.75rem; }
+  .topbar-inner > span:last-child { display: none; }  /* hide address on mobile */
   .hero { min-height: 500px; }
   .trust-grid { justify-content: center; }
   .cta-inner { flex-direction: column; text-align: center; }
@@ -1001,14 +1005,7 @@ ul { list-style: none; }
   overflow: hidden;
 }
 .split-hero-panel--hire {
-  background: var(--black);
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 60px,
-    rgba(254,0,0,0.04) 60px,
-    rgba(254,0,0,0.04) 61px
-  );
+  background: var(--black) url('images/telehandlers/hero.jpg') center / cover no-repeat;
 }
 .split-hero-panel--hire::after {
   content: '';
@@ -1097,13 +1094,6 @@ ul { list-style: none; }
 /* ===== RED HEADER OVERRIDES ===== */
 /* header btn-primary override removed — btn-white is used in header */
 /* ===== HIRE HERO BACKGROUND IMAGE ===== */
-/* When you add a real photo, save it as images/hire-hero.jpg and it will appear automatically */
-.split-hero-panel--hire {
-  background-image: url('images/hire-hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: multiply;
-}
 /* Dark overlay so text stays readable over photo */
 .split-hero-panel--hire::before {
   content: '';
@@ -1447,6 +1437,63 @@ ul { list-style: none; }
 }
 .hc-back-btn:hover { opacity: .7; }
 
+/* ── Level 3 toolbar (back + pills inline) ── */
+.hc-level3-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 18px;
+  flex-wrap: wrap;
+}
+.hc-level3-toolbar .hc-back-btn {
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+.hc-level3-toolbar .hc-back-btn::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  background: var(--dark2);
+  opacity: 0.3;
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+/* ── Sub-category filter pills ── */
+.hc-subcat-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.hc-subcat-pill {
+  background: #fff;
+  border: 1.5px solid var(--dark2);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--dark2);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.hc-subcat-pill:hover {
+  background: var(--dark2);
+  border-color: var(--dark2);
+  color: #fff;
+}
+.hc-subcat-pill.active {
+  background: var(--dark);
+  border-color: var(--dark);
+  color: #fff;
+}
+
 /* ── LEVEL 1: SECTION CARDS ── */
 .hc-section-grid {
   display: grid;
@@ -1688,6 +1735,43 @@ ul { list-style: none; }
 }
 .pa-hero p { color: rgba(255,255,255,.6); font-size: 1rem; margin: 0; }
 
+/* ── Telehandler hero background ── */
+.th-hero {
+  background: #111 url('images/hire-hero.jpg') center 40% / cover no-repeat;
+  position: relative;
+  padding: 80px 0 60px;
+  min-height: 320px;
+}
+.th-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 0;
+}
+.th-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Telehandler showcase banner ── */
+.th-showcase {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  background: #111;
+}
+.th-showcase-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 420px;
+}
+@media (max-width: 640px) {
+  .th-showcase-img { max-height: 220px; }
+}
+
 /* ── Level 1: Group cards (big image cards) ── */
 .pa-group-grid {
   display: grid;
@@ -1741,12 +1825,12 @@ ul { list-style: none; }
   background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
   gap: 8px;
 }
-/* Hide placeholder when image loads */
-.pa-card-img[style*="url(images"] .pa-card-img-placeholder,
-.pa-cat-img[style*="url(images"] .pa-cat-img-placeholder,
-.pa-prod-thumb[style*="url(images"] .pa-prod-thumb-ph,
-.pa-product-hero-img[style*="url(images"] .pa-product-hero-ph {
-  /* Will be hidden by JS once real images exist */
+/* Hide placeholder when image is confirmed loaded (via .img-loaded class) */
+.pa-card-img.img-loaded .pa-card-img-placeholder,
+.pa-cat-img.img-loaded .pa-cat-img-placeholder,
+.pa-prod-thumb.img-loaded .pa-prod-thumb-ph,
+.pa-product-hero-img.img-loaded .pa-product-hero-ph {
+  display: none;
 }
 .pa-card-img-icon { font-size: 3rem; }
 .pa-card-img-hint,
@@ -3757,4 +3841,243 @@ ul { list-style: none; }
   .do-card { padding: 12px; gap: 10px; }
   .do-icon { width: 38px; height: 38px; }
   .do-price { font-size: 0.75rem; }
+}
+
+/* ===== MOBILE OPTIMISATION FIXES ===== */
+
+/* ── iOS: Prevent auto-zoom on input focus (font-size must be ≥16px) ── */
+@media (max-width: 900px) {
+  input, select, textarea { font-size: 16px !important; }
+}
+
+/* ── iPhone notch / Dynamic Island safe-area ── */
+.header {
+  padding-top: env(safe-area-inset-top, 0);
+}
+.footer-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.cart-drawer {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* ── Mobile nav: scroll containment ── */
+.mobile-nav.open {
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* ── Spec tables: prevent horizontal overflow ── */
+.pt-tab-content {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ── Touch targets: minimum 44×44px ── */
+.social-links a { min-width: 44px; min-height: 44px; }
+.nhh-account-btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+.cart-qty-btn { min-width: 44px; min-height: 44px; }
+.hc-bc-item { padding: 8px 4px; min-height: 44px; display: inline-flex; align-items: center; }
+
+/* ── Small font fixes for mobile ── */
+@media (max-width: 640px) {
+  .sc-tag, .nhh-badge, .hw-cat-count, .rate-label, .hc-rate-label,
+  .fleet-card-cats span, .co-step-label { font-size: 0.75rem; }
+}
+
+/* ── Split hero buttons: stack on very narrow screens ── */
+@media (max-width: 400px) {
+  .split-hero-actions .btn-lg {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ── Service cards: use min-height not fixed height ── */
+@media (max-width: 560px) {
+  .service-card { min-height: 280px; height: auto; }
+}
+
+/* ── Overlay scroll containment ── */
+.cart-drawer-body, .checkout-modal {
+  overscroll-behavior: contain;
+}
+
+/* ── Reduced motion support ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Tap highlight (Android/iOS polish) ── */
+a, button, [onclick] {
+  -webkit-tap-highlight-color: rgba(254, 0, 0, 0.1);
+}
+
+/* ── Service card active state for touch devices ── */
+@media (hover: none) {
+  .service-card:active .sc-content { transform: translateY(-8px); }
+  .service-card:active .service-link { background: #c00; }
+}
+
+/* ── Focus-visible for keyboard/assistive navigation ── */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+/* ── Map height on small screens ── */
+@media (max-width: 480px) {
+  .map-embed { height: 220px; }
+}
+
+/* ── Compact category cards on mobile ── */
+@media (max-width: 640px) {
+
+  /* -- Fleet page cards -- */
+  .fleet-grid { gap: 8px; }
+  .fleet-card {
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 14px;
+    gap: 12px;
+  }
+  .fleet-card-img {
+    display: block;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  .fleet-card-img-ph { border-radius: 8px; }
+  .fleet-card-icon { font-size: 1.4rem; }
+  .fleet-card-img .pa-img-hint { display: none; }
+  .fleet-card-body {
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    flex: 1;
+  }
+  .fleet-card-title {
+    font-size: 0.95rem;
+    flex: 1;
+    margin: 0;
+  }
+  .fleet-card-desc,
+  .fleet-card-cats,
+  .fleet-card-cta { display: none; }
+  .fleet-card::after {
+    content: '\203A';
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--red);
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .fleet-card:hover { transform: translateX(4px) translateY(0); }
+
+  /* -- Powered-access & Telehandler group cards -- */
+  .pa-group-grid { gap: 8px; }
+  .pa-group-card {
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 14px;
+    gap: 12px;
+  }
+  .pa-group-card .pa-card-img {
+    display: block;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  .pa-group-card .pa-card-img-placeholder { border-radius: 8px; }
+  .pa-group-card .pa-card-img-icon { font-size: 1.4rem; }
+  .pa-group-card .pa-card-img .pa-card-img-hint { display: none; }
+  .pa-group-card .pa-card-body {
+    padding: 0;
+    flex: 1;
+  }
+  .pa-group-card .pa-card-title {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+  .pa-group-card .pa-card-desc { display: none; }
+  .pa-group-card .pa-card-meta {
+    font-size: 0.72rem;
+    margin: 2px 0 0;
+  }
+  .pa-group-card .hc-arrow {
+    padding: 0;
+    align-self: center;
+  }
+  .pa-group-card:hover { transform: translateX(4px) translateY(0); }
+
+  /* -- PA level-2 sub-category cards -- */
+  .pa-cat-grid { gap: 8px; }
+  .pa-cat-card {
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 14px;
+    gap: 12px;
+  }
+  .pa-cat-card .pa-cat-img {
+    display: block;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  .pa-cat-card .pa-cat-img-placeholder { border-radius: 8px; }
+  .pa-cat-card .pa-cat-body {
+    padding: 0;
+    flex: 1;
+  }
+  .pa-cat-card .hc-arrow {
+    padding: 0;
+    align-self: center;
+  }
+  .pa-cat-card:hover { transform: translateX(4px) translateY(0); }
+
+  /* -- Hire page section cards -- */
+  .hc-section-grid { gap: 8px; }
+  .hc-section-card {
+    flex-direction: row !important;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 14px !important;
+    gap: 12px;
+  }
+  .hc-section-card-img {
+    display: flex;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  .hc-section-card-img-ph { border-radius: 8px; font-size: 1.4rem; }
+  .hc-section-card-img-ph .pa-img-hint { display: none; }
+  .hc-section-card-content {
+    padding: 0;
+    flex: 1;
+    gap: 12px;
+  }
+  .hc-section-card-content h2 { font-size: 0.95rem; }
+  .hc-section-card-content p { font-size: 0.75rem; }
+  .hc-section-card:hover { transform: translateX(4px) translateY(0); }
 }
