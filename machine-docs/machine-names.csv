@@ -1,0 +1,60 @@
+# NHH Machine Names
+# Format: fleet_id, display_name, type
+# This gives fleet IDs friendly names on the QR page
+# If a machine isn't listed here, the fleet ID is shown instead
+#
+# ── Telehandlers ──
+TELE8N110,Manitou MRT2660 360° Roto,telehandler
+TELLN116,Manitou Treuil 3 Ton Winch,telehandler
+#
+# ── Boom Lifts (Articulated) ──
+BM30N52,Genie Z30/20 Boom Lift,powered-access
+BM30N53,JLG E300AJ Boom Lift,powered-access
+BM30N145,LGMG A09JE Boom Lift,powered-access
+BM30N146,Genie Z30/20N Boom Lift,powered-access
+BM38N39,Snorkel A38E Boom Lift,powered-access
+BM38N54,Snorkel A38E Boom Lift,powered-access
+BM38N68,Snorkel A38E Boom Lift,powered-access
+BM38N69,Snorkel A38E Boom Lift,powered-access
+BM38N105,Snorkel A38E Boom Lift,powered-access
+BM38N106,Snorkel A38E Boom Lift,powered-access
+BM40N110,Snorkel TL37 Boom Lift,powered-access
+BM46N55,JLG 450A Boom Lift,powered-access
+BM46N61,Genie Z45/25 Boom Lift,powered-access
+BM46N77,Genie Z45/25 Boom Lift,powered-access
+BM46N96,Genie S45 Boom Lift,powered-access
+BM46N98,Genie Z45/25J Boom Lift,powered-access
+BM46N99,Genie Z45/25 Boom Lift,powered-access
+BM46N100,Genie Z45/25 Boom Lift,powered-access
+BM46N101,Genie Z45 Boom Lift,powered-access
+BM46N107,Genie Z45/25 Boom Lift,powered-access
+BM46N108,Genie Z45/25 Boom Lift,powered-access
+BM46N109,Genie Z45/25 Boom Lift,powered-access
+BM46N112,Genie Z45/25 Boom Lift,powered-access
+BM46N115,Genie Z45/25 Boom Lift,powered-access
+BM46N117,Genie Z45/25 Boom Lift,powered-access
+BM46N118,Genie Z45/25 Boom Lift,powered-access
+BM46N119,Genie Z45/25 Boom Lift,powered-access
+BM46N124,Genie Z45/25 Boom Lift,powered-access
+BM46N125,Genie Z45/25 Boom Lift,powered-access
+BM46N126,Genie Z45/25 Boom Lift,powered-access
+BM46N144,LGMG A14JE Boom Lift,powered-access
+#
+# ── Boom Lifts (Straight) ──
+BM125N123,Genie SX125 XC Boom Lift,powered-access
+BM125N147,Genie SX125 XC Boom Lift,powered-access
+BM135N122,Genie ZX135 Boom Lift,powered-access
+BM135N148,Genie ZX135 Boom Lift,powered-access
+BM135N149,Genie ZX135 Articulated Boom,powered-access
+#
+# ── Spider Lifts ──
+BMSN71,Hinowa 15.70 Lightlift Spider Lift,powered-access
+BMSN72,Hinowa 15.70 Lightlift Spider Lift,powered-access
+BMSN73,Hinowa 17.75 Spider Lift,powered-access
+BMSN74,Hinowa 26.14 Spider Lift,powered-access
+BMSN93,Hinowa 20.10 Lightlift Spider Lift,powered-access
+BMSN143,Platform Basket 18.95 Spider Lift,powered-access
+BMSN150,Platform Basket 20.95 Spider Lift,powered-access
+BMSN151,Platform Basket 15.70 Spider Lift,powered-access
+BMSN152,Platform Basket 15.70 Spider Lift,powered-access
+BMSN153,Platform Basket 27.14 Spider Lift,powered-access

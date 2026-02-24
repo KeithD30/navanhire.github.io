@@ -1,3 +1,627 @@
 {
-  "machines": []
+  "machines": [
+    {
+      "id": "TELE8N110",
+      "name": "Manitou MRT2660 360° Roto",
+      "type": "telehandler",
+      "serial": "",
+      "docs": {
+        "cert": "TELE8N110/public/ga1/MANITOU MRT2660 ROTO N110 GA1 CERT.pdf",
+        "manual": ""
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "TELLN116",
+      "name": "Manitou Treuil 3 Ton Winch",
+      "type": "telehandler",
+      "serial": "",
+      "docs": {
+        "cert": "TELLN116/public/ga1/MANITOU TREUIL 3 TON WINCH N116 GA1 CERT.pdf",
+        "manual": ""
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM30N52",
+      "name": "Genie Z30/20 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM30N52/public/manual/GENIE Z30.20 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM30N53",
+      "name": "JLG E300AJ Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM30N53/public/manual/E300AJ, E300AJP_JLG_Operation Manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM30N145",
+      "name": "LGMG A09JE Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM30N145/public/manual/LGMG A09JE OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM30N146",
+      "name": "Genie Z30/20N Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM30N146/public/ga1/GENIE Z30.20N BOOM LIFT N146 GA1 CERT 03.08.26.pdf",
+        "manual": "BM30N146/public/manual/GENIE Z30.20 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM38N39",
+      "name": "Snorkel A38E Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM38N39/public/ga1/1354_001.pdf",
+        "manual": "BM38N39/public/manual/A38E Operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM38N54",
+      "name": "Snorkel A38E Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM38N54/public/manual/A38E Operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM38N68",
+      "name": "Snorkel A38E Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM38N68/public/ga1/SNORKEL A38E GA1 EXP 17TH APR 2026.pdf",
+        "manual": "BM38N68/public/manual/A38E Operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM38N69",
+      "name": "Snorkel A38E Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM38N69/public/ga1/SNORKEL A38E BOOM LIFT NO69 GA1 CERT 25.03.2026.pdf",
+        "manual": "BM38N69/public/manual/A38E Operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM38N105",
+      "name": "Snorkel A38E Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM38N105/public/ga1/SNORKEL A38E BOOM LIFT NO105 GA1 CERT 14.05.2026.pdf",
+        "manual": "BM38N105/public/manual/A38E Operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM38N106",
+      "name": "Snorkel A38E Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM38N106/public/manual/A38E Operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM40N110",
+      "name": "Snorkel TL37 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM40N110/public/manual/SNORKEL TL37 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N55",
+      "name": "JLG 450A Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM46N55/public/manual/OPERATORS MANUAL BOOM LIFT MODEL 450A 450AJ.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N61",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM46N61/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N77",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM46N77/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N96",
+      "name": "Genie S45 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N96/public/ga1/GENIE S45 BOOM LIFT GA1 CERT N96 23.08.26.pdf",
+        "manual": "BM46N96/public/manual/Genie S40-45 Operator Manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N98",
+      "name": "Genie Z45/25J Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N98/public/ga1/GENIE Z4525J BOOM LIFT N98 GA1 CERT 22.07.26.pdf",
+        "manual": "BM46N98/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N99",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N99/public/ga1/GENIE Z4525 BOOM LIFT NO99 GA1 CERT 19.03.2026.pdf",
+        "manual": "BM46N99/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N100",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N100/public/ga1/GENIE Z4525 BOOM N100 GA1 CERT 01.03.2026.pdf",
+        "manual": "BM46N100/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N101",
+      "name": "Genie Z45 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N101/public/ga1/GENIE Z45 BOOM LIFT N101 GA1 CERT 07.04.2026.pdf",
+        "manual": "BM46N101/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N107",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N107/public/ga1/GENIE Z4525 BOOM LIFT NO107 GA1 CERT 19.06.26.pdf",
+        "manual": "BM46N107/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N108",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N108/public/ga1/GENIE Z4525 BOOM LIFT NO108 GA1 CERT 03.04.26.pdf",
+        "manual": "BM46N108/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N109",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM46N109/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N112",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM46N112/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N115",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N115/public/ga1/GENIE Z4525 BOOM LIFT NO115 GA1 CERT 13.07.2026.pdf",
+        "manual": "BM46N115/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N117",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N117/public/ga1/GENIE Z4525 BOOM LIFT NO117 GA1. 30.04.2026.pdf",
+        "manual": "BM46N117/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N118",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N118/public/ga1/GA1 nO 118 BOOM LIFT EXP 13TH APR 2026.pdf",
+        "manual": "BM46N118/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N119",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM46N119/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N124",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM46N124/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N125",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N125/public/ga1/GENIE Z4525 BOOM LIFT NO125 GA1 CERT 30.03.2026.pdf",
+        "manual": "BM46N125/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N126",
+      "name": "Genie Z45/25 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N126/public/ga1/GENIE Z4525 BOOM LIFT NO126 GA1 CERT 30.03.2026.pdf",
+        "manual": "BM46N126/public/manual/z45 operators manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM46N144",
+      "name": "LGMG A14JE Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM46N144/public/ga1/LGMG A14JE BOOM LIFT N144 GA1 CERT 27.07.2026.pdf",
+        "manual": "BM46N144/public/manual/A14JE-Operation-Manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM125N123",
+      "name": "Genie SX125 XC Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM125N123/public/ga1/GENIE S125 BOOM LIFT N123 GA1 CERT 11.08.26.pdf",
+        "manual": "BM125N123/public/manual/OPERATIONS MANUAL FOR (SX125 XC) BM125N123.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM125N147",
+      "name": "Genie SX125 XC Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM125N147/public/ga1/BOOM LIFT 125FT STRAIGHT XC N147 GA1 CERT 11.08.26.pdf",
+        "manual": "BM125N147/public/manual/OPERATIONS MANUAL FOR (SX125 XC) BM125N123.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM135N122",
+      "name": "Genie ZX135 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BM135N122/public/manual/GENIE ZX135 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM135N148",
+      "name": "Genie ZX135 Boom Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM135N148/public/ga1/GENIE ZX135 BOOM LIFT N148 GA1 CERT 22.07.26.pdf",
+        "manual": "BM135N148/public/manual/GENIE ZX135 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BM135N149",
+      "name": "Genie ZX135 Articulated Boom",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BM135N149/public/ga1/GENIE ZX135 ARTICULATED BOOM NO149 GA1 13.08.26.pdf",
+        "manual": "BM135N149/public/manual/GENIE ZX135 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BMSN71",
+      "name": "Hinowa 15.70 Lightlift Spider Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BMSN71/public/ga1/HINOWA 15.70 LIGHTLIFT SPIDER LIFT NO71 GA1 CERT 03.10.25.pdf",
+        "manual": "BMSN71/public/manual/HINOWA 15.70 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BMSN72",
+      "name": "Hinowa 15.70 Lightlift Spider Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BMSN72/public/ga1/HINOWA 15.70 LIGHTLIFT SPIDER LIFT NO72 GA1 CET 22.03.2026.pdf",
+        "manual": "BMSN72/public/manual/HINOWA 15.70 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BMSN73",
+      "name": "Hinowa 17.75 Spider Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "",
+        "manual": "BMSN73/public/manual/HINOWA 17.75 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BMSN74",
+      "name": "Hinowa 26.14 Spider Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BMSN74/public/ga1/HINOWA 17.75 OPERATORS MANUAL.pdf",
+        "manual": "BMSN74/public/manual/HINOWA 26.14 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BMSN93",
+      "name": "Hinowa 20.10 Lightlift Spider Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BMSN93/public/ga1/HINOWA 20.10 LIGHTLIFT SPIDER LIFT NO93 05.06.2026.pdf",
+        "manual": "BMSN93/public/manual/HINOWA 20.10 LIGHTLIFT OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BMSN143",
+      "name": "Platform Basket 18.95 Spider Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BMSN143/public/ga1/PLATFORM BASKET 18.95  SPIDER LIFT NO73 GA1 CERT 26.07.26.pdf",
+        "manual": "BMSN143/public/manual/PLATFORM BASKET 18.95 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BMSN150",
+      "name": "Platform Basket 20.95 Spider Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BMSN150/public/ga1/PLATFORM BASKET 20.95  SPIDER LIFT NO150 GA1 CERT 08.06.2026.pdf",
+        "manual": "BMSN150/public/manual/PLATFORM BASKET 20.95 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BMSN151",
+      "name": "Platform Basket 15.70 Spider Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BMSN151/public/ga1/SPIDER N151 PB 15.70 15697 GA1 CERT 17.08.26.pdf",
+        "manual": "BMSN151/public/manual/PLATFORM BASKET 15.70 Operators Manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BMSN152",
+      "name": "Platform Basket 15.70 Spider Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BMSN152/public/ga1/SPIDER N152 PB 15.70 15697 GA1 CERT 17.08.2026.pdf",
+        "manual": "BMSN152/public/manual/PLATFORM BASKET 15.70 Operators Manual.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+    ,
+    {
+      "id": "BMSN153",
+      "name": "Platform Basket 27.14 Spider Lift",
+      "type": "powered-access",
+      "serial": "",
+      "docs": {
+        "cert": "BMSN153/public/ga1/PLATFORM BASKET N153 PB 27.14 15677 GA1 17.08.26.pdf",
+        "manual": "BMSN153/public/manual/SPIDER 27.14 OPERATORS MANUAL.pdf"
+      },
+      "certExpiry": "",
+      "videoUrl": ""
+    }
+  ]
 }

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NHH Machine QR Labels — Print Ready</title>
+  <meta name="robots" content="noindex, nofollow"/>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #fe0000;
+      --black: #0D0D0D;
+      --font-head: 'Barlow Condensed', sans-serif;
+      --font-body: 'Barlow', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      background: #f5f4f2;
+      padding: 24px;
+    }
+
+    /* ── Screen-only header ── */
+    .screen-header {
+      text-align: center;
+      margin-bottom: 24px;
+      padding: 24px;
+      background: var(--black);
+      color: #fff;
+      border-radius: 8px;
+    }
+    .screen-header h1 {
+      font-family: var(--font-head);
+      font-size: 1.6rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .screen-header p { opacity: 0.6; font-size: 0.9rem; }
+    .screen-header .count {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 3px 12px;
+      border-radius: 4px;
+      margin-top: 8px;
+    }
+    .print-btn {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border: none;
+      padding: 12px 40px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 16px;
+    }
+    .print-btn:hover { background: #cc0000; }
+
+    /* ── Label grid (screen) ── */
+    .label-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 50mm);
+      gap: 8px;
+      justify-content: center;
+    }
+
+    /* ── Individual label: 50mm × 30mm ── */
+    .label {
+      width: 50mm;
+      height: 30mm;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      padding: 2mm;
+      gap: 2mm;
+      overflow: hidden;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .label-qr {
+      flex-shrink: 0;
+      width: 22mm;
+      height: 22mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .label-qr img {
+      width: 22mm !important;
+      height: 22mm !important;
+      image-rendering: pixelated;
+    }
+
+    .label-info {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .label-brand {
+      flex-shrink: 0;
+      height: 8mm;
+      margin-bottom: 0.5mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .label-brand img {
+      height: 100%;
+      width: auto;
+      display: block;
+    }
+    .label-cta {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--black);
+      line-height: 1.1;
+      margin-bottom: 0.5mm;
+    }
+    .label-name {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 6pt;
+      line-height: 1.15;
+      color: var(--black);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .label-fleet {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 8pt;
+      color: var(--black);
+      background: #f0f0f0;
+      display: inline-block;
+      padding: 0.3mm 1.5mm;
+      border-radius: 1mm;
+      margin-top: 0.5mm;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Print styles ── */
+    @media print {
+      @page {
+        size: A4;
+        margin: 10mm;
+      }
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .screen-header { display: none !important; }
+      .label-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 50mm);
+        gap: 4mm;
+        justify-content: start;
+      }
+      .label {
+        border: 0.5pt solid #ddd;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="screen-header">
+    <h1>NHH Machine QR Labels</h1>
+    <p>50mm × 30mm labels — ready to print</p>
+    <div class="count" id="labelCount">Loading...</div>
+    <br>
+    <button class="print-btn" onclick="window.print()">⎙ Print Labels</button>
+  </div>
+
+  <div class="label-grid" id="labelGrid"></div>
+
+  <script>
+    var BASE_URL = 'https://nhh.ie';
+
+    fetch('machine-docs/machines.json')
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        var grid = document.getElementById('labelGrid');
+        var machines = data.machines;
+
+        document.getElementById('labelCount').textContent = machines.length + ' labels';
+
+        machines.forEach(function(m) {
+          var url = BASE_URL + '/machine.html?id=' + encodeURIComponent(m.id);
+
+          // Generate QR code
+          var qr = qrcode(0, 'M');
+          qr.addData(url);
+          qr.make();
+
+          var label = document.createElement('div');
+          label.className = 'label';
+
+          label.innerHTML =
+            '<div class="label-qr">' + qr.createImgTag(3, 0) + '</div>' +
+            '<div class="label-info">' +
+              '<div class="label-brand"><img src="logo.svg" alt="NHH"></div>' +
+              '<div class="label-cta">SCAN FOR DOCS</div>' +
+              '<div class="label-fleet">' + escHtml(m.id) + '</div>' +
+            '</div>';
+
+          grid.appendChild(label);
+        });
+      })
+      .catch(function(err) {
+        document.getElementById('labelGrid').innerHTML =
+          '<p style="color:red;padding:20px;">Error loading machines.json: ' + err.message + '</p>';
+      });
+
+    function escHtml(s) {
+      var d = document.createElement('div');
+      d.textContent = s;
+      return d.innerHTML;
+    }
+  </script>
+</body>
+</html>

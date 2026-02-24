@@ -1,0 +1,7 @@
+# NHH Machine Names
+# Format: fleet_id, display_name, type
+# This gives fleet IDs friendly names on the QR page
+# If a machine isn't listed here, the fleet ID is shown instead
+#
+TELE8N110,Manitou MRT2660 360° Roto,telehandler
+TELLN116,Manitou Treuil 3 Ton Winch,telehandler

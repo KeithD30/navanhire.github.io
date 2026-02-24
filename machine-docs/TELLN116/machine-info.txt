@@ -1,0 +1,5 @@
+name: Manitou Treuil 3 Ton Winch
+type: telehandler
+serial: 
+expiry: 
+video: 

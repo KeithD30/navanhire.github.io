@@ -1,0 +1,5 @@
+name: Manitou MRT2660 360° Roto
+type: telehandler
+serial: 
+expiry: 
+video: 
